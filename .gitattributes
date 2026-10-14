@@ -1,0 +1,5 @@
+# Linux'ta calisacak betikler her zaman LF olmali (Windows'ta CRLF'e donusup bozulmasin)
+*.sh text eol=lf
+*.py text eol=lf
+*.md text
+*.ps1 text eol=crlf

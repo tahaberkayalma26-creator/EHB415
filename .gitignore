@@ -1,0 +1,12 @@
+# Telif haklı makaleler ve proposal (ogrenci numaralari iceriyor): repoya girmez
+*.pdf
+# Bu makineye ozgu kurulum loglari (kullanici ve bilgisayar adi iceriyor)
+kurulum/loglar/
+*.log
+# Python / Jupyter
+__pycache__/
+.ipynb_checkpoints/
+# Buyuk / uretilmis dosyalar
+*.pcap
+*.h5
+*.npz
