@@ -1,8 +1,16 @@
 # Telif haklı makaleler ve proposal (ogrenci numaralari iceriyor): repoya girmez
 *.pdf
+# Istisna: ekip icin yazdigimiz ogretici (kisisel bilgi icermez)
+!EHB415_ISAC_Ogretici.pdf
 # Bu makineye ozgu kurulum loglari (kullanici ve bilgisayar adi iceriyor)
 kurulum/loglar/
 *.log
+# Ogretici: telifli fontlar ve derleme ara dosyalari
+ogretici/fontlar/*.ttf
+ogretici/*.aux
+ogretici/*.log
+ogretici/*.toc
+ogretici/*.out
 # Python / Jupyter
 __pycache__/
 .ipynb_checkpoints/

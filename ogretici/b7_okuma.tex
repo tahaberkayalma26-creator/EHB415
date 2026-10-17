@@ -1,0 +1,82 @@
+\section{Makale okuma rehberi}\label{sec:okuma}
+
+\subsection{Google Scholar'a ne yazmalı?}
+
+Scholar, arama kutusundaki \textbf{tırnak içindeki ifadeleri aynen} arar ve çok kelimeli sorgularda çok geniş sonuç döndürür. Bu yüzden
+\emph{tırnaklı anahtar ifadeler} ve yanlarında 1--2 serbest kelime kullanın. Aşağıdaki sorgular, bu projenin her alt konusunu kapsayacak şekilde tasarlandı.
+\textbf{Sorgulardaki sonuçları ben kontrol etmedim}; sonuç sayısı ve sırası değişir. Bulduklarınızı Bölüm~\ref{sec:okuma-liste}'teki listeyle karşılaştırın.
+
+\begingroup\sffamily\small
+\begin{xltabular}{\textwidth}{@{}p{0.5cm}p{7.0cm}X@{}}
+\toprule
+ & \textbf{Sorgu (kopyala-yapıştır)} & \textbf{Ne ararsın / ne işine yarar} \\
+\midrule
+1 & \texttt{"integrated sensing and communication" "5G NR" "positioning reference signal"} & PRS ile sensing yapan çalışmalar; sinyal tasarımı ve sonuçlar. \\
+2 & \texttt{"ISAC" "resource allocation" "5G NR" "sensing overhead"} & \textbf{Ana sorumuz:} sensing kaynak payı ve throughput kaybı. \\
+3 & \texttt{"ISAC" "3GPP" "Release 19" OR "Release 20" sensing "channel model"} & Standart durumu, kanal modeli. \\
+4 & \texttt{"gNB" "monostatic sensing" UAV detection "5G NR"} & TR~38.765'in senaryosuyla aynı çalışmalar. \\
+5 & \texttt{"ISAC" "O-RAN" OR "OpenRAN" xApp sensing srsRAN OR OpenAirInterface} & Açık RAN'a sensing entegrasyon mimarileri (OCUDU tarafı). \\
+6 & \texttt{"Sionna" "ray tracing" sensing OR radar OFDM} & Sionna ile sensing/ISAC uygulamaları, hazır kod. \\
+7 & \texttt{"ns-3" "5G-LENA" sensing OR ISAC} & ns-3'te sensing modelleme (az çıkması beklenir; boşluğu gösterir). \\
+8 & \texttt{"OFDM radar" "range-Doppler" "mobile network" tutorial} & Radyo sinyal işleme temelleri, öğretici nitelikli. \\
+9 & \texttt{"self-interference" "monostatic" "base station" sensing isolation} & Öz-girişim, neden zor, hangi izolasyon yeter. \\
+10 & \texttt{"ghost targets" PRS comb sensing} & PRS tabanlı sensing'in bilinen sorunu ve çözümleri. \\
+11 & \texttt{"communication-sensing tradeoff" OR "sensing-communication tradeoff" ISAC "Cramer-Rao"} & Teorik ödünleşim (R1 için, matematik yoğun). \\
+12 & \texttt{"sensing-assisted" scheduling OR "beam management" 5G ISAC} & Tersine yön: sensing'in haberleşmeye \emph{katkısı} (rapora zenginlik). \\
+\bottomrule
+\end{xltabular}
+\endgroup
+
+\subsubsection{Scholar'ı verimli kullanmak}
+
+\begin{itemize}
+\item Soldaki menüden \textbf{``Since 2024''} (veya ``Since 2025'') seçin: alan hızlı değişiyor, 2022 öncesi çalışmalar çoğu zaman eski.
+\item \textbf{``Cited by''} bağlantısı: bir makaleyi \emph{atıf yapan yeni makaleler} üzerinden ileriye doğru izleyin (en değerli ipucu).
+\item \textbf{``Related articles''} ve \textbf{``Versions''}: arXiv sürümünü bulun, çoğu zaman ücretsizdir.
+\item \textbf{``Cite''} $\rightarrow$ BibTeX: rapor kaynakçası için.
+\item Bir ``survey'' veya ``tutorial'' bulursanız \emph{önce onu} okuyun: yüzlerce makaleyi sizin için özetler (örn.\ Liu vd.~\cite{liu22}).
+\end{itemize}
+
+\subsection{Bir makalede ne aranır? (7 soru)}\label{sec:7soru}
+
+Makaleyi baştan sona okumayın. Önce \textbf{özet, giriş sonu (katkılar) ve sonuç}, sonra şu yedi soruya cevap arayın:
+
+\begin{enumerate}
+\item \textbf{Ne ölçüyorlar?} (Hangi metrik: $P_{md}$, hata, throughput?) Bizim metriklerimizle aynı mı?
+\item \textbf{Sistem modeli ve parametre tablosu:} bant, SCS, taşıyıcı, anten, hedef. Bizimkiyle karşılaştırılabilir mi?
+\item \textbf{Sensing sinyali ne?} (PRS, SRS, DMRS, özel dizi?) Haberleşmeyle nasıl paylaşıyor?
+\item \textbf{Kaynak paylaşımı nasıl?} (Zaman, frekans, güç, uzay; sabit mi uyarlanır mı?)
+\item \textbf{Hangi araç/simülatör?} (MATLAB, Sionna, ns-3, OAI, srsRAN/OCUDU?) \emph{Kodu paylaşıyorlar mı?}
+\item \textbf{Sınırlamalar ve ``future work''} bölümü: bizim için \emph{fırsat} (onların yapmadığı şeyi biz yapıyoruz).
+\item \textbf{Bizim projeye tek cümlelik katkısı:} ``X makalesi, Y için Z'yi veriyor.'' Bu cümleyi yazamıyorsanız makaleyi bırakın.
+\end{enumerate}
+
+\begin{ipucu}[Her makale için 5 dakikalık not]
+Her okuduğunuz makale için ortak bir tabloya \textbf{tek satır} ekleyin: \texttt{Makale | Sinyal | Araç | Kod var mı | Bizim için katkı (1 cümle) | Güven (düşük/orta/yüksek)}.
+Dönem sonunda ilgili çalışmalar bölümünün neredeyse hazır olacak.
+\end{ipucu}
+
+\subsection{Okuma listesi (indirildi, doğrulandı)}\label{sec:okuma-liste}
+
+Aşağıdaki makaleler \texttt{makaleler/} klasöründe PDF olarak durur; başlık, yazar ve tarihleri arXiv/3GPP'den doğrulandı.
+Ayrıntılı ``şurada ne var'' notları \texttt{makaleler/OKUMA\_LISTESI.md} dosyasında.
+
+\begingroup\sffamily\small
+\begin{xltabular}{\textwidth}{@{}p{0.9cm}p{4.5cm}p{2.4cm}X@{}}
+\toprule
+\textbf{Kim} & \textbf{Makale} & \textbf{Önce oku} & \textbf{Neden} \\
+\midrule
+Herkes & Lin, \emph{ISAC in 3GPP: 5G-Adv.\ to 6G} \cite{lin} & Tamamı (8 s.) & Standart durumunun güncel ve kısa özeti. \\
+Herkes & 3GPP TR 38.765 & \S4, 6.2, 9 & Metrikler, kaynak oranı, kararlar. \\
+R1, R3 & Dickerson vd.\ \cite{dickerson} & \S III.B, IV.A & Kaynak payı modeli ve throughput formülü. \\
+R2 & Khosroshahi vd.\ \cite{khos} & Özet, \S resource allocation & PRS+PDSCH Pareto optimali. \\
+R2 & Blandino vd.\ (NIST) \cite{nist} & Özet, sonuçlar & İHA tespiti sonuçları; kod (MATLAB) var. \\
+R2 & Wei vd.\ \cite{wei} & CRLB bölümü & Kuramsal sınır; sonuçlarımızı kıyaslamak için. \\
+R3 & Ropitault vd.\ (SioLENA) \cite{siolena} & \S III.B, III.C & Sionna RT $\rightarrow$ 5G-LENA kanal köprüsü. \\
+R3 & Capozzi vd.\ \cite{capozzi} & \S IV.B--C, V & Scheduler aileleri ve metrik tanımları. \\
+R4 & Lindenschmitt vd.\ \cite{linden} & \S 3.3, 4.4, 5 & Sensing işlemenin RAN'daki yeri ve açık sorular. \\
+R4 & Gurung vd.\ \cite{gurung} & \S III--IV & OAI + RIC + Sionna RT ile ISAC test düzeneği. \\
+İsteğe bağlı & Liu vd.\ \cite{liu22} & \S III, IV.A & Alanın temel tutorial'ı; trade-off teorisi. \\
+\bottomrule
+\end{xltabular}
+\endgroup

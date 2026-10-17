@@ -1,0 +1,238 @@
+\section{OCUDU kodu: nerede ne var, nereye ekleme yaparız?}\label{sec:ocudu}
+
+Bu bölüm, OCUDU 26.10.0 kaynak kodunu (\texttt{release\_26\_10}, commit \texttt{e0db566}) gerçekten okuyarak yazıldı. Dosya yolları \texttt{\textasciitilde/ehb415/ocudu} altındadır.
+
+\subsection{Depo haritası}\label{sec:repomap}
+
+\begingroup\sffamily\small
+\begin{xltabular}{\textwidth}{@{}p{3.1cm}p{1.9cm}X@{}}
+\toprule
+\textbf{Klasör} & \textbf{Satır (.h+.cpp)} & \textbf{İçerik} \\
+\midrule
+\kod{apps/gnb} & -- & \texttt{gnb} programı: yapılandırmayı okur, CU/DU/RU'yu bir araya getirir. \\
+\kod{apps/units/...} & -- & Yapılandırma şemaları (YAML anahtarları burada tanımlı). \\
+\kod{lib/scheduler} & 53\,502 & \textbf{MAC scheduler} (kaynak dağıtımı). \textbf{Bizim ana ilgi alanımız.} \\
+\kod{lib/mac} & 10\,882 & MAC katmanı (scheduler'ın sonuçlarını PDU'lara çevirir). \\
+\kod{lib/phy} & 65\,715 & Fiziksel katman: PRS üretici, PDSCH, SRS, ... (alt klasör \kod{signal_processors/prs}). \\
+\kod{lib/fapi_adaptor} & -- & MAC $\leftrightarrow$ PHY arayüzü (FAPI); PRS çevirileri (\kod{.../pdu_translators/prs.cpp}). \\
+\kod{lib/du} & 24\,963 & DU yönetimi ve yapılandırması. \\
+\kod{lib/cu_cp}, \kod{lib/cu_up} & 29\,397 / 4\,702 & Merkezi birim: kontrol ve kullanıcı düzlemi. \\
+\kod{lib/f1ap}, \kod{lib/e1ap}, \kod{lib/ngap} & 15\,595 / -- / 9\,399 & Arayüz protokolleri (F1 CU--DU, E1, NG çekirdek ağa). \\
+\kod{lib/rlc}, \kod{lib/pdcp} & 7\,441 / 4\,300 & Üst katman protokolleri. \\
+\kod{lib/nrppa}, \kod{lib/lpp} & -- & \textbf{Konumlandırma} protokolleri (NRPPa, LPP). \\
+\kod{lib/ru}, \kod{lib/radio} & -- & RU taklidi (\kod{ru/dummy}), radyo sürücüleri (\kod{radio/zmq}, \kod{radio/uhd}). \\
+\kod{configs/} & -- & Hazır yapılandırma örnekleri (\texttt{testmode.yml} dahil). \\
+\kod{docs/}, \kod{lib/*/README.md} & -- & Mimari dokümanlar. \\
+\bottomrule
+\end{xltabular}
+\endgroup
+{\sffamily\footnotesize\color{muted} Satır sayıları \texttt{find ... | xargs cat | wc -l} ile ölçüldü (yalnızca \texttt{.cpp} ve \texttt{.h}); ``--'' ölçülmedi.}
+
+\begin{ipucu}[Kodu nereden okumaya başlamalı?]
+\texttt{lib/scheduler/README.md} (scheduler'ın tüm bileşenlerini ve slot akışını anlatır) ve \texttt{lib/README.md}. İkisi de iyi yazılmış ve güncel.
+Koda dalmadan önce bu iki dosyayı okumak, doğru dosyayı bulmak için gereken zamanı kısaltır.
+\end{ipucu}
+
+\subsection{Scheduler bir slotta ne yapar?}\label{sec:slotflow}
+
+\texttt{cell\_scheduler::run\_slot()} (\kod{lib/scheduler/cell_scheduler.cpp}) \textbf{her slot} bir kez çalışır ve kaynak ızgarasını doldurur.
+Kodun gerçek sırası (satır yorumlarından):
+
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[node distance=3.2mm,every node/.style={font=\sffamily\small}]
+  \node[ndn,text width=6.4cm] (a) {1. Izgarayı temizle, olayları işle};
+  \node[nd,text width=6.4cm,below=of a] (b) {2. \textbf{SSB}, 3. \textbf{CSI-RS}};
+  \node[ndw,text width=6.4cm,below=of b,line width=1.2pt] (c) {4. \textbf{DL-PRS} \hfill{\scriptsize \texttt{prs\_sch.run\_slot}}};
+  \node[nd,text width=6.4cm,below=of c] (d) {5. SIB1/SI, 6. PRACH, 7. RAR/Msg3, 8. Paging};
+  \node[nd,text width=6.4cm,below=of d] (e) {9. Periyodik \textbf{UCI} (SR, CSI), 10. Periyodik \textbf{SRS}};
+  \node[ndg,text width=6.4cm,below=of e] (f) {11. \textbf{Kullanıcı verisi} (PDSCH/PUSCH) \hfill{\scriptsize \texttt{ue\_sched->run\_slot}}};
+  \node[ndn,text width=6.4cm,below=of f] (g) {12. UCI eşleştirme, log, metrikler};
+  \foreach \x/\y in {a/b,b/c,c/d,d/e,e/f,f/g} \draw[ar] (\x) -- (\y);
+  \node[ndw,text width=5.2cm,right=14mm of c,align=left] (note1) {\textbf{PRS erken zamanlanır:} ızgarada yer kaplar, sonra kullanıcı verisi \emph{kalan} PRB'lere dağıtılır};
+  \draw[ar,color=warn] (c.east) -- (note1.west);
+  \node[ndg,text width=5.2cm,right=14mm of f,align=left] (note2) {\textbf{Kullanıcılar en son:} periyodik rezervasyonlardan (PRS, SRS, UCI) artan PRB'leri paylaşır};
+  \draw[ar,color=good!70!black] (f.east) -- (note2.west);
+\end{tikzpicture}
+\caption{OCUDU scheduler'ının slot başına işlem sırası (\texttt{cell\_scheduler.cpp}). Turuncu adım: \textbf{sensing sinyali olarak kullanabileceğimiz PRS}.}
+\label{fig:slotflow}
+\end{figure}
+
+\textbf{Anahtar fikir:} \emph{periyodik, önceden bilinen} sinyaller (SSB, CSI-RS, \textbf{PRS}, PRACH, UCI, SRS) önce ızgarada yerini alır; kullanıcı verisi \emph{kalan kaynağı} alır.
+Dokümandaki ifadeyle: ``\textit{uci\_scheduler ve srs\_scheduler, UE tahsisinden önce periyodik fırsatlarını rezerve etmek zorunda olduğu için UE zamanlamadan önce çalışır}''.
+Sensing'in kaynak ihtiyacı da tam bu türdendir: periyodik ve önceden bilinen.
+
+\subsection{Büyük bulgu: OCUDU'da PRS zaten var}\label{sec:prs}
+
+Sensing için ihtiyaç duyduğumuz \emph{gönderici tarafının} büyük bölümü OCUDU'da hazır:
+
+\begingroup\sffamily\small
+\begin{xltabular}{\textwidth}{@{}p{4.9cm}X@{}}
+\toprule
+\textbf{Dosya} & \textbf{Ne yapıyor?} \\
+\midrule
+\kod{lib/scheduler/common_scheduling/prs_scheduler.cpp} & \textbf{MAC'te DL-PRS zamanlayıcısı.} PRS kaynak kümelerini periyoda, ofsete, tekrar faktörüne, \emph{muting} desenlerine göre slotlara yerleştirir. \\
+\kod{lib/phy/upper/signal_processors/prs/prs_generator_impl.cpp} & \textbf{PHY'de PRS dizisini üretir} (standarttaki dizi, TS 38.211 \S7.4.1.7). \\
+\kod{lib/fapi_adaptor/mac/p7/pdu_translators/prs.cpp} ve \kod{.../phy/p7/.../prs.cpp} & MAC'in PRS isteğini PHY'nin anlayacağı biçime çevirir. \\
+\kod{lib/f1ap/cu_cp/procedures/f1ap_positioning_*.cpp} & CU--DU arasında konumlandırma prosedürleri. \\
+\kod{lib/nrppa/}, \kod{lib/lpp/} & Konumlandırma protokolleri. \\
+\bottomrule
+\end{xltabular}
+\endgroup
+
+PRS'in kapladığı kaynağı rezerve eden asıl satır (\texttt{prs\_scheduler.cpp}, \texttt{schedule\_slot}):
+
+\begin{lstlisting}
+slot_alloc.dl_res_grid.fill(grant_info{pdu.scs, pdu.symbols, pdu.crbs});
+\end{lstlisting}
+
+Yani PRS'in kapladığı \emph{sembol aralığı} ($\times$ PRB aralığı), ızgarada ``dolu'' olarak işaretlenir. Kullanıcı verisi scheduler'ı bu bölgeye tahsis yapamaz.
+
+\subsubsection{PRS yapılandırması (YAML)}
+
+PRS, hücre yapılandırmasında \texttt{cell\_cfg:} altında \texttt{prs:} bölümüyle açılır. Bu yapılandırmayı denedik; gNB hücreyi açtı. Örnek (PRS her 4 slotta bir, 20\,MHz hücre, 104 PRB):
+
+\begin{lstlisting}
+cell_cfg:
+  dl_arfcn: 368500
+  band: 3
+  channel_bandwidth_MHz: 20
+  common_scs: 15
+  prs:
+    resource_sets:
+      - comb_size: 2
+        periodicity_slots: 4
+        slot_offset: 1
+        nof_symbols: 12
+        bandwidth_prbs: 104
+        resources:
+          - sequence_id: 1
+            re_offset: 0
+            slot_offset: 0
+            symbol_offset: 2
+\end{lstlisting}
+
+\begingroup\sffamily\small
+\begin{xltabular}{\textwidth}{@{}p{3.4cm}p{4.6cm}X@{}}
+\toprule
+\textbf{Parametre} & \textbf{Anlamı} & \textbf{Geçerli değerler} \\
+\midrule
+\texttt{periodicity\_slots} & PRS kaç slotta bir tekrarlanır ($T_{PRS}$) & 4, 5, 8, 10, 16, 20, 32, 40, 64, 80, 160, \ldots \\
+\texttt{slot\_offset} & Periyot içindeki başlangıç slotu & $0 \ldots T-1$ \\
+\texttt{nof\_symbols} & Her kaynağın OFDM sembol sayısı & 2, 4, 6, 12 \\
+\texttt{bandwidth\_prbs} & PRS'in kapladığı PRB (4'ün katı) & 24 \ldots 272 \\
+\texttt{comb\_size} & Comb (alt taşıyıcı seyreltme) & 2, 4, 6, 12 \\
+\texttt{repetition\_factor}, \texttt{time\_gap} & Tekrar sayısı ve aralığı & 1--32 \\
+\texttt{power\_offset\_db} & Güç ofseti & $-60 \ldots 50$ \\
+\bottomrule
+\end{xltabular}
+\endgroup
+
+\begin{dikkat}[OCUDU yapılandırmayı doğrular]
+\texttt{slot\_offset: 0} ve periyot 10 verdiğimizde gNB \emph{başlamadı}:
+\texttt{Detected a collision between the SSB occasion (ssb-Index=0) and the DL-PRS resource ... in slot 0 (period 10 slots)}.
+PRS, SSB ile çakışamaz; \texttt{slot\_offset: 1} ile çözüldü. Ayrıca PDSCH için \texttt{mcs\_table: qam64} verilmezse
+``256QAM MCS table cannot be used for PDSCH with fallback DCI format'' hatası alınır. Bunlar \emph{doğrulama} mesajlarıdır, hata değil.
+\end{dikkat}
+
+\subsubsection{Ölçüm: PRS yükü arttıkça DL throughput ne kadar düşer?}
+
+OCUDU'yu radyosuz modda (\texttt{testmode}, \texttt{ru\_dummy}, 20\,MHz FDD, 15\,kHz SCS, 1 sanal UE, tam tamponlu indirme trafiği) çalıştırıp PRS periyodunu değiştirdik.
+Her koşu yaklaşık 30\,s, tablodaki değerler son 15 satırın ortalamasıdır:
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.82\textwidth]{sekiller/fig_ocudu_prs.pdf}
+\caption{\textbf{Gerçek OCUDU ölçümü} (WSL2, testmode). Mavi: tüm banda PRS (104/106 PRB). Kesikli çizgi: kuram $59\,(1-1/T_{PRS})$.
+Turuncu: $T=4$ ama PRS yalnızca 52 PRB'de. Veri: \texttt{ogretici/veri/ocudu\_prs\_sweep.csv}.}
+\label{fig:ocudu-prs}
+\end{figure}
+
+\begin{center}
+\sffamily\small
+\begin{tabular}{@{}lrrrrr@{}}
+\toprule
+\textbf{Koşul} & $T_{PRS}$ & sembol & PRB & \textbf{DL (Mbps)} & başarılı blok/s \\
+\midrule
+Sensing yok & -- & -- & -- & 59,0 & 1000 \\
+$T=80$ & 80 & 12 & 104 & 58,0 & 987 \\
+$T=40$ & 40 & 12 & 104 & 57,8 & 972 \\
+$T=20$ & 20 & 12 & 104 & 56,0 & 950 \\
+$T=10$ & 10 & 12 & 104 & 53,0 & 900 \\
+$T=8$ & 8 & 12 & 104 & 50,9 & 874 \\
+$T=4$ & 4 & 12 & 104 & 43,8 & 749 \\
+$T=4$, yarım bant & 4 & 12 & 52 & 51,0 & 1000 \\
+$T=4$, 4 sembol & 4 & 4 & 104 & 43,8 & 748 \\
+\bottomrule
+\end{tabular}
+\end{center}
+{\sffamily\footnotesize\color{muted} UL throughput tüm koşullarda $\approx$77,2\,Mbps, yani PRS'ten etkilenmedi (PRS DL sinyalidir).}
+
+\begin{bulgu}[Dört gözlem ve açık soru]
+\textbf{(1) H1 ile uyumlu.} Tüm banda PRS koyunca DL throughput, PRS'li slot oranı kadar düşüyor: $T=4$ (\%25 slot) $\Rightarrow$ 59,0 $\rightarrow$ 43,8\,Mbps (\%26 azalma). 1000 slotluk saniyede 749 başarılı blok.\\
+\textbf{(2) Bant payı önemli.} PRS'i bandın yarısına (52 PRB) koyunca, aynı periyotta \emph{slot kaybı olmadı} (1000 blok) ve düşüş yalnızca 59,0 $\rightarrow$ 51,0\,Mbps (\%13,6): yaklaşık $0{,}25\times\frac{52}{106}=\%12{,}3$. Scheduler, PRS'in kaplamadığı PRB'lere veri tahsis etmeye devam ediyor.\\
+\textbf{(3) UL etkilenmiyor.} PRS bir DL sinyali olduğu için UL değişmedi.\\
+\textbf{(4) Açık soru: sembol sayısı neden etkisiz?} 12 sembollük PRS ile 4 sembollük PRS \emph{aynı} kaybı verdi (43,8\,Mbps). Kuramda 4 sembol daha az kaynak kaplamalı. Olası açıklama:
+PDSCH tahsisinin zaman ekseni sabit bir sembol aralığına yayılıyor ve PRS ile çakışan PRB'ler o slotta tümden kullanılamıyor. Bu \textbf{doğrulanmadı}, OCUDU'daki PDSCH tahsis koduna (\kod{lib/scheduler/ue_scheduling/}) bakılarak cevaplanmalı.
+Cevap, ``sensing kaynak payı'' tanımımızı doğrudan etkiler (TR~38.765'teki Tip~3 kaynak!).
+\end{bulgu}
+
+\begin{dikkat}[Bu ölçümün sınırları]
+\textbf{(i)} Her koşul \emph{tek koşu}, 15 saniyelik ortalama; tekrarlayıp hata çubuğu eklemek gerekir. (Betikleri taşıdıktan sonra $T=20$ koşusunu bir kez daha çalıştırdık ve \emph{aynı} değerleri aldık: 56\,Mbps, 950 blok/s. Yani bu ortamda koşular arası oynaklık küçük görünüyor, ama bunu 5 koşuyla kanıtlamak gerekir.) \textbf{(ii)} WSL2 gerçek zamanlı değil; log'da \texttt{Real-time failure in RU: received late DL request} uyarıları vardı.
+\textbf{(iii)} \texttt{testmode} gerçek radyo, gerçek kanal ve gerçek UE içermez: yalnızca MAC/PHY'yi uyarır. Sayıların \emph{mutlak değeri} (59\,Mbps) gerçek bir sistem için geçerli değildir; \emph{eğilim} geçerlidir.
+\textbf{(iv)} Bu deney sensing'i değil, yalnızca \emph{PRS'in kaynak maliyetini} ölçer. Alıcı tarafı (yankıyı işleyen) yoktur.
+\end{dikkat}
+
+\subsection{Slicing: PRB oranıyla kaynak ayırma}\label{sec:slicing}
+
+OCUDU'da kullanıcı trafiği \emph{dilimlenebilir} (network slicing). Her dilim için yapılandırmada (\texttt{du\_high\_config.h}, \texttt{du\_high\_unit\_cell\_slice\_sched\_config}):
+\begin{itemize}
+\item \texttt{min\_prb\_policy\_ratio}: dilime garanti edilen en az PRB yüzdesi,
+\item \texttt{max\_prb\_policy\_ratio}: en çok PRB yüzdesi,
+\item \texttt{ded\_prb\_policy\_ratio}: dilime \emph{ayrılmış} (dedicated) PRB yüzdesi,
+\item \texttt{priority}: dilim önceliği.
+\end{itemize}
+Ayrıca çalışma anında dilim oranı \texttt{rrm\_policy\_ratio\_set} uzaktan komutuyla değiştirilebilir. Scheduler'ın içinde \texttt{inter\_slice\_scheduler} dilimleri sıralar, \texttt{intra\_slice\_scheduler} dilimin içinde dağıtır.
+Scheduler politikaları: \texttt{time\_rr} (round-robin) ve \texttt{time\_qos} (QoS-farkında, PF katsayısı yapılandırılabilir).
+
+\textbf{Fikir (denenmedi):} ``sensing'' için bir dilim tanımlayıp \texttt{ded\_prb\_policy\_ratio} ile kaynak ayırmak, PRS'e alternatif ve \emph{koda dokunmadan} bir sensing-yükü emülasyonu olabilir.
+Bunun gerçekten iş görüp görmediği bir pilot görevdir (Bölüm~\ref{sec:pilot}).
+
+\subsection{Nereye ekleme yapabiliriz?}\label{sec:ekleme}
+
+Gerçek bir kod tabanına ekleme yaparken \textbf{en az değişiklikle başlayıp gerekirse artırmak} esastır. Dört seviye:
+
+\begingroup\sffamily\small
+\begin{xltabular}{\textwidth}{@{}p{0.5cm}p{2.9cm}p{3.6cm}Xp{1.5cm}@{}}
+\toprule
+ & \textbf{Seviye} & \textbf{Ne yapılır} & \textbf{Ne öğrenir/elde ederiz} & \textbf{Emek} \\
+\midrule
+A & \textbf{Yapılandırma (kod yok)} & \texttt{prs:} bölümünü ve dilimleri YAML'da ayarlayıp \texttt{testmode} ile ölç & PRS yükünün haberleşmeye maliyeti (\textbf{yaptık}, Şekil~\ref{fig:ocudu-prs}) & \textcolor{good}{düşük} \\
+B & \textbf{Ölçüm/log ekleme} & Scheduler metriklerinden PRS'li slot oranı, kaybolan PRB, Tip~1/2/3 kaynakları çıkarmak & TR~38.765'in ``sensing kaynak oranı'' metriğini \emph{gerçek kodda} hesaplamak & \textcolor{good}{düşük--orta} \\
+C & \textbf{Politika ekleme} & Yüke göre PRS periyodunu/bandını uyarlayan basit bir kural ($\alpha$ yük arttıkça küçülür) & H3: \emph{uyarlanır} politikanın sabitten iyi olup olmadığı & \textcolor{warn}{orta--yüksek} \\
+D & \textbf{Alıcı tarafı sensing} & Yankı işleme (range-Doppler), SenF/NsAP arayüzü & Tam ISAC. OCUDU'da yok; bizim kapsamımız dışı & \textcolor{bad}{çok yüksek} \\
+\bottomrule
+\end{xltabular}
+\endgroup
+
+\textbf{Önerimiz:} \textbf{A} ve \textbf{B}'yi hedefleyin; \textbf{C}'yi ``zaman kalırsa'' bırakın; \textbf{D}'yi yalnızca \emph{tasarım diyagramı} olarak (bkz.\ Bölüm~\ref{sec:senf}) yapın.
+Bunun nedeni basit: ana sorumuz haberleşme tarafına etkiyi ölçmek, A--B bunu zaten verir.
+
+\subsubsection{Kod geliştirme döngüsü (A ve B için)}
+
+\begin{lstlisting}
+# 1) Kodu degistir (Windows'ta VS Code ile, Remote-WSL uzerinden)
+cd ~/ehb415/ocudu && code .
+
+# 2) Sadece gnb'yi yeniden derle (degisen dosyalar icin hizli, ccache sayesinde)
+cd ~/ehb415/ocudu/build && make -j4 gnb
+
+# 3) Calistir (yapilandirma dosyalarini birlestirebilirsin: -c a.yml -c b.yml)
+./apps/gnb/gnb -c /mnt/c/Users/<kullanici>/Desktop/EHB415/kurulum/ocudu_testmode.yml
+# gNB acildiktan sonra konsola "t" yazip Enter: metrik tablosu gorunur (bu makinede boyle gozlendi)
+\end{lstlisting}
+
+\begin{dikkat}[Gerçek bir geliştirici gibi çalış]
+Her değişiklikten sonra \texttt{git diff} ile ne değiştiğine bak ve \emph{küçük adımlarla} ilerle: bir ölçüm satırı ekle, derle, çalıştır, sonucu gör. Büyük değişiklikleri tek seferde yapmak,
+OCUDU gibi yüz binlerce satırlık bir kod tabanında hatayı bulmayı imkânsız hale getirir. Ayrıca kendi değişikliklerini \emph{yama (patch) dosyası} olarak saklayın; OCUDU deposunun kendisini projemizin reposuna kopyalamıyoruz.
+\end{dikkat}

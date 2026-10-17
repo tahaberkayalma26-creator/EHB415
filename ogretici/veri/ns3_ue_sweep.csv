@@ -1,0 +1,6 @@
+ue_per_gnb,flows,mean_flow_throughput_mbps,mean_flow_delay_ms,total_throughput_mbps
+1,1,10.24,0.276,10.2
+2,2,56.23,0.589,112.5
+5,5,43.93,9.970,219.7
+10,10,23.83,57.927,238.3
+20,20,14.41,123.603,288.2

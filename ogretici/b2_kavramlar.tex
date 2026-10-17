@@ -1,0 +1,166 @@
+\section{Temel kavramlar}\label{sec:kavram}
+
+Bu bölüm, proje boyunca duyacağınız her terimi sıfırdan anlatır. Zorlanırsanız Ek~\ref{ek:sozluk}'teki sözlüğe bakın.
+
+\subsection{5G NR radyo kaynak ızgarası}\label{sec:grid}
+
+5G NR'de radyo kaynağı bir \textbf{zaman--frekans ızgarasıdır}:
+\begin{itemize}
+\item \textbf{Zaman ekseni:} bir \textbf{slot} 14 \textbf{OFDM sembolünden} oluşur. Slot süresi alt taşıyıcı aralığına (SCS) bağlıdır:
+  15\,kHz'de 1\,ms, 30\,kHz'de 0,5\,ms.
+\item \textbf{Frekans ekseni:} 12 alt taşıyıcı bir \textbf{PRB}'yi (Physical Resource Block) oluşturur. 20\,MHz'lik, 15\,kHz'lik bir hücrede yaklaşık 106 PRB vardır.
+\item En küçük birim \textbf{kaynak elemanı (RE)}: 1 sembol $\times$ 1 alt taşıyıcı.
+\end{itemize}
+
+Izgaranın her bölgesinin bir görevi vardır:
+
+\begingroup\sffamily\small
+\begin{xltabular}{\textwidth}{@{}p{2.2cm}X@{}}
+\toprule
+\textbf{Kanal/sinyal} & \textbf{Görevi} \\
+\midrule
+PDSCH & Kullanıcı verisi (indirme, \emph{downlink}). Throughput'u belirleyen kaynak. \\
+PDCCH & Kontrol: hangi kullanıcı hangi PRB'yi alıyor? Slotun ilk sembollerinde. \\
+SSB & Senkronizasyon: telefonlar hücreyi bulsun diye periyodik yayın. \\
+PRS & \textbf{Konumlandırma referans sinyali} (Rel-16). Bilinen bir dizi içerir, bu yüzden \emph{radar gibi} kullanılabilir. \\
+SRS & Telefonun gönderdiği (yukarı bağlantı) referans sinyali. Kanal ölçümü için. \\
+\bottomrule
+\end{xltabular}
+\endgroup
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.88\textwidth]{sekiller/fig_grid.pdf}
+\caption{Şematik kaynak ızgarası (8 slot). Turuncu bloklar slot 1 ve 5'teki sensing/PRS sinyali: kapladığı PRB'ler o slotta kullanıcı verisi için kullanılamaz.
+Bu şema OCUDU'da PRS periyodu $T=4$ slot ve ofset 1 olan gerçek bir yapılandırmayı temsil eder.}
+\label{fig:grid}
+\end{figure}
+
+\textbf{Sensing bu ızgarada nasıl görünür?} Sensing için gönderilen sinyal (örneğin PRS), ızgaranın bir bölgesini kaplar. Orası artık kullanıcı verisi taşıyamaz.
+Ne kadar bölge kaplandığı, \textbf{sensing kaynak payı} $\alpha$'dır. Bu projenin merkezindeki sayı budur.
+
+\subsection{gNB'nin iç yapısı: CU, DU, RU}\label{sec:gnb}
+
+Bir gNB tek parça değildir. Açık RAN mimarisinde (O-RAN) işlevler katmanlara bölünür:
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.78\textwidth]{sekiller/oran_gnb_arch.jpg}
+\caption{O-RAN gNB mimarisi. Kaynak: OCUDU deposu, \texttt{lib/oran\_gnb\_arch.jpg} (SPDX: BSD-3-Clause-Open-MPI, Software Radio Systems Limited).
+Biz özellikle \textbf{O-DU-high} içindeki \textbf{MAC} (scheduler orada) ve \textbf{O-DU-low}'daki \textbf{PHY} ile ilgileniyoruz.}
+\label{fig:oran}
+\end{figure}
+
+\begingroup\sffamily\small
+\begin{xltabular}{\textwidth}{@{}p{2.3cm}X@{}}
+\toprule
+\textbf{Parça} & \textbf{Ne yapar?} \\
+\midrule
+CU-CP / CU-UP & Merkezi birim: kontrol düzlemi (RRC, bağlantı yönetimi) ve kullanıcı düzlemi (veri yönlendirme, SDAP/PDCP). Çekirdek ağla konuşur. \\
+DU-high & RLC ve \textbf{MAC}. MAC'in içindeki \textbf{scheduler}, her slotta kaynakları kullanıcılara dağıtır. \\
+DU-low & PHY (fiziksel katman): modülasyon, kodlama, FFT. PRS sinyalini üreten kod burada. \\
+RU & Radyo: antenler ve RF. Bizde gerçek RU yok; yazılımla taklit ediliyor (\texttt{ru\_dummy}, ZMQ). \\
+\bottomrule
+\end{xltabular}
+\endgroup
+
+\subsection{Scheduler: slotta kim ne alır?}\label{sec:sched}
+
+\textbf{Scheduler}, \emph{her slotta} (örneğin her 1\,ms) bir karar verir: hangi kullanıcı hangi PRB'leri, hangi modülasyonla alacak?
+Bu kararın sonucu bir ``tahsis listesi''dir. Çok kullanıcılı bir ağda throughput'u ve gecikmeyi esas olarak scheduler belirler.
+
+Yaygın politikalar:
+\begin{itemize}
+\item \textbf{Round-Robin (RR):} herkese sırayla.
+\item \textbf{Proportional Fair (PF):} kanalı iyi olana öncelik verir ama kimseyi aç bırakmaz. En yaygın politika.
+\item \textbf{QoS-farkında (örn.\ M-LWDF, EXP/PF):} gecikme bütçesi yaklaşan paketlere öncelik. (Capozzi vd.~\cite{capozzi}'nin taraması bu aileyi anlatır.)
+\end{itemize}
+
+\textbf{Neden önemli?} Sensing sinyali, scheduler'ın dağıtabileceği kaynak havuzundan düşer. Yani sensing bir \emph{scheduler problemi}dir:
+sensing kaynaklarını önceden mi ayırırız, yoksa yük arttıkça mı küçültürüz?
+
+\subsection{OFDM radar: yankıdan menzil ve hız}\label{sec:radar}
+
+OFDM sinyali (5G'nin kullandığı) bir radar olarak da çalışır. Fikir şu:
+
+\begin{enumerate}
+\item gNB bilinen bir OFDM sinyali gönderir ($X$).
+\item Hedeften yansıyan sinyal ($Y$) gecikmiş ve Doppler kaymış olarak geri gelir.
+\item $H = Y/X$ (kanal tahmini) hesaplanır. Alt taşıyıcılar arasındaki \textbf{faz eğimi gecikmeyi (menzili)}, semboller arasındaki \textbf{faz eğimi Doppler'i (hızı)} verir.
+\item Bir \textbf{2 boyutlu FFT} bu iki eğimi bir \textbf{range-Doppler haritasına} çevirir. Hedef haritada bir tepe noktası olarak görünür.
+\end{enumerate}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.78\textwidth]{sekiller/fig_rd_map.pdf}
+\caption{\textbf{Simülasyon:} iki hedefli (120\,m, +25\,m/s ve 260\,m, $-18$\,m/s) bir OFDM radarın range-Doppler haritası.
+Parametreler TR 38.765 Ek~A ile uyumlu: 4,9\,GHz, 30\,kHz SCS, 1024 alt taşıyıcı ($\approx$ 30,7\,MHz), 128 sembol. Halkalar gerçek konumdur; tepeler halkaların içine düşer.
+Betik: \texttt{ogretici/betikler/make\_figs.py}.}
+\label{fig:rd}
+\end{figure}
+
+\textbf{Çözünürlük}, iki hedefi ayırt etme yeteneğidir ve iki şeye bağlıdır:
+\begin{equation}
+\Delta R=\frac{c}{2W},\qquad \Delta v=\frac{\lambda}{2\,M\,T_{sym}}
+\end{equation}
+$W$: sensing sinyalinin bant genişliği, $M$: gözlenen OFDM sembol sayısı, $T_{sym}$: sembol süresi, $\lambda$: dalga boyu.
+Bu denklemler Lin~\cite{lin}'in IV.\ bölümünde ve Dickerson vd.~\cite{dickerson}'in Tablo~II'sinde de geçer.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.92\textwidth]{sekiller/fig_resolution.pdf}
+\caption{Çözünürlük, sensing'e verdiğimiz kaynakla belirlenir. \textbf{Daha çok bant ($W$) $\rightarrow$ daha ince menzil.
+Daha çok sembol ($M$) $\rightarrow$ daha ince hız.} Bu yüzden ``sensing'e kaynak vermek'' sensing kalitesinin doğrudan sebebidir.}
+\end{figure}
+
+\begin{pilot}[Kendi gözünle gör]
+\texttt{kurulum\textbackslash sionna\_dogrulama.py} dosyasını çalıştırın. Gerçek hedef 120\,m ve 25\,m/s'ydi; betik hedefi 122,1\,m ve 25,9\,m/s olarak buldu.
+Hata, çözünürlük hücresinin (4,88\,m, 6,47\,m/s) içinde. \textbf{Soru:} bant genişliğini 4~kat artırsak menzil hatası ne olur? (Cevap: yaklaşık 4~kat azalır, formülden.)
+\end{pilot}
+
+\subsection{Sensing sinyali olarak ne kullanılır?}\label{sec:sinyal}
+
+Sensing için yeni bir sinyal icat etmek yerine, 5G'de zaten olan ve alıcının \emph{önceden bildiği} sinyaller kullanılır
+(bilinen bir sinyal olmazsa $H=Y/X$ hesaplanamaz):
+
+\begingroup\sffamily\small
+\begin{xltabular}{\textwidth}{@{}p{2cm}XX@{}}
+\toprule
+\textbf{Sinyal} & \textbf{Avantaj} & \textbf{Sorun} \\
+\midrule
+PRS (DL) & Geniş bant, seyrek yapılandırılabilir, standart (Rel-16). Radar için en çok çalışılan aday \cite{wei,nist,khos}. & Comb yapısı \emph{hayalet hedef (ghost target)} üretebilir \cite{khos}. \\
+DMRS (DL, PDSCH içinde) & Veri sinyaliyle birlikte gelir: sensing neredeyse bedava. & Seyrek, yalnızca veri olan yerde var. \\
+SRS (UL) & Telefon gönderir; bistatic/pasif sensing mümkün \cite{gurung}. & Telefonun gücü ve zamanlaması sınırlı. \\
+Özel sinyal (örn.\ ZC) & Tasarım serbest, iyi korelasyon. & Standartta yok; ek kaynak ister \cite{dickerson}. \\
+\bottomrule
+\end{xltabular}
+\endgroup
+
+\textbf{OCUDU'da PRS zaten var} (Bölüm~\ref{sec:ocudu}): hem MAC'te zamanlayıcısı hem PHY'de üretici kodu mevcut. Bu, projenin en önemli teknik bulgularından biridir.
+
+\subsection{Metrikler: neyi ölçüyoruz?}\label{sec:metrik}
+
+İki taraf için iki metrik ailesi:
+
+\begingroup\sffamily\small
+\begin{xltabular}{\textwidth}{@{}p{3.1cm}Xp{3.2cm}@{}}
+\toprule
+\textbf{Taraf} & \textbf{Metrik} & \textbf{Nereden?} \\
+\midrule
+\multirow{4}{*}{Sensing}
+ & Kaçırma olasılığı $P_{md}$ (hedef var, bulunamadı) & TR 38.765 \S4.1 \\
+ & Yanlış alarm Tip~1 $P_{f1}$ (hedef yok, tespit var) & TR 38.765 \S4.1 \\
+ & Yanlış alarm Tip~2 $P_{f2}$ (tespit var, ama gerçek hedefle eşleşmiyor) & TR 38.765 \S4.1 \\
+ & Yatay/dikey konum hatası, hız hatası & TR 38.765 \S4.1 \\
+\midrule
+\multirow{3}{*}{Haberleşme}
+ & Throughput, gecikme, paket kaybı, adalet (fairness) & Capozzi vd.\ \cite{capozzi} \S V \\
+ & Kaynak kullanımı & ns-3, OCUDU çıktıları \\
+\midrule
+Ödünleşim & \textbf{Sensing kaynak oranı} $\alpha$ (Tip~1,2,3 kaynaklar, Seçenek~1 ve~2) & TR 38.765 \S6.2 \\
+\bottomrule
+\end{xltabular}
+\endgroup
+
+TR~38.765'in hedefleri (Tablo~4.2-1): $P_{md}$, $P_{f1}$, $P_{f2}\leq\%5$, yatay ve dikey konum hatası 10\,m (\%90 güvenle), hız hatası 5\,m/s (\%90 güvenle).
+Bu eşikler, sensing tarafında ``yeterince iyi''nin ne demek olduğunu söyler.

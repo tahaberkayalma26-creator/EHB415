@@ -1,7 +1,8 @@
 # 03: Sionna ve Sionna RT (Windows, yerel Python, CPU)
 
 > **Doğrulama durumu:** Bu dokümandaki tüm adımlar bu makinede çalıştırıldı ve doğrulandı
-> (Sionna çekirdeği, OFDM radar testi, LLVM kurulumu, Sionna RT yol çözücü).
+> (Sionna çekirdeği, OFDM radar testi, LLVM kurulumu, Sionna RT yol çözücü). İlk doğrulama Python 3.10.11 ile, ardından ortam
+> **Python 3.11.9 ile sıfırdan yeniden kuruldu ve aynı çıktılar alındı** (tahmin 122,1 m / 25,9 m/s; Sionna RT 12 yol; 2026-10-17).
 
 **Ne kuruluyor:** Python sanal ortamı + Sionna 1.2.2 + sionna-rt 1.2.2 + TensorFlow 2.21.0 + Mitsuba 3.8.0 + Dr.Jit 1.3.1 + JupyterLab 4.6.4 + LLVM 23.1.3.
 
@@ -12,8 +13,9 @@ py -0p
 python --version
 ```
 
-- 3.10, 3.11 veya 3.12 uygundur. Bu makinede 3.10.11 kullanıldı. **3.13 ile denemedik**, kullanma.
-- Yoksa: `winget install --id Python.Python.3.12 -e`, ardından yeni bir PowerShell aç.
+- **Önerilen: Python 3.11** (bu makinede 3.11.9 ile doğrulandı; önceki doğrulama 3.10.11 ile de aynı sonucu verdi). **3.13 ile denemedik**, kullanma.
+- Yoksa: `winget install --id Python.Python.3.11 -e --scope user`, ardından yeni bir PowerShell aç.
+- `py -3.11 -m venv ...` ile belirli bir sürümü seçebilirsin (birden çok Python kuruluysa).
 
 ## 2. Sanal ortam oluştur (global Python'a dokunmadan)
 
@@ -31,8 +33,12 @@ Bu makinede global Python'da PyTorch 2.10 vardı; sanal ortam sayesinde karışm
 ## 3. Paketleri kur
 
 ```powershell
-C:\Users\$env:USERNAME\venvs\ehb415\Scripts\python.exe -m pip install sionna jupyterlab matplotlib scipy
+C:\Users\$env:USERNAME\venvs\ehb415\Scripts\python.exe -m pip install --retries 10 --timeout 60 "sionna==1.2.2" jupyterlab matplotlib scipy
 ```
+
+> **`sionna==1.2.2` sabitlemesi önemli.** Python 3.11'de `pip install sionna` (sürüm belirtmeden) en yeni sürümü, **Sionna 2.2.0**'ı seçer
+> (kurulum sırasında PyTorch indirdi; bu sürümün API'sini incelemedik, betiklerimiz 1.2.2 içindir). Python 3.10'da pip 2.x'i göremediği için 1.2.2 kurulmuştu.
+> `--retries/--timeout` zayıf ağlarda kopmaları tolere etmek içindir (bu makinede ağ aralıklı koptu).
 
 - Süre: **15–30 dakika** (TensorFlow ve Mitsuba büyük). İlk 10 dakika sessiz görünebilir.
 - Sanal ortam sonunda ≈ **2,1 GB** yer kaplar.

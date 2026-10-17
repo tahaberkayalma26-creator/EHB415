@@ -3,8 +3,8 @@
 > **Doğrulama durumu (2026-10-14):**
 > - **Doğrulandı:** bağımlılık kurulumu, kaynak indirme, Clang 18.1.3 ile derleme (ZeroMQ açık), `gnb` ikilisinin oluşması ve
 >   `./apps/gnb/gnb --version` çıktısı: `OCUDU 5G gNB version 26.10.0 (e0db566)`.
-> - **Doğrulanmadı:** `testmode` yük testi (6. adım) ve srsUE + Open5GS ile uçtan uca test (7. adım). Bu adımlar resmi dokümandan aktarıldı, bu makinede **çalıştırılmadı**.
->   Yani gNB'nin bir hücreyi gerçekten ayağa kaldırdığı henüz gösterilmedi.
+> - **Doğrulandı (2026-10-17):** `testmode` ile radyosuz çalıştırma (6. adım): gNB `==== gNB started ===` verdi ve hücre (n3, 20 MHz) açıldı.
+> - **Doğrulanmadı:** srsUE + Open5GS ile uçtan uca test (7. adım). Bu adım resmi dokümandan aktarıldı, bu makinede **çalıştırılmadı**.
 
 **Ön koşul:** [02-wsl2-ubuntu.md](02-wsl2-ubuntu.md) tamamlanmış olmalı. Komutlar Ubuntu terminalinde çalışır.
 
@@ -100,11 +100,31 @@ Depoda kullanıma hazır yapılandırma dosyaları var: `~/ehb415/ocudu/configs/
 
 Mimari dokümantasyonu: `https://docs.ocudu.org/dev_guide/codebase_guide/` ve `.../dev_guide/architecture_guide/`.
 
-## 6. [Doğrulanmadı] Radyosuz yük testi (`testmode`)
+## 6. Radyosuz yük testi (`testmode`): DOĞRULANDI (2026-10-17)
 
-Resmi doküman: `https://docs.ocudu.org/tutorials/testmode/`. gNB'yi radyo ve çekirdek ağ olmadan çalıştırmak için yapılandırma dosyasında
-`ru_dummy` ve `no_core` seçeneklerini kullanır ve `testmode` ile UE trafiği taklit eder. Bu, derlemenin ve gNB'nin çalıştığını gösteren
-en az bağımlılıklı testtir. **Bu makinede henüz yapılmadı;** ilk deneyen kişi sonucu bu dokümana eklesin.
+Resmi doküman: `https://docs.ocudu.org/tutorials/testmode/`. gNB'yi radyo ve çekirdek ağ olmadan çalıştırmak için `ru_dummy` ve `no_core` kullanılır,
+`test_mode` ile 1 sanal UE trafiği taklit edilir. Bu repodaki hazır yapılandırma: `kurulum/ocudu_testmode.yml`
+(taban: `ocudu/configs/gnb_rf_b210_fdd_srsUE.yml`; `ru_sdr` yerine `ru_dummy`, `amf` yerine `no_core`).
+
+```bash
+cd ~/ehb415/ocudu/build/apps/gnb
+./gnb -c /mnt/c/Users/<kullanici>/Desktop/EHB415/kurulum/ocudu_testmode.yml
+```
+
+Bu makinede beklenen çıktı ve sonuç:
+
+```
+--== OCUDU gNB (commit e0db566) ==--
+Cell pci=1, bw=20 MHz, 1T1R, dl_arfcn=368500 (n3), dl_freq=1842.5 MHz, dl_ssb_arfcn=368410, ul_freq=1747.5 MHz
+==== gNB started ===
+Type <h> to view help
+```
+
+Durdurmak için `Ctrl+C`. Notlar:
+- `Warning: Scheduling priority of thread ... not changed. Cause: Not enough privileges.` uyarıları zararsızdır (gerçek zamanlı öncelik için `sudo` gerekir, WSL'de önemli değil).
+- Log dosyasında `Real-time failure in RU: received late DL request` uyarıları görülür; WSL2 gerçek zamanlı olmadığı için beklenen bir durumdur.
+- İlk denemede `pdsch/pusch mcs_table: qam64` ayarı eksik olduğu için `256QAM MCS table cannot be used for PDSCH with fallback DCI format` hatası alındı; bu repodaki dosyada düzeltilmiştir.
+- Tabloyla (`pci rnti | cqi ri mcs brate ...`) gösterilen anlık DL/UL metrikleri **etkileşimli terminalde** (TTY) görünür. Bizim otomatik denememiz TTY olmadan çalıştığı için tabloyu yakalamadık; tabloyu görmek için komutu doğrudan Ubuntu terminalinde çalıştır.
 
 ## 7. [Doğrulanmadı] srsUE + Open5GS ile uçtan uca (ZMQ)
 

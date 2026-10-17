@@ -1,0 +1,127 @@
+\appendix
+\section{Sözlük}\label{ek:sozluk}
+
+\begingroup\sffamily\small
+\begin{xltabular}{\textwidth}{@{}p{3.2cm}X@{}}
+\toprule
+\textbf{Terim} & \textbf{Anlamı} \\
+\midrule
+gNB & 5G baz istasyonu. \\
+UE & Kullanıcı cihazı (telefon). \\
+NR & 5G'nin radyo arayüzü (New Radio). \\
+FR1 & 6\,GHz altı frekans aralığı (bizim senaryolar: 4--4,9\,GHz, band n3 testlerinde 1,8\,GHz). \\
+OFDM & Veriyi çok sayıda dar alt taşıyıcıya yayan modülasyon. 5G'nin ve OFDM radarın temeli. \\
+SCS & Alt taşıyıcı aralığı (15, 30, 60, 120\,kHz). Slot süresini belirler. \\
+Slot / sembol & Zaman birimi: bir slot 14 OFDM sembolüdür. \\
+PRB & 12 alt taşıyıcılık frekans birimi (kaynak bloğu). \\
+RE & Kaynak elemanı: 1 sembol $\times$ 1 alt taşıyıcı. \\
+PDSCH / PDCCH & DL veri / DL kontrol kanalı. \\
+SSB & Senkronizasyon sinyali bloğu (hücreyi bulmak için). \\
+PRS & Konumlandırma referans sinyali (Rel-16); sensing için aday. \\
+SRS / DMRS & UL ses/kanal ölçüm sinyali / veri çözme referans sinyali. \\
+Scheduler & Slot başına kaynakları kullanıcılara dağıtan MAC bileşeni. \\
+RR / PF & Round-Robin / Proportional Fair scheduler politikaları. \\
+MAC / PHY / RLC / PDCP & Protokol katmanları (MAC: zamanlama; PHY: fiziksel işlem). \\
+CU / DU / RU & Merkezi / dağıtık / radyo birimi (gNB'nin bölünmüş yapısı). \\
+O-RAN, RIC & Açık RAN mimarisi; RAN Akıllı Denetleyicisi (dışarıdan kontrol/ölçüm). \\
+FAPI & MAC ile PHY arasındaki arayüz. \\
+F1, E1, NG & CU--DU, CU-CP--CU-UP ve gNB--çekirdek ağ arayüzleri. \\
+ISAC & Entegre sensing ve haberleşme. \\
+Monostatic / bistatic & Gönderici ve alıcının aynı / ayrı yerde olduğu radar düzeni. \\
+Range-Doppler haritası & Menzil ve hızı gösteren iki boyutlu radar çıktısı. \\
+RCS & Radar kesit alanı: hedefin ne kadar yansıttığı. \\
+Clutter & Hedef olmayan yansımalar (bina, ağaç). \\
+Hayalet hedef (ghost) & Sinyal yapısından doğan sahte tepe noktası. \\
+Öz-girişim & Vericinin kendi alıcısına sızan sinyali (monostatic sensing'in ana sorunu). \\
+SNR / SINR & Sinyal-gürültü / sinyal-girişim-gürültü oranı. \\
+$P_{md}$, $P_{f1}$, $P_{f2}$ & Kaçırma olasılığı, yanlış alarm tip~1 ve tip~2 (TR 38.765). \\
+CRLB & Cramér--Rao sınırı: bir kestirimin ulaşabileceği teorik en iyi doğruluk. \\
+$\alpha$ (sensing kaynak payı) & Sensing'e giden kaynak oranı; projenin ortak ekseni. \\
+Tip~1/2/3 kaynak & TR 38.765'te sensing kaynak oranı tanımı (Bölüm~\ref{sec:3gpp}). \\
+SenF / NsAP & Çekirdekteki sensing işlevi / gNB--SenF protokolü (Rel-20). \\
+TR / TS & 3GPP Teknik Rapor / Teknik Şartname. \\
+Release (Rel-N) & 3GPP standart sürümü. \\
+WSL2 & Windows içinde çalışan Linux (Ubuntu) ortamı. \\
+ZMQ / testmode / ru\_dummy & OCUDU'da radyosuz çalıştırma yolları (sanal radyo, test UE, sahte RU). \\
+Pareto & Bir hedefi iyileştirirken diğerini kötüleştirmeden daha iyi bir nokta kalmaması. \\
+\bottomrule
+\end{xltabular}
+\endgroup
+
+\section{Soru kartlarının beklenen cevapları (yönetici için)}\label{ek:cevap}
+
+\begin{dikkat}[Önce kendiniz cevaplayın]
+Pilot yapan kişiler cevapları yazmadan bu sayfaya bakmamalı. Aşağıdakiler \emph{referans cevaplardır}, tek doğru ifade değil.
+\end{dikkat}
+
+\subsection*{Pilot-1 (OCUDU)}
+\begin{enumerate}
+\item PRS tüm bandın 104/106 PRB'sini kapladığı için, PRS'li slotta kullanıcı verisine neredeyse PRB kalmaz. $T=4$'te her 4 slottan biri bu durumdadır, yani kapasitenin yaklaşık $1/4$'ü gider (ölçülen: 59,0 $\rightarrow$ 43,8\,Mbps, \%26).
+\item PRS 52 PRB'de iken scheduler kalan 54 PRB'ye veri vermeye devam eder. Kaybolan kaynak oranı yaklaşık $\frac14\times\frac{52}{106}\approx\%12{,}3$; ölçülen \%13,6.
+\item PRS'in kapladığı sembol $\times$ PRB \textbf{Tip~1}'dir; PRS veri taşımadığı için \textbf{Tip~2} yoktur. 4 ve 12 sembollü PRS'in aynı kaybı vermesi, PRS dışındaki sembollerin de kullanılamadığına işaret eder; bu \textbf{Tip~3} benzeri bir kayıptır. \emph{Nedeni doğrulanmadı} (R4'ün görevi).
+\end{enumerate}
+
+\subsection*{Pilot-2 (ns-3)}
+\begin{enumerate}
+\item Sunulan trafik (UE başına yaklaşık 10 veya 102\,Mbps) hücre kapasitesini aştıkça kuyruklar uzar. Ölçülen gecikme büyük ölçüde \emph{kuyruk bekleme} gecikmesidir.
+\item Radyo kapasitesi sonludur; yük kapasiteyi aşınca yeni UE'ler toplamı artırmaz, yalnızca kapasiteyi bölüşür. Bu yüzden eğri doygunluğa yaklaşır.
+\item Önerilen: (b), sensing'i yüksek öncelikli periyodik trafik olarak eklemek: (a)'dan daha gerçekçi (zamansal yapı), (c)'den çok daha ucuz. (c), zaman kalırsa ve OCUDU ile tutarlılık için.
+\end{enumerate}
+
+\subsection*{Pilot-3 (Sionna/radar)}
+\begin{enumerate}
+\item $\Delta v \propto 1/M$ olduğundan 128'den 32'ye inince hız çözünürlüğü 4~kat kabalaşır.
+\item Eksik semboller, zaman ekseninde düzensiz örnekleme demektir; FFT'de bu, enerjiyi hedeften yan loblara dağıtır (spektral sızıntı).
+\item Düzenli ve boşluksuz sensing sembolleri: sensing sinyalinin periyodik ve zaman ekseninde kesintisiz olması, haberleşme scheduler'ı tarafından \emph{öncelikli rezerve edilmesi} (OCUDU'daki PRS/SRS gibi).
+\end{enumerate}
+
+\section{Komut kartı}\label{ek:komut}
+
+\begingroup\sffamily\small
+\begin{xltabular}{\textwidth}{@{}p{3.3cm}X@{}}
+\toprule
+\textbf{İş} & \textbf{Komut} \\
+\midrule
+Ubuntu'ya gir (PowerShell) & \texttt{wsl -d Ubuntu-24.04} \quad (çıkış: \texttt{exit}) \\
+ns-3 klasörü & \texttt{cd \textasciitilde/ehb415/ns-3-dev} \\
+ns-3 örnek & \texttt{./ns3 run "cttc-nr-demo --ueNumPergNb=5"} \\
+ns-3 parametreler & \texttt{./ns3 run "cttc-nr-demo --PrintHelp"} \\
+OCUDU çalıştır & \texttt{cd \textasciitilde/ehb415/ocudu/build/apps/gnb \&\& ./gnb -c <yapilandirma.yml>} \\
+OCUDU derle & \texttt{cd \textasciitilde/ehb415/ocudu/build \&\& make -j4 gnb} \\
+Sionna doğrulama & \texttt{...\textbackslash venvs\textbackslash ehb415\textbackslash Scripts\textbackslash python.exe kurulum\textbackslash sionna\_dogrulama.py} \\
+OCUDU PRS taraması & \texttt{bash ogretici/betikler/ocudu\_prs\_sweep.sh} (yaklaşık 6\,dk; çıktı \texttt{/tmp/prs\_sweep.csv}) \\
+ns-3 UE taraması & \texttt{bash ogretici/betikler/ns3\_ue\_sweep.sh} (yaklaşık 2\,dk; çıktı \texttt{/tmp/ns3\_sweep.csv}) \\
+Şekilleri yeniden üret &\texttt{python ogretici\textbackslash betikler\textbackslash make\_figs.py} (numpy, matplotlib, pandas) \\
+\bottomrule
+\end{xltabular}
+\endgroup
+
+\section{Ölçüm yöntemi ve sınırlar}
+
+\begin{itemize}
+\item \textbf{OCUDU:} \texttt{ogretici/veri/ocudu\_prs\_sweep.csv} (üreten betikler: \texttt{ocudu\_prs\_kos.sh}, \texttt{ocudu\_prs\_sweep.sh}). Her koşu: \texttt{gnb} başlatıldı, 8\,s sonra \texttt{t} gönderildi, 22\,s sonra çıkıldı; son 15 satırın ortalaması alındı. Tek koşu. WSL2, gerçek zamanlı değil. Yapılandırma: \texttt{ogretici/veri/ocudu\_p4\_config.yml}.
+\item \textbf{ns-3:} \texttt{ogretici/veri/ns3\_ue\_sweep.csv}. 1\,s simülasyon, varsayılan tohum, tek koşu. Toplam throughput, akış throughput'larının toplamıdır.
+\item \textbf{Radar simülasyonları:} \texttt{betikler/make\_figs.py}. Tek hedef/iki hedef, ideal kanal, toplamsal beyaz gürültü, sabit SNR; boşluk deneyi 12 tohum ortalaması.
+\item \textbf{D1 modeli:} makalenin denklemleri, makalenin parametreleriyle; iki sayı makaleyle birebir doğrulandı (\%1,66 ve \%13,29).
+\end{itemize}
+
+\begin{thebibliography}{99}\sffamily\small
+\bibitem{tr38765} 3GPP, \emph{TR 38.765: Study on Integrated Sensing and Communication (ISAC) for NR}, V20.0.0, Haziran 2026.
+\bibitem{lin} X.~Lin, ``Integrated Sensing and Communication in 3GPP: Evolution from 5G-Advanced to 6G,'' arXiv:2608.11606, 2026.
+\bibitem{lin20} X.~Lin, ``A Tale of Two Mobile Generations: 5G-Advanced and 6G in 3GPP Release 20,'' arXiv:2506.11828, 2025.
+\bibitem{liu19} Y.~Liu, Y.~Zhang, J.~Zhang \emph{et al.}, ``A Comprehensive Survey of 3GPP Release 19 ISAC Channel Modeling,'' arXiv:2512.03506, 2025. \emph{(Özet düzeyinde okundu.)}
+\bibitem{liu22} F.~Liu, Y.~Cui, C.~Masouros, J.~Xu, T.~X.~Han, Y.~C.~Eldar, S.~Buzzi, ``Integrated Sensing and Communications: Toward Dual-Functional Wireless Networks for 6G and Beyond,'' \emph{IEEE JSAC}, 2022 (arXiv:2108.07165).
+\bibitem{dickerson} C.~Dickerson, W.~Khawaja, I.~Guvenc, ``Adaptive 5G Resource Allocation for Multistatic ISAC-Based UAV Detection and Tracking,'' arXiv:2606.21677, 2026.
+\bibitem{khos} K.~Khosroshahi, P.~Sehier, S.~Mekki, ``Leveraging PRS and PDSCH for Integrated Sensing and Communication Systems,'' arXiv:2408.00667, 2024.
+\bibitem{nist} S.~Blandino, N.~Golmie, A.~Sahoo \emph{et al.}, ``Detecting Airborne Objects with 5G NR Radars,'' arXiv:2505.24763, 2025. Kod: \texttt{github.com/usnistgov/5GNRad} (MATLAB).
+\bibitem{wei} Z.~Wei, Y.~Wang, L.~Ma \emph{et al.}, ``5G PRS-Based Sensing: A Sensing Reference Signal Approach for Joint Sensing and Communication System,'' arXiv:2211.11488, 2022.
+\bibitem{linden} D.~Lindenschmitt, T.~Jung, P.~K.~Kakani, T.~Reissland, N.~Franchi, H.~D.~Schotten, ``Analysis of an Architecture for Integrated Sensing and Communication in 5G OpenRAN,'' arXiv:2509.16917, 2025.
+\bibitem{gurung} A.~K.~Gurung, S.~K.~Sathananthan, ``Multi-UAV Tracking Evaluation Using 5G Uplink Signals on an O-RAN ISAC Simulation Testbed,'' arXiv:2608.10784, 2026.
+\bibitem{siolena} T.~Ropitault, M.~Bordin, P.~Testolina, M.~Polese, P.~Johari, N.~Golmie, T.~Melodia, ``Enabling Site-Specific Cellular Network Simulation Through Ray-Tracing-Driven ns-3,'' arXiv:2508.04004, 2025. Kod: \texttt{github.com/usnistgov/siolena}.
+\bibitem{koutlia} K.~Koutlia, B.~Bojovic, Z.~Ali, S.~Lagen, ``Calibration of the 5G-LENA System Level Simulator in 3GPP reference scenarios,'' arXiv:2205.03278, 2022.
+\bibitem{lena} CTTC, \emph{5G-LENA: the 5G NR module for the ns-3 simulator}, \texttt{5g-lena.cttc.es}; kod: \texttt{gitlab.com/cttc-lena/nr}.
+\bibitem{sionna} J.~Hoydis, S.~Cammerer, F.~Ait Aoudia \emph{et al.}, ``Sionna: An Open-Source Library for Next-Generation Physical Layer Research,'' arXiv:2203.11854, 2022.
+\bibitem{sionnart} F.~Ait Aoudia, J.~Hoydis, M.~Nimier-David \emph{et al.}, ``Sionna RT: Technical Report,'' arXiv:2504.21719, 2025.
+\bibitem{capozzi} F.~Capozzi, G.~Piro, L.~A.~Grieco, G.~Boggia, P.~Camarda, ``Downlink Packet Scheduling in LTE Cellular Networks: Key Design Issues and a Survey,'' \emph{IEEE Commun.\ Surveys \& Tutorials}, vol.~15, no.~2, 2013.
+\bibitem{ocudu} OCUDU Project, \texttt{gitlab.com/ocudu/ocudu}, \texttt{release\_26\_10}; dokümantasyon: \texttt{docs.ocudu.org}.
+\end{thebibliography}

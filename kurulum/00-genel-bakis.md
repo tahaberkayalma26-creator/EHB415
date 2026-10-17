@@ -32,9 +32,9 @@ OCUDU resmi dokümanında "gerçek zamanlı çekirdek desteği olan Linux" ister
 | Windows | 11 Home, 10.0.26200 | Pro/Education da çalışır |
 | WSL | 3.0.3 paketi, WSL2 | |
 | Ubuntu | 24.04.5 LTS | |
-| Python (Windows) | 3.10.11 | 3.10–3.12 uygundur |
+| Python (Windows) | **3.11.9** | Önerilen. 3.10.11 ile de doğrulandı; 3.13 denenmedi |
 | Sionna / sionna-rt | 1.2.2 | |
-| TensorFlow / Keras | 2.21.0 / 3.12.4 | Yerel Windows'ta yalnızca CPU |
+| TensorFlow / Keras | 2.21.0 / 3.15.1 | Yerel Windows'ta yalnızca CPU (Keras 3.12.4 Python 3.10 kurulumunda) |
 | Mitsuba / Dr.Jit | 3.8.0 / 1.3.1 | Sionna RT bağımlılığı |
 | LLVM | 23.1.3 | Sionna RT'nin CPU modu için |
 | ns-3 | **3.48** | 5G-LENA v5.1 bu sürümle uyumlu |

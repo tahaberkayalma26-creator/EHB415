@@ -1,0 +1,144 @@
+\section{Üç araç: ne işe yarar, biz ne yaptırırız?}\label{sec:arac}
+
+\subsection{Sionna: fiziksel katman ve ray tracing}\label{sec:sionna}
+
+\textbf{Sionna}, NVIDIA'nın açık kaynak, TensorFlow tabanlı fiziksel katman kütüphanesidir \cite{sionna}. İki parçası var:
+\begin{itemize}
+\item \textbf{Sionna (çekirdek):} OFDM, MIMO, kanal kodlama, kanal modelleri (bit hata oranı eğrileri gibi bağlantı seviyesi simülasyon).
+\item \textbf{Sionna RT:} 3B bir sahnede (bina, yol) ışın izleme ile \emph{gerçek yer-özel} kanal üretir \cite{sionnart}. Sahnede bir verici ve alıcı koyup hangi yolların oluştuğunu hesaplar.
+\end{itemize}
+
+\textbf{Projedeki rolü:} sensing'in \emph{ne kadar iyi} çalıştığını göstermek. Yani şu eğriyi çıkarmak: ``sensing'e ayrılan bant genişliği ve sembol sayısı arttıkça menzil/hız doğruluğu ve tespit olasılığı nasıl değişir?''
+Bunun ilk adımını Bölüm~\ref{sec:radar}'de zaten attık (range-Doppler haritası, çözünürlük). Resmî Sionna RT öğreticileri: \emph{Introduction to Sionna RT}, \emph{Tutorial on Mobility},
+\emph{Tutorial on Radio Maps}, \emph{Tutorial on Radar Cross Section (RCS)}.
+
+\begin{bulgu}[Sionna ile ilgili iki tuzak (ölçülen)]
+\textbf{(1)} Python 3.11'de \texttt{pip install sionna} en yeni sürümü, \textbf{Sionna 2.2.0}'ı seçiyor (kurulum sırasında PyTorch indirdi; yani muhtemelen farklı bir API, bunu incelemedik). Betiklerimiz 1.2.2 için yazıldığından \texttt{sionna==1.2.2} sabitliyoruz.
+\textbf{(2)} Sionna RT, Windows'ta CPU üzerinde çalışmak için \textbf{LLVM} ister; yoksa \texttt{LLVM-C.dll bulunamadı} hatası verir (\texttt{kurulum/03-sionna-windows.md} bölüm 5).
+\end{bulgu}
+
+\subsubsection{Haberleşme zamanlaması sensing'i bozar mı? (basit deney)}
+
+Haberleşme scheduler'ı, sensing sinyalinin bazı OFDM sembollerini başka kullanıcılara verirse, sensing alıcısı sembol dizisinde \emph{boşluklar} görür.
+Lin~\cite{lin} bunu şöyle özetler: ``sensing fırsatları arasındaki boşluklar Doppler işlemeyi bozar''. Bunu tek hedefli bir OFDM radarla denedik:
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.78\textwidth]{sekiller/fig_gap.pdf}
+\caption{\textbf{Simülasyon (basit model, 12 koşunun ortalaması):} OFDM sembollerinin yüzde kaçı sensing'e kullanılamıyorsa range-Doppler haritasında tepe/yan lob oranı (ne kadar yüksekse o kadar iyi) nasıl düşüyor?
+Rastgele dağılmış boşluklar, aynı oranda ardışık boşluktan \emph{daha çok} zarar veriyor.}
+\label{fig:gap}
+\end{figure}
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.95\textwidth]{sekiller/fig_gap_maps.pdf}
+\caption{Aynı deneyden haritalar. Boşluk arttıkça hedefin etrafında hız ekseni boyunca \emph{sahte yan loblar} oluşur; hedefin gerçek hızı bulanıklaşır.}
+\end{figure}
+
+\begin{dikkat}[Bu bir oyuncak model]
+Bu deney \emph{tek hedef, sabit SNR, ideal kanal, gerçekçi olmayan boşluk dağılımları} ile yapıldı. Sonucun \emph{yönü} (boşluk $\rightarrow$ kötüleşme) literatürle uyumludur,
+ama sayıları (dB) gerçek bir sistem için geçerli değildir. Raporda bu deneyi ``kavramı gösteren simülasyon'' olarak sunun, ``sonuç'' olarak değil.
+\end{dikkat}
+
+\subsection{ns-3 ve 5G-LENA: ağ seviyesi simülasyon}\label{sec:ns3}
+
+\textbf{ns-3}, ayrık olay tabanlı bir ağ simülatörüdür. \textbf{5G-LENA} (\texttt{nr} modülü) onun üstüne eklenen 5G NR modülüdür: gerçek protokol yığınını (PHY, MAC, RLC, PDCP, çekirdek ağ) 3GPP'ye uygun olarak simüle eder \cite{lena}.
+Kalibrasyonu 3GPP referans sonuçlarına karşı yapılmıştır \cite{koutlia}. Büyük bir avantajı: \emph{çok kullanıcılı} bir ağda scheduler etkisini görebilmemiz.
+
+\textbf{Nasıl çalışır?} Bir C++ senaryo dosyası (``örnek'') düğümleri, anten dizilerini, bantları ve trafik akışlarını tanımlar; simülatör çalışır ve her akış için throughput, gecikme, jitter ve paket sayılarını yazar.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.95\textwidth]{sekiller/term_ns3.pdf}
+\caption{Gerçek çıktı: \texttt{./ns3 run "cttc-nr-demo --ueNumPergNb=5"} komutunun son satırları (Ubuntu/WSL2). Her akış için throughput, gecikme, jitter ve alınan paket sayısı.}
+\end{figure}
+
+\begin{bulgu}[ns-3 ölçümü: UE sayısına göre throughput ve gecikme]
+\texttt{cttc-nr-demo} örneğini \texttt{--ueNumPergNb} = 1, 2, 5, 10, 20 ile çalıştırdık (5G-LENA v5.1, ns-3.48, 1\,s simülasyon, tek koşu). Sonuçlar:\par
+\begin{center}
+\sffamily\small
+\begin{tabular}{@{}rrrr@{}}
+\toprule
+UE/gNB & akış & toplam throughput (Mbps) & ort.\ gecikme (ms) \\
+\midrule
+1 & 1 & 10,2 & 0,28 \\
+2 & 2 & 112,5 & 0,59 \\
+5 & 5 & 219,7 & 9,97 \\
+10 & 10 & 238,3 & 57,9 \\
+20 & 20 & 288,2 & 123,6 \\
+\bottomrule
+\end{tabular}
+\end{center}
+\textbf{Yorum:} Örnek, UE'leri iki gruba böler: bir kısmına düşük gecikmeli 10,24\,Mbps trafik, kalanına 102,4\,Mbps ``best effort'' trafik verir (5 UE'de çıktıda 3'üne 10,24 ve 2'sine 102,4\,Mbps verildiğini gördük).
+Yük arttıkça toplam kapasite doygunluğa varır ve gecikme patlar.
+Bu, \emph{kaynaklar azalırsa} ne olacağının bir önizlemesidir: sensing de benzer şekilde kapasite alır.
+\end{bulgu}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.92\textwidth]{sekiller/fig_ns3_ues.pdf}
+\caption{Yukarıdaki tablo grafik olarak (gerçek 5G-LENA ölçümü; veri: \texttt{ogretici/veri/ns3\_ue\_sweep.csv}).}
+\end{figure}
+
+\subsubsection{Analitik model: sensing kaynak payı ve throughput}
+
+Dickerson vd.~\cite{dickerson}, sensing'in kaynak tüketimini şöyle modeller (denklem 9--12):
+\begin{equation}
+\alpha_{sense}=\frac{N_b}{1-OH}\cdot\frac{f_{sense}}{N_{sym/sn}}\cdot\frac{N_{PRB,sense}}{N_{PRB,toplam}},\qquad
+T(\eta)=\min\{\eta,\;1-\alpha_{sense}\}
+\end{equation}
+$N_b$: sensing ışın sayısı, $f_{sense}$: saniyedeki sensing sayısı, $N_{PRB,sense}$: bir sensing dalga biçiminin kapladığı PRB, $OH$: sabit NR kontrol yükü,
+$\eta$: sunulan haberleşme yükü (normalize).
+
+Makalenin parametreleriyle ($N_{PRB,toplam}=270$, $OH=0{,}14$, 14\,000 sembol/s, $N_{ZC}=1291\Rightarrow108$ PRB, $f_{sense}=500$\,Hz) \textbf{makalenin verdiği iki sayıyı elle yeniden hesapladık}:
+tek ışın için $\alpha=\%1{,}66$ ve sekiz ışın için $\alpha=\%13{,}29$ (makalede de aynı değerler).
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.98\textwidth]{sekiller/fig_d1_model.pdf}
+\caption{Dickerson vd.\ modelinin yeniden üretimi. Sol: sensing hızı arttıkça kaynak payı. Sağ: sunulan throughput. 8 ışında yüksek yükte throughput \%86,7'de tavan yapar.}
+\end{figure}
+
+\subsubsection{5G-LENA'ya sensing yükünü nasıl koyarız? (açık tasarım sorusu)}\label{sec:ns3tasarim}
+
+5G-LENA'da hazır bir sensing modeli \textbf{yok}. Sensing yükünü simülasyonda temsil etmenin üç aday yolu var; hangisinin \emph{mümkün ve yeterince doğru} olduğunu \textbf{pilot görev} cevaplayacak:
+
+\begingroup\sffamily\small
+\begin{xltabular}{\textwidth}{@{}p{0.4cm}p{4.0cm}XX@{}}
+\toprule
+ & \textbf{Yol} & \textbf{Artısı} & \textbf{Riski} \\
+\midrule
+a & Bant genişliğini $(1-\alpha)$ ile küçült & Çok basit, kodlama yok & Sensing'in ``zamansal'' yapısını (periyodik, atımlı) hiç temsil etmez \\
+b & Sensing'i yüksek öncelikli periyodik bir trafik akışı olarak ekle & Atımlı yapı ve scheduler etkisi görünür & Gerçek PRB rezervasyonu değil, trafik: yaklaşım \\
+c & Scheduler'ı değiştirip PRB'leri periyodik rezerve et & En gerçekçi (OCUDU'daki PRS gibi) & C++ içinde geliştirme ister; en çok emek \\
+\bottomrule
+\end{xltabular}
+\endgroup
+
+Önerimiz önce \textbf{(a) ve (b)} ile başlamak ve \textbf{(c)'yi, OCUDU ölçümüyle (Bölüm~\ref{sec:ocudu}) tutarlılık kontrolü olarak} ancak zaman kalırsa denemek.
+
+\subsubsection{Sionna'dan ns-3'e kanal köprüsü: SioLENA}
+
+Ropitault vd.~\cite{siolena}, Sionna RT'nin ürettiği çok yollu kanalı (gecikme, genlik, faz, açı) CSV olarak alıp 5G-LENA'nın kanal modeline besleyen \textbf{SioLENA} modülünü yayımladı
+(\texttt{github.com/usnistgov/siolena}; CSV üretici: \texttt{github.com/wineslab/sionna-channel-generator}). Böylece \emph{yer-özel kanallı} ağ simülasyonu mümkün.
+
+\begin{dikkat}[SioLENA'yı kullanmadan önce üç şeyi bil]
+\textbf{(1)} SioLENA deposu \emph{kendi içinde} ns-3.44 ve 5G-LENA v4.0 taşır; bizim ns-3.48 + v5.1 kurulumumuza eklenmez, \emph{ayrı klasörde ayrı derlenir}.
+\textbf{(2)} CSV üretici araç \textbf{Sionna 0.19.2} ve \textbf{Python 3.11+} ister; bizim Sionna 1.2.2 ortamıyla çakışır, ayrı sanal ortam gerekir.
+\textbf{(3)} Bunların hiçbirini henüz kurup denemedik. Bu bir \emph{ikinci aşama} işidir.
+\end{dikkat}
+
+\subsection{OCUDU: gerçek bir gNB yazılımı}\label{sec:ocudu-kisa}
+
+\textbf{OCUDU}, srsRAN Project'in devamı olan, Linux Foundation altında yönetilen açık kaynak 5G CU/DU yazılımıdır (lisans: BSD-3-Clause-Open-MPI). Bir uygulamada
+CU-CP, CU-UP ve DU'yu birleştiren tek bir \texttt{gnb} programı vardır. Gerçek radyoya (USRP) ya da yazılımsal sahte radyoya (ZeroMQ, \texttt{ru\_dummy}) bağlanabilir.
+
+\textbf{Neden ns-3 yetmez de OCUDU da var?} ns-3 \emph{modeldir}: gerçek kod değil. OCUDU \emph{gerçek koddur}: gerçek bir scheduler'ın, gerçek PRS sinyalini nasıl rezerve ettiğini ve throughput'u nasıl etkilediğini ölçebiliriz.
+Bu, sonuçlarımıza \emph{güvenilirlik} katar. Detaylı kod haritası bir sonraki bölümde.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.98\textwidth]{sekiller/term_ocudu.pdf}
+\caption{Gerçek çıktı: OCUDU gNB, radyosuz (\texttt{ru\_dummy}) \texttt{testmode}'da, PRS her 4 slotta bir. DL throughput 44\,Mbps (PRS yok iken 59\,Mbps).
+Sütunlar: \texttt{cqi ri mcs brate ok nok (\%) dl\_bs} (DL) ve \texttt{pusch rsrp ri mcs brate ok nok (\%) bsr ta phr} (UL).}
+\end{figure}

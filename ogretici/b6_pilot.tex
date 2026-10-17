@@ -1,0 +1,174 @@
+\section{Pilot görevler ve görev dağılımı}\label{sec:pilot}
+
+\subsection{Pilot hafta: herkes aynı üç mini deneyi yapar}
+
+\textbf{Amaç:} Herkes, uzmanlaşmadan \emph{önce}, üç aracın her birinde bir sonuç üretsin. Böylece ``OCUDU'cu'' ns-3'ün ne yaptığını, ``Sionna'cı'' scheduler'ın etkisini görmüş olur
+ve toplantılarda aynı dili konuşuruz. Her pilot yarım gün sürer. Kurulumlar \texttt{kurulum/} klasöründeki dokümanlarla yapılmış olmalı.
+
+\begingroup\sffamily\small
+\begin{xltabular}{\textwidth}{@{}p{2cm}p{3.6cm}Xp{2.6cm}@{}}
+\toprule
+\textbf{Pilot} & \textbf{Araç} & \textbf{Ne yapılır} & \textbf{Çıktı} \\
+\midrule
+Pilot-1 & OCUDU & PRS yükünü değiştirip DL throughput'u ölç & Tablo + 1 paragraf \\
+Pilot-2 & ns-3 / 5G-LENA & UE sayısına göre throughput ve gecikmeyi ölç & Tablo + 1 grafik \\
+Pilot-3 & Sionna (radar) & Range-Doppler haritası, çözünürlük ve boşluk deneyi & 1 grafik + 1 paragraf \\
+\bottomrule
+\end{xltabular}
+\endgroup
+
+Her pilotun sonunda bir \textbf{soru kartı} var: kendi cümlelerinizle cevaplayın (her biri 2--3 cümle). Ek~\ref{ek:cevap}'te \emph{beklenen cevaplar} yönetici için verilmiştir;
+cevapları yazmadan önce bakmayın, öğrenmenin yolu o.
+
+\subsubsection{Pilot-1: OCUDU'da PRS maliyetini ölç}
+
+\begin{pilot}[Pilot-1: adımlar]
+\begin{enumerate}[leftmargin=1.5em]
+\item Ubuntu'da: \texttt{cd \textasciitilde/ehb415/ocudu/build/apps/gnb}
+\item Temel koşu (PRS yok): \texttt{./gnb -c /mnt/c/Users/<kullanici>/Desktop/EHB415/kurulum/ocudu\_testmode.yml}. gNB açılınca \texttt{t} yazıp Enter; tablo gelir. DL \texttt{brate} sütununu not et (59\,M civarı). \texttt{Ctrl+C} ile kapat.
+\item Bir kopya yapılandırma dosyası hazırla, \texttt{cell\_cfg:} altına \texttt{pdsch:}'den önce Bölüm~\ref{sec:prs}'deki \texttt{prs:} bloğunu ekle. Hazır örnek: \texttt{ogretici/veri/ocudu\_p4\_config.yml} ($T=4$).
+\item Aynı şekilde çalıştır; \texttt{brate} ve \texttt{ok} sütunlarını not et. $T$ değerini 8, 20, 40 yap, her seferinde tekrarla.
+\item \texttt{bandwidth\_prbs: 52} ile $T=4$'ü dene.
+\end{enumerate}
+\textbf{Kısayol:} adım 3--5'i otomatikleştiren betik: \texttt{bash ogretici/betikler/ocudu\_prs\_kos.sh p4 4 12 104} (etiket, periyot, sembol, PRB). Önce elle yapın, sonra betiği kullanın.
+\textbf{Çıktı:} $T$ ve \texttt{bandwidth\_prbs}'e göre DL throughput tablosu. Bölüm~\ref{sec:prs}'deki tabloyla karşılaştır.
+\end{pilot}
+
+\begin{ipucu}[Soru kartı: Pilot-1]
+\textbf{(1)} PRS her 4 slotta bir olunca DL throughput neden yaklaşık \%25 düştü? \quad
+\textbf{(2)} PRS'i bandın yarısına koyunca neden yalnızca yaklaşık \%13 düştü? \quad
+\textbf{(3)} Bu deney TR 38.765'teki Tip~1, 2 ve 3 kaynakların hangisine karşılık gelir?
+\end{ipucu}
+
+\subsubsection{Pilot-2: ns-3'te UE sayısını artır}
+
+\begin{pilot}[Pilot-2: adımlar]
+\begin{enumerate}[leftmargin=1.5em]
+\item Ubuntu'da: \texttt{cd \textasciitilde/ehb415/ns-3-dev}
+\item \texttt{./ns3 run "cttc-nr-demo --ueNumPergNb=1"}, sonra 2, 5, 10, 20 için tekrarla.
+\item Her koşuda çıktıdaki akış sayısını, her akışın \texttt{Throughput} ve \texttt{Mean delay} değerini ve son satırdaki \texttt{Mean flow throughput}/\texttt{Mean flow delay}'i not et.
+\item Toplam throughput'u (akışların toplamı) ve ortalama gecikmeyi UE sayısına karşı tabloya yaz; Excel veya Python ile grafiğe çevir.
+\end{enumerate}
+\textbf{Çıktı:} Bölüm~\ref{sec:ns3}'teki gibi bir tablo ve grafik.
+\end{pilot}
+
+\begin{ipucu}[Soru kartı: Pilot-2]
+\textbf{(1)} Gecikme neden 0,28\,ms'den yaklaşık 124\,ms'ye çıktı? \quad
+\textbf{(2)} Toplam throughput neden UE sayısıyla doğrusal artmadı? \quad
+\textbf{(3)} Sensing yükünü bu senaryoya koymak için Bölüm~\ref{sec:ns3tasarim}'deki (a), (b), (c) yollarından hangisini önerirsin, neden?
+\end{ipucu}
+
+\subsubsection{Pilot-3: Radar ve boşluk deneyi}
+
+\begin{pilot}[Pilot-3: adımlar]
+\begin{enumerate}[leftmargin=1.5em]
+\item Windows PowerShell'de: \texttt{C:\textbackslash Users\textbackslash <kullanici>\textbackslash venvs\textbackslash ehb415\textbackslash Scripts\textbackslash python.exe kurulum\textbackslash sionna\_dogrulama.py}. Çıktıdaki gerçek ve tahmin edilen menzil/hızı not et.
+\item \texttt{ogretici\textbackslash betikler\textbackslash make\_figs.py} içindeki \texttt{fig\_gap()} fonksiyonunu çalıştır (\texttt{pip install pandas matplotlib} gerekebilir).
+\item Betikte hedef mesafesini ve hızını değiştir, haritada tepenin de kaydığını gör.
+\item Sembol sayısını $M=128$'den 32'ye düşür; çözünürlüğün nasıl değiştiğini formülle karşılaştır.
+\end{enumerate}
+\textbf{Çıktı:} Bölüm~\ref{sec:sionna}'deki gibi bir grafik ve ``neden?'' paragrafı.
+\end{pilot}
+
+\begin{ipucu}[Soru kartı: Pilot-3]
+\textbf{(1)} $M=128$ yerine 32 sembol kullanınca hız çözünürlüğü kaç kat değişir? \quad
+\textbf{(2)} Boşluklar neden yan lobları yükseltir? \quad
+\textbf{(3)} Haberleşme scheduler'ı sensing için \emph{neyi garanti etmeli}?
+\end{ipucu}
+
+\subsection{Dört kişilik görev dağılımı}\label{sec:roller}
+
+Pilotlardan sonra herkes bir \textbf{rol} üstlenir. Her rolün somut bir ``Faz-1 çıktısı'' var (çıktısı olmayan görev vermiyoruz). Dördüncü rol, proje yöneticisinin entegrasyon ve standart işi.
+
+\begingroup\sffamily\small
+\begin{xltabular}{\textwidth}{@{}p{1.1cm}p{2.7cm}Xp{3.4cm}@{}}
+\toprule
+\textbf{Rol} & \textbf{Alan} & \textbf{Faz-1 çıktıları (somut)} & \textbf{Önce okuma} \\
+\midrule
+R1 & \textbf{Standart, metrik, entegrasyon} &
+  (a) \texttt{docs/metrics.md}: TR~38.765 \S4.1 ve \S6.2'den metrik sözlüğü (formüllerle). (b) Dickerson modelini ($\alpha$, $T(\eta)$) bir tabloya/betiğe dök. (c) Üç aracın sonuçlarını \emph{aynı $\alpha$ eksenine} getiren ortak grafik şablonu. &
+  TR 38.765 \S4, 6.2, 9; Lin \cite{lin}; Dickerson \cite{dickerson} \\
+R2 & \textbf{Sionna} &
+  (a) Sensing performansı eğrisi: bant ($W$) ve sembol sayısına ($M$) göre menzil/hız hatası ve tespit olasılığı. (b) Boşluk deneyini gerçekçileştir (SNR, çok hedef). (c) Sionna RT öğreticilerinden 3'ünü çalıştır. &
+  Wei \cite{wei}, Khosroshahi \cite{khos}, NIST \cite{nist}; Sionna RT \cite{sionnart} \\
+R3 & \textbf{ns-3 / 5G-LENA} &
+  (a) Sensing yükünü (a) ve (b) yollarıyla ekle (Bölüm~\ref{sec:ns3tasarim}). (b) $\alpha$'ya göre throughput/gecikme/PLR taraması, CSV + grafik. (c) 5G-LENA scheduler sınıflarının tablosu. &
+  SioLENA \cite{siolena}; Koutlia \cite{koutlia}; Capozzi \cite{capozzi} \\
+R4 & \textbf{OCUDU} &
+  (a) Bölüm~\ref{sec:prs}'deki ölçümü \emph{tekrarla ve hata çubuğu ekle} (örn.\ 5 koşu). (b) ``Sembol sayısı neden etkisiz?'' sorusunu kodu okuyarak cevapla. (c) Slicing ile (\texttt{ded\_prb\_policy\_ratio}) sensing emülasyonunu dene. (d) Kod haritası ve ``sensing nereye takılır'' diyagramı. &
+  Lindenschmitt \cite{linden}; Gurung \cite{gurung}; OCUDU \texttt{lib/scheduler/README.md} \\
+\bottomrule
+\end{xltabular}
+\endgroup
+
+\textbf{Ortak çalışma (``ikinci göz''):} her çıktı bir başkası tarafından \emph{yeniden üretilmeden} ``bitti'' sayılmaz.
+Öneri eşleşmeleri: R2 $\leftrightarrow$ R3 (kanal/ağ köprüsü, SioLENA), R3 $\leftrightarrow$ R4 (ns-3 sonuçlarıyla OCUDU ölçümünü karşılaştırma), R1 $\leftrightarrow$ herkes (metrik tutarlılığı).
+
+\begin{dikkat}[Rolleri neden böyle böldük?]
+Üç araç birbirinden \emph{bağımsız} çalışabilir, ama sonuçları \textbf{aynı eksende} buluşmalı. Bunu garanti eden rol R1'dir: herkes sonucunu $\alpha$ cinsinden ve R1'in metrik sözlüğündeki tanımlarla raporlar.
+Aksi halde üç farklı ``overhead'' tanımıyla üç uyumsuz grafik çıkar.
+\end{dikkat}
+
+\subsection{Hedef grafik: hepimizin üzerinde çalıştığı tek şekil}
+
+Projenin ``kahramanı'' şekil şu şemadaki gibi olacak (\textbf{bu bir şematiktir, veri değildir}):
+
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[x=1cm,y=1cm]
+  \begin{scope}[shift={(0,0)}]
+    \draw[->,thick] (0,0) -- (6.2,0) node[right,font=\sffamily\scriptsize] {$\alpha$ (sensing kaynak payı)};
+    \draw[->,thick] (0,0) -- (0,3.2) node[above,font=\sffamily\scriptsize] {sensing hatası};
+    \draw[very thick,good!70!black] (0.2,3.0) .. controls (1.2,1.0) and (3,0.5) .. (6,0.3);
+    \node[font=\sffamily\scriptsize,color=good!70!black] at (3.4,1.2) {Sionna};
+    \node[font=\sffamily\scriptsize,color=muted] at (3.1,-0.55) {daha çok kaynak $\rightarrow$ daha iyi sensing};
+  \end{scope}
+  \begin{scope}[shift={(8.4,0)}]
+    \draw[->,thick] (0,0) -- (6.2,0) node[right,font=\sffamily\scriptsize] {$\alpha$};
+    \draw[->,thick] (0,0) -- (0,3.2) node[above,font=\sffamily\scriptsize] {DL throughput};
+    \draw[very thick,purp] (0.2,3.0) -- (6,0.6);
+    \node[font=\sffamily\scriptsize,color=purp] at (3.5,2.2) {ns-3 ve OCUDU};
+    \draw[dashed,color=muted] (0.2,3.0) -- (6,0.6);
+    \node[font=\sffamily\scriptsize,color=muted] at (3.1,-0.55) {daha çok kaynak $\rightarrow$ daha az throughput};
+  \end{scope}
+\end{tikzpicture}
+\caption{\textbf{Şematik} (veri değil): iki ters eğri aynı $\alpha$ ekseninde. Proje, bu iki eğrinin gerçek hâlini üretmek ve ``çalışma noktası'' (hem sensing yeterli hem haberleşme kabul edilebilir) bölgesini bulmaktır.}
+\end{figure}
+
+\subsection{Haftalık plan önerisi}
+
+Kesin teslim tarihlerini bilmediğimden aşağıdaki \textbf{12 haftalık bir öneridir}; ara rapor/final tarihine göre ölçeklenmelidir.
+
+\begingroup\sffamily\small
+\begin{xltabular}{\textwidth}{@{}p{1.3cm}X@{}}
+\toprule
+\textbf{Hafta} & \textbf{Hedef} \\
+\midrule
+1 & Kurulumlar bitti. \textbf{Pilot-1, 2, 3} (herkes). Soru kartları cevaplandı. \\
+2 & Okuma: herkes Bölüm~\ref{sec:buyuk}--\ref{sec:3gpp} + kendi rolünün makaleleri. \textbf{Karar toplantısı:} sensing yükünü nasıl temsil ediyoruz (Bölüm~\ref{sec:ns3tasarim} a/b/c), hangi metrikler. \\
+3--4 & Rol çıktıları (Faz-1). Haftalık 30 dakikalık ``gördüğümü anlat'' toplantısı. \\
+5 & \textbf{İlk entegrasyon:} üç aracın sonucu aynı $\alpha$ ekseninde, taslak ortak grafik. \\
+6 & \textbf{Ara rapor.} Boşluklar ve riskler listelenir. \\
+7--9 & Genişletme: OCUDU seviye~B (metrik/log), Sionna RT ile gerçekçi kanal, ns-3'te (c) yolu veya SioLENA (zaman kalırsa). \\
+10 & Tekrar koşular, hata çubukları, sınırlılıklar bölümü. \\
+11 & Rapor yazımı. \\
+12 & Gözden geçirme, tekrar üretilebilirlik kontrolü (başkası komutlarla aynı sonucu alıyor mu?), teslim. \\
+\bottomrule
+\end{xltabular}
+\endgroup
+
+\subsection{Riskler ve nasıl yönetiriz}
+
+\begingroup\sffamily\small
+\begin{xltabular}{\textwidth}{@{}p{4.4cm}Xp{3.6cm}@{}}
+\toprule
+\textbf{Risk} & \textbf{Etkisi} & \textbf{Önlem} \\
+\midrule
+Ölçümler tek koşu, WSL2 gerçek zamanlı değil & Sayılar oynak olabilir & R4: 5 koşu + hata çubuğu \\
+``Sembol sayısı etkisiz'' bulgusunun nedeni belirsiz & Tip~3 kaynak tanımımız yanlış olabilir & R4: PDSCH tahsis kodunu oku (Bölüm~\ref{sec:prs}) \\
+5G-LENA'da sensing modeli yok & Deney tasarımı belirsiz & Karar toplantısı (hafta 2), (a)/(b) yolu \\
+SioLENA ayrı ns-3 ağacı, eski Sionna & Entegrasyon zor & İkinci aşama; ana sonuca bağımlı yapma \\
+Rapor yazılmadan zaman biter & Teslim riski & Hafta 5'te taslak grafik, hafta 11 yazım \\
+\bottomrule
+\end{xltabular}
+\endgroup

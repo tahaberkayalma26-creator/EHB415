@@ -1,0 +1,163 @@
+\section{3GPP standartları: ne söylüyorlar, biz neyi alıyoruz?}\label{sec:3gpp}
+
+\subsection{3GPP nedir, bu projede neden önemli?}
+
+\textbf{3GPP}, mobil ağ standartlarını yazan kuruluştur. 5G'nin her özelliği ``Release'' (sürüm) adı altında sürümlenir. Bu projede standart üç iş yapar:
+\begin{enumerate}
+\item Sensing için \textbf{ne ölçüleceğini} (metrikler) ve \textbf{hangi eşiklerin} yeterli sayılacağını söyler.
+\item Simülasyonda hangi \textbf{senaryo ve parametreleri} kullanacağımızı verir (ki sonuçlarımız literatürle karşılaştırılabilsin).
+\item Sensing'in ağ mimarisinde \textbf{nereye oturacağını} tarif eder (SenF, NsAP).
+\end{enumerate}
+
+\subsection{ISAC'ın standartlardaki yolculuğu}
+
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[node distance=6mm and 6mm]
+  \node[nd,text width=3.6cm] (r19) {\textbf{Rel-19}\\[2pt]{\scriptsize Kullanım senaryoları, servis gereksinimleri, \textbf{ISAC kanal modeli} (TR~38.901 uzantısı)}};
+  \node[nd,text width=3.9cm,right=of r19] (r20a) {\textbf{Rel-20: 5G-Advanced}\\[2pt]{\scriptsize \textbf{TR~38.765}: gNB tek-istasyonlu (monostatic) sensing, \textbf{İHA tespiti}}};
+  \node[nd,text width=3.6cm,right=of r20a] (r20b) {\textbf{Rel-20: 6G çalışmaları}\\[2pt]{\scriptsize Sensing \emph{yerel yetenek} olarak; daha çok hedef türü ve mod}};
+  \draw[ar] (r19) -- (r20a);
+  \draw[ar] (r20a) -- (r20b);
+\end{tikzpicture}
+\caption{ISAC'ın 3GPP'deki gelişimi. Kaynak: Lin \cite{lin,lin20}.}
+\end{figure}
+
+\textbf{Biz Rel-20 / 5G-Advanced hattındayız:} gNB'nin kendi sinyalini kullanarak (tek istasyon) İHA tespiti. Proposal'ın başvurduğu referans da budur.
+
+\subsection{TR 38.765'e rehber (v20.0.0, 2026-06)}
+
+Tüm raporu okumanıza gerek yok. Şu tablo hangi bölümde ne olduğunu ve neden önemli olduğunu söyler:
+
+\begingroup\sffamily\small
+\begin{xltabular}{\textwidth}{@{}p{1.5cm}p{4.9cm}X@{}}
+\toprule
+\textbf{Bölüm} & \textbf{İçerik} & \textbf{Bizim için önemi} \\
+\midrule
+4.1 & Performans metrikleri ve formülleri ($P_{md}$, $P_{f1}$, $P_{f2}$, konum/hız hatası) & Sensing metriklerimizi \emph{buradan alırız}; kendi tanımımızı uydurmayız. \\
+4.2 & Hedefler: $P_{md}, P_{f1}, P_{f2} \leq \%5$; 10\,m ve 5\,m/s (\%90) & Sensing ``yeterince iyi'' eşiği. \\
+\textbf{6.2} & \textbf{Sensing kaynak oranı:} Tip~1/2/3 kaynaklar, Seçenek~1 ve~2 & \textbf{Overhead'i nasıl tanımlayacağımızın standart cevabı.} \\
+6.2, Tablo 6.2-1 & Baseline~1 (52\,dBm, 80\,dB izolasyon), Baseline~2 (37\,dBm, 65\,dB) & Simülasyonda kullanacağımız referans senaryolar. \\
+5 & Ölçüm raporlama seviyeleri A, B, C, D & Sensing verisinin ağ taşıma yükünü hesaplamak için. \\
+7--8 & Ağ mimarisi: SenF, NsAP, sensing başlatma/rapor prosedürleri & OCUDU'da sensing'in nereye takılacağı. \\
+9 & Sonuç: Seviye~A desteklenmedi, Seviye~C kabul, SCTP tabanlı protokol & Tasarım kararlarını gerekçelendirmek için. \\
+Ek A & Değerlendirme varsayımları & Simülasyon parametre tablosu. \\
+\bottomrule
+\end{xltabular}
+\endgroup
+
+\subsubsection{Değerlendirme senaryosu (Ek A)}
+
+\begingroup\sffamily\small
+\begin{xltabular}{\textwidth}{@{}p{4.8cm}X@{}}
+\toprule
+\textbf{Parametre} & \textbf{Değer} \\
+\midrule
+Senaryo & UMa-AV (şehir makro hücresi, hava aracı hedefi), ikili mesafe 500\,m \\
+Taşıyıcı / bant / SCS & 4 veya 4,9\,GHz (FR1) / 100\,MHz / 30\,kHz \\
+Yerleşim & 7 makro site, her sitede 3 sektör \\
+Anten (gNB) & 8$\times$8$\times$2 eleman, Tx ve Rx \\
+gNB gücü & 37 veya 52\,dBm \\
+Anten izolasyonu (Tx $\rightarrow$ Rx) & 65 veya 80\,dB \\
+Hedef & Küçük İHA (0,3$\times$0,4$\times$0,2\,m), sektör başına $N=5$, yükseklik 25--300\,m, yatay hız 0--180\,km/s \\
+Sensing modu & gNB tek istasyon (monostatic), \textbf{Tx ve Rx aynı anda çalışır} \\
+Öz-girişim (self-interference) & Artık sızıntı gürültü olarak modellenir ($-94+X$\,dBm, 100\,MHz'de) \\
+\bottomrule
+\end{xltabular}
+\endgroup
+
+\begin{dikkat}[Öz-girişim: monostatic sensing'in en zor kısmı]
+Aynı gNB hem gönderip hem dinlediği için kendi vericisinin sızıntısı, İHA'dan dönen çok zayıf yankıdan \emph{birçok büyüklük mertebesi} (orders of magnitude) güçlü olabilir \cite{lin}. Bu yüzden standart,
+anten izolasyonunu (65 veya 80\,dB) ve artık sızıntıyı değerlendirmenin \emph{parçası} yapıyor. Lin~\cite{lin} bunu IV.B bölümünde ``monostatic gNB sensing'in tanımlayıcı zorluğu'' diye anlatır.
+Bizim ns-3 ve OCUDU çalışmamız öz-girişimi modellemez; yalnızca \emph{kaynak tüketimine} bakar. Bunu raporda açıkça sınırlılık olarak yazmalıyız.
+\end{dikkat}
+
+\subsubsection{Sensing kaynak oranı (Bölüm 6.2): bizim ana metriğimiz}
+
+Standart üç tür kaynak tanımlar:
+\begin{itemize}
+\item \textbf{Tip~1:} sensing sinyali için kullanılan kaynaklar.
+\item \textbf{Tip~2:} Tip~1'in, aynı zamanda haberleşme için de kullanılan kısmı (olmayabilir).
+\item \textbf{Tip~3:} sensing sinyali taşımayan ama sensing işlemi yüzünden haberleşmeye de açılamayan kaynaklar.
+\end{itemize}
+İki seçenekle oran hesaplanır (hepsi tüm DL+UL kaynaklarına bölünür):
+\begin{equation}
+\text{Seçenek 1: }\ \frac{T_1+T_3}{\text{toplam}},\qquad \text{Seçenek 2: }\ \frac{T_1-T_2+T_3}{\text{toplam}}
+\end{equation}
+Tip~2 yoksa iki seçenek aynıdır. Biz ilk aşamada bunu kullanırız: OCUDU'daki PRS rezervasyonu Tip~1'dir (veri taşımaz, Tip~2 yok) ve Tip~3'ü de gözleyebiliriz (Bölüm~\ref{sec:ocudu}'daki ``kaybolan slot'' bulgusu tam olarak bir Tip~3 benzeri etkidir).
+
+\subsubsection{Ölçüm raporlama seviyeleri (Bölüm 5)}
+
+Sensing sonuçları gNB'den çekirdek ağdaki sensing işlevine \emph{ne ayrıntıda} gönderilir? Ayrıntı arttıkça taşıma yükü artar:
+
+\begingroup\sffamily\small
+\begin{xltabular}{\textwidth}{@{}p{1.5cm}Xp{2.2cm}p{3.2cm}@{}}
+\toprule
+\textbf{Seviye} & \textbf{İçerik} & \textbf{Taşıma yükü} & \textbf{TR 38.765 kararı} \\
+\midrule
+A & Ham veri (anten başına, sembol başına kanal tahmini) & Çok yüksek & \textbf{Desteklenmedi} \\
+B & Gecikme/Doppler/açı profilleri & Yüksek & Değerlendirildi \\
+C & \textbf{Tespit edilen yol/nokta başına} (menzil, hız, açı, güç, güven) & Orta & \textbf{İleri normatif çalışma için kabul} \\
+D & Nesne seviyesi (konum, hız, sınıf, iz kimliği) & Düşük & Gizlilik/güvenlik çözülürse \\
+\bottomrule
+\end{xltabular}
+\endgroup
+Lin~\cite{lin} Tablo~2 aynı dört soyutlamayı (örnek, profil, tespit noktası, nesne) ``transport yükü'' ve ``füzyon'' açısından karşılaştırır.
+
+\subsection{Mimari: SenF ve NsAP}\label{sec:senf}
+
+Rel-20 mimarisi, çekirdek ağa yeni bir mantıksal işlev ekler: \textbf{SenF (Sensing Function)}. Görevleri: sensing servisini yetkilendirmek, sensing yapacak gNB'yi seçmek, parametreleri vermek, ölçümleri toplamak ve dış uygulamalara sunmak \cite{lin}.
+gNB ile SenF arasındaki konuşma için ise yeni bir protokol önerilir: \textbf{NsAP}.
+
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[node distance=8mm and 20mm]
+  \node[nd,text width=2.4cm] (af) {Üçüncü taraf\\uygulama};
+  \node[ndp,text width=2.2cm,right=of af] (senf) {\textbf{SenF}\\{\scriptsize çekirdek ağ}};
+  \node[ndw,text width=2.9cm,right=of senf] (gnb) {\textbf{gNB}\\{\scriptsize sensing sinyali gönderir/ölçer}};
+  \node[ndr,text width=1.6cm,right=16mm of gnb] (uav) {Hedef\\(İHA)};
+  \draw[dar] (af) -- node[lab,above] {istek/sonuç} (senf);
+  \draw[dar] (senf) -- node[lab,above] {\textbf{NsAP}} node[lab,below] {(SCTP)} (gnb);
+  \draw[dar,dashed,color=warn] (gnb) -- node[lab,above] {radyo} (uav);
+  \node[lab,below=7mm of senf,text width=8cm] (n1) {Sensing başlatma, durdurma, değiştirme, rapor: NsAP prosedürleri};
+\end{tikzpicture}
+\caption{Rel-20 ISAC mimarisinin sadeleştirilmiş görünümü (TR 38.765 bölüm 7--8; Lin \cite{lin} bölüm III.A).}
+\end{figure}
+
+NsAP prosedürleri (TR 38.765 bölüm 8): \textbf{Sensing Initiation} (istek/cevap/hata), \textbf{SenF-initiated Sensing Abort}, \textbf{SenF-initiated Sensing Modification},
+\textbf{gNB-initiated Sensing Failure indication}, \textbf{Sensing Report}; yönetim tarafında \textbf{Ns Setup}, \textbf{RAN Configuration Update}, \textbf{Error indication}.
+Sensing verisi için üç protokol yığını değerlendirildi; \textbf{SCTP tabanlı olanı (Seçenek~1)} önerildi.
+
+\textbf{Bizim için anlamı:} OCUDU gerçek bir 5G gNB uygulamasıdır; NsAP gibi bir arayüz henüz yok. Bunu eklemek ``tam bir sensing özelliği'' olurdu,
+ama proje kapsamı için fazla büyük. Biz bunu \emph{tasarım seviyesinde} (bir diyagram ve bir arayüz taslağı) ele alacağız, kodlamayı değil.
+
+\subsection{Kanal modeli: hedef, arka plan ve yerel kuplaj}
+
+Rel-19, TR~38.901'e \emph{sensing'e özgü} bir uzantı ekledi \cite{lin,liu19}. Fikir: bir sensing kanalı üç parçaya ayrılır:
+\begin{itemize}
+\item \textbf{Hedef kanalı:} gNB $\rightarrow$ hedef $\rightarrow$ gNB yolu ve hedefin yansıtma özelliği (RCS).
+\item \textbf{Arka plan kanalı:} bina, ağaç, araba gibi \emph{hedef olmayan} yansıtıcılar (clutter).
+\item \textbf{Yerel kuplaj:} vericiden alıcıya doğrudan sızıntı (öz-girişim).
+\end{itemize}
+Ayrıca RCS sabit bir sayı değil; açıya, polarizasyona ve frekansa göre değişir. Bir İHA, yalnızca biraz konum değiştirince RCS çukurlarına girip \emph{kaybolabilir} \cite{lin}.
+
+\subsection{Hangi standart belgelerini bilmeliyiz?}
+
+\begingroup\sffamily\small
+\begin{xltabular}{\textwidth}{@{}p{2.7cm}X@{}}
+\toprule
+\textbf{Belge} & \textbf{Ne için} \\
+\midrule
+TR 38.765 & ISAC çalışması, \textbf{ana referansımız} (indirildi, \texttt{makaleler/} klasöründe). \\
+TR 38.901 & Kanal modeli; Rel-19 ISAC uzantısı (hedef/arka plan kanalı). \\
+TS 38.211 \S7.4.1.7 & \textbf{PRS sinyalinin tanımı} (OCUDU kodundaki yorumlarda bu bölüme atıf var). \\
+TS 38.455 \S9.2.44 & PRS kaynak kümesi yapılandırması (NRPPa); OCUDU'nun PRS parametreleri bunu izler. \\
+TR 36.777 & İHA kanal modeli (TR 38.765 Ek~A bu belgenin B.1.3 maddesine atıf yapar). \\
+\bottomrule
+\end{xltabular}
+\endgroup
+
+\begin{ipucu}[Standart belgesi nasıl okunur?]
+Standartlar roman değil, \emph{başvuru} metinleridir. Baştan sona okumayın. \textbf{(1)} İçindekilerden ihtiyacınız olan bölümü bulun, \textbf{(2)} tanımları ve tablolardaki sayıları okuyun,
+\textbf{(3)} ``NOTE'' kutularına özellikle bakın, çünkü kısıtlar ve belirsizlikler orada yazılıdır. TR 38.765'te de projenin boşluğunu gösteren cümle bir bölüm girişinde duruyordu.
+\end{ipucu}

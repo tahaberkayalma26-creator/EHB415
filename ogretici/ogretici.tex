@@ -1,0 +1,130 @@
+% EHB415 ISAC projesi: Ogretici
+% Derleme (Windows): tectonic -X compile ogretici.tex
+% Yazi tipleri (Georgia, Arial, Consolas) telifli oldugu icin repoda YOK. C:\Windows\Fonts\ icinden
+% bu klasordeki fontlar\ altina kopyalanmalidir (bkz. fontlar\README.txt).
+\documentclass[10.5pt,a4paper]{article}
+
+\usepackage{fontspec}
+\setmainfont{georgia}[Path=./fontlar/,Extension=.ttf,BoldFont=georgiab,ItalicFont=georgiai,BoldItalicFont=georgiaz]
+\setsansfont{arial}[Path=./fontlar/,Extension=.ttf,BoldFont=arialbd,ItalicFont=ariali,BoldItalicFont=arialbi]
+\setmonofont{consola}[Path=./fontlar/,Extension=.ttf,BoldFont=consolab,ItalicFont=consolai,BoldItalicFont=consolaz,Scale=0.88]
+
+\usepackage[a4paper,left=2.2cm,right=2.2cm,top=2.3cm,bottom=2.3cm]{geometry}
+\usepackage{xcolor}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{multirow}
+\usepackage{float}
+\usepackage{longtable}
+\usepackage{xltabular}
+\usepackage{array}
+\usepackage{enumitem}
+\usepackage{amsmath,amssymb}
+\usepackage{url}
+\usepackage[most]{tcolorbox}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,positioning,shapes.geometric,shapes.misc,fit,calc,decorations.pathmorphing,backgrounds,patterns}
+\usepackage{caption}
+\usepackage{fancyhdr}
+\usepackage{titlesec}
+\usepackage{listings}
+\usepackage[colorlinks=true,linkcolor=blue!50!black,urlcolor=blue!50!black,citecolor=blue!50!black]{hyperref}
+
+\renewcommand{\figurename}{Şekil}
+\renewcommand{\tablename}{Tablo}
+\renewcommand{\contentsname}{İçindekiler}
+\renewcommand{\appendixname}{Ek}
+\renewcommand{\refname}{Kaynakça}
+\emergencystretch=2em
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{5.5pt plus 1pt}
+\renewcommand{\arraystretch}{1.18}
+\setlist{itemsep=2pt,topsep=3pt,parsep=0pt}
+
+% ---------- renkler
+\definecolor{ink}{HTML}{1F2937}
+\definecolor{muted}{HTML}{6B7280}
+\definecolor{acc}{HTML}{1D4ED8}
+\definecolor{accl}{HTML}{DBEAFE}
+\definecolor{warn}{HTML}{EA580C}
+\definecolor{warnl}{HTML}{FFEDD5}
+\definecolor{good}{HTML}{16A34A}
+\definecolor{goodl}{HTML}{DCFCE7}
+\definecolor{bad}{HTML}{DC2626}
+\definecolor{badl}{HTML}{FEE2E2}
+\definecolor{purp}{HTML}{7C3AED}
+\definecolor{purpl}{HTML}{EDE9FE}
+\definecolor{codebg}{HTML}{F3F4F6}
+\color{ink}
+
+% ---------- basliklar
+\titleformat{\section}{\sffamily\bfseries\LARGE\color{acc}}{\thesection}{0.6em}{}[\vspace{-2pt}{\color{acc!35}\titlerule[1.2pt]}]
+\titleformat{\subsection}{\sffamily\bfseries\Large\color{ink}}{\thesubsection}{0.6em}{}
+\titleformat{\subsubsection}{\sffamily\bfseries\large\color{acc!80!black}}{\thesubsubsection}{0.5em}{}
+\titlespacing*{\section}{0pt}{20pt}{8pt}
+\titlespacing*{\subsection}{0pt}{12pt}{4pt}
+\titlespacing*{\subsubsection}{0pt}{8pt}{2pt}
+
+% ---------- ust/alt bilgi
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0.4pt}
+\fancyhead[L]{\sffamily\footnotesize\color{muted} EHB415 \textbullet\ ISAC Projesi \textbullet\ Öğretici}
+\fancyhead[R]{\sffamily\footnotesize\color{muted}\nouppercase{\leftmark}}
+\fancyfoot[C]{\sffamily\footnotesize\color{muted}\thepage}
+
+\captionsetup{font={small,sf},labelfont={bf,color=acc},labelsep=period,justification=raggedright,singlelinecheck=false}
+
+% ---------- kod/dosya yolu
+\newcommand{\kod}[1]{{\small\path{#1}}}
+\lstset{basicstyle=\ttfamily\footnotesize,backgroundcolor=\color{codebg},frame=single,rulecolor=\color{codebg!70!black},
+  breaklines=true,breakatwhitespace=false,columns=fullflexible,keepspaces=true,showstringspaces=false,
+  xleftmargin=2pt,xrightmargin=2pt,aboveskip=6pt,belowskip=6pt,literate={ğ}{g}1 {ş}{s}1 {ı}{i}1 {ü}{u}1 {ö}{o}1 {ç}{c}1}
+
+% ---------- kutular
+\newtcolorbox{ipucu}[1][İpucu]{enhanced,breakable,colback=accl,colframe=acc,boxrule=0.5pt,arc=2pt,
+  left=6pt,right=6pt,top=4pt,bottom=4pt,fonttitle=\sffamily\bfseries\small,title={#1},coltitle=white,colbacktitle=acc,
+  attach boxed title to top left={yshift=-2mm,xshift=4mm},boxed title style={arc=2pt,boxrule=0pt}}
+\newtcolorbox{dikkat}[1][Dikkat]{enhanced,breakable,colback=warnl,colframe=warn,boxrule=0.5pt,arc=2pt,
+  left=6pt,right=6pt,top=4pt,bottom=4pt,fonttitle=\sffamily\bfseries\small,title={#1},coltitle=white,colbacktitle=warn,
+  attach boxed title to top left={yshift=-2mm,xshift=4mm},boxed title style={arc=2pt,boxrule=0pt}}
+\newtcolorbox{pilot}[1][Pilot görev]{enhanced,breakable,colback=goodl,colframe=good,boxrule=0.5pt,arc=2pt,
+  left=6pt,right=6pt,top=4pt,bottom=4pt,fonttitle=\sffamily\bfseries\small,title={#1},coltitle=white,colbacktitle=good,
+  attach boxed title to top left={yshift=-2mm,xshift=4mm},boxed title style={arc=2pt,boxrule=0pt}}
+\newtcolorbox{bulgu}[1][Ölçülen bulgu]{enhanced,breakable,colback=purpl,colframe=purp,boxrule=0.5pt,arc=2pt,
+  left=6pt,right=6pt,top=4pt,bottom=4pt,fonttitle=\sffamily\bfseries\small,title={#1},coltitle=white,colbacktitle=purp,
+  attach boxed title to top left={yshift=-2mm,xshift=4mm},boxed title style={arc=2pt,boxrule=0pt}}
+
+% ---------- TikZ ortak stiller
+\tikzset{
+  nd/.style={draw=acc!70!black,fill=accl,rounded corners=3pt,align=center,inner sep=4pt,font=\sffamily\small,minimum height=7mm},
+  ndw/.style={draw=warn!80!black,fill=warnl,rounded corners=3pt,align=center,inner sep=4pt,font=\sffamily\small,minimum height=7mm},
+  ndg/.style={draw=good!70!black,fill=goodl,rounded corners=3pt,align=center,inner sep=4pt,font=\sffamily\small,minimum height=7mm},
+  ndp/.style={draw=purp!70!black,fill=purpl,rounded corners=3pt,align=center,inner sep=4pt,font=\sffamily\small,minimum height=7mm},
+  ndr/.style={draw=bad!70!black,fill=badl,rounded corners=3pt,align=center,inner sep=4pt,font=\sffamily\small,minimum height=7mm},
+  ndn/.style={draw=muted,fill=codebg,rounded corners=3pt,align=center,inner sep=4pt,font=\sffamily\small,minimum height=7mm},
+  ar/.style={-{Stealth[length=2.4mm]},thick,color=ink!80},
+  dar/.style={{Stealth[length=2.4mm]}-{Stealth[length=2.4mm]},thick,color=ink!80},
+  lab/.style={font=\sffamily\scriptsize,color=muted,align=center},
+}
+
+\newcommand{\sy}[1]{\textsf{\textbf{#1}}}
+
+\title{}
+\author{}
+\date{}
+
+\begin{document}
+
+\input{b0_kapak}
+\input{b1_buyuk_resim}
+\input{b2_kavramlar}
+\input{b3_3gpp}
+\input{b4_araclar}
+\input{b5_ocudu}
+\input{b6_pilot}
+\input{b7_okuma}
+\input{b8_ekler}
+
+\end{document}

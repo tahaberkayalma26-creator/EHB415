@@ -1,0 +1,106 @@
+\section{Büyük resim: sorun ne, biz neyi düzeltiyoruz?}\label{sec:buyuk}
+
+\subsection{Tek cümlede proje}
+
+\begin{tcolorbox}[colback=accl,colframe=acc,boxrule=0.6pt,arc=3pt,left=8pt,right=8pt,top=6pt,bottom=6pt]
+\sffamily\large
+Bir 5G baz istasyonu (gNB) aynı radyo kaynaklarıyla hem \textbf{kullanıcıya veri} taşıyıp hem de çevreyi \textbf{algılayabilirse}
+(ISAC: \emph{Integrated Sensing and Communication}), algılama için harcanan kaynak \textbf{haberleşme performansından ne kadar götürür}?
+\end{tcolorbox}
+
+\subsection{ISAC nedir? (radar olarak baz istasyonu)}
+
+Bir radar, sinyal gönderir ve yansımayı dinler. Yansımanın geç gelmesinden \textbf{uzaklığı}, frekansının kaymasından (Doppler) \textbf{hızı} anlar.
+Bir 5G baz istasyonu da zaten sürekli sinyal gönderir. ISAC fikri: \emph{bu sinyallerin yansımasını da dinleyip çevreyi izlemek},
+örneğin izinsiz bir \textbf{insansız hava aracını (İHA)} bulmak.
+
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[x=1cm,y=1cm]
+  % gNB
+  \node[ndp,minimum width=20mm,minimum height=14mm] (gnb) at (0,0) {\textbf{gNB}\\[-1pt]{\scriptsize baz istasyonu}};
+  % UE'ler
+  \node[ndg] (ue1) at (7.0,1.2) {UE 1\\{\scriptsize telefon}};
+  \node[ndg] (ue2) at (7.0,-1.3) {UE 2\\{\scriptsize telefon}};
+  % hedef
+  \node[ndr,minimum width=16mm] (uav) at (3.6,3.4) {\textbf{İHA}\\{\scriptsize hedef}};
+  % veri akislari
+  \draw[ar,color=good!70!black] (gnb.east) -- node[lab,fill=white,inner sep=1.5pt,pos=0.5] {veri (haberleşme)} (ue1.west);
+  \draw[ar,color=good!70!black] (gnb.east) -- node[lab,fill=white,inner sep=1.5pt,pos=0.5] {veri (haberleşme)} (ue2.west);
+  % sensing: gonderilen sinyal ve yanki
+  \draw[ar,color=warn,dashed] (gnb.north) to[bend left=14] node[lab,fill=white,inner sep=1.5pt,pos=0.45] {sensing sinyali} (uav.west);
+  \draw[ar,color=bad!80!black,dotted] (uav.south) to[bend left=14] node[lab,fill=white,inner sep=1.5pt,pos=0.5] {yankı} (gnb.north east);
+  \node[lab,anchor=north,text width=9cm] at (3.5,-2.3) {\textbf{Aynı radyo kaynakları} (zaman--frekans ızgarası) hem veri hem sensing için paylaşılır};
+\end{tikzpicture}
+\caption{ISAC fikri: gNB aynı sinyalle kullanıcılara veri taşır ve İHA'dan dönen yankıyı dinleyerek konumunu ve hızını kestirir.}
+\end{figure}
+
+\subsection{Sorun: sensing bedava değil}
+
+Radyo kaynakları sonludur. Bir \emph{slot} içindeki bir kaynak ya bir kullanıcıya veri taşır ya da sensing sinyali olarak kullanılır.
+Sensing'e ne kadar kaynak ayırırsak:
+\begin{itemize}
+\item \textcolor{good!70!black}{\textbf{Sensing kalitesi artar}} (daha az kaçırılan hedef, daha doğru konum),
+\item \textcolor{bad!80!black}{\textbf{Haberleşme kapasitesi düşer}} (daha az throughput, daha çok gecikme).
+\end{itemize}
+Bu bir \textbf{ödünleşim (trade-off)}. Soru, bu ödünleşimin şeklinin ne olduğu.
+
+\subsection{Mevcut çalışmada boşluk nerede?}
+
+3GPP, ISAC'ı standartlaştırmak için \textbf{TR 38.765}'i (Rel-20) yazdı. Bu rapor İHA tespiti için \emph{sensing performansını} değerlendirdi:
+kaçırma olasılığı, yanlış alarm, konum ve hız doğruluğu. Ama raporun kendisi şunu açıkça yazıyor
+(\emph{bölüm 6.3.0}): \textit{``The performance of communication is not evaluated.''} Yani \textbf{haberleşme tarafı değerlendirilmedi}.
+
+\begin{bulgu}[Projenin boşluğu, standardın kendi cümlesiyle]
+3GPP TR 38.765 v20.0.0 bölüm 6.3.0: sensing sonuçları raporlanırken haberleşmenin etkisi \emph{hesaba katılmadı}.
+Bizim katkımız tam bu eksik taraf: \textbf{sensing yükü arttıkça haberleşme ne kadar kaybediyor, ve bunu açık kaynak araçlarla nasıl ölçeriz?}
+\end{bulgu}
+
+\subsection{Üç araç, bir hikâye}
+
+Proposal'daki üç araç bu soruya birbirini tamamlayan üç açıdan bakıyor:
+
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[node distance=7mm and 9mm]
+  \node[ndg,text width=3.9cm] (s) {\textbf{Sionna}\\[2pt]{\scriptsize Fiziksel katman.}\\{\scriptsize \emph{Sensing ne kadar iyi çalışıyor?}}};
+  \node[ndp,text width=3.9cm,right=of s] (n) {\textbf{ns-3 + 5G-LENA}\\[2pt]{\scriptsize Ağ seviyesi.}\\{\scriptsize \emph{Haberleşme ne kadar düşüyor?}}};
+  \node[ndw,text width=3.9cm,right=of n] (o) {\textbf{OCUDU}\\[2pt]{\scriptsize Gerçek gNB kodu.}\\{\scriptsize \emph{Gerçek sistemde nasıl yapılır?}}};
+  \node[nd,text width=11.2cm,below=8mm of n] (r) {\textbf{Sensing kaynak payı $\alpha$} eksenli iki eğri:\\ sensing performansı (Sionna) \textbf{ve} haberleşme kaybı (ns-3, OCUDU)};
+  \draw[ar] (s.south) |- (r.west);
+  \draw[ar] (n.south) -- (r.north);
+  \draw[ar] (o.south) |- (r.east);
+\end{tikzpicture}
+\caption{Projenin yapısı: üç araç, aynı $\alpha$ ekseninde birleşen iki sonuç.}
+\label{fig:boru}
+\end{figure}
+
+\begingroup\sffamily\small
+\begin{xltabular}{\textwidth}{@{}p{2.6cm}Xp{4.2cm}@{}}
+\toprule
+\textbf{Araç} & \textbf{Cevapladığı soru} & \textbf{Çıktısı} \\
+\midrule
+Sionna & Sensing sinyaline ne kadar kaynak verirsek hedefi ne kadar iyi buluruz? & Tespit ve hata eğrileri, range-Doppler haritaları \\
+ns-3 + 5G-LENA & Kaynağın bir kısmı sensing'e gidince birçok kullanıcılı bir ağda throughput ve gecikme ne olur? & Throughput, gecikme, paket kaybı tabloları \\
+OCUDU & Gerçek bir gNB yazılımı bu yükü nasıl zamanlar? Sensing nereye takılır? & Çalışan deney, kod haritası, tasarım önerisi \\
+\bottomrule
+\end{xltabular}
+\endgroup
+
+\subsection{Araştırma sorusu ve hipotezler}
+
+\textbf{Ana soru:} Sensing için ayrılan radyo kaynağı payı $\alpha$ arttıkça, haberleşme throughput'u ve gecikmesi nasıl değişir; bu, sensing kazancıyla nasıl dengelenir?
+
+\begin{description}[leftmargin=2.2em,labelwidth=2em,font=\sffamily\bfseries\color{acc}]
+\item[H1] Haberleşme throughput'u, sensing'e giden kaynak payı kadar \emph{doğrusal} düşer: $T(\eta)=\min\{\eta,\,1-\alpha\}$.
+  \textit{(Dickerson vd.~\cite{dickerson} modeli; OCUDU ölçümümüzde zaten yaklaşık olarak gördük, bkz.~Şekil~\ref{fig:ocudu-prs}.)}
+\item[H2] Sensing sinyali zaman ekseninde \emph{düzensiz boşluklarla} kesildiğinde, sensing kalitesi (özellikle Doppler/hız) hızla bozulur.
+  \textit{(Sionna'da basit bir deneyle gördük, bkz.~Şekil~\ref{fig:gap}.)}
+\item[H3] Yüksek yükte, kaynakları sensing ve haberleşme arasında \emph{uyarlanır} paylaştıran bir politika, sabit rezervasyondan iyi bir ödünleşim verir.
+  \textit{(Literatürde önerildi~\cite{dickerson}; bizim ölçmemiz gereken kısım.)}
+\end{description}
+
+\begin{dikkat}[Hipotez ne demek?]
+H1--H3 \emph{kesin sonuç değil}, test edeceğimiz iddialardır. Doğru çıkabilirler de, çıkmayabilirler de. Proje başarısı, hipotezlerin doğru çıkması değil,
+\textbf{iyi ölçülmüş ve açıklanmış sonuç} üretmektir.
+\end{dikkat}

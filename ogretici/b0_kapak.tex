@@ -1,0 +1,76 @@
+\begin{titlepage}
+\thispagestyle{empty}
+\vspace*{1.2cm}
+{\sffamily\color{muted}\large EHB415 \textbullet\ Dönem Projesi}\par
+\vspace{0.4cm}
+{\sffamily\bfseries\fontsize{30}{34}\selectfont\color{acc} 5G Ağlarına Sensing\\[2pt] Entegrasyonu (ISAC)}\par
+\vspace{0.3cm}
+{\sffamily\Large Temelden uygulamaya öğretici}\par
+\vspace{0.7cm}
+{\color{acc!35}\rule{\textwidth}{1.4pt}}\par
+\vspace{0.5cm}
+
+\begin{minipage}[t]{0.62\textwidth}
+\sffamily\normalsize
+Bu belge, ekibin tamamının \emph{ne yaptığımızı, neden yaptığımızı ve nasıl yapacağımızı} aynı seviyede anlaması için yazıldı.
+Soyut bir proposal'dan, çalıştırılabilir ve ölçülmüş bir başlangıca inmeyi hedefliyor.
+
+\vspace{0.4cm}
+\textbf{Bu belgede ne var?}
+\begin{itemize}[leftmargin=1.2em]
+\item Sorun ne, biz neyi düzeltmeye çalışıyoruz? (Bölüm~\ref{sec:buyuk})
+\item Temel kavramlar: kaynak ızgarası, scheduler, OFDM radar (Bölüm~\ref{sec:kavram})
+\item 3GPP standartları: ne söylüyorlar, biz neyi alıyoruz? (Bölüm~\ref{sec:3gpp})
+\item Üç araç: Sionna, ns-3/5G-LENA, OCUDU (Bölüm~\ref{sec:arac})
+\item OCUDU kodu: nerede ne var, nereye ekleme yaparız? (Bölüm~\ref{sec:ocudu})
+\item Pilot görevler ve 4 kişilik görev dağılımı (Bölüm~\ref{sec:pilot})
+\item Makale okuma rehberi ve Google Scholar sorguları (Bölüm~\ref{sec:okuma})
+\end{itemize}
+\end{minipage}\hfill
+\begin{minipage}[t]{0.33\textwidth}
+\vspace{0pt}
+\begin{tcolorbox}[colback=accl,colframe=acc,boxrule=0.5pt,arc=3pt,left=6pt,right=6pt,top=5pt,bottom=5pt]
+\sffamily\small
+\textbf{Bu belgedeki sayılar nereden?}\par\vspace{2pt}
+Kutular ve şekiller üç türdendir:
+\begin{itemize}[leftmargin=1em,itemsep=1pt]
+\item \textcolor{purp}{\textbf{Ölçülen bulgu}}: bu projenin kurulu araçlarında \emph{gerçekten çalıştırılıp} ölçüldü.
+\item \textcolor{good}{\textbf{Pilot görev}}: sizin yapacağınız iş.
+\item \textcolor{warn}{\textbf{Dikkat}}: tuzaklar ve doğrulanmamış yerler.
+\end{itemize}
+\end{tcolorbox}
+\end{minipage}
+
+\vfill
+{\sffamily\small\color{muted}
+Sürüm: 2026-10-17 \textbullet\ Araç sürümleri: Sionna 1.2.2, ns-3.48 + 5G-LENA v5.1, OCUDU 26.10.0\\
+Kurulum dokümanları ve betikler: \texttt{kurulum/} klasörü \textbullet\ Okuma listesi: \texttt{makaleler/OKUMA\_LISTESI.md}}
+\end{titlepage}
+
+\tableofcontents
+\clearpage
+
+\section*{Nasıl okunmalı?}
+\addcontentsline{toc}{section}{Nasıl okunmalı?}
+
+Herkes \textbf{Bölüm~\ref{sec:buyuk}}'i (büyük resim) okur. Sonra rolüne göre:
+
+\begingroup\sffamily\small
+\begin{xltabular}{\textwidth}{@{}lXl@{}}
+\toprule
+\textbf{Rol} & \textbf{Önce oku} & \textbf{Pilot görevi} \\
+\midrule
+Herkes & Bölüm~\ref{sec:buyuk}, \ref{sec:kavram} ve~\ref{sec:pilot} & Pilot-1, 2, 3 (hepsi) \\
+Standart ve metrik & Bölüm~\ref{sec:3gpp} & Bölüm~\ref{sec:pilot} \\
+Sionna & Bölüm~\ref{sec:kavram}.4, \ref{sec:arac}.1 & Pilot-3 \\
+ns-3 & Bölüm~\ref{sec:arac}.2 & Pilot-2 \\
+OCUDU & Bölüm~\ref{sec:arac}.3, \ref{sec:ocudu} & Pilot-1 \\
+\bottomrule
+\end{xltabular}
+\endgroup
+
+\begin{ipucu}[Okurken şunu hatırla]
+Bu proje bir \emph{yazılım yazma} projesi değil, bir \emph{ölçüm ve karşılaştırma} projesi. Hedefimiz yeni bir 5G sistemi yapmak değil;
+mevcut açık kaynak araçlarla şu soruya kanıtlı bir cevap vermek: \textbf{sensing eklemek haberleşmeyi ne kadar etkiler?}
+Bu yüzden bu belgenin her bölümü o soruya bir şey ekler.
+\end{ipucu}
