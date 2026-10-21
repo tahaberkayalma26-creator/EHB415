@@ -2,6 +2,13 @@
 *.pdf
 # Istisna: ekip icin yazdigimiz ogretici (kisisel bilgi icermez)
 !EHB415_ISAC_Ogretici.pdf
+!EHB415_Gorev_Kartlari.pdf
+# Sionna sehir projesi: buyuk ve yeniden uretilebilir ciktilar repoya girmez (rt_sehir.py / radar_takip.py uretir)
+ogretici/sionna_sehir/cikti/*.gif
+ogretici/sionna_sehir/cikti/*.npz
+ogretici/sionna_sehir/cikti/01_sahne.png
+ogretici/sionna_sehir/cikti/02_kapsama_3b.png
+ogretici/sionna_sehir/cikti/04_yollar.png
 # Bu makineye ozgu kurulum loglari (kullanici ve bilgisayar adi iceriyor)
 kurulum/loglar/
 *.log

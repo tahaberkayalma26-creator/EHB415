@@ -227,6 +227,33 @@ def fig_grid():
               ncol=4, loc="upper center", bbox_to_anchor=(0.5, 1.16), frameon=False, fontsize=8.5)
     save(fig, "fig_grid")
 
+# ---------------------------------------------------------------- gercek slot seridi (OCUDU log'u)
+def fig_slot_serit():
+    d = pd.read_csv(os.path.join(DATA, "ocudu_slot_serit.csv"), dtype={"slot": str})
+    fig, ax = plt.subplots(figsize=(8.4, 3.3))
+    cols = []
+    for _, r in d.iterrows():
+        if r.pdsch_sayisi == 0:
+            cols.append(ORANGE)
+        elif r.pdsch_prb < 90:
+            cols.append("#eab308")
+        else:
+            cols.append(BLUE)
+    ax.bar(range(len(d)), np.where(d.pdsch_sayisi == 0, 106, d.pdsch_prb), color=cols, width=0.82, alpha=0.9)
+    for i, r in d.iterrows():
+        if r.pdsch_sayisi == 0:
+            ax.text(i, 53, "PRS", rotation=90, ha="center", va="center", color="white", fontsize=8, fontweight="bold")
+    ax.axhline(106, color=MUTED, lw=0.8, ls="--")
+    ax.text(len(d) - 0.5, 108, "hücrede toplam 106 PRB", ha="right", va="bottom", fontsize=8, color=MUTED)
+    ax.set_xticks(range(0, len(d), 5)); ax.set_xticklabels(d.slot.iloc[::5], fontsize=8)
+    ax.set_xlabel("Slot  (SFN.slot: çerçeve numarası.çerçeve içi slot; 15 kHz'de 1 çerçeve = 10 slot = 10 ms)")
+    ax.set_ylabel("PDSCH'ye verilen PRB sayısı"); ax.set_ylim(0, 122)
+    from matplotlib.patches import Patch
+    ax.legend(handles=[Patch(fc=BLUE, label="veri slotu (96 PRB)"), Patch(fc="#eab308", label="slot .0: yalnızca 40 PRB"),
+                       Patch(fc=ORANGE, label="PRS'in tuttuğu slot (PDSCH yok)")], ncol=3, frameon=False, fontsize=8.5,
+              loc="upper center", bbox_to_anchor=(0.5, 1.18))
+    save(fig, "fig_slot_serit")
+
 # ---------------------------------------------------------------- terminal ciktisi gorselleri
 def term(name, lines, title, fs=8.2, w=8.4):
     h = 0.62 + 0.155 * len(lines)
@@ -249,4 +276,4 @@ def fig_terms():
     term("term_ocudu", ["$ ./gnb -c ehb_p4.yml      # PRS her 4 slotta bir"] + keep, "Ubuntu (WSL2): OCUDU gNB testmode (gerçek çıktı)", fs=7.4, w=9.0)
 
 if __name__ == "__main__":
-    fig_rd_map(); fig_resolution(); fig_gap(); fig_d1(); fig_ocudu(); fig_ns3(); fig_grid(); fig_terms()
+    fig_rd_map(); fig_resolution(); fig_gap(); fig_d1(); fig_ocudu(); fig_ns3(); fig_grid(); fig_slot_serit(); fig_terms()

@@ -54,7 +54,7 @@ Kalibrasyonu 3GPP referans sonuçlarına karşı yapılmıştır \cite{koutlia}.
 \end{figure}
 
 \begin{bulgu}[ns-3 ölçümü: UE sayısına göre throughput ve gecikme]
-\texttt{cttc-nr-demo} örneğini \texttt{--ueNumPergNb} = 1, 2, 5, 10, 20 ile çalıştırdık (5G-LENA v5.1, ns-3.48, 1\,s simülasyon, tek koşu). Sonuçlar:\par
+\texttt{cttc-nr-demo} örneğini \texttt{--ueNumPergNb} = 1, 2, 5, 10, 20 ve 100 ile çalıştırdık (5G-LENA v5.1, ns-3.48, 1\,s simülasyon, tek koşu). Sonuçlar:\par
 \begin{center}
 \sffamily\small
 \begin{tabular}{@{}rrrr@{}}
@@ -66,11 +66,15 @@ UE/gNB & akış & toplam throughput (Mbps) & ort.\ gecikme (ms) \\
 5 & 5 & 219,7 & 9,97 \\
 10 & 10 & 238,3 & 57,9 \\
 20 & 20 & 288,2 & 123,6 \\
+100 & 100 & 346,0 & 154,1 \\
 \bottomrule
 \end{tabular}
 \end{center}
 \textbf{Yorum:} Örnek, UE'leri iki gruba böler: bir kısmına düşük gecikmeli 10,24\,Mbps trafik, kalanına 102,4\,Mbps ``best effort'' trafik verir (5 UE'de çıktıda 3'üne 10,24 ve 2'sine 102,4\,Mbps verildiğini gördük).
 Yük arttıkça toplam kapasite doygunluğa varır ve gecikme patlar.
+\par\textbf{100 UE:} bu koşu \textbf{26 dakika} sürdü (20 UE'de birkaç dakikaydı), yani süre UE sayısıyla doğrusal artmıyor. Sunulan toplam yük 5632\,Mbps iken teslim edilen yalnızca 346\,Mbps (\%6,1).
+Çarpıcı olan, çok farklı talepli akışların \emph{neredeyse eşit pay almasıdır}: 10,24\,Mbps isteyen 49 akış \textbf{3,40\,Mbps}, 102,4\,Mbps isteyen 50 akış \textbf{3,58\,Mbps} aldı. Gecikme ise farklı: düşük gecikmeli sınıf ortalama 17\,ms, ``best effort'' sınıf 292\,ms.
+Bir akış (No.~47) hiç paket alamadı; nedenini incelemedik.
 Bu, \emph{kaynaklar azalırsa} ne olacağının bir önizlemesidir: sensing de benzer şekilde kapasite alır.
 \end{bulgu}
 
@@ -127,6 +131,125 @@ Ropitault vd.~\cite{siolena}, Sionna RT'nin ürettiği çok yollu kanalı (gecik
 \textbf{(2)} CSV üretici araç \textbf{Sionna 0.19.2} ve \textbf{Python 3.11+} ister; bizim Sionna 1.2.2 ortamıyla çakışır, ayrı sanal ortam gerekir.
 \textbf{(3)} Bunların hiçbirini henüz kurup denemedik. Bu bir \emph{ikinci aşama} işidir.
 \end{dikkat}
+
+\subsection{Üç araç ne işe yarar? Tek bakışta}\label{sec:tek-bakis}
+
+\begin{center}
+\sffamily\small
+\begin{tabularx}{\textwidth}{@{}p{2.3cm}p{3.9cm}p{3.7cm}X@{}}
+\toprule
+\textbf{Araç} & \textbf{Gerçek hayatta neyin yerine geçer?} & \textbf{Ne yaparsın?} & \textbf{Bizim sorumuza cevabı} \\
+\midrule
+\textbf{Sionna} & Bir radar/radyo laboratuvarı ve ölçüm arabası: sinyalin şehirde nasıl yayıldığını ve radarın hedefi nasıl gördüğünü hesaplar & Sahne kur, gNB koy, kapsama haritası çıkar, İHA uçur, radar işle & Sensing'e verilen kaynak arttıkça \emph{sensing ne kadar iyi} oluyor? \\
+\textbf{ns-3 / 5G-LENA} & Bir şehir ölçeğinde ağ: yüzlerce telefonun aynı baz istasyonunu paylaştığı bir trafik laboratuvarı & Düğümler ve trafik tanımla, çalıştır, throughput ve gecikmeyi oku & Kaynak sensing'e gidince \emph{çok kullanıcılı bir ağ} ne kadar etkileniyor? \\
+\textbf{OCUDU} & Gerçek bir baz istasyonunun yazılımı: radyo hariç her şey gerçek kod & gNB'yi çalıştır, yapılandırmayı değiştir, scheduler'ın kararlarını log'dan izle & \emph{Gerçek kodda} sensing sinyali (PRS) haberleşmeden ne kadar götürüyor? \\
+\bottomrule
+\end{tabularx}
+\end{center}
+
+Üçü aynı sorunun üç yüzü: \textbf{sensing yüzdesi $\alpha$ arttıkça kazanç (Sionna) ve bedel (ns-3, OCUDU) nasıl değişir?}
+
+\subsection{Görsel tur: Sionna ile şehirde ISAC projesi}\label{sec:sionna-sehir}
+
+Bu bölüm, Sionna'nın \emph{ne işe yaradığını} gözle görmek için hazırlandı. Proje bir şehirde (Münih, Sionna'nın yerleşik sahnesi) şunları yapar:
+\textbf{(1)} gNB'yi bir çatıya koy, \textbf{(2)} sinyalin şehirde nereye ulaştığını hesapla (kapsama), \textbf{(3)} bir telefona giden yolları göster, \textbf{(4)} bir İHA uçur ve radarın onu izlemesini sağla, \textbf{(5)} sensing'e ayrılan kaynak arttıkça sonuçların nasıl değiştiğini ölç.
+Kodlar: \texttt{ogretici/sionna\_sehir/} (\texttt{rt\_sehir.py}: Sionna RT; \texttt{radar\_takip.py}: radar ve takip). Toplam çalışma süresi birkaç dakikadır.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.78\textwidth]{sekiller/sionna_01_sahne.png}
+\caption{\textbf{Adım 1: şehir ve gNB.} Münih'in 3B modeli; kırmızı küre gNB (\texttt{[8,5; 21; 27]} m, bir çatı kenarı), 4,9\,GHz, 37\,dBm. Sionna RT ile üretildi (Mitsuba yol izleyici, CPU).}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.78\textwidth]{sekiller/sionna_02_kapsama.png}
+\caption{\textbf{Adım 2: kapsama haritası.} Renk, her noktadaki yol kazancı (dB). Sinyal en çok gNB'nin baktığı açık meydana ulaşıyor; binaların arkasında ve dar sokaklarda zayıf. Işın izleme bunu binaların yansıma ve gölgelemesiyle hesaplıyor.}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.78\textwidth]{sekiller/sionna_04_yollar.png}
+\caption{\textbf{Adım 3: bir telefona giden yollar.} Yeşil küre bir kullanıcı (\texttt{[45; 90; 1,5]} m). Işık çizgiler, sinyalin gNB'den ona gittiği yollardır: bir doğrudan yol ve binalardan yansıyanlar. Sionna 13 geçerli yol buldu. En güçlü yol doğrudan yol (274\,ns $\approx$ 82\,m, $-84{,}5$\,dB), en zayıf listelenen yol $-104$\,dB. Bu \emph{çok yollu kanal}, kablosuz ağın neden kablolu ağdan farklı davrandığının nedenidir.}
+\end{figure}
+
+\paragraph{Adım 4: İHA'yı uçur ve radarla izle.}
+Bir İHA, 20\,m irtifada 356\,m'lik bir rotada yaklaşık 25\,m/s ile uçar (60 nokta, 14,3\,s). Her noktada iki şey hesaplanır:
+\textbf{(i)} gNB'nin İHA'yı \emph{görüp görmediği} (görüş hattı), bunu Sionna RT'ye \emph{doğrudan yolu çözdürerek} buluyoruz; \textbf{(ii)} bu geometride radarın İHA'yı tespit edip edemediği.
+Görüş hattı 60 noktanın \textbf{37}'sinde var (\%62). Gerisinde İHA bir binanın arkasında.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.98\textwidth]{sekiller/sionna_takip_kare1.png}
+\caption{\textbf{Takip filmi, 1. kare} (tam film: \texttt{ogretici/sionna\_sehir/cikti/05\_takip\_filmi.gif}). Sol: harita, İHA rotası (yeşil = görüş hattı var). Orta ve sağ: iki radarın menzil-hız görüntüsü, \textbf{sensing payı \%10} ve \textbf{\%50}. Turkuaz halka İHA'nın gerçek konumu. \textbf{\%10 payda (14 sembol) hedef hız ekseninde uzun bir çizgi gibi yayılıyor} (hız çözünürlüğü kaba), \textbf{\%50 payda (70 sembol) tek bir nokta.} Alt: gerçek menzil (siyah) ve radarın bulduğu menzil.}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.98\textwidth]{sekiller/sionna_takip_kare2.png}
+\caption{\textbf{Takip filmi, engelli bölüm.} İHA rotanın kırmızı kısmında, yani bir binanın arkasında. \textbf{İki radar da hedefi göremiyor} ve alttaki izde noktalar kesildi. \emph{Sensing kaynağını artırmak engeli aşmaya yetmedi.} Bu, sensing kalitesinin yalnızca kaynağa değil, \emph{geometriye} (görüş hattı) da bağlı olduğunu gösteriyor.}
+\end{figure}
+
+\paragraph{Adım 5: sensing'e ayrılan kaynak ne kazandırıyor?}
+Sensing payını $\alpha=M/140$ tanımlıyoruz ($M$: 10\,ms'lik çerçevede (140 sembol) sensing'e ayrılan sembol sayısı). Her ($\alpha$, menzil) için 160 deneme yaptık:
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.98\textwidth]{sekiller/sionna_06_kaynak_basari.png}
+\caption{\textbf{Sensing kaynağı $\leftrightarrow$ başarı (Sionna tarafı).} Sol: tespit olasılığı. Orta: menzil hatası. Sağ: hız hatası (orta ve sağda yalnızca $P_d\geq0{,}5$ noktalar). Renkler İHA'nın gNB'den uzaklığı.}
+\end{figure}
+
+\begin{bulgu}[Sionna tarafından üç bulgu]
+\textbf{(1) Yakın hedef ucuza bulunur, uzak hedef pahalıya.} 200\,m'de tespit \%20 payda (28 sembol) 0,99'a ulaşır; \textbf{300\,m'de} aynı olasılık için yaklaşık \%100 pay gerekir (\%40'ta 0,49, \%50'de 0,71, \%100'de 0,98); \textbf{400\,m'de} \%100 payda bile yalnızca 0,38.
+\textbf{(2) Menzil doğruluğu kaynak payına bağlı değil:} RMSE tüm $\alpha$ için yaklaşık 0,85--1,2\,m kalıyor. Menzil doğruluğunu \emph{bant genişliği} belirler (Bölüm~\ref{sec:radar}), $\alpha$ değil.
+\textbf{(3) Hız doğruluğu $\alpha$ ile hızla düzelir:} RMSE yaklaşık 16\,m/s'den (\%3 pay) 1\,m/s'ye (\%100 pay) iner, $\Delta v \propto 1/M$ olduğundan.
+Yani \textbf{sensing kaynağı neye yarar?} Daha uzak hedefi bulmaya ve hızı daha iyi ölçmeye; menzil hassasiyetine değil.
+\end{bulgu}
+
+\begin{dikkat}[Bu bölümdeki varsayımlar ve sınırlar (hepsi \texttt{radar\_takip.py} içinde)]
+Radar kısmı \emph{standart radar denklemiyle yazılmış oyuncak bir modeldir}, Sionna'nın RT'sinden yalnızca \textbf{geometri ve görüş hattı} geliyor. Varsayımlar:
+gNB gücü 37\,dBm, anten kazancı 26\,dBi (gönderim ve alım), İHA RCS $-20$\,dBsm, \textbf{artık öz-girişim X = 40\,dB} (TR 38.765'te ``$-94+X$'', $X$ şirket seçimi), engelli noktada yankıya \textbf{30\,dB} ek kayıp, yanlış alarm olasılığı $P_{fa}=10^{-3}$.
+Bu sayılar \emph{eğilimi} gösterir; mutlak değerleri (örn.\ ``300\,m'de \%100 pay gerekir'') gerçek bir sistem için geçerli değildir. Öz-girişimin 40\,dB seçilmesi, uzak menzildeki başarıyı doğrudan belirleyen büyük bir varsayımdır.
+İlk denemede yanlış alarm olasılığı sabit eşikle çok yüksek çıkıyordu (engelli bölgede sahte ``tespit''); eşiği hücre sayısına göre ayarlayınca bu kayboldu (60 karede 0 yanlış alarm).
+Ayrıca kapsama haritası \emph{yer seviyesi} (kullanıcı yüksekliği) içindir, İHA'nın uçtuğu 20\,m için değildir.
+\end{dikkat}
+
+\subsection{Görsel tur: OCUDU'da çok kullanıcılı ve dilimli deney}\label{sec:ocudu-cokue}
+
+Bu kez OCUDU'ya birden çok sahte kullanıcı (test UE) bağladık ve PRS'i açıp kapattık. Betikler: \texttt{ogretici/betikler/ocudu\_cok\_ue.sh}, \texttt{ocudu\_cok\_ue\_sweep.sh}.
+
+\begin{center}
+\sffamily\small
+\begin{tabular}{@{}rrrrr@{}}
+\toprule
+\textbf{UE sayısı} & \textbf{PRS yok: toplam} & \textbf{UE başına} & \textbf{PRS her 4 slot: toplam} & \textbf{UE başına} \\
+\midrule
+1 & 59,0 Mbps & 59,0 & 44,0 Mbps & 44,0 \\
+2 & 60,0 & 30,0 & 44,0 & 22,0 \\
+4 & 60,0 & 15,0 & 44,0 & 11,0 \\
+8 & 60,8 & 7,6 & 45,1 & 5,6 \\
+\bottomrule
+\end{tabular}
+\end{center}
+(Veri: \texttt{ogretici/veri/ocudu\_cok\_ue.csv}. DL, 20\,MHz, 15\,kHz, son 15 saniyenin ortalaması, tek koşu.)
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.96\textwidth]{sekiller/fig_cok_ue_kareler.pdf}
+\caption{\textbf{Gerçek OCUDU log'u, 4 kullanıcı, PRS her 4 slotta bir.} Her kare bir slot. \textbf{Her slotun tamamı (96 PRB) tek bir kullanıcıya veriliyor}, kullanıcılar ızgarayı yan yana değil \emph{slot slot sırayla} paylaşıyor (mor UE 46, mavi UE 44, ...). Turuncu slotlar PRS: kimseye yer yok. Animasyon: \texttt{ogretici/sekiller/ocudu\_cok\_ue\_filmi.gif}.}
+\end{figure}
+
+\begin{bulgu}[OCUDU çok kullanıcılı deneyden dört bulgu]
+\textbf{(1) Hücre kapasitesi sabit bir havuz:} kullanıcı sayısından bağımsız $\approx$ 60\,Mbps. $N$ kullanıcı bunu eşit böler (60/$N$).
+\textbf{(2) PRS havuzu küçültür, herkesin payı aynı oranda küçülür:} 60 $\rightarrow$ 44\,Mbps ($-\%27$), 4 kullanıcıda 15 $\rightarrow$ 11\,Mbps. Sensing, \emph{adil biçimde} herkesten alıyor.
+\textbf{(3) Paylaşım zamanda:} log'da (5873 PDSCH kaydı) bir slotta tek kullanıcı görüldü; tüm slotları tek tek denetlemedik.
+\textbf{(4) Dilim (slicing) sınırı bu ortamda etkisiz:} \texttt{max\_prb\_policy\_ratio} \%60 ve \%30 verildi, throughput 59,0\,Mbps'te kaldı. Büyük olasılıkla testmode UE'leri çekirdek ağ olmadan yaratıldığı için hiçbir dilime atanmıyor. Yani \textbf{sensing'i dilimle emüle etme fikri} testmode'da çalışmadı; gerçek UE ve çekirdek ağ ister.
+Kod okurken ayrıca şunu gördük: varsayılan scheduler politikası \texttt{time\_qos} (\texttt{du\_high\_config\_cli11\_schema.cpp}, \texttt{derive\_cell\_auto\_params}); eşit paylaşım bu politikanın testmode'daki davranışı.
+\end{bulgu}
+
+\subsection{ns-3'ü görmek: NetAnim}\label{sec:netanim}
+
+ns-3'ün resmî animasyon aracı \textbf{NetAnim}, düğümleri ekranda gösterir ve paketlerin hareketini oynatır. Ubuntu'da hazır paketi yok; kaynaktan derlendi (\texttt{kurulum/wsl\_netanim\_kur.sh}, Qt5 + CMake). Programa \texttt{AnimationInterface} eklenince bir XML üretilir ve NetAnim'de açılır (Bölüm~\ref{sec:ns3}'teki iki düğümlü örnek böyle izlendi). Pencere Windows 11'de WSLg ile masaüstüne açılır.
 
 \subsection{OCUDU: gerçek bir gNB yazılımı}\label{sec:ocudu-kisa}
 

@@ -1,0 +1,234 @@
+% EHB415 Gorev Kartlari (4 kisi). Derleme: tectonic -X compile gorev_kartlari.tex  (fontlar\ klasoru gerekir)
+\documentclass[10.5pt,a4paper]{article}
+\usepackage{fontspec}
+\setmainfont{georgia}[Path=./fontlar/,Extension=.ttf,BoldFont=georgiab,ItalicFont=georgiai,BoldItalicFont=georgiaz]
+\setsansfont{arial}[Path=./fontlar/,Extension=.ttf,BoldFont=arialbd,ItalicFont=ariali,BoldItalicFont=arialbi]
+\setmonofont{consola}[Path=./fontlar/,Extension=.ttf,BoldFont=consolab,ItalicFont=consolai,BoldItalicFont=consolaz,Scale=0.88]
+\usepackage[a4paper,left=2cm,right=2cm,top=1.9cm,bottom=1.9cm]{geometry}
+\usepackage{xcolor,booktabs,enumitem,amsmath,url,float}
+\usepackage[most]{tcolorbox}
+\usepackage{xltabular,longtable}
+\usepackage{fancyhdr,titlesec,listings}
+\usepackage[colorlinks=true,linkcolor=blue!50!black,urlcolor=blue!50!black]{hyperref}
+\renewcommand{\contentsname}{İçindekiler}
+\emergencystretch=2em
+\setlength{\parindent}{0pt}\setlength{\parskip}{4pt plus 1pt}
+\setlist{itemsep=2pt,topsep=3pt,parsep=0pt}
+\definecolor{ink}{HTML}{1F2937}\definecolor{acc}{HTML}{1D4ED8}\definecolor{accl}{HTML}{DBEAFE}
+\definecolor{warn}{HTML}{EA580C}\definecolor{warnl}{HTML}{FFEDD5}\definecolor{good}{HTML}{16A34A}
+\definecolor{goodl}{HTML}{DCFCE7}\definecolor{muted}{HTML}{6B7280}\definecolor{codebg}{HTML}{F3F4F6}
+\color{ink}
+\titleformat{\section}{\sffamily\bfseries\Large\color{acc}}{}{0pt}{}[{\color{acc!35}\titlerule[1pt]}]
+\titleformat{\subsection}{\sffamily\bfseries\normalsize\color{acc!80!black}}{}{0pt}{}
+\titlespacing*{\section}{0pt}{6pt}{6pt}\titlespacing*{\subsection}{0pt}{8pt}{2pt}
+\pagestyle{fancy}\fancyhf{}\renewcommand{\headrulewidth}{0.3pt}
+\fancyhead[L]{\sffamily\footnotesize\color{muted} EHB415 \textbullet\ ISAC projesi \textbullet\ Görev kartları}
+\fancyfoot[C]{\sffamily\footnotesize\color{muted}\thepage}
+\lstset{basicstyle=\ttfamily\footnotesize,backgroundcolor=\color{codebg},frame=single,rulecolor=\color{codebg!70!black},
+  breaklines=true,columns=fullflexible,keepspaces=true,showstringspaces=false,aboveskip=4pt,belowskip=6pt,
+  literate={ğ}{g}1 {ş}{s}1 {ı}{i}1 {ü}{u}1 {ö}{o}1 {ç}{c}1}
+\newcommand{\kod}[1]{{\small\path{#1}}}
+\newtcolorbox{neden}{enhanced,colback=accl,colframe=acc,boxrule=0.5pt,arc=2pt,left=6pt,right=6pt,top=4pt,bottom=4pt,
+  fonttitle=\sffamily\bfseries\small,title=Bu görev neden önemli?,coltitle=white,colbacktitle=acc,
+  attach boxed title to top left={yshift=-2mm,xshift=4mm},boxed title style={arc=2pt,boxrule=0pt}}
+\newtcolorbox{kontrol}{enhanced,colback=goodl,colframe=good,boxrule=0.5pt,arc=2pt,left=6pt,right=6pt,top=4pt,bottom=4pt,
+  fonttitle=\sffamily\bfseries\small,title=Kontrol: bizde çıkan sonuç (kendi sonucunla karşılaştır),coltitle=white,colbacktitle=good,
+  attach boxed title to top left={yshift=-2mm,xshift=4mm},boxed title style={arc=2pt,boxrule=0pt}}
+\newtcolorbox{teslim}{enhanced,colback=warnl,colframe=warn,boxrule=0.5pt,arc=2pt,left=6pt,right=6pt,top=4pt,bottom=4pt,
+  fonttitle=\sffamily\bfseries\small,title=Ne teslim edeceksin?,coltitle=white,colbacktitle=warn,
+  attach boxed title to top left={yshift=-2mm,xshift=4mm},boxed title style={arc=2pt,boxrule=0pt}}
+\begin{document}
+
+% ======================================================================= ORTAK
+\section*{EHB415 ISAC projesi: görev kartları}
+{\sffamily\color{muted} Bu belge 4 kişilik ekibin bu haftaki işlerini anlatır. Önce \textbf{Ortak bilgi}'yi, sonra kendi kartını oku.}
+
+\subsection*{Projenin sorusu (herkes bilmeli)}
+5G baz istasyonu hem kullanıcıya veri taşıyıp hem çevreyi \emph{algılayabilir} (ISAC). Ama kaynaklar sonlu: sensing'e ayrılan kaynak, haberleşmeden gider.
+\textbf{Soru: sensing'e ne kadar kaynak ayırırsak sensing ne kazanır, haberleşme ne kaybeder?}
+Üç araç bu sorunun üç yüzünü ölçer: \textbf{Sionna} kazancı (sensing ne kadar iyi), \textbf{ns-3} ve \textbf{OCUDU} bedeli (haberleşme ne kadar düşüyor).
+Hepsi aynı eksende buluşacak: \textbf{$\alpha$ = sensing'e giden kaynak payı}.
+
+\subsection*{Herkes için ortak adımlar}
+\begin{enumerate}[leftmargin=1.6em]
+\item \textbf{Repoyu al:} \texttt{git clone https://github.com/tahaberkayalma26-creator/EHB415.git}
+\item \textbf{Öğreticiyi oku:} repodaki \texttt{EHB415\_ISAC\_Ogretici.pdf}: \textbf{Bölüm 1} (sorun), \textbf{Bölüm 2.1} (kaynak ızgarası), \textbf{Bölüm 6.2} (roller). Yaklaşık 40 dakika.
+\item \textbf{Kurulumunu yap:} \texttt{kurulum/README.md}'deki sıra. Senin kartında hangi kurulum yazıyorsa onu yap. Takılırsan \texttt{kurulum/07-sorun-giderme.md}.
+\item \textbf{Teslim:} \textbf{Perşembe akşamı.} Ayrıntısı kartında.
+\end{enumerate}
+
+\begin{tcolorbox}[colback=codebg,colframe=muted,boxrule=0.4pt,arc=2pt,left=6pt,right=6pt,top=3pt,bottom=3pt]
+\sffamily\small\textbf{Üç kural.}
+(1) Sonucu yazarken \textbf{hangi komutu çalıştırdığını} yaz; başkası aynısını yapıp aynı sonucu alabilmeli.
+(2) Sonucun bizimkinden \textbf{farklı çıkması sorun değil}: farkı ve nedenini düşündüğünü yaz.
+(3) Anlamadığın bir şey olursa \textbf{teslime "anlamadığım yer" diye yaz}: bu eksik değil, bilgi.
+\end{tcolorbox}
+
+\subsection*{Özet tablo}
+\begingroup\sffamily\small
+\begin{xltabular}{\textwidth}{@{}p{1.5cm}p{2.7cm}Xp{3.6cm}@{}}
+\toprule
+\textbf{Kim} & \textbf{Alan} & \textbf{Bu hafta} & \textbf{Çıktı} \\
+\midrule
+\textbf{Taha} & 3GPP, metrik, rapor & Metrik sözlüğü, $\alpha$ tanımı, rapor & \texttt{docs/metrics.md} + rapor taslağı \\
+\textbf{Nihat} & Sionna & Şehir projesini çalıştır, kazanç eğrisini üret & Grafik + 1 paragraf + 3 cevap \\
+\textbf{Aziz} & ns-3 / 5G-LENA & UE taraması, scheduler tablosu, bant deneyi & 2 tablo + 1 sayfa not \\
+\textbf{Fatih} & OCUDU & PRS taraması, çok kullanıcılı deney, açık soru & Tablo + sorunun cevabı \\
+\bottomrule
+\end{xltabular}
+\endgroup
+
+\subsection*{Takvim}
+\textbf{Bugün:} kurulumlar başlar. \textbf{Perşembe akşamı:} teslimler; kısa toplantı (ns-3'te sensing yükünü nasıl temsil edeceğimize karar). \textbf{Cuma:} rapor yazımı.
+
+\clearpage
+% ======================================================================= KISI 1
+\section*{Taha: 3GPP standardı, metrik ve rapor}
+\begin{neden}
+Üç araç farklı şeyler ölçüyor (Sionna: sembol, OCUDU: slot, ns-3: bant). Hepsinin sonucunu \textbf{aynı eksene} koymak için \textbf{ortak bir "sensing kaynak payı" tanımı} lazım. Bu tanım yoksa üç ayrı, birbiriyle kıyaslanamayan grafik çıkar. Raporun Yöntem bölümü de buna dayanır. Bu kart projenin yapıştırıcısı.
+\end{neden}
+
+\subsection*{Adımlar}
+\begin{enumerate}[leftmargin=1.6em]
+\item \textbf{Oku (toplam 2--3 saat).}
+  \begin{itemize}
+  \item Lin, \emph{ISAC in 3GPP} (arXiv 2608.11606, 8 sayfa): Tablo 1, bölüm III.A, IV.B.
+  \item \textbf{3GPP TR 38.765 v20.0.0:} §4.1 (metrikler), §4.2 (hedefler), \textbf{§6.2 (sensing kaynak oranı)}, §9 (sonuç), Ek A (parametreler). PDF telifli, repoda yok; şuradan indir: \url{https://whatthespec.net/friendlyspec/pdf/38765/38765-k00.pdf}
+  \item Dickerson vd. (arXiv 2606.21677): bölüm III.B (denklem 9--12) ve IV.A.
+  \end{itemize}
+\item \textbf{Metrik sözlüğünü yaz:} \texttt{docs/metrics.md}. Tablo: \emph{Metrik | tanım/formül | birim | hangi araçta ölçülür}. En az şu satırlar: kaçırma olasılığı $P_{md}$, yanlış alarm Tip~1 ve Tip~2 ($P_{f1}$, $P_{f2}$), konum hatası, hız hatası, throughput, gecikme, paket kaybı, sensing kaynak oranı (Seçenek~1 ve~2).
+\item \textbf{$\alpha$ tanımını netleştir.} Her araç için bir satır: \emph{$\alpha$ bu araçta nasıl hesaplanıyor?} Şu an: Sionna'da $\alpha = M/140$ ($M$: 10\,ms'lik çerçevede sensing sembolü); OCUDU'da PRS'li slot oranı (ölçülen kayıp $\approx 1/T_{PRS}$); ns-3'te henüz belirsiz (Aziz'in ``hangi yol'' notuna bağlı; Aziz'le konuş). Hangileri belirsizse işaretle. TR 38.765 §6.2'deki Tip~1/2/3 kaynakları bu tabloya eşle.
+\item \textbf{Dickerson modelini bir tabloya dök:} $\alpha_{sense} = \frac{N_b}{1-OH}\cdot\frac{f_{sense}}{N_{sym/sn}}\cdot\frac{N_{PRB,sense}}{N_{PRB,toplam}}$ ve $T(\eta)=\min\{\eta,1-\alpha_{sense}\}$. Makalenin parametreleriyle ($N_{PRB,toplam}=270$, $OH=0{,}14$, 14\,000 sembol/s, $N_{ZC}=1291\Rightarrow108$ PRB, $f_{sense}=500$\,Hz) kendin hesapla.
+\item \textbf{Cuma: raporu yaz.} Iskelet: Giriş (boşluk), Arka plan (ISAC, 3GPP), Yöntem (üç araç ve sensing yükünün temsili), Ön bulgular (Nihat, Aziz ve Fatih'in çıktıları), İş planı, Kaynakça.
+\end{enumerate}
+
+\begin{kontrol}
+Dickerson formülü: tek ışın için $\alpha=\%1{,}66$; sekiz ışın için $\alpha=\%13{,}29$. Makale de aynı değerleri veriyor; tutmuyorsa formülü yanlış yazmışsın.
+\end{kontrol}
+
+\begin{teslim}
+(1) \texttt{docs/metrics.md}; (2) $\alpha$ tablosu (araç $\times$ tanım $\times$ belirsizlikler); (3) Dickerson hesap tablosu; (4) Cuma: rapor taslağı. \textbf{Perşembe akşamına (1)--(3) hazır.}
+\end{teslim}
+
+\clearpage
+% ======================================================================= KISI 2
+\section*{Nihat: Sionna (kazanç tarafı)}
+\begin{neden}
+Sionna \textbf{"sensing'e kaynak verirsek ne kazanırız?"} sorusunu cevaplar: bir İHA'yı hangi mesafeden, ne kadar doğrulukla buluruz. Ns-3 ve OCUDU yalnızca bedeli ölçer; kazanç olmadan ödünleşim (trade-off) çıkmaz. Ayrıca bu kartın sonunda, filmde gördüğümüz radarın \emph{nasıl çalıştığını} anlamış olacaksın.
+\end{neden}
+
+\subsection*{Adımlar}
+\begin{enumerate}[leftmargin=1.6em]
+\item \textbf{Kurulum:} \texttt{kurulum/03-sionna-windows.md}, adım 1--6 (Python 3.11 sanal ortam, \texttt{sionna==1.2.2}, LLVM, \textbf{LLVM için yönetici gerekir}). Bitti: \texttt{kurulum\textbackslash sionna\_dogrulama.py} ve \texttt{sionna\_rt\_dogrulama.py} hatasız çalışıyor.
+\item \textbf{Ek paket:} \texttt{python.exe -m pip install pandas} (venv'in python'uyla).
+\item \textbf{Şehir projesini çalıştır} (PowerShell, repo klasöründe):
+\begin{lstlisting}
+$env:DRJIT_LIBLLVM_PATH = [Environment]::GetEnvironmentVariable('DRJIT_LIBLLVM_PATH','User')
+cd ogretici\sionna_sehir
+C:\Users\<kullanici>\venvs\ehb415\Scripts\python.exe rt_sehir.py
+C:\Users\<kullanici>\venvs\ehb415\Scripts\python.exe radar_takip.py
+\end{lstlisting}
+  \texttt{rt\_sehir.py} Sionna RT ile şehri ve görüş hattını hesaplar (ilk çalıştırma yaklaşık 1 dk). \texttt{radar\_takip.py} bu sonucu okuyup radarı simüle eder (yaklaşık 2 dk). Çıktılar \texttt{cikti/} klasöründe.
+\item \textbf{Anla (en önemli adım):} \texttt{radar\_takip.py} içindeki \texttt{radar()} fonksiyonunu satır satır oku. Üç fikir: (i) gecikme, alt taşıyıcılarda \emph{faz dönmesi} yaratır; (ii) alt taşıyıcılar boyunca ters FFT bunu \emph{menzil tepesine} çevirir; (iii) semboller boyunca FFT aynısını \emph{hıza} çevirir. Öğreticide Bölüm 2.4 ve radar atölyesi bunu anlatıyor.
+\item \textbf{Deney (önce tahmin et, sonra çalıştır):} \texttt{radar\_takip.py}'nin başındaki \texttt{X\_SI\_DB = 40.0} (artık öz-girişim) değerini 30 yap ve yeniden çalıştır. 300\,m'deki tespit olasılığı nasıl değişir? \emph{Çalıştırmadan önce yönünü tahmin et ve nedenini yaz.}
+\item \textbf{Üç soruyu cevapla (her biri 2--3 cümle):}
+  \begin{enumerate}[label=(\alph*)]
+  \item Menzil hatası neden sensing payı $\alpha$'ya bağlı değil, ama hız hatası bağlı?
+  \item Filmde $\alpha=\%10$ ile $\alpha=\%50$ radar görüntüsü neden farklı görünüyor (çizgi ve nokta)?
+  \item İHA binanın arkasına geçince hem $\alpha=\%10$ hem \%50 neden hedefi kaybediyor? $\alpha$'yı artırmak neden kurtarmıyor?
+  \end{enumerate}
+\end{enumerate}
+
+\begin{kontrol}
+\texttt{rt\_sehir.py} sonunda \texttt{LOS olan nokta sayisi: 37/60}. \texttt{radar\_takip.py}'nin tespit olasılığı tablosunda, 300\,m'de yaklaşık: $\alpha=\%10$: 0,01; \%20: 0,13; \%40: 0,49; \%50: 0,71; \%100: 0,98. 200\,m'de $\alpha=\%20$ için yaklaşık 0,99. (Küçük sapmalar normal; rastgele sayı üretici sabit ama kütüphane sürümü farklıysa değişebilir.) Film dosyası: \texttt{cikti/05\_takip\_filmi.gif}.
+\end{kontrol}
+
+\begin{teslim}
+(1) Kendi çalıştırmandan \texttt{06\_kaynak\_basari.png} grafiği; (2) ``ne gördüm'' 3--5 cümle; (3) $X=30$ dB deneyinin tahmini ve gerçek sonucu; (4) üç sorunun cevabı. Bizim sonuçlardan farklı çıkan bir şey varsa belirt.
+\end{teslim}
+
+\clearpage
+% ======================================================================= KISI 3
+\section*{Aziz: ns-3 / 5G-LENA (bedel tarafı, ağ düzeyi)}
+\begin{neden}
+ns-3 \textbf{çok kullanıcılı bir ağda} sensing'in bedelini gösterir. Ayrıca projenin en büyük açık sorusu \textbf{senin alanında}: 5G-LENA'da hazır bir sensing modeli yok, sensing yükünü simülasyonda \emph{nasıl temsil edeceğimizi} bulman gerekiyor. Raporun Yöntem bölümü bu karara bağlı.
+\end{neden}
+
+\subsection*{Adımlar}
+\begin{enumerate}[leftmargin=1.6em]
+\item \textbf{Kurulum:} \kod{kurulum/02-wsl2-ubuntu.md} (WSL2, yönetici gerekir, gerçek yeniden başlatma) sonra \kod{kurulum/04-ns3-5g-lena.md}. Bitti: Ubuntu'da \texttt{./ns3 run cttc-nr-demo} komutunu \kod{~/ehb415/ns-3-dev} klasöründe çalıştır; çıktıda \texttt{Mean flow throughput} satırı olmalı.
+\item \textbf{(Önerilir, 30 dk) ns-3'ü tanı:} ``iki bilgisayar, bir kablo'' programını kendin yaz (referans: \kod{ogretici/betikler/ilk_uygulama_referans.cc}; önce bakmadan yazmayı dene). Çalıştırınca sunucu 2003,69\,ms, istemci 2007,37\,ms yazmalı. Önce elle hesapla: (1054 bayt $\times$ 8 / 5\,Mbps) + 2\,ms.
+\item \textbf{UE taraması} (Ubuntu'da, yaklaşık 2 dk):
+\begin{lstlisting}
+bash ogretici/betikler/ns3_ue_sweep.sh      # cikti: /tmp/ns3_sweep.csv
+\end{lstlisting}
+  UE sayısı 1, 2, 5, 10, 20. \textbf{100 UE koşma}, 26 dakika sürüyor.
+\item \textbf{Scheduler tablosu.} \texttt{\textasciitilde/ehb415/ns-3-dev/contrib/nr/model/} içinde \texttt{nr-mac-scheduler-*} dosyalarını listele. Tablo: \emph{sınıf | algoritma (RR, PF, MR, QoS, random) | zaman (TDMA) ya da frekans (OFDMA) bölüşümü | cttc-nr-demo'da kullanılıyor mu}. İpucu: varsayılan scheduler \texttt{contrib/nr/helper/nr-helper.cc} içinde 81. satırda ayarlı.
+\item \textbf{Bant daraltma deneyi} (bir yoldan sensing'i taklit etmek):
+\begin{lstlisting}
+cd ~/ehb415/ns-3-dev
+./ns3 run "cttc-nr-demo --ueNumPergNb=5 --bandwidthBand1=5e7 --simTime=1"
+./ns3 run "cttc-nr-demo --ueNumPergNb=5 --bandwidthBand1=4e7 --simTime=1"
+./ns3 run "cttc-nr-demo --ueNumPergNb=5 --bandwidthBand1=2.5e7 --simTime=1"
+\end{lstlisting}
+  Her biri için akışların throughput toplamını ve ortalama gecikmeyi yaz. \emph{Önce tahmin et:} bant \%20 daralınca ve \%50 daralınca throughput ne olur?
+\item \textbf{``Hangi yol'' notu (1 sayfa).} Öğretici Bölüm 4.2.2'deki (a) bant daraltma ve (b) sensing'i ayrı bir trafik akışı olarak ekleme yollarını karşılaştır. Yukarıdaki deney (a)'nın ne zaman işe yaradığını gösteriyor. Hangisini öneriyorsun, neden? (b) için ns-3 alıştırmasındaki ikinci istemci fikrini kullanabilirsin.
+\end{enumerate}
+
+\begin{kontrol}
+\textbf{UE taraması} (toplam throughput, ortalama gecikme): 1 UE: 10,2\,Mbps, 0,28\,ms; 2 UE: 112,5, 0,59; 5 UE: 219,7, 9,97; 10 UE: 238,3, 57,9; 20 UE: 288,2, 123,6.
+\textbf{Bant deneyi} (5 UE): 50\,MHz: 219,7\,Mbps, 9,97\,ms; 40\,MHz: \textbf{219,7} (aynı!), 9,97\,ms; 25\,MHz: 203,7\,Mbps, 19,4\,ms.
+\textbf{Dikkat:} 50 $\rightarrow$ 40\,MHz'de hiçbir şey değişmedi. Bu bir hata değil: yük kapasitenin altında olduğunda bandı daraltmak throughput'u etkilemiyor, bedel yalnızca yük kapasiteye yaklaşınca görünüyor. Bu, Dickerson modeli $T(\eta)=\min\{\eta,1-\alpha\}$ ile aynı şey. \textbf{Varsayılan scheduler:} \texttt{NrMacSchedulerTdmaRR} (round-robin).
+\end{kontrol}
+
+\begin{teslim}
+(1) UE taraması tablosu (kendi çalıştırmandan); (2) scheduler tablosu; (3) bant deneyi sonuçları ve tahminin; (4) 1 sayfa ``hangi yol'' notu: hangi yolu öneriyorsun, neden, riski ne? \textbf{Perşembe karar toplantısında bu notu sen sunacaksın.}
+\end{teslim}
+
+\clearpage
+% ======================================================================= KISI 4
+\section*{Fatih: OCUDU (bedel tarafı, gerçek kod)}
+\begin{neden}
+OCUDU \textbf{gerçek bir gNB yazılımı}: ns-3 gibi bir model değil, gerçek kod. PRS sinyalinin kaynak maliyetini burada ölçmek sonuçlarımıza güvenilirlik katar. Ayrıca elimizdeki \textbf{açık bir teknik soru} senin kartında: 4 sembollük PRS neden 12 sembollük PRS kadar kayıp veriyor? Cevap, ``ne kadar kaynak tükettik'' sayımızı (TR 38.765'teki Tip~3 kaynak) doğrudan değiştirir.
+\end{neden}
+
+\subsection*{Adımlar}
+\begin{enumerate}[leftmargin=1.6em]
+\item \textbf{Kurulum:} \kod{kurulum/02-wsl2-ubuntu.md} (yönetici gerekir) sonra \kod{kurulum/05-ocudu.md}. Bitti: \kod{~/ehb415/ocudu/build/apps/gnb/gnb} programını \texttt{--version} ile çalıştır; çıktı \texttt{OCUDU 5G gNB version 26.10.0} olmalı.
+\item \textbf{İki koşu ve tabloyu oku} (Ubuntu'da, repo klasöründe, her biri yaklaşık 35 sn):
+\begin{lstlisting}
+bash ogretici/betikler/ocudu_prs_kos.sh base 0 0 0        # PRS yok
+bash ogretici/betikler/ocudu_prs_kos.sh p4 4 12 104       # PRS her 4 slotta bir
+\end{lstlisting}
+  Tablodaki DL \texttt{brate} ve \texttt{ok} sütunlarına bak. \texttt{ok}: saniyede başarılı blok sayısı. \emph{Önce tahmin et:} \texttt{ok} 1000'den kaça düşer, neden?
+\item \textbf{PRS taraması} (yaklaşık 6 dk):
+\begin{lstlisting}
+bash ogretici/betikler/ocudu_prs_sweep.sh      # cikti: /tmp/prs_sweep.csv
+\end{lstlisting}
+\item \textbf{Çok kullanıcılı deney:}
+\begin{lstlisting}
+bash ogretici/betikler/ocudu_cok_ue.sh u4 4 0 0      # 4 UE, PRS yok
+bash ogretici/betikler/ocudu_cok_ue.sh u4p4 4 4 0    # 4 UE, PRS her 4 slotta
+\end{lstlisting}
+\item \textbf{Açık soru (asıl araştırma işi):} \emph{4 sembollük PRS neden 12 sembollük PRS ile aynı kaybı veriyor?} Bakılacak yerler:
+  \begin{itemize}
+  \item \kod{~/ehb415/ocudu/lib/scheduler/ue_scheduling/ue_cell_grid_allocator.cpp} ve \kod{grant_params_selector.cpp}: PDSCH için kaynak ararken ızgaranın hangi sembol aralığının doluluğuna bakılıyor?
+  \item \kod{lib/scheduler/common_scheduling/prs_scheduler.cpp}: PRS ızgaraya \texttt{dl\_res\_grid.fill(grant\_info\{scs, symbols, crbs\})} ile yazılıyor.
+  \item Log ipucu: PDSCH her zaman \texttt{symb=[1, 14)} (slotun tamamı) olarak tahsis ediliyor (kendin görmek için \kod{ogretici/betikler/ocudu_slot_log.sh} betiğini \texttt{bash} ile çalıştır).
+  \end{itemize}
+  Çıktı: bir paragraf cevap. \textbf{Bulamazsan da geçerli:} ``şu dosyaya, şu fonksiyona baktım, şunu gördüm, şurada takıldım.''
+\item \textbf{(Bonus)} \kod{ogretici/betikler/ocudu_prs_yerlesim.sh} betiğini \texttt{bash} ile çalıştır: PRS'i farklı yerlere koymayı dener; hangisini OCUDU reddediyor, nedenleriyle birlikte not al.
+\end{enumerate}
+
+\begin{kontrol}
+\textbf{İki koşu:} PRS yok: \texttt{brate} $\approx$ 59\,M, \texttt{ok} = 1000; PRS her 4 slotta: $\approx$ 44\,M, \texttt{ok} $\approx$ 750.
+\textbf{Tarama} (DL Mbps): PRS yok 59,0; $T=80$: 58,0; $T=40$: 57,8; $T=20$: 56,0; $T=10$: 53,0; $T=8$: 50,9; $T=4$: 43,8; $T=4$ yarım bant (52 PRB): 51,0; $T=4$, 4 sembol: 43,8.
+\textbf{Çok kullanıcılı:} 4 UE, PRS yok: toplam $\approx$ 60\,Mbps, UE başına $\approx$ 15; PRS her 4 slotta: toplam $\approx$ 44, UE başına $\approx$ 11.
+\textbf{Not:} Bu ölçümler tek koşu ve WSL2 üzerinde (gerçek zamanlı değil). Farklı çıkarsa farkı yaz.
+\end{kontrol}
+
+\begin{teslim}
+(1) Tarama tablosu (kendi çalıştırmandan); (2) 4 UE sonucu; (3) açık sorunun cevabı ya da nerelere baktığın; (4) bonus: PRS yerleşim deneyi notu. \textbf{Perşembe akşamına (1)--(3) hazır.}
+\end{teslim}
+
+\end{document}
