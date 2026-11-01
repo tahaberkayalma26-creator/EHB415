@@ -1,0 +1,203 @@
+% Taha teslim dosyasi. Derleme: tectonic -X compile taha_teslim.tex  (fontlar\ klasoru gerekir)
+\documentclass[10.5pt,a4paper]{article}
+\usepackage{fontspec}
+\setmainfont{georgia}[Path=./fontlar/,Extension=.ttf,BoldFont=georgiab,ItalicFont=georgiai,BoldItalicFont=georgiaz]
+\setsansfont{arial}[Path=./fontlar/,Extension=.ttf,BoldFont=arialbd,ItalicFont=ariali,BoldItalicFont=arialbi]
+\setmonofont{consola}[Path=./fontlar/,Extension=.ttf,BoldFont=consolab,ItalicFont=consolai,BoldItalicFont=consolaz,Scale=0.88]
+\usepackage[a4paper,left=2cm,right=2cm,top=1.9cm,bottom=1.9cm]{geometry}
+\usepackage{xcolor,booktabs,enumitem,amsmath,url,float}
+\usepackage[most]{tcolorbox}
+\usepackage{xltabular,longtable}
+\usepackage{fancyhdr,titlesec}
+\usepackage[colorlinks=true,linkcolor=blue!50!black,urlcolor=blue!50!black]{hyperref}
+\emergencystretch=2em
+\setlength{\parindent}{0pt}\setlength{\parskip}{4pt plus 1pt}
+\setlist{itemsep=2pt,topsep=3pt,parsep=0pt}
+\definecolor{ink}{HTML}{1F2937}\definecolor{acc}{HTML}{1D4ED8}\definecolor{accl}{HTML}{DBEAFE}
+\definecolor{warn}{HTML}{EA580C}\definecolor{warnl}{HTML}{FFEDD5}\definecolor{good}{HTML}{16A34A}
+\definecolor{goodl}{HTML}{DCFCE7}\definecolor{muted}{HTML}{6B7280}\definecolor{codebg}{HTML}{F3F4F6}
+\color{ink}
+\titleformat{\section}{\sffamily\bfseries\Large\color{acc}}{}{0pt}{}[{\color{acc!35}\titlerule[1pt]}]
+\titleformat{\subsection}{\sffamily\bfseries\normalsize\color{acc!80!black}}{}{0pt}{}
+\titlespacing*{\section}{0pt}{6pt}{6pt}\titlespacing*{\subsection}{0pt}{8pt}{2pt}
+\pagestyle{fancy}\fancyhf{}\renewcommand{\headrulewidth}{0.3pt}
+\fancyhead[L]{\sffamily\footnotesize\color{muted} EHB415 \textbullet\ ISAC projesi \textbullet\ Taha: teslim dosyası}
+\fancyfoot[C]{\sffamily\footnotesize\color{muted}\thepage}
+\newtcolorbox{kontrol}{enhanced,colback=goodl,colframe=good,boxrule=0.5pt,arc=2pt,left=6pt,right=6pt,top=4pt,bottom=4pt,
+  fonttitle=\sffamily\bfseries\small,title=Kontrol,coltitle=white,colbacktitle=good,
+  attach boxed title to top left={yshift=-2mm,xshift=4mm},boxed title style={arc=2pt,boxrule=0pt}}
+\newtcolorbox{dikkat}{enhanced,colback=warnl,colframe=warn,boxrule=0.5pt,arc=2pt,left=6pt,right=6pt,top=4pt,bottom=4pt,
+  fonttitle=\sffamily\bfseries\small,title=Açık nokta,coltitle=white,colbacktitle=warn,
+  attach boxed title to top left={yshift=-2mm,xshift=4mm},boxed title style={arc=2pt,boxrule=0pt}}
+\newcommand{\bel}{{\color{warn}\textbf{[BELİRSİZ]}}}
+\begin{document}
+
+\section*{Taha: 3GPP standardı, metrik ve rapor. Teslim dosyası}
+{\sffamily\color{muted} Kaynak: \texttt{EHB415\_Gorev\_Kartlari.pdf}, Taha kartı. Kartın 5 adımı sırayla yapıldı.}
+
+\begingroup\sffamily\small
+\begin{xltabular}{\textwidth}{@{}p{5.2cm}p{5.2cm}X@{}}
+\toprule
+\textbf{Kart adımı} & \textbf{Durum} & \textbf{Bu dosyada} \\
+\midrule
+1. Oku & Yapıldı & Bölüm 1 \\
+2. Metrik sözlüğü & Yapıldı & Bölüm 2 (+ \texttt{docs/metrics.md}) \\
+3. $\alpha$ tanımı (araç $\times$ tanım $\times$ belirsizlik) & Yapıldı; ns-3 satırı açık & Bölüm 3 \\
+4. Dickerson hesap tablosu & Yapıldı, kontrol değerleri tuttu & Bölüm 4 \\
+5. Rapor taslağı (Cuma) & İskelet ve giriş/yöntem metni hazır; ön bulgular Perşembe verilerine bağlı & Bölüm 5 \\
+\bottomrule
+\end{xltabular}
+\endgroup
+
+% ======================================================================= 1
+\section*{1. Okuma notları (adım 1)}
+Okunan yerler ve her birinden çıkan sonuç.
+
+\begingroup\sffamily\small
+\begin{xltabular}{\textwidth}{@{}p{3.1cm}p{3.4cm}X@{}}
+\toprule
+\textbf{Kaynak} & \textbf{Okunan yer} & \textbf{Ne çıktı} \\
+\midrule
+3GPP TR 38.765 v20.0.0 & §4.1 metrikler & Başarı beş ölçüyle verilir: yatay/dikey konum hatası, hız hatası, kaçırma ($P_{md}$), yanlış alarm Tip~1 ve Tip~2. Yanlış alarmın ikisi de zorunlu. \\
+ & §4.2 hedefler & $P_{md}$, $P_{f1}$, $P_{f2}$ her biri \%5; konum 10\,m ve hız 5\,m/s (\%90 güvenle, hata dağılımının 90. yüzdeliği). \\
+ & §6.2 sensing kaynak oranı & Üç kaynak türü (Tip~1/2/3) ve iki hesap yolu (Seçenek~1 ve 2). İkisinin de raporlanması isteniyor. \\
+ & §6.2 Tablo 6.2-1 & Baseline~1: 52\,dBm; Baseline~2: \textbf{37\,dBm}. Projemiz Baseline~2'ye denk. \\
+ & §6.3.0 & ``The performance of communication is not evaluated.'' Standart iletişim tarafını \textbf{ölçmüyor}; projenin boşluğu bu. \\
+ & §9 sonuç & Tek TRP ölçümüyle hedefi tutturan kaynak sayısı: Baseline~1'de 3/11, Baseline~2'de 2/9. Level~A desteklenmiyor; Level~C kabul edildi. \\
+ & Ek A & UMa-AV, FR1 4 veya 4,9\,GHz, 100\,MHz, SCS 30\,kHz, hedef: 0,3$\times$0,4$\times$0,2\,m İHA, yükseklik 25--300\,m, hız 0--180\,km/s, sektör başına $N=5$ hedef. ``Sensing resource ratio'' şirketlerin raporlaması gereken parametrelerden biri. \\
+\midrule
+Dickerson vd., arXiv 2606.21677 & III.B (denklem 9--12) & Sensing yükü $\alpha_{sense}$ için formül (denklem 9), bütçeye sığma koşulu $\alpha_{sense}\le 1-\eta$ (10) ve sunulan iletişim $T(\eta)=\min\{\eta,\,1-\alpha_{sense}\}$ (12). \\
+ & IV.A & $OH=0{,}14$, $f_{sense}=500$\,Hz, $N_{ZC}=1291$: tek ışın \%1,66; $N_b=8$ için \%13,29. \\
+ & III.C (denklem 13--14) & $P_d$ için Marcum~Q ifadesi ve $M$-of-$N$ takip kriteri (3-of-5). \\
+\midrule
+Lin, arXiv 2608.11606 & Tablo~1 (bölüm II) & Hava/ulaşım kullanım grubunda İHA için istenen sonuç: tespit, konum, hız, yörünge; öne çıkan gereksinimler: kapsama, kaçırma, yanlış alarm, doğruluk, yenileme hızı. \\
+ & IV.B & gNB tabanlı sensing'in 5 adımı: sinyal yeniden oluşturma, kalibrasyon ve öz-girişim bastırma, gecikme-Doppler-açı işleme, clutter bastırma ve tespit, parametre kestirimi. \\
+\bottomrule
+\end{xltabular}
+\endgroup
+
+% ======================================================================= 2
+\section*{2. Metrik sözlüğü (adım 2)}
+Kaynak: TR 38.765 §4.1--4.2. ``Drop'': konum ve gürültüsü rastgele seçilmiş tek bir simülasyon denemesi.
+$N$: kendi tanımındaki deneme sayısı (aşağıda her metrik için).
+
+\begingroup\sffamily\small
+\begin{xltabular}{\textwidth}{@{}p{2.6cm}p{5.2cm}p{1.2cm}p{1.7cm}X@{}}
+\toprule
+\textbf{Metrik} & \textbf{Tanım / formül} & \textbf{Birim} & \textbf{Hedef} & \textbf{Hangi araçta} \\
+\midrule
+Kaçırma $P_{md}$ & Hedef varken bulamama. $P_{md}=\frac{1}{N}\sum_{n}\frac{D_n}{M_n}$; $D_n$: drop $n$'de kaçırılan hedef, $M_n$: gerçek hedef; $N$: en az bir hedefli drop sayısı. & \% & $\le 5$ & Sionna (\texttt{radar\_takip.py}, Monte~Carlo) \\
+Yanlış alarm Tip~1 $P_{f1}$ & Hedef yokken nesne bulundu. $P_{f1}=\frac{1}{N}\sum_n Q_n$; $Q_n=1$ ise hedefsiz drop'ta en az bir nesne bulunmuş; $N$: hedefsiz drop sayısı. & \% & $\le 5$ & Sionna \\
+Yanlış alarm Tip~2 $P_{f2}$ & Hedef varken, gerçek hedefle eşleşmeyen nesne bulundu. $P_{f2}=\frac{1}{K}\sum_{n:\,M'_n\neq 0}\frac{D'_n}{M'_n}$; $D'_n$: eşleşmeyen tespit, $M'_n$: drop'taki toplam tespit, $K$: en az bir tespitli drop sayısı. & \% & $\le 5$ & Sionna \\
+Konum hatası & $|\hat{p}-p|$ (yatay ve dikey ayrı) & m & 10 (\%90) & Sionna \\
+Hız hatası & $|\hat{v}-v|$; monostatikte radyal hız & m/s & 5 (\%90) & Sionna \\
+Throughput & Saniyede taşınan kullanıcı verisi & Mbps & (ödünleşim) & OCUDU (\texttt{brate}), ns-3 (\texttt{FlowMonitor}) \\
+Gecikme & Paketin uçtan uca süresi & ms & (ödünleşim) & ns-3 \\
+Paket kaybı & Gönderilip ulaşmayan paket oranı & \% & (ödünleşim) & ns-3 (\texttt{FlowMonitor}); OCUDU'da \texttt{ok} sütunu (saniyedeki başarılı blok) ve düşüşü \\
+Sensing kaynak oranı, Seçenek~1 & $\dfrac{T_1+T_3}{\text{tüm DL ve UL kaynak}}$ & \% (veya 0--1) & raporlanır & Her üç araç (bölüm 3) \\
+Sensing kaynak oranı, Seçenek~2 & $\dfrac{T_1-T_2+T_3}{\text{tüm DL ve UL kaynak}}$ & \% (veya 0--1) & raporlanır & Her üç araç (bölüm 3) \\
+\bottomrule
+\end{xltabular}
+\endgroup
+
+\textbf{Kaynak türleri (§6.2).} $T_1$: sensing sinyali için kullanılan kaynak. $T_2$: $T_1$'in içinde aynı zamanda iletişime de yarayan kısım (hiç olmayabilir). $T_3$: sensing sinyali olmayıp sensing yüzünden iletişime de kullanılamayan kaynak. $T_2$ yoksa Seçenek~1 = Seçenek~2.
+
+\textbf{Standartta ölçüt olmayanlar:} sensing çözünürlüğü, hizmet gecikmesi, yenileme hızı (§4.1). \textbf{İletişim metrikleri} (throughput, gecikme, paket kaybı) standartta yok; bizim eklememiz.
+
+\textbf{İletişim tarafı için model (Dickerson, denklem 12).} $T(\eta)=\min\{\eta,\,1-\alpha_{sense}\}$: istenen yük $\eta$ (0--1, bütçeye oranla), sunulan en fazla $1-\alpha_{sense}$.
+
+% ======================================================================= 3
+\section*{3. $\alpha$ tablosu (adım 3)}
+Her araç için: $\alpha$ nasıl hesaplanıyor, TR 38.765'teki $T_1/T_2/T_3$ ile nasıl eşleşiyor, neresi belirsiz.
+
+\begingroup\sffamily\small
+\begin{xltabular}{\textwidth}{@{}p{1.7cm}p{4.3cm}X@{}}
+\toprule
+\textbf{Araç} & \textbf{$\alpha$ tanımı} & \textbf{Standartla eşleme ve belirsizlikler} \\
+\midrule
+Sionna & $\alpha = M/140$. $M$: 140 sembollük çerçevede sensing sembolü sayısı (kodda \texttt{FRAME\_SYM = 140}; $M\in\{4,8,14,28,56,70,140\}$). & $T_1=M$ sembolü. $T_2=0$ (sensing dalga biçimi kullanıcı verisi taşımıyor), dolayısıyla Seçenek~1 = Seçenek~2. $T_3$ modellenmedi (iletişimi hesaplamıyor). Not: payda yalnızca çerçevedeki sembol sayısı; ``tüm DL+UL'' olarak tanımlanmadı. Çerçeve 140 sembol olarak sabit alındı; mutlak süre SCS'ye bağlı, oran bağlı değil. \\
+\addlinespace
+OCUDU & Kayıp, PRS'li slot oranı ile PRS'in kapladığı PRB oranının çarpımı: $\alpha\approx \dfrac{1}{T_{PRS}}\cdot\dfrac{N_{PRB,PRS}}{N_{PRB,PDSCH}}$ (PDSCH bölgesi: 96\,PRB $\times$ 13 sembol). & $T_1$ = PRS'in gerçekte kapladığı kaynak (ölçümdeki koşuda 52\,PRB $\times$ 12 sembol). $T_2=0$ (PRS'te kullanıcı verisi yok). $T_3$: koddan okunan bulguya göre PRS'li slotta, PRS'in PRB'leri PDSCH için 13 sembolün hepsinde kapatılıyor (\texttt{intra\_slice\_scheduler.cpp}, \texttt{update\_used\_dl\_vrbs}); PRS'in kullanmadığı semboller $T_3$ sayılır. Ölçümle uyum: $T_{PRS}=4$, 52\,PRB için hesap $\tfrac14\cdot\tfrac{52}{96}=\%13{,}5$; ölçülen throughput kaybı (59,0$\to$51,0\,Mbps) \%13,6. \textbf{Belirsiz:} (i) $T_3$ yorumu koddan okundu. Ofset deneyinde (52\,PRB, $T_{PRS}=4$; 4 sembol ofset 2, 12 sembol ofset 2, 4 sembol ofset 0 ve 10) DL hep 51\,Mbps çıktı, yani DL kaybı PRS'in sembol sayısına ve konumuna bağlı değil. (ii) Ölçüm yalnızca DL; standartın ``tüm DL ve UL kaynak'' paydasına göre oran, UL payı kadar küçülür. \\
+\addlinespace
+ns-3 / 5G-LENA & \bel\ 5G-LENA'da sensing modeli yok. Aday yollar (Aziz'in kartı): (a) banttan çıkarma: $\alpha = (B_{toplam}-B_{kalan})/B_{toplam}$; (b) sensing'i ayrı trafik akışı olarak ekleme. & Eşleme yolun seçimine bağlı; (a)'da $T_1$ banttan alınan kısım, $T_2=0$. \textbf{Perşembe toplantısında karar:} Aziz'in ``hangi yol'' notu. Karar çıkana kadar bu satır doldurulamaz. \\
+\bottomrule
+\end{xltabular}
+\endgroup
+
+\begin{dikkat}
+Üç aracın $\alpha$'sı \textbf{aynı payda} üzerinde değil: Sionna sembol, OCUDU PRB$\times$slot, ns-3 bant. Rapor yöntem bölümünde ortak payda şu cümleyle tanımlanır: ``$\alpha$ = sensing'e giden kaynağın, aracın kendi kaynak ızgarasındaki toplamına oranı''; Seçenek~1/2'ye çeviri yukarıdaki tablodan yapılır.
+\end{dikkat}
+
+% ======================================================================= 4
+\section*{4. Dickerson hesap tablosu (adım 4)}
+$$\alpha_{sense}=\frac{N_b}{1-OH}\cdot\frac{f_{sense}}{N_{sym/sn}}\cdot\frac{N_{PRB,sense}}{N_{PRB,toplam}},\qquad T(\eta)=\min\{\eta,\,1-\alpha_{sense}\}$$
+
+\begin{center}\sffamily\small
+\begin{tabular}{@{}llr@{}}
+\toprule
+\textbf{Parametre} & \textbf{Anlamı} & \textbf{Değer} \\
+\midrule
+$N_{PRB,toplam}$ & bantın toplam PRB'si & 270 \\
+$OH$ & sabit NR kontrol/sinyal yükü & 0,14 \\
+$N_{sym/sn}$ & saniyedeki sembol sayısı & 14\,000 \\
+$N_{ZC}$ & Zadoff--Chu dizisi uzunluğu & 1291 \\
+$N_{PRB,sense}=\lceil N_{ZC}/12\rceil$ & radar dalga biçiminin PRB'si & $\lceil 107{,}58\rceil=108$ \\
+$f_{sense}$ & saniyede kaç kez sensing & 500\,Hz \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\begin{center}\sffamily\small
+\begin{tabular}{@{}lrrrrr@{}}
+\toprule
+$N_b$ & $\dfrac{N_b}{1-OH}$ & $\dfrac{f_{sense}}{N_{sym/sn}}$ & $\dfrac{N_{PRB,sense}}{N_{PRB,toplam}}$ & $\alpha_{sense}$ & $T(\eta{=}0{,}9)$ \\
+\midrule
+1 & 1,1628 & 0,035714 & 0,4 & \textbf{\%1,66} & 0,900 \\
+8 & 9,3023 & 0,035714 & 0,4 & \textbf{\%13,29} & 0,867 \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\begin{kontrol}
+Kart kontrol değerleri: tek ışın \%1,66; sekiz ışın \%13,29. Makale de aynı değerleri veriyor (IV.A) ve hesap tuttu. $N_b=8$ için kalan kaynak $1-0{,}1329=\%86{,}71$, makalenin ``86.71\% remains'' ifadesiyle aynı.
+\end{kontrol}
+
+\textbf{Okuma:} $\tfrac{108}{270}=0{,}4$ çarpanı, sensing dalga biçiminin bantın \%40'ını kapladığını söyler. Radar sinyali yalnızca saniyedeki sembollerin $500/14000=\%3{,}57$'sinde gönderildiği için toplam yük küçük kalır. Doğrusal ölçekleme (her ışın ayrı sembol) bir \emph{üst sınır}dır; makale bunu ``conservative upper bound'' olarak belirtiyor.
+
+% ======================================================================= 5
+\section*{5. Rapor taslağı (adım 5, Cuma)}
+Kartın iskeleti: Giriş (boşluk), Arka plan, Yöntem, Ön bulgular, İş planı, Kaynakça. Aşağıda her bölüm için başlangıç metni; \textbf{kalın köşeli parantezli} yerler Perşembe teslimleriyle doldurulacak.
+
+\subsection*{1. Giriş}
+5G NR ağlarına algılama (sensing) yeteneği eklemek, yani ISAC, standartlaşma aşamasındadır. 3GPP TR 38.765 (Rel-20), gNB tabanlı monostatik sensing ile İHA tespitini değerlendirmiş ve başarıyı kaçırma, yanlış alarm, konum ve hız hatasıyla ölçmüştür; ancak aynı belge ``the performance of communication is not evaluated'' (§6.3.0) der. Oysa sensing, haberleşmeyle \emph{aynı kaynak ızgarasını} paylaşır: sensing'e ayrılan her kaynak kullanıcı verisinden gider. Bu çalışma şu soruyu sorar: \textbf{sensing'e ayrılan kaynak payı $\alpha$ arttıkça sensing ne kazanır ve haberleşme ne kaybeder?}
+
+\subsection*{2. Arka plan}
+\textbf{ISAC.} Aynı dalga biçimi hem veri taşır hem de çevreden yansıyıp gecikme, Doppler ve açı bilgisi verir (Lin, bölüm IV.B). \textbf{Standart.} TR 38.765 UMa-AV senaryosu, 4--4,9\,GHz, 100\,MHz, 37 veya 52\,dBm baz istasyonu gücü, hedef 0,3$\times$0,4$\times$0,2\,m İHA ve hedef değerler ($P_{md},P_{f1},P_{f2}\le\%5$; 10\,m; 5\,m/s) üzerinden değerlendirme yapar. Sonuç olarak tek TRP ölçümüyle hedefe ulaşan kaynak oranı düşüktür (2/9, 3/11). \textbf{Kaynak payı.} Standart sensing kaynak oranını $T_1/T_2/T_3$ ile tanımlar (§6.2); Dickerson vd. aynı büyüklüğü basit bir model olarak verir (tek ışın \%1,66; sekiz ışın \%13,29).
+
+\subsection*{3. Yöntem}
+Üç araç aynı soruya üç yönden bakar ve ortak eksen $\alpha$'dır.
+
+\begin{itemize}[leftmargin=1.4em]
+\item \textbf{Sionna (kazanç).} Sionna~RT ile Münih sahnesinde görüş hattı hesaplanır; numpy ile OFDM radarı (2B~FFT) simüle edilir. $\alpha=M/140$. Ölçütler $P_{md}$, $P_{f1}$, menzil ve hız hatasıdır.
+\item \textbf{OCUDU (bedel, gerçek gNB kodu).} PRS periyodu ve bant genişliği değiştirilerek DL throughput ölçülür. $\alpha\approx\tfrac{1}{T_{PRS}}\cdot\tfrac{N_{PRB,PRS}}{N_{PRB,PDSCH}}$.
+\item \textbf{ns-3 / 5G-LENA (bedel, ağ düzeyi).} Çok kullanıcılı ağda throughput ve gecikme; sensing yükünün temsili: \textbf{[Perşembe kararı: (a) bant daraltma / (b) ayrı trafik akışı]}.
+\end{itemize}
+Ortak payda ve Seçenek~1/2 eşlemesi bölüm 3'teki tablodadır. İletişim bedeli modeli $T(\eta)=\min\{\eta,1-\alpha\}$ ile karşılaştırılır.
+
+\subsection*{4. Ön bulgular}
+\textbf{[Nihat: kaynak--başarı grafiği ($P_d$ ve hız hatasının $\alpha$'ya göre değişimi) ve üç sorunun cevabı]}\\
+\textbf{[Aziz: UE taraması ve bant deneyi tabloları; ``hangi yol'' kararı]}\\
+\textbf{[Fatih: PRS taraması ve çok kullanıcılı deney tabloları; açık sorunun cevabı]}\\
+\textbf{[Taha: Dickerson hesabıyla karşılaştırma: ölçülen kayıp ile $T(\eta)$ modeli]}
+
+\subsection*{5. İş planı}
+\textbf{[Perşembe toplantısından sonra yazılacak.]} Girdi olarak: ns-3'te sensing yükü temsilinin seçimi; üç aracın aynı $\alpha$ eksenine bağlanması; kazanç ($P_{md}$) ve bedel (throughput) eğrilerinin tek grafikte birleştirilmesi.
+
+\subsection*{6. Kaynakça}
+\begin{enumerate}[leftmargin=1.6em,label={[\arabic*]}]
+\item 3GPP TR 38.765 V20.0.0 (2026-06), \emph{Study on Integrated Sensing And Communication (ISAC) for NR}, Release 20.
+\item C. Dickerson, W. Khawaja, I. Güvenç, ``Adaptive 5G Resource Allocation for Multistatic ISAC-Based UAV Detection and Tracking,'' arXiv:2606.21677, Haziran 2026.
+\item X. Lin, ``Integrated Sensing and Communication in 3GPP: Evolution from 5G-Advanced to 6G,'' arXiv:2608.11606.
+\end{enumerate}
+
+\end{document}

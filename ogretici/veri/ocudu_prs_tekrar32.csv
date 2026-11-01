@@ -1,0 +1,4 @@
+etiket,periyot_slot,sembol,bw_prb,tekrar,bosluk,tarak,dl_mbps,dl_ok_per_s,ul_mbps,ul_ok_per_s,not
+base2,0,0,0,1,1,2,16.0,1000,77.6,1000,
+r32p40,40,4,32,32,1,4,12.0,1000,77.6,1000,
+r32p80,80,4,32,32,1,4,14.0,1000,77.6,1000,

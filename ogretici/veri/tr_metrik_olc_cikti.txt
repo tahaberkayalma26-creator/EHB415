@@ -1,0 +1,14 @@
+1) Pf1 (hedef yok; radar_takip.PFA = 0.001, CPI basina)
+   M= 14 (alpha=10%): 2/3000 hedefsiz CPI'da alarm -> Pf1 = 0.07 %
+   M= 70 (alpha=50%): 5/3000 hedefsiz CPI'da alarm -> Pf1 = 0.17 %
+
+2) Pmd <= %5 (Pd >= 0,95) icin en kucuk alfa (cikti/kaynak_basari.csv)
+   100 m: alfa = 2.9% (Pd = 1.00)
+   200 m: alfa = 20.0% (Pd = 0.99)
+   300 m: alfa = 100.0% (Pd = 0.97)
+   400 m: taranan alfa degerlerinin hicbirinde yok (en yuksek Pd = 0.38)
+
+3) 300 m'de Pd, X_SI_DB'ye gore (160 deneme)
+   alpha:          20%    40%    50%   100%
+   X_SI=  40 dB:  0.18   0.56   0.73   0.96
+   X_SI=  30 dB:  1.00   1.00   1.00   1.00

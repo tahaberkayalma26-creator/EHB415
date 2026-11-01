@@ -1,0 +1,6 @@
+etiket,periyot_slot,sembol,bw_prb,sembol_ofset,dl_brate_mbps,dl_ok_per_s,ul_brate_mbps,ul_ok_per_s,not
+e1,4,4,52,2,51,1000,77.3,1000,
+e2,4,12,52,2,51,1000,77.3,1000,
+e3,4,4,52,0,51,1000,57.8,750,UL dustu; DL ayni
+e4,4,4,52,10,51,1000,77.3,1000,
+e5,4,4,52,5,,,,,yapilandirma reddedildi: NZP-CSI-RS (id 4) ile DL-PRS carpismasi slot 13 (periyot 20)

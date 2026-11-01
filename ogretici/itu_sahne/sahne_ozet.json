@@ -1,0 +1,27 @@
+{
+ "merkez_lat": 41.1040507,
+ "merkez_lon": 29.0245551,
+ "yaricap_m": 350,
+ "bina_sayisi": 66,
+ "yukseklik_kaynagi": {
+  "height": 4,
+  "levels": 28,
+  "varsayilan": 34
+ },
+ "varsayimlar": {
+  "kat_m": 3.0,
+  "varsayilan_bina_m": 9.0,
+  "direk_m": 2.0,
+  "arazi": "duz z=0",
+  "bina_malzeme": "concrete",
+  "zemin_malzeme": "medium_dry_ground"
+ },
+ "eef_catı_m": 28.0,
+ "gnb_xyz_m": [
+  0.0036289442077901413,
+  -0.005565975000194512,
+  30.0
+ ],
+ "en_yuksek_bina_m": 30.0,
+ "ortalama_yukseklik_m": 9.818181818181818
+}

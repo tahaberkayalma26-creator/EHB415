@@ -1,0 +1,62 @@
+% Birlesik rapor. Derleme: tectonic -X compile birlesik_rapor.tex  (rapor\ klasorunde; fontlar ../fontlar)
+\documentclass[10.5pt,a4paper]{article}
+\input{ortak}
+\titleformat{\subsubsection}{\sffamily\bfseries\small\color{ink}}{}{0pt}{}
+\titlespacing*{\subsubsection}{0pt}{5pt}{2pt}
+\begin{document}
+\begin{center}
+{\sffamily\color{muted}\small EHB415 Dönem Projesi \textbullet\ 2026--2027 Güz \textbullet\ Study of Simulation Tools\par}
+\vspace{6pt}
+{\sffamily\bfseries\LARGE Integrating Sensing Capabilities into 5G Networks:\\ An ISAC-Oriented Study\par}
+\vspace{8pt}
+{\sffamily\small \taha \quad \aziz\par \fatih \quad \nihat\par}
+\end{center}
+\vspace{-4pt}{\color{acc!40}\rule{\textwidth}{0.8pt}}
+
+\section*{1. Projenin amacı ve bu raporun kapsamı}
+Entegre algılama ve haberleşme (ISAC), kablosuz altyapının hem veri taşıdığı hem de çevreyi algıladığı yeni bir yaklaşımdır. 5G-Advanced ve 6G'de algılama yeteneği eklemek; kaynak ayırma, işlem yükü ve haberleşme başarımı üzerindeki etki gibi soruları gündeme getirir. Projemiz, ISAC işlevlerinin açık kaynaklı bir 5G ağ mimarisine (OCUDU) nasıl eklenebileceğini inceler ve bunların etkisini benzetim araçlarıyla değerlendirir. Hedefler: (i) 3GPP ISAC çalışmalarını gözden geçirmek, (ii) seçilen işlevlerin OCUDU içinde veya yanında nasıl uygulanabileceğini araştırmak, (iii) benzetime dayalı bir değerlendirme çerçevesi kurmak, (iv) algılama ile haberleşme başarımı arasındaki ödünleşimi (trade-off) değerlendirmek.
+
+Bu rapor, projede kullanacağımız üç aracın \textbf{doğru kurulduğunu ve çalıştığını} gösterir: \textbf{ns-3 + 5G-LENA}, \textbf{OCUDU} ve \textbf{Sionna}. Araçlar tek bir soruyu üç yönden ölçer: \emph{algılamaya ne kadar kaynak ayırırsak algılama ne kazanır, haberleşme ne kaybeder?} Ortak eksen, algılamaya giden kaynak payıdır ($\alpha$).
+
+\begin{center}\sffamily\small
+\begin{tabular}{@{}p{2.6cm}p{3.3cm}p{3.3cm}p{4.2cm}@{}}
+\toprule
+\textbf{Araç} & \textbf{Projedeki rolü} & \textbf{Sürüm / ortam} & \textbf{Doğrulama} \\
+\midrule
+ns-3 + 5G-LENA & Haberleşme maliyeti (ağ düzeyi) & ns-3.48, nr v5.1; WSL2 Ubuntu 24.04 & \texttt{cttc-nr-demo} çalıştı, kendi programımız elle hesapla tuttu \\
+OCUDU & Haberleşme maliyeti (gerçek gNB kodu) & 26.10.0; WSL2 Ubuntu 24.04, Clang 18 & \texttt{testmode}: DL $\approx$59 Mbps, UL 77,3 Mbps, 1000 blok/s \\
+Sionna / Sionna RT & Algılama kazancı (kanal ve radar) & 1.2.2; Ubuntu 22.04 ve Windows 11 & Radar testi hata çözünürlük içinde; ışın izleme 12 yol \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\section*{2. Bölüm A: ns-3 ve 5G-LENA}
+{\sffamily\small Hazırlayan: \aziz\par}
+\input{ns3_govde}
+
+\clearpage
+\section*{3. Bölüm B: OCUDU}
+{\sffamily\small Hazırlayan: \fatih\par}
+\input{ocudu_govde}
+
+\clearpage
+\section*{4. Bölüm C: Sionna ve Sionna RT}
+{\sffamily\small Hazırlayan: \nihat\par}
+\input{sionna_govde}
+
+\section*{5. Genel değerlendirme}
+Üç araç da kuruldu ve doğrulama çıktıları beklenen sonuçları verdi. Araçlar birbirini tamamlıyor: Sionna algılamanın \emph{kazancını}, ns-3 ve OCUDU ise haberleşmenin \emph{bedelini} ölçer. Önceden bilinen sınırlamalar: 5G-LENA'da hazır bir sensing modeli yok (sensing yükünü ns-3'te nasıl temsil edeceğimiz seçilecek); OCUDU'da uçtan uca (srsUE + Open5GS) test yapılmadı; Sionna'da GPU kullanılmadı ve radar modeli basitleştirilmiştir; Sionna RT'nin ns-3'e bağlanması (SioLENA) denenmedi.
+
+\begingroup\sffamily\small
+\begin{xltabular}{\textwidth}{@{}p{3.6cm}X@{}}
+\toprule
+\textbf{Sorumlu} & \textbf{Sonraki aşamadaki iş} \\
+\midrule
+\taha & 3GPP TR 38.765'in incelenmesi, metrik sözlüğü, $\alpha$ tanımının üç araçta ortaklaştırılması, rapor \\
+\aziz & ns-3'te kullanıcı sayısı ve bant taraması, zamanlayıcı karşılaştırması, sensing yükünün temsil yolunun seçimi \\
+\fatih & OCUDU'da PRS periyodu ve çok kullanıcılı deneyler; PRS'in PDSCH'e etkisinin zamanlayıcı kodunda incelenmesi \\
+\nihat & Radar modelinin incelenmesi, tespit olasılığı ve hata eğrilerinin 3GPP hedefleriyle karşılaştırılması \\
+\bottomrule
+\end{xltabular}
+\endgroup
+\end{document}

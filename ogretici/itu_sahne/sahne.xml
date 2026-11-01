@@ -1,0 +1,7 @@
+<scene version="2.1.0">
+	<bsdf type="itu-radio-material" id="concrete"><string name="type" value="concrete"/><float name="thickness" value="0.1"/></bsdf>
+	<bsdf type="itu-radio-material" id="medium_dry_ground"><string name="type" value="medium_dry_ground"/><float name="thickness" value="0.1"/></bsdf>
+	<shape type="ply" id="mesh-zemin"><string name="filename" value="meshes/zemin.ply"/><boolean name="face_normals" value="true"/><ref id="medium_dry_ground" name="bsdf"/></shape>
+	<shape type="ply" id="mesh-eef"><string name="filename" value="meshes/eef.ply"/><boolean name="face_normals" value="true"/><ref id="concrete" name="bsdf"/></shape>
+	<shape type="ply" id="mesh-binalar"><string name="filename" value="meshes/binalar.ply"/><boolean name="face_normals" value="true"/><ref id="concrete" name="bsdf"/></shape>
+</scene>

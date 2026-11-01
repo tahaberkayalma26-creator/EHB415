@@ -1,0 +1,9 @@
+yatay   100 m, yukseklik    25 m: gorus hatti olan nokta 0/36 = 0.00
+yatay   100 m, yukseklik   100 m: gorus hatti olan nokta 36/36 = 1.00
+yatay   100 m, yukseklik   250 m: gorus hatti olan nokta 36/36 = 1.00
+yatay   200 m, yukseklik    25 m: gorus hatti olan nokta 28/36 = 0.78
+yatay   200 m, yukseklik   100 m: gorus hatti olan nokta 36/36 = 1.00
+yatay   200 m, yukseklik   250 m: gorus hatti olan nokta 36/36 = 1.00
+yatay   300 m, yukseklik    25 m: gorus hatti olan nokta 29/36 = 0.81
+yatay   300 m, yukseklik   100 m: gorus hatti olan nokta 36/36 = 1.00
+yatay   300 m, yukseklik   250 m: gorus hatti olan nokta 36/36 = 1.00

@@ -1,0 +1,29 @@
+% Ortak onbilgi: uc "Study of Simulation Tools" raporu icin. Derleme: tectonic -X compile <dosya>.tex (rapor\ klasorunde)
+\usepackage{fontspec}
+\setmainfont{georgia}[Path=../fontlar/,Extension=.ttf,BoldFont=georgiab,ItalicFont=georgiai,BoldItalicFont=georgiaz]
+\setsansfont{arial}[Path=../fontlar/,Extension=.ttf,BoldFont=arialbd,ItalicFont=ariali,BoldItalicFont=arialbi]
+\setmonofont{consola}[Path=../fontlar/,Extension=.ttf,BoldFont=consolab,ItalicFont=consolai,BoldItalicFont=consolaz,Scale=0.86]
+\usepackage[a4paper,left=2.2cm,right=2.2cm,top=1.9cm,bottom=1.8cm]{geometry}
+\usepackage{xcolor,graphicx,titlesec,enumitem,amsmath,booktabs,xltabular,listings,fancyhdr,caption}
+\emergencystretch=3em
+\definecolor{ink}{HTML}{1F2937}\definecolor{acc}{HTML}{1D4ED8}\definecolor{muted}{HTML}{6B7280}\definecolor{codebg}{HTML}{F3F4F6}
+\color{ink}
+\titleformat{\section}{\sffamily\bfseries\large\color{acc}}{}{0pt}{}
+\titlespacing*{\section}{0pt}{9pt}{3pt}
+\titleformat{\subsection}{\sffamily\bfseries\normalsize}{}{0pt}{}
+\titlespacing*{\subsection}{0pt}{6pt}{2pt}
+\setlength{\parindent}{0pt}\setlength{\parskip}{4pt plus 1pt}
+\setlist{itemsep=1pt,topsep=2pt,parsep=0pt}
+\pagestyle{fancy}\fancyhf{}\renewcommand{\headrulewidth}{0.3pt}
+\fancyhead[L]{\sffamily\footnotesize\color{muted} EHB415 \textbullet\ Study of Simulation Tools}
+\fancyfoot[C]{\sffamily\footnotesize\color{muted}\thepage}
+\captionsetup{font={sf,footnotesize},labelfont=bf,labelsep=period,skip=2pt}
+\lstset{basicstyle=\ttfamily\footnotesize,backgroundcolor=\color{codebg},frame=single,rulecolor=\color{codebg!70!black},
+  breaklines=true,columns=fullflexible,keepspaces=true,showstringspaces=false,aboveskip=4pt,belowskip=6pt,
+  literate={ğ}{g}1 {ş}{s}1 {ı}{i}1 {ü}{u}1 {ö}{o}1 {ç}{c}1}
+\newcommand{\baslik}[2]{%
+  {\sffamily\color{muted}\small EHB415 Dönem Projesi \textbullet\ 2026--2027 Güz\par}
+  {\sffamily\bfseries\Large Study of Simulation Tools: #1\par}
+  {\sffamily\small #2\par}
+  \vspace{-2pt}{\color{acc!40}\rule{\textwidth}{0.8pt}}\par}
+\IfFileExists{isimler.tex}{\input{isimler}}{\newcommand{\taha}{[Ad Soyad -- No]}\newcommand{\aziz}{[Ad Soyad -- No]}\newcommand{\fatih}{[Ad Soyad -- No]}\newcommand{\nihat}{[Ad Soyad -- No]}}

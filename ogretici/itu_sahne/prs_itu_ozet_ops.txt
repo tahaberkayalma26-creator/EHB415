@@ -1,0 +1,11 @@
+tekrar 16: ort. Pd 0.85 (Pmd 14.7 %) | LOS konumlar (533) Pd 0.96 | LOS olmayan (67) Pd 0.00, bunlardan duvarin icinden gecen dogrudan yollu 47 konum (ort. ek kayip 30 dB, Pd 0.00) | Pd>=0,95 olan konum orani 0.79
+      3B uzaklik   0-100 m:  26 konum, ort. Pd 0.81
+      3B uzaklik 100-200 m: 165 konum, ort. Pd 0.84
+      3B uzaklik 200-300 m: 409 konum, ort. Pd 0.86
+tekrar 32: ort. Pd 0.88 (Pmd 11.9 %) | LOS konumlar (533) Pd 0.99 | LOS olmayan (67) Pd 0.00, bunlardan duvarin icinden gecen dogrudan yollu 47 konum (ort. ek kayip 30 dB, Pd 0.00) | Pd>=0,95 olan konum orani 0.88
+      3B uzaklik   0-100 m:  26 konum, ort. Pd 0.81
+      3B uzaklik 100-200 m: 165 konum, ort. Pd 0.84
+      3B uzaklik 200-300 m: 409 konum, ort. Pd 0.90
+hiz hatasi (tekrar 32, belirsizlik sinirinin icindeki 485 konum): medyan 0.31 m/s, %90 0.45 m/s (hedef 5 m/s)
+radyal hizi |v_r| > 30.6 m/s (belirsiz) olan konum orani: 0.09
+yanki cifti sayisi (tekrar 32): ortalama 1.2, en cok 66; yol sayisi ortalama 2.1

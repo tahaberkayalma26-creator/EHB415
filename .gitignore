@@ -25,3 +25,8 @@ __pycache__/
 *.pcap
 *.h5
 *.npz
+
+# Kisisel bilgi (ad ve ogrenci no)
+ogretici/rapor/isimler.tex
+raporlar/
+!EHB415_Gorev_Kartlari_2.pdf
