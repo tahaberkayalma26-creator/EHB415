@@ -1,0 +1,201 @@
+% EHB415 Gorev Kartlari 4 (ortak izgara, 3,5 GHz). Derleme (ogretici klasorunde): C:\Users\Huawei\tools\tectonic\tectonic.exe -X compile gorev_kartlari_4.tex
+\documentclass[11pt,a4paper]{article}
+\usepackage{fontspec}
+\setmainfont{georgia}[Path=./fontlar/,Extension=.ttf,BoldFont=georgiab,ItalicFont=georgiai,BoldItalicFont=georgiaz]
+\setsansfont{arial}[Path=./fontlar/,Extension=.ttf,BoldFont=arialbd,ItalicFont=ariali,BoldItalicFont=arialbi]
+\setmonofont{consola}[Path=./fontlar/,Extension=.ttf,BoldFont=consolab,ItalicFont=consolai,BoldItalicFont=consolaz,Scale=0.88]
+\usepackage[a4paper,left=2cm,right=2cm,top=1.8cm,bottom=1.8cm]{geometry}
+\usepackage{xcolor,booktabs,enumitem,listings}
+\usepackage[most]{tcolorbox}
+\usepackage{fancyhdr,titlesec}
+\definecolor{ink}{HTML}{1F2937}\definecolor{acc}{HTML}{1D4ED8}\definecolor{accl}{HTML}{DBEAFE}
+\definecolor{warn}{HTML}{EA580C}\definecolor{warnl}{HTML}{FFEDD5}\definecolor{good}{HTML}{16A34A}\definecolor{goodl}{HTML}{DCFCE7}
+\definecolor{muted}{HTML}{6B7280}\definecolor{codebg}{HTML}{F3F4F6}
+\color{ink}
+\titleformat{\section}{\sffamily\bfseries\Large\color{acc}}{}{0pt}{}[{\color{acc!35}\titlerule[1pt]}]
+\titlespacing*{\section}{0pt}{4pt}{8pt}
+\setlength{\parindent}{0pt}\setlength{\parskip}{5pt}
+\setlist{itemsep=4pt,topsep=3pt,parsep=0pt}
+\pagestyle{fancy}\fancyhf{}\renewcommand{\headrulewidth}{0.3pt}
+\fancyhead[L]{\sffamily\footnotesize\color{muted} EHB415 \textbullet\ Görev kartları 4 (ortak ızgara, 3,5 GHz)}
+\fancyfoot[C]{\sffamily\footnotesize\color{muted}\thepage}
+\lstset{basicstyle=\ttfamily\footnotesize,backgroundcolor=\color{codebg},frame=single,rulecolor=\color{codebg!70!black},
+  breaklines=true,columns=fullflexible,keepspaces=true,showstringspaces=false,aboveskip=4pt,belowskip=6pt}
+\newtcolorbox{amac}{enhanced,colback=accl,colframe=acc,boxrule=0.5pt,arc=2pt,left=6pt,right=6pt,top=4pt,bottom=4pt,
+  fonttitle=\sffamily\bfseries\small,title=Amaç,coltitle=white,colbacktitle=acc,
+  attach boxed title to top left={yshift=-2mm,xshift=4mm},boxed title style={arc=2pt,boxrule=0pt}}
+\newtcolorbox{kontrol}{enhanced,colback=goodl,colframe=good,boxrule=0.5pt,arc=2pt,left=6pt,right=6pt,top=4pt,bottom=4pt,
+  fonttitle=\sffamily\bfseries\small,title=Kontrol: bizde çıkan sayılar (farklı çıkarsa farkı yaz),coltitle=white,colbacktitle=good,
+  attach boxed title to top left={yshift=-2mm,xshift=4mm},boxed title style={arc=2pt,boxrule=0pt}}
+\newtcolorbox{teslim}{enhanced,colback=warnl,colframe=warn,boxrule=0.5pt,arc=2pt,left=6pt,right=6pt,top=4pt,bottom=4pt,
+  fonttitle=\sffamily\bfseries\small,title=Teslim,coltitle=white,colbacktitle=warn,
+  attach boxed title to top left={yshift=-2mm,xshift=4mm},boxed title style={arc=2pt,boxrule=0pt}}
+\begin{document}
+
+\section*{Görev kartları 4: herkes aynı ızgarayı kullanıyor}
+{\sffamily\color{muted} Merkez frekansımız artık \textbf{3,5 GHz}. Türkiye'de 5G yayını 100 MHz ile yapılıyor, ana ızgara bu. Üç araç (OCUDU, ns-3, Sionna) aynı ızgara ve aynı PRS ayarlarıyla çalışacak. Sayıların hepsi tek dosyada: \texttt{ogretici/veri/ortak\_degerler.xlsx}.}
+
+\textbf{Kurallar}
+\begin{itemize}[leftmargin=1.4em]
+\item Sayıyı \textbf{dosyadan al}, kendi sayını kullanma. Dosyada yanlış ya da eksik bir şey görürsen Taha'ya yaz; Taha dosyayı günceller.
+\item Her teslimde: çalıştırdığın komut, gördüğün çıktı, anlamadığın yer (varsa). Çıkan sayı bizimkinden farklıysa gizleme, farkı yaz.
+\item Sonuçlarını dosyadaki ``Sonuç şablonu'' sayfasının sütunlarıyla ver.
+\end{itemize}
+
+\textbf{Dosyadaki sayfalar:} (1) Ortak değerler, (2) SCS karşılaştırma, (3) PRS konfigürasyonları (K0--K11), (4) ns-3 bant (30 kHz), (5) ns-3 bant (15 kHz), (6) Sionna, (7) Yedek ızgara (40 MHz), (8) Sonuç şablonu. Her satırın yanında \emph{Durum} yazar: KAYNAK (standart ya da kod), TÜRETME (hesap), DENENDİ (bizde çalıştırıldı), ÖLÇÜLECEK (birine görev), KARAR, VARSAYIM.
+
+\begin{tcolorbox}[colback=warnl,colframe=warn,boxrule=0.5pt,arc=2pt]
+\textbf{İki şey bilmen lazım.} (1) OCUDU n78 bandında 15 kHz'i reddetti (``Common SCS 15kHz is not equal to SSB SCS 30kHz''; n78'de eşzamanlama bloğu yalnız 30 kHz, OCUDU \texttt{band\_helper.cpp} satır 308). Bu yüzden ana ızgara \textbf{30 kHz, 100 MHz, 273 PRB}. 15 kHz karşılaştırması Sionna ve ns-3'te yapılır (15 kHz'te en geniş bant 50 MHz). (2) OCUDU'da 100 MHz'de ilk denemede veri akışı \textbf{yoktu} (DL ve UL = 0), nedeni bilinmiyor. 40 MHz (106 PRB) çalıştı ve yedek ızgara. Fatih'in ilk işi bu.
+\end{tcolorbox}
+
+\subsection*{Sözlük (kartlarda geçen her kelime burada)}
+\begingroup\sffamily\small
+\begin{tabular}{@{}p{2.8cm}p{13.2cm}@{}}
+\toprule
+\textbf{α (alfa)} & Sensing'e (radara) giden kaynağın, toplam kaynağa oranı. Bizde: PRS'in kapattığı kutular / toplam kutular. \\
+\textbf{PRB, sembol, slot} & PRB = frekansta alt alta 12 şerit. Sembol = zamanda bir adım. 14 sembol = 1 slot. Kaynak kutusu = 1 PRB $\times$ 1 sembol. \\
+\textbf{SCS} & Alt taşıyıcı aralığı. 15 kHz'te 1 slot = 1 ms, 30 kHz'te 1 slot = 0,5 ms. \\
+\textbf{n78} & 3,3--3,8 GHz'lik 5G bandı. Çift yönlü mod TDD. \\
+\textbf{TDD} & Aynı frekans, zaman paylaşımlı: bazı slotlar indirme (DL), bazıları yükleme (UL). Bizde 10 slotluk desende 6 slot DL, 3 slot UL, 1 karışık slot. \\
+\textbf{DL, UL} & DL = indirme (istasyondan telefona). UL = yükleme (telefondan istasyona). \\
+\textbf{PRS} & Sensing için gönderilen özel sinyal. \\
+\textbf{PDSCH} & Verinin gönderildiği alan. Bizde 48 PRB geniş (aşağıda). \\
+\textbf{PDCCH} & ``Kim, hangi slotta veri alacak ya da gönderecek'' mesajının alanı. \\
+\textbf{T\_PRS, periyot} & PRS kaç slotta bir gönderiliyor. 30 kHz'te 10 slot = 5 ms. \\
+\textbf{bw} & PRS'in kaç PRB geniş olduğu. \\
+\textbf{sembol} & Her PRS gönderiminin kaç sembol sürdüğü. \\
+\textbf{comb} & PRS'in her comb'uncu alt taşıyıcıyı doldurması. Comb 4 = dört şeritten birini. \\
+\textbf{Ofset} & PRS'in slot içinde kaçıncı sembolden başladığı. \\
+\textbf{Kayıp} & (PRS'siz hız $-$ PRS'li hız) / PRS'siz hız. \\
+\textbf{Pd} & Radarın hedefi doğru bulma oranı. \\
+\textbf{λ (lambda)} & Dalga boyu = ışık hızı / frekans. 3,5 GHz'te 8,57 cm. \\
+\textbf{Hız çözünürlüğü} & Radarın birbirinden ayırabildiği en küçük hız farkı = $\lambda / (2 \times \text{gözlem süresi})$. \\
+\textbf{En büyük hız} & Radarın karıştırmadan ölçebildiği en büyük hız = $\lambda / (4 \times \text{iki PRS arası süre})$. \\
+\textbf{α (ns-3)} & Gerçek α = $1 - \text{PRB} / \text{ilk satırdaki PRB}$. PRB sayısını ns-3 banttan hesaplar (dosyadaki ``ns-3 bant'' sayfası). \\
+\bottomrule
+\end{tabular}
+\endgroup
+
+% ======================================================================= FATIH
+\clearpage
+\section*{Fatih: OCUDU'yu ortak ızgarada ölç}
+\begin{amac}
+Önce 100 MHz'de OCUDU'nun çalışıp çalışmadığını bul ve nedenini yaz. Sonra ortak ızgarada PRS'siz ve K1--K11 PRS ayarlarıyla DL ve UL hızını ölç. 100 MHz çalışmazsa aynı ölçümleri 40 MHz'de yap.
+\end{amac}
+
+\textbf{Adımlar}
+\begin{enumerate}[leftmargin=1.6em]
+\item \textbf{100 MHz çalışıyor mu?} Repo kökünde:
+\begin{lstlisting}
+export CFG_BASE=$PWD/kurulum/ocudu_testmode_n78_100MHz.yml
+bash ogretici/betikler/ocudu_prs_kos.sh b100 0 0 0
+\end{lstlisting}
+Üç kez koş. DL ve UL hızı (\texttt{brate}) sıfır mı? Sıfırsa nedenini bul: \texttt{/tmp/out\_b100.txt} ve \texttt{/tmp/gnb\_testmode.log} içinde hata, uyarı ya da ``late'' geçen satırları kopyala; koşu sırasında başka bir terminalde \texttt{top} ile işlemci kullanımına bak. Sonra bandı sırayla 40, 60, 80, 100 MHz yap (yedek dosya \texttt{ocudu\_testmode\_n78.yml}'den kopya al, içinde \texttt{channel\_bandwidth\_MHz}) ve her biri için DL/UL yaz: veri akışı hangi banttan itibaren duruyor?
+\item \textbf{PRS'siz referans ve veri genişliği.} Çalışan en geniş bant için:
+\begin{lstlisting}
+bash ogretici/betikler/ocudu_prs_kos.sh base 0 0 0
+bash ogretici/betikler/ocudu_veri_genislik.sh <o bandin yml dosyasi>
+\end{lstlisting}
+Üç koşunun ortalamasını ve PDSCH'nin PRB aralığını dosyadaki ``Ortak değerler'' sayfasının 16.\ satırına ve DL/UL hücrelerine yaz.
+\item \textbf{K1--K11.} Dosyadaki \texttt{PRS konfigürasyonları} sayfasının her satırı bir koşu. K1 örnek (sırayla: etiket, periyot, sembol, bw, ofset, tekrar, boşluk, comb):
+\begin{lstlisting}
+bash ogretici/betikler/ocudu_prs_kos.sh K1 10 4 48 2 1 1 4
+\end{lstlisting}
+Her koşuda DL, UL ve \texttt{ok} sütunlarını yaz; yapılandırma reddedilirse ret mesajını kopyala. K1, K9 (ofset 0), K10 (ofset 10) için UL düşerse logda ``No space in PDCCH'' sayısını yaz.
+\item \textbf{PRS'in boş kutularını veriye aç.} \texttt{prs\_scheduler.cpp} satır 189--192'deki yorumu oku: ızgara PRB düzeyinde, PRS'in PRB'leri tümüyle kapatılıyor, PDSCH PRS etrafında kutu atlamıyor. Ama comb 4 ise PRS dört kutudan yalnız birini dolduruyor; comb 6 ve 12'de daha da azını. Boş kalanlar veriye verilirse kayıp çok düşer (ayrıntı: \texttt{gorev\_karti\_prs\_gorsel.pdf}, 5.\ resim). Denemen:
+\begin{enumerate}[label=(\alph*),leftmargin=1.6em]
+\item OCUDU kodunun \textbf{kopyasını} (git dalı) al, asıl koda dokunma. \texttt{prs\_scheduler.cpp}'deki \texttt{dl\_res\_grid.fill(...)} çağrısı PRS'in PRB'lerini kapatıyor. PDSCH'nin kutu sayısı (\texttt{mcs\_tbs\_calculator.cpp}) hangi sayıdan hesaplanıyor? Hangi satır? Yaz.
+\item En basit deney: \texttt{fill} çağrısını kaldır ve PDSCH tahsisinde PRS ile çakışan PRB'lerde veri için kullanılabilir kutu sayısını PRS'in doldurduğu kutular kadar azalt. Derleyip K1, K6, K7, K8, K11'i koş (DL hızı). Beklenen (üst sınır, hesap): PRS slotunda kapanan pay K1 \%7,7, K6 \%23,1, K7 \%15,4, K8 \%7,7, K11 \%7,7.
+\item Yapamazsan ``yapamadım'' yaz: hangi satırda, hangi hatada tıkandığını kopyala.
+\item Açık soru (kodla değil, standartla): gerçek bir telefon PDSCH'sini PRS'in kutularının etrafında nasıl kuracağını bilir mi? TS 38.214 §5.1.4 (PDSCH resource mapping) ve DL-PRS ile ilgili alt bölümleri bul; ``PDSCH, PRS kutularına rate-match edilir mi, UE'ye nasıl söylenir'' sorusunu 2 cümleyle yaz (bölüm numarasıyla). Metni okuyamazsan okuyamadığını yaz.
+\end{enumerate}
+\end{enumerate}
+
+\begin{kontrol}
+\textbf{100 MHz (tek koşu):} DL ve UL = 0, nedeni bilinmiyor. PDSCH aralığı: 8185 kez \texttt{rb=[0..48)}.\\
+\textbf{40 MHz yedek (tek koşu):} PRS'siz DL 36 Mbps (\texttt{ok} 1200), UL 44,9 (\texttt{ok} 600). \textbf{K1:} DL 29 (\texttt{ok} 1000), UL 44,9. \textbf{K4} (bw 104): DL 29, UL 44,9, K1 ile aynı. Başka koşu yapılmadı.
+\end{kontrol}
+
+\begin{teslim}
+(1) 100 MHz'de neden çalışmadığı (hata satırları) ya da çalıştığı; 40/60/80/100 MHz tablosu; (2) PRS'siz DL, UL, PDSCH genişliği; (3) K1--K11 için DL, UL, ok, kabul/ret tablosu ve UL düşen satırlar; (4) boş kutuları açma deneyi: kod satırları, DL hızları (önce / sonra) ve standart sorusunun cevabı.
+\end{teslim}
+
+% ======================================================================= NIHAT
+\clearpage
+\section*{Nihat: Sionna'da 3,5 GHz ve PRS sinyali}
+\begin{amac}
+Radarı ortak ızgaranın frekansına (3,5 GHz) ve sinyaline (30 kHz, 100 MHz, 273 PRB) taşı. Sonra PRS ayarlarının (K1, K2, K3) radarın hız ölçümünü nasıl değiştirdiğini hesapla ve ölç.
+\end{amac}
+
+\textbf{Adımlar}
+\begin{enumerate}[leftmargin=1.6em]
+\item \textbf{3,5 GHz'te kampüs.} \texttt{rt\_sehir.py}'nin \textbf{kopyasında} \texttt{FC = 4.9e9} satırını \texttt{3.5e9} yap, çalıştır. Çıktıyı ayrı bir klasöre yazdır, asıl \texttt{rt\_sonuclar.npz}'ye dokunma. İkinci adımdaki \texttt{radar\_takip.py} kopyası bu yeni dosyayı okusun. Eski (4,9 GHz) ve yeni (3,5 GHz) için aynı 5 konumda yol kazancını (dB) yan yana yaz.
+\item \textbf{Radar parametreleri.} \texttt{radar\_takip.py}'nin kopyasında şunları dosyadan al: \texttt{N = 273*12}, \texttt{SCS = 30e3}, \texttt{RCS\_DBSM = -12.81} (sabit; standarttaki 3,74 dB sapma modellenmeyecek), frekans npz'den zaten geliyor. Kopyayı \texttt{tr\_metrik\_olc.py} ile çalıştırıp 300~m'de Pd'yi, X\_SI = 40 ve 30 dB için, α = \%20 / 40 / 50 / 100 değerlerinde yaz. Eski sonuçla (kartlar 2'deki 0,18 / 0,56 / 0,73 / 0,96, RCS $-20$ dBsm ile) yan yana koy ve farkın RCS'ten mi, frekanstan mı geldiğini ayırmak için RCS'i tek başına değiştirdiğin bir koşu daha yap.
+\item \textbf{PRS ve hız.} Dosyadaki K1, K2, K3 (periyot 5, 10, 20 ms) için tabloyu doldur: en büyük hız ($\lambda / (4 \times \text{periyot})$) ve 160 ms gözlemde hız çözünürlüğü ($\lambda / (2 \times 0{,}16)$). λ = 8,57 cm. Sonra şunu cevapla: \texttt{radar\_takip.py} PRS gönderimlerini şu an periyotla mı modelliyor, yoksa ardışık semboller mi kullanıyor? Kodda hangi satır? PRS periyodunu kodda uygulamak ne gerektirir? (Yapmak zorunda değilsin, nedenini yaz.)
+\end{enumerate}
+
+\begin{kontrol}
+Hesapla çıkması gerekenler (λ = 8,57 cm): K1 (5 ms): en büyük hız 4,29 m/s, çözünürlük 0,27 m/s. K2 (10 ms): 2,14 ve 0,27. K3 (20 ms): 1,07 ve 0,27 (gözlem süresi aynı olduğu için çözünürlük değişmez).\\
+Adım 2 için bizde henüz koşulmadı; senin sonucun ilk sonuç olacak.
+\end{kontrol}
+
+\begin{teslim}
+(1) 4,9 ve 3,5 GHz yol kazancı tablosu; (2) Pd tablosu (eski / yeni); (3) K1--K3 hız tablosu ve üç sorunun cevabı.
+
+\textbf{Raporuna şu cümleyi yaz:} ``RCS sabit $-12{,}81$ dBsm alındı (TR 38.901 Tablo 7.9.2.1-1, küçük drone ortalaması); standarttaki 3,74 dB sapma modellenmedi, bu yüzden sonuçlar iyimser olabilir.''
+\end{teslim}
+
+% ======================================================================= AZIZ
+\clearpage
+\section*{Aziz: ns-3'te bant aralığını daralt}
+\begin{amac}
+Eski taramada bant 50'den 10 MHz'e kadar gidiyordu ve 25 ile 10 arasında hiç ölçüm yoktu. Şimdi ortak ızgarada (3,5 GHz, 100 MHz) bandı 7 küçük adımla daraltıyoruz ve α'yı gerçek PRB sayısından hesaplıyoruz.
+\end{amac}
+
+\textbf{Adımlar}
+\begin{enumerate}[leftmargin=1.6em]
+\item \textbf{Ana tarama (30 kHz, 100 MHz).} Repo kökünde:
+\begin{lstlisting}
+bash ogretici/betikler/ns3_bant_ortak.sh 1 100 5
+\end{lstlisting}
+Bant 100, 95, \ldots, 70 MHz olur. Betik PRB'yi ve gerçek α'yı kendisi yazar.
+\item \textbf{Karşılaştırma (15 kHz, 50 MHz).} 15 kHz'te en geniş bant 50 MHz:
+\begin{lstlisting}
+bash ogretici/betikler/ns3_bant_ortak.sh 0 50 3
+\end{lstlisting}
+Bant 50, 47, \ldots, 32 MHz olur. Her iki çıktıya iki sütun ekle: $C/C_0$ ($C_0$ = ilk satırın hızı) ve $1 - \alpha$.
+\item \textbf{Üç soru, birer cümle:} (a) $C/C_0$ ile $1 - \alpha$ iki tabloda da yakın mı? (b) Yakınlığın bozulduğu satır var mı, hangi bant ve PRB? (c) Bozulma nedeni olarak ns-3 kodunda (\texttt{contrib/nr/model}) aradığın yer ve bulduğun satır.
+\end{enumerate}
+
+\begin{kontrol}
+\textbf{30 kHz, hız (Mbps), PRB:} 100 MHz 349,13 (266); 95: 332,03 (253); 90: 314,91 (240); 85: 296,38 (226); 80: 279,33 (213); 75: 262,43 (200); 70: 244,00 (186). $C/C_0$ her satırda $1 - \alpha$'ya çok yakın (örnek: 80 MHz'de 0,800 ve 0,801).\\
+\textbf{15 kHz, hız (Mbps), PRB:} 50 MHz 173,23 (266); 47: 162,73 (250); 44: 152,46 (234); 41: 141,91 (218); 38: 131,48 (202); 35: 120,97 (186); 32: 100,61 (170). Son satırda $C/C_0$ = 0,581, $1 - \alpha$ = 0,639: 170 PRB'de bir sıçrama var. Daha küçük ızgarada da benzeri vardı (85 PRB, 0,72 ve 0,80). Nedenini bilmiyoruz.
+\end{kontrol}
+
+\begin{teslim}
+(1) İki tablo (bant, PRB, gerçek α, hız, $C/C_0$, $1 - \alpha$); (2) üç sorunun cevabı; (3) sıçramanın nedeni ya da ``bulamadım'' ve baktığın yerler.
+\end{teslim}
+
+% ======================================================================= TAHA
+\clearpage
+\section*{Taha: ortak dosya ve birleştirme}
+\begin{amac}
+Dosyanın sahibi sensin. Herkesin sayıları buradan alacak. Üçünün sonucunu birleştirip PRS'in kaybı ile kazancını tek tabloda göreceksin.
+\end{amac}
+
+\textbf{Adımlar}
+\begin{enumerate}[leftmargin=1.6em]
+\item \textbf{Dosyayı onayla.} \texttt{ortak\_degerler.xlsx}'i aç. Durumu ``KARAR'' ve ``ÖNERİ'' olan satırlara bak: onaylıyor musun? Özellikle (a) K1--K11 listesi, (b) TDD deseni (6 DL, 3 UL), (c) 30 kHz ana ızgara. Değiştireceğin satırı yaz; dosyayı \texttt{ogretici/betikler/ortak\_sheet\_uret.py} üretiyor.
+\item \textbf{Model ve ölçümü karşılaştır.} Fatih'in tablosu gelince ``PRS konfigürasyonları'' sayfasındaki model kaybı sütununu ölçülen DL kaybıyla yan yana koy. En çok ayrılan satırı bul ve Fatih'ten o satırı 3 kez koşturmasını iste. Not: bu model TDD için henüz ölçümle doğrulanmadı.
+\item \textbf{Kayıp ve kazanç tek tabloda.} ``Sonuç şablonu'' sayfasında her K satırı için: DL kayıp \%, Nihat'ın Pd'si, hız çözünürlüğü ve en büyük hız bir arada olsun. Hangi K satırı bu üç şeyi en dengeli veriyor? Bunu 3 cümleyle yaz. Tablonun altına Nihat'ın RCS cümlesini aynen kopyala (RCS sabit, sapma yok, sonuç iyimser olabilir). Aynı şekilde frekansı da yaz: standardın değerlendirmesi 4 ve 4,9 GHz, bizim ızgara 3,5 GHz.
+\end{enumerate}
+
+\begin{kontrol}
+Yedek ızgara (40 MHz) için modelin ilk satırı: K1 için kayıp = (1 PRS slotu / 6 DL slotu) $\times$ 48/48 = \%16,7. Ölçüm: DL 36 $\rightarrow$ 29 Mbps (\%19,4, tam sayıya yuvarlanmış brate), \texttt{ok} 1200 $\rightarrow$ 1000 (\%16,7).
+\end{kontrol}
+
+\begin{teslim}
+(1) Onayladığın / değiştirdiğin satırlar; (2) model ve ölçüm tablosu, en çok ayrılan satır; (3) tek tablo ve 3 cümlelik karar.
+\end{teslim}
+
+\end{document}

@@ -1,0 +1,13 @@
+id,periyot_slot,sembol,comb,bw_prb,sembol_ofset,slot_ofset,aciklama
+K0,0,0,0,0,0,0,PRS yok (referans)
+K1,10,4,4,48,2,1,Referans PRS (5 ms'de bir)
+K2,20,4,4,48,2,1,Yalnız periyot: 10 ms
+K3,40,4,4,48,2,1,Yalnız periyot: 20 ms
+K4,10,4,4,272,2,1,"Yalnız genişlik: tüm hücre (272 PRB). Veri kaybı K1 ile aynı olmalı (veri alanı 48 PRB ise), menzil çözünürlüğü çok daha iyi"
+K5,10,4,4,24,2,1,Yalnız genişlik: yarım
+K6,10,12,4,48,2,1,Yalnız sembol sayısı: 12
+K7,10,4,2,48,2,1,Yalnız comb: 2
+K8,10,12,12,48,2,1,"Comb 12, 12 sembol"
+K9,10,4,4,48,0,1,Yalnız sembol ofseti: 0
+K10,10,4,4,48,10,1,Yalnız sembol ofseti: 10
+K11,10,6,6,48,2,1,"Comb 6, 6 sembol"

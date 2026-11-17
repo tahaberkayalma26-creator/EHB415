@@ -1,0 +1,145 @@
+% EHB415 Gorev Kartlari 3 (sade). Derleme (ogretici klasorunde): C:\Users\Huawei\tools\tectonic\tectonic.exe -X compile gorev_kartlari_3.tex
+\documentclass[11pt,a4paper]{article}
+\usepackage{fontspec}
+\setmainfont{georgia}[Path=./fontlar/,Extension=.ttf,BoldFont=georgiab,ItalicFont=georgiai,BoldItalicFont=georgiaz]
+\setsansfont{arial}[Path=./fontlar/,Extension=.ttf,BoldFont=arialbd,ItalicFont=ariali,BoldItalicFont=arialbi]
+\setmonofont{consola}[Path=./fontlar/,Extension=.ttf,BoldFont=consolab,ItalicFont=consolai,BoldItalicFont=consolaz,Scale=0.88]
+\usepackage[a4paper,left=2cm,right=2cm,top=1.8cm,bottom=1.8cm]{geometry}
+\usepackage{xcolor,booktabs,enumitem,listings}
+\usepackage[most]{tcolorbox}
+\usepackage{fancyhdr,titlesec}
+\definecolor{ink}{HTML}{1F2937}\definecolor{acc}{HTML}{1D4ED8}\definecolor{accl}{HTML}{DBEAFE}
+\definecolor{warn}{HTML}{EA580C}\definecolor{warnl}{HTML}{FFEDD5}\definecolor{muted}{HTML}{6B7280}\definecolor{codebg}{HTML}{F3F4F6}
+\color{ink}
+\titleformat{\section}{\sffamily\bfseries\Large\color{acc}}{}{0pt}{}[{\color{acc!35}\titlerule[1pt]}]
+\titlespacing*{\section}{0pt}{4pt}{8pt}
+\setlength{\parindent}{0pt}\setlength{\parskip}{5pt}
+\setlist{itemsep=4pt,topsep=3pt,parsep=0pt}
+\pagestyle{fancy}\fancyhf{}\renewcommand{\headrulewidth}{0.3pt}
+\fancyhead[L]{\sffamily\footnotesize\color{muted} EHB415 \textbullet\ Görev kartları 3 (sade)}
+\fancyfoot[C]{\sffamily\footnotesize\color{muted}\thepage}
+\lstset{basicstyle=\ttfamily\footnotesize,backgroundcolor=\color{codebg},frame=single,rulecolor=\color{codebg!70!black},
+  breaklines=true,columns=fullflexible,keepspaces=true,showstringspaces=false,aboveskip=4pt,belowskip=6pt}
+\newtcolorbox{amac}{enhanced,colback=accl,colframe=acc,boxrule=0.5pt,arc=2pt,left=6pt,right=6pt,top=4pt,bottom=4pt,
+  fonttitle=\sffamily\bfseries\small,title=Amaç,coltitle=white,colbacktitle=acc,
+  attach boxed title to top left={yshift=-2mm,xshift=4mm},boxed title style={arc=2pt,boxrule=0pt}}
+\newtcolorbox{teslim}{enhanced,colback=warnl,colframe=warn,boxrule=0.5pt,arc=2pt,left=6pt,right=6pt,top=4pt,bottom=4pt,
+  fonttitle=\sffamily\bfseries\small,title=Teslim,coltitle=white,colbacktitle=warn,
+  attach boxed title to top left={yshift=-2mm,xshift=4mm},boxed title style={arc=2pt,boxrule=0pt}}
+\begin{document}
+
+\section*{Görev kartları 3}
+{\sffamily\color{muted} Üç raporu okuduk. Bu kartlar raporlarda açık kalan yerleri kapatır. Her kart: 1 amaç, 3 adım, 1 teslim.}
+
+\textbf{Her teslimde şunları yaz:} çalıştırdığın komut, gördüğün çıktı, anlamadığın yer (varsa). Bir sayı bizim beklediğimizden farklı çıkarsa gizleme, farkı yaz.
+
+\subsection*{Sözlük (kartlarda geçen her kelime burada)}
+\begingroup\sffamily\small
+\begin{tabular}{@{}p{2.6cm}p{13.4cm}@{}}
+\toprule
+\textbf{α (alfa)} & Sensing'e (radara) giden kaynağın, toplam kaynağa oranı. α = 0,10 ise kaynağın \%10'u radara gider. \\
+\textbf{Kaynak} & Zaman-frekans ızgarasındaki kutular. Bir kutu = 1 PRB $\times$ 1 sembol. \\
+\textbf{PRB} & Frekansta alt alta dizilmiş 12 şerit. \\
+\textbf{Sembol, slot} & Zamanda yan yana kutular. 14 sembol = 1 slot. 15 kHz ayarında 1 slot = 1 ms. \\
+\textbf{PRS} & Sensing için gönderilen özel sinyal. \\
+\textbf{T\_PRS} & PRS kaç slotta bir gönderiliyor. T\_PRS = 4 ise her 4 slotta bir. \\
+\textbf{bw} & PRS'in kaç PRB geniş olduğu. \\
+\textbf{Ofset} & PRS'in slot içinde kaçıncı sembolden başladığı. \\
+\textbf{SIB1} & İstasyonun telefona, hücreye bağlanması için gönderdiği temel bilgi mesajı. \\
+\textbf{Numeroloji} & Alt taşıyıcı aralığı ayarı. Numeroloji 4 = 240 kHz, numeroloji 2 = 60 kHz. \\
+\textbf{Rx paket} & Alıcının aldığı paket sayısı. 0 ise hiçbir şey alınmamış. \\
+\textbf{PDSCH} & Verinin gönderildiği alan. \\
+\textbf{PDCCH} & ``Kim, hangi slotta veri alacak ya da gönderecek'' mesajının gönderildiği alan. \\
+\textbf{DL, UL} & DL = indirme (istasyondan telefona). UL = yükleme (telefondan istasyona). \\
+\textbf{Kayıp} & (59,0 $-$ ölçülen hız) / 59,0. 59,0 Mbps, PRS kapalıyken ölçtüğümüz DL hızı. \\
+\textbf{Pd} & Radarın hedefi doğru bulma oranı. \\
+\textbf{Pf1} & Hedef yokken radarın yanlış alarm verme oranı. \\
+\textbf{X\_SI} & Kendi gönderdiğimiz sinyalin alıcıya sızması (öz-girişim). dB cinsinden bir ayar. Büyürse radar körleşir. \\
+\textbf{PRB sayısı (ns-3)} & Bant (MHz) $\times$ 0,96 $\div$ 2,88, sonra aşağı yuvarla. Yalnızca ns-3 numeroloji 4 için (Aziz'in raporu, kodda doğrulandı). \\
+\bottomrule
+\end{tabular}
+\endgroup
+
+% ======================================================================= AZIZ
+\clearpage
+\section*{Aziz: dar bantta nerede kopuyor?}
+\begin{amac}
+Raporda 23,9 MHz kopuyor, 24 MHz çalışıyor. Ama 10--25 MHz arasında başka nokta denenmemiş. ``8 PRB altında hep kopar'' demek için aradaki noktaları ölç.
+\end{amac}
+
+\textbf{Adımlar}
+\begin{enumerate}[leftmargin=1.6em]
+\item \texttt{ns3\_bant\_sweep.sh} içindeki \texttt{for bw in ...} satırına şu değerleri koy ve çalıştır:
+\begin{lstlisting}
+for bw in 25000000 24000000 23900000 22000000 20000000 15000000 12000000 10000000; do
+bash ogretici/betikler/ns3_bant_sweep.sh
+\end{lstlisting}
+\item Her bant için tahmini PRB sayısını sözlükteki formülle hesapla. Tabloya yaz: bant, tahmini PRB, Rx paket sayısı, hız (Mbps). Bağlantı kurulmadıysa hızın yanına ``kopuk'' yaz.
+\item Tek cümleyle cevapla: bağlantı hep 8 PRB ve üstünde mi kuruluyor, hep 7 ve altında mı kopuyor? İstisna varsa hangi bant?
+\end{enumerate}
+
+\textbf{Ayrıca iki kısa soru (birer cümle):}
+\begin{itemize}[leftmargin=1.4em]
+\item Önceki kart ``paket kurma'' demişti, Sionna paketleri kuruldu. Kimin isteğiyle kuruldu?
+\item Bant daraltma ile PRS'in kaynak yemesi arasındaki farkı kendi cümlenle yaz.
+\end{itemize}
+
+\begin{teslim}
+Bant, tahmini PRB, Rx paket, hız tablosu + 3. adımın cevabı + iki kısa cevap.
+\end{teslim}
+
+% ======================================================================= FATIH
+\clearpage
+\section*{Fatih: üç açık soruyu kanıtla}
+\begin{amac}
+Raporunda üç yer açık kaldı: DL ofset 0'da neden düşmüyor, SIB1 hataları ne, 96 PRB sınırı gerçekten bu ayardan mı geliyor. Her birini log ya da kod satırıyla kapat.
+\end{amac}
+
+\textbf{Adımlar}
+\begin{enumerate}[leftmargin=1.6em]
+\item \textbf{DL neden düşmüyor?} Ofset 0'da UL'de ``Failed to allocate PUSCH. Cause: No space in PDCCH'' mesajını 4148 kez saydın. Aynı koşuda (\texttt{bash ogretici/betikler/ocudu\_prs\_kos.sh e3 4 4 52 0}) DL tarafı için PDCCH ile ilgili benzer bir hata var mı? Sayısını yaz. Yoksa ``yok'' yaz ve DL'in aynı PDCCH çakışmasından neden etkilenmediğini kodda bul (satır numarası ver).
+\item \textbf{SIB1 hataları.} Raporunda PRS açık çok kullanıcılı koşuda SIB1 için kaynak ayrılamadığı mesajları var. Koşuyu tekrarla (\texttt{bash ogretici/betikler/ocudu\_cok\_ue.sh u4p4 4 4 0}), bu mesajdan kaç tane çıktığını ve hangi slotlarda olduğunu yaz. PRS kapalıyken (\texttt{u4}) aynı mesaj var mı?
+\item \textbf{96 PRB sınırı.} \texttt{kurulum/ocudu\_testmode.yml} dosyasının yedeğini al. İçinde \texttt{dci\_format\_0\_1\_and\_1\_1: false} satırını \texttt{true} yap. PRS'siz bir koşu yap. Günlükte veri alanının PRB aralığına bak: \texttt{prb=[0,96)} kalıyor mu, yoksa 106'ya çıkıyor mu? Sonra dosyayı eski haline geri koy. Yapılandırma reddederse mesajı yaz.
+\end{enumerate}
+
+\begin{teslim}
+(1) DL için PDCCH hata sayısı ya da kodda neden olmadığı; (2) SIB1 mesaj sayıları (PRS açık / kapalı); (3) PRB aralığı önce ve sonra.
+\end{teslim}
+
+% ======================================================================= NIHAT
+\clearpage
+\section*{Nihat: radarı standarda yaklaştır ve α'yı açıkla}
+\begin{amac}
+Raporunda bizim X\_SI tanımımızın standarttan 5 dB kötümser olduğunu buldun. Bunu düzeltince sonuç ne değişiyor? Ayrıca radar kodunda α'nın nasıl hesaplandığını kendi cümlenle yaz.
+\end{amac}
+
+\textbf{Adımlar}
+\begin{enumerate}[leftmargin=1.6em]
+\item \texttt{radar\_takip.py}'nin \textbf{kopyasını} al (asıl dosyaya dokunma). Kopyada satır 40'taki 5 dB farkı kapat (standarda göre: öz-girişim gürültü tabanına, 5 dB gürültü payı eklenmemiş tabanın üstüne eklenir).
+\item \texttt{tr\_metrik\_olc.py}'nin de kopyasını al, içindeki \texttt{import radar\_takip} satırını kopya dosyanın adına çevir ve çalıştır. 300 m'de, X\_SI = 40 ve 30 dB için, α = \%20 / 40 / 50 / 100 değerlerinde Pd'yi \textbf{önce ve sonra} diye iki satır halinde yaz.
+\item Kodda \texttt{FRAME\_SYM = 140} ve α = M / 140 yazıyor (satır 32). Üç cümleyle yaz: 140 neyin sayısı? M neyin sayısı? α bu tanımla, Dickerson formülündeki (zaman payı $\times$ frekans payı) çarpanlarından hangisine karşılık geliyor? Frekans payı bizde neden 1 kabul ediliyor, ediliyor mu?
+\end{enumerate}
+
+\begin{teslim}
+(1) Önce / sonra Pd tablosu; (2) farkın nedenini anlatan 2 cümle; (3) 3. adımın üç cümlesi.
+\end{teslim}
+
+% ======================================================================= TAHA
+\clearpage
+\section*{Taha: üç raporu tek tabloda topla}
+\begin{amac}
+Aziz, Fatih ve Nihat'ın sayılarını α ekseninde yan yana koyup ``model ile ölçüm tutuyor mu'' sorusunu cevapla. Her kutuyu kendin dolduracaksın.
+\end{amac}
+
+\textbf{Adımlar}
+\begin{enumerate}[leftmargin=1.6em]
+\item \textbf{OCUDU tablosu.} \texttt{ogretici/veri/ocudu\_prs\_sweep.csv} içindeki 8 PRS satırı için tablo yap: etiket, T\_PRS, bw, model \%, ölçülen \%. Model = (1 / T\_PRS) $\times$ min(bw, 96) / 96. Ölçülen = sözlükteki kayıp formülü.
+\item \textbf{Tutmayan satırı bul.} Model ile ölçülenin en çok ayrıldığı satırı bul. Bu fark ölçüm gürültüsü mü? Bunu anlamak için Fatih'ten bu satırı 3 kez koşturmasını iste (\texttt{ocudu\_prs\_kos.sh}), ortalamayı yaz.
+\item \textbf{Toplantı listesi.} Üç raporda açık kalan yerleri (bu kartlardaki sorular) tek sayfaya yaz: kime, hangi soru, hangi dosyada cevap beklenecek.
+\end{enumerate}
+
+\begin{teslim}
+(1) 8 satırlı model--ölçüm tablosu; (2) en çok ayrılan satır ve 3 koşunun ortalaması; (3) tek sayfa toplantı listesi.
+\end{teslim}
+
+\end{document}

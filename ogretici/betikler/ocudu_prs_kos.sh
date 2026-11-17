@@ -11,7 +11,7 @@ set -u
 tag=$1; per=$2; sym=$3; bw=$4; off=${5:-2}   # 5. arguman (istege bagli): PRS sembol ofseti, varsayilan 2
 rep=${6:-1}; gap=${7:-1}; comb=${8:-2}         # 6-8. arguman (istege bagli): repetition_factor, time_gap, comb_size
 here="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-base="$here/../../kurulum/ocudu_testmode.yml"
+base="${CFG_BASE:-$here/../../kurulum/ocudu_testmode.yml}"   # CFG_BASE=<yml yolu>: baska taban yapilandirma (ornek: n78)
 cfg=/tmp/ehb_$tag.yml
 cp "$base" "$cfg"
 if [ "${CSI_OFF:-0}" = "1" ]; then     # CSI_OFF=1: CSI-RS kapali (testmode'da CQI sabit; uzun PRS penceresi CSI-RS ile cakisip yapilandirma reddedilmesin)
