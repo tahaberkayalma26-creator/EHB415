@@ -1,0 +1,43 @@
+PRB basina veri RE (PRS yok) = 12*13 - 12*3 - 0 = 120; MCS 28 qam64: Qm = 6, R = 0.9258
+    48 PRB: N_RE = 5760, TBS = 31752 bit/slot -> 38.10 Mbps (1200 DL slot/s)
+   273 PRB: N_RE = 32760, TBS = 180376 bit/slot -> 216.45 Mbps (1200 DL slot/s)
+   duyarlilik: xOverhead = 6 alinsaydi 48 PRB TBS = 30216 -> 36.26 Mbps
+
+Kontrol: PRS'in 48 PRB'de PDSCH'den dusurdugu veri RE (M3) ve kartin verdigi pay:
+   K1 : model   432 RE | PRS slotunda kayip pay: model   7.5 % (DMRS haric 120 RE/PRB'ye gore), kart  7.7 % (13 sembole gore)
+   K6 : model  1296 RE | PRS slotunda kayip pay: model  22.5 % (DMRS haric 120 RE/PRB'ye gore), kart 23.1 % (13 sembole gore)
+   K7 : model   864 RE | PRS slotunda kayip pay: model  15.0 % (DMRS haric 120 RE/PRB'ye gore), kart 15.4 % (13 sembole gore)
+   K8 : model   432 RE | PRS slotunda kayip pay: model   7.5 % (DMRS haric 120 RE/PRB'ye gore), kart  7.7 % (13 sembole gore)
+   K11: model   384 RE | PRS slotunda kayip pay: model   6.7 % (DMRS haric 120 RE/PRB'ye gore), kart  7.7 % (13 sembole gore)
+
+Senaryo A (48 PRB): DL hizi (Mbps) ve PRS'siz duruma gore kayip (%)
+ id  M0_Mbps  M1_Mbps  M1_kayip_yuzde  M2_Mbps  M2_kayip_yuzde  M3_Mbps  M3_kayip_yuzde  M3_kazanc_Mbps  M3_kazanc_M1e_gore_yuzde
+ K0     38.1    38.10            0.00    38.10            0.00    38.10            0.00            0.00                      0.00
+ K1     38.1    31.75           16.67    36.26            4.84    37.69            1.07            5.94                     18.71
+ K2     38.1    34.93            8.33    37.18            2.42    37.90            0.54            2.97                      8.50
+ K3     38.1    36.51            4.17    37.64            1.21    38.00            0.27            1.49                      4.07
+ K4     38.1    31.75           16.67    36.26            4.84    37.69            1.07            5.94                     18.71
+ K5     38.1    34.93            8.33    37.18            2.42    37.90            0.54            2.97                      8.50
+ K6     38.1    31.75           16.67    32.40           14.97    36.67            3.77            4.92                     15.48
+ K7     38.1    31.75           16.67    36.26            4.84    37.18            2.42            5.43                     17.10
+ K8     38.1    31.75           16.67    32.40           14.97    37.69            1.07            5.94                     18.71
+ K9     38.1    31.75           16.67    36.87            3.22    37.80            0.81            6.04                     19.03
+K10     38.1    31.75           16.67    36.26            4.84    37.69            1.07            5.94                     18.71
+K11     38.1    31.75           16.67    35.54            6.71    37.69            1.07            5.94                     18.71
+
+Senaryo B (273 PRB): DL hizi (Mbps) ve PRS'siz duruma gore kayip (%)
+ id  M0_Mbps  M1_Mbps  M1_kayip_yuzde  M2_Mbps  M2_kayip_yuzde  M3_Mbps  M3_kayip_yuzde  M3_kazanc_Mbps  M3_kazanc_M1e_gore_yuzde
+ K0   216.45   216.45            0.00   216.45            0.00   216.45            0.00            0.00                      0.00
+ K1   216.45   210.70            2.66   214.81            0.76   216.45            0.00            5.75                      2.73
+ K2   216.45   213.57            1.33   215.63            0.38   216.45            0.00            2.88                      1.35
+ K3   216.45   215.01            0.66   216.04            0.19   216.45            0.00            1.44                      0.67
+ K4   216.45   180.51           16.60   205.79            4.92   213.97            1.15           33.46                     18.54
+ K5   216.45   213.97            1.15   215.62            0.39   216.45            0.00            2.48                      1.16
+ K6   216.45   210.70            2.66   210.70            2.66   215.62            0.39            4.92                      2.34
+ K7   216.45   210.70            2.66   214.81            0.76   215.62            0.39            4.92                      2.34
+ K8   216.45   210.70            2.66   210.70            2.66   216.45            0.00            5.75                      2.73
+ K9   216.45   210.70            2.66   215.62            0.39   216.45            0.00            5.75                      2.73
+K10   216.45   210.70            2.66   214.81            0.76   216.45            0.00            5.75                      2.73
+K11   216.45   210.70            2.66   213.97            1.15   216.45            0.00            5.75                      2.73
+
+cikti: ../cikti/veri_tbs

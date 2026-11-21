@@ -1,0 +1,67 @@
+PRS n78: fc = 3.50 GHz, lambda = 8.57 cm, SCS = 30 kHz, hucre 273 PRB, gozlem 160 ms, RCS = -12.81 dBsm, X_SI = 40.0 dB, gurultu bandi 98.28 MHz
+
+1) Yapilandirmalar (hesap)
+ id  periyot_ms  sembol  comb  bw_prb  sembol_ofset  bant_MHz  menzil_kutusu_m  n_firsat  prs_re_160ms  alfa_prs_yuzde  islem_kazanci_db  en_buyuk_hiz_ms  hiz_cozunurlugu_ms
+ K1         5.0       4     4      48             2     17.28            8.681        32         18432           0.126            42.656            4.286               0.268
+ K2        10.0       4     4      48             2     17.28            8.681        16          9216           0.063            39.645            2.143               0.268
+ K3        20.0       4     4      48             2     17.28            8.681         8          4608           0.031            36.635            1.071               0.268
+ K4         5.0       4     4     272             2     97.92            1.532        32        104448           0.712            50.189            4.286               0.268
+ K5         5.0       4     4      24             2      8.64           17.361        32          9216           0.063            39.645            4.286               0.268
+ K6         5.0      12     4      48             2     17.28            8.681        32         55296           0.377            47.427            4.286               0.268
+ K7         5.0       4     2      48             2     17.28            8.681        32         36864           0.251            45.666            4.286               0.268
+ K8         5.0      12    12      48             2     17.28            8.681        32         18432           0.126            42.656            4.286               0.268
+ K9         5.0       4     4      48             0     17.28            8.681        32         18432           0.126            42.656            4.286               0.268
+K10         5.0       4     4      48            10     17.28            8.681        32         18432           0.126            42.656            4.286               0.268
+K11         5.0       6     6      48             2     17.28            8.681        32         18432           0.126            42.656            4.286               0.268
+   X_SI = 40 dB bitti (251 s)
+   X_SI = 30 dB bitti (267 s)
+
+2) Pd, menzile gore (X_SI = 40 dB, 160 deneme, hiz -30..30 m/s)
+menzil_m  100   200   300   400   500
+id                                   
+K1        1.0  1.00  0.57  0.03  0.00
+K2        1.0  0.99  0.12  0.00  0.00
+K3        1.0  0.83  0.03  0.00  0.00
+K4        1.0  1.00  1.00  0.55  0.10
+K5        1.0  1.00  0.15  0.02  0.00
+K6        1.0  1.00  1.00  0.47  0.06
+K7        1.0  1.00  0.93  0.29  0.01
+K8        1.0  1.00  0.56  0.04  0.00
+K9        1.0  1.00  0.66  0.02  0.00
+K10       1.0  1.00  0.66  0.02  0.00
+K11       1.0  1.00  0.64  0.02  0.00
+
+   Pd (300 m): X_SI = 40 / 30 dB
+X_SI_dB  30.0  40.0
+id                 
+K1       1.00  0.57
+K2       1.00  0.12
+K3       0.99  0.03
+K4       1.00  1.00
+K5       1.00  0.15
+K6       1.00  1.00
+K7       1.00  0.93
+K8       1.00  0.56
+K9       1.00  0.66
+K10      1.00  0.66
+K11      1.00  0.64
+
+   300 m, X_SI = 40 dB, dogru tespitlerde %90 yuzdelik hatalar (menzil / hiz ham / hiz katlanmis):
+   K1   menzil   2.66 m | hiz ham  26.06 m/s | katlanmis  0.34 m/s
+   K2   menzil   2.01 m | hiz ham  21.69 m/s | katlanmis  0.26 m/s
+   K3   menzil   2.03 m | hiz ham  24.62 m/s | katlanmis  0.24 m/s
+   K4   menzil   0.46 m | hiz ham  25.78 m/s | katlanmis  0.11 m/s
+   K5   menzil   5.31 m | hiz ham  26.02 m/s | katlanmis  0.33 m/s
+   K6   menzil   2.13 m | hiz ham  26.00 m/s | katlanmis  0.30 m/s
+   K7   menzil   2.51 m | hiz ham  26.04 m/s | katlanmis  0.33 m/s
+   K8   menzil   2.61 m | hiz ham  26.06 m/s | katlanmis  0.34 m/s
+   K9   menzil   2.99 m | hiz ham  26.04 m/s | katlanmis  0.33 m/s
+   K10  menzil   2.64 m | hiz ham  26.03 m/s | katlanmis  0.33 m/s
+   K11  menzil   2.68 m | hiz ham  26.03 m/s | katlanmis  0.32 m/s
+
+3) Pf1 K1: 0/1000 hedefsiz gozlemde alarm -> %0.00 (hedef <= %5)
+3) Pf1 K4: 2/1000 hedefsiz gozlemde alarm -> %0.20 (hedef <= %5)
+   hiz dagilimi -30..30 m/s icinde |v| > 4.29 m/s (K1 belirsizlik siniri) olan oran: 0.86
+
+bitti (290 s); cikti: ../cikti/prs_n78
+~/venvs/ehb415/bin/python prs_takip_n78.py  1698,78s user 16,83s system 588% cpu 4:51,66 total

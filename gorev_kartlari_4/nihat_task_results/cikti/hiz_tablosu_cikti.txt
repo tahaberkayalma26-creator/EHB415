@@ -1,0 +1,18 @@
+fc = 3.5 GHz, lambda = 8.571 cm
+   konfig  periyot   PRS firsati (160 ms)   en buyuk hiz lambda/(4T)   hiz cozunurlugu lambda/(2*0,16 s)
+   K1       5.0 ms     32                     4.29 m/s                  0.27 m/s
+   K2      10.0 ms     16                     2.14 m/s                  0.27 m/s
+   K3      20.0 ms      8                     1.07 m/s                  0.27 m/s
+   radar_takip.py (ardisik semboller, T = 36.98 us): en buyuk hiz  579.5 m/s; cozunurluk M = 28 / 70 / 140 icin 41.39 / 16.56 / 8.28 m/s
+   tek slot arayla tekrar (PRS tekrar faktoru > 1, zaman boslugu 1 slot, T = 0,5 ms): en buyuk hiz 42.86 m/s
+   TR 38.765 Tablo A-1: IHA yatay hizi 0-180 km/sa = 0-50 m/s -> 50 m/s'i katlamadan olcmek icin T <= lambda/(4*50) = 0.429 ms
+
+fc = 4.9 GHz, lambda = 6.122 cm
+   konfig  periyot   PRS firsati (160 ms)   en buyuk hiz lambda/(4T)   hiz cozunurlugu lambda/(2*0,16 s)
+   K1       5.0 ms     32                     3.06 m/s                  0.19 m/s
+   K2      10.0 ms     16                     1.53 m/s                  0.19 m/s
+   K3      20.0 ms      8                     0.77 m/s                  0.19 m/s
+   radar_takip.py (ardisik semboller, T = 36.98 us): en buyuk hiz  413.9 m/s; cozunurluk M = 28 / 70 / 140 icin 29.57 / 11.83 / 5.91 m/s
+   tek slot arayla tekrar (PRS tekrar faktoru > 1, zaman boslugu 1 slot, T = 0,5 ms): en buyuk hiz 30.61 m/s
+   TR 38.765 Tablo A-1: IHA yatay hizi 0-180 km/sa = 0-50 m/s -> 50 m/s'i katlamadan olcmek icin T <= lambda/(4*50) = 0.306 ms
+

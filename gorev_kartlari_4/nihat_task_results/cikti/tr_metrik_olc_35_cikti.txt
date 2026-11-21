@@ -1,0 +1,49 @@
+radar ayari: {'fc_GHz': 3.5, 'N': 3276, 'W_MHz': 98.28, 'RCS_dBsm': -12.81} | menzil kutusu 1.53 m | X_SI = 40.0 dB
+
+1) Pf1 (hedef yok; radar_takip.PFA = 0.001, CPI basina)
+   M= 14 (alpha=10%): 2/3000 hedefsiz CPI'da alarm -> Pf1 = 0.07 %
+   M= 70 (alpha=50%): 3/3000 hedefsiz CPI'da alarm -> Pf1 = 0.10 %
+
+2) Pmd <= %5 (Pd >= 0,95) icin en kucuk alfa
+   yeni (3,5 GHz, 3276 alt tas., -12,81 dBsm) 100 m: alfa = 2.9% (Pd = 1.00)
+   yeni (3,5 GHz, 3276 alt tas., -12,81 dBsm) 200 m: alfa = 2.9% (Pd = 1.00)
+   yeni (3,5 GHz, 3276 alt tas., -12,81 dBsm) 300 m: alfa = 5.7% (Pd = 0.97)
+   yeni (3,5 GHz, 3276 alt tas., -12,81 dBsm) 400 m: alfa = 40.0% (Pd = 0.99)
+   eski (4,9 GHz, 1024 alt tas., -20 dBsm)   100 m: alfa = 2.9% (Pd = 1.00)
+   eski (4,9 GHz, 1024 alt tas., -20 dBsm)   200 m: alfa = 20.0% (Pd = 0.99)
+   eski (4,9 GHz, 1024 alt tas., -20 dBsm)   300 m: alfa = 100.0% (Pd = 0.97)
+   eski (4,9 GHz, 1024 alt tas., -20 dBsm)   400 m: taranan alfa degerlerinin hicbirinde yok (en yuksek Pd = 0.38)
+
+3) 300 m'de Pd, X_SI_DB'ye gore (160 deneme)
+   alpha:          20%    40%    50%   100%
+   X_SI=  40 dB:  1.00   1.00   1.00   1.00
+   X_SI=  30 dB:  1.00   1.00   1.00   1.00
+   (124 s)
+
+4) Ayristirma: 300 m'de Pd (160 deneme; her satir tohum 11 ile ayni rastgele sayilar)
+   alpha:                           2.9%   5.7%  10.0%  20.0%  40.0%  50.0%  100.0%
+   X_SI=40 A eski (kartlar 2)            0.00   0.00   0.00   0.11   0.51   0.69   0.98
+   X_SI=40 B yalniz RCS                  0.12   0.59   0.83   0.99   1.00   1.00   1.00
+   X_SI=40 C yalniz frekans              0.03   0.01   0.10   0.57   0.97   0.96   1.00
+   X_SI=40 D yalniz bant (N=3276)        0.01   0.00   0.01   0.12   0.51   0.63   0.99
+   X_SI=40 F frekans + RCS (N=1024)      0.61   0.97   1.00   1.00   1.00   1.00   1.00
+   X_SI=40 E yeni (hepsi)                0.60   0.97   0.99   1.00   1.00   1.00   1.00
+   X_SI=30 A eski (kartlar 2)            0.61   0.96   0.99   1.00   1.00   1.00   1.00
+   X_SI=30 B yalniz RCS                  1.00   1.00   1.00   1.00   1.00   1.00   1.00
+   X_SI=30 C yalniz frekans              0.97   1.00   1.00   1.00   1.00   1.00   1.00
+   X_SI=30 D yalniz bant (N=3276)        0.56   0.94   0.99   1.00   1.00   1.00   1.00
+   X_SI=30 F frekans + RCS (N=1024)      1.00   1.00   1.00   1.00   1.00   1.00   1.00
+   X_SI=30 E yeni (hepsi)                1.00   1.00   1.00   1.00   1.00   1.00   1.00
+   (251 s)
+
+5) SNR butcesi, 300 m, X_SI = 40 dB (hedef kutu merkezinde; esik, ortalama gurultuye gore)
+   ayar                          ornek SNR   M=28: kazanc / tepe / esik / pay    M=140: kazanc / tepe / esik / pay
+   A eski (kartlar 2)            -33.20 dB    44.6 /  11.4 / 11.7 /  -0.3 dB     51.6 /  18.4 / 12.1 /  +6.2 dB
+   B yalniz RCS                  -26.01 dB    44.6 /  18.6 / 11.7 /  +6.9 dB     51.6 /  25.6 / 12.1 / +13.4 dB
+   C yalniz frekans              -30.27 dB    44.6 /  14.3 / 11.7 /  +2.6 dB     51.6 /  21.3 / 12.1 /  +9.1 dB
+   D yalniz bant (N=3276)        -38.25 dB    49.6 /  11.4 / 12.0 /  -0.6 dB     56.6 /  18.4 / 12.4 /  +5.9 dB
+   F frekans + RCS (N=1024)      -23.08 dB    44.6 /  21.5 / 11.7 /  +9.8 dB     51.6 /  28.5 / 12.1 / +16.3 dB
+   E yeni (hepsi)                -28.13 dB    49.6 /  21.5 / 12.0 /  +9.5 dB     56.6 /  28.5 / 12.4 / +16.0 dB
+
+bitti (251 s)
+~/venvs/ehb415/bin/python tr_metrik_olc_35.py  230,40s user 21,80s system 100% cpu 4:11,49 total

@@ -1,0 +1,13 @@
+[   0.3 s] sahne yuklendi
+[   6.5 s] 01_sahne.png
+[   6.5 s] radyo haritasi hesaplandi
+[  14.5 s] 02_kapsama_3b.png
+[  14.5 s] harita boyutu (242, 296), x:[-803,672] y:[-686,519]
+[  14.8 s] UE: 13 gecerli yol
+[  20.8 s] 04_yollar.png
+[  22.9 s] iha cozum a:(60, 1, 1, 1, 10, 1) tau:(60, 1, 10)
+[  23.1 s] debug: en kisa yol - dogrudan mesafe/c farki (ns), ilk 6: [0.4 0.4 0.4 0.4 0.4 0.4]
+[  23.1 s] LOS olan nokta sayisi: 37/60
+[  23.1 s] FC = 4.90 GHz | kapsama haritasi: 3774 hucre, medyan yol kazanci -101.74 dB
+tamam 23.08198046684265
+~/venvs/ehb415/bin/python betikler/rt_sehir_35.py 4.9e9  237,65s user 0,66s system 977% cpu 24,387 total

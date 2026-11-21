@@ -1,0 +1,39 @@
+radar_takip_35: fc = 3.50 GHz (npz: ../cikti/rt_3p5GHz/rt_sonuclar.npz), N = 3276, W = 98.28 MHz, RCS = -12.81 dBsm, X_SI = 40.0 dB, menzil kutusu = 1.53 m
+p90 100 m M=  4 alfa=  2.9% Pd=1.00 n=160 | menzil 0.34 m  hiz 25.64 m/s
+p90 100 m M=  8 alfa=  5.7% Pd=1.00 n=160 | menzil 0.35 m  hiz 23.84 m/s
+p90 100 m M= 14 alfa= 10.0% Pd=1.00 n=160 | menzil 0.35 m  hiz 18.96 m/s
+p90 100 m M= 28 alfa= 20.0% Pd=1.00 n=160 | menzil 0.35 m  hiz 9.60 m/s
+p90 100 m M= 56 alfa= 40.0% Pd=1.00 n=160 | menzil 0.35 m  hiz 4.76 m/s
+p90 100 m M= 70 alfa= 50.0% Pd=1.00 n=160 | menzil 0.35 m  hiz 3.83 m/s
+p90 100 m M=140 alfa=100.0% Pd=1.00 n=160 | menzil 0.35 m  hiz 1.91 m/s
+p90 200 m M=  4 alfa=  2.9% Pd=1.00 n=160 | menzil 0.42 m  hiz 29.34 m/s
+p90 200 m M=  8 alfa=  5.7% Pd=1.00 n=160 | menzil 0.38 m  hiz 24.77 m/s
+p90 200 m M= 14 alfa= 10.0% Pd=1.00 n=160 | menzil 0.37 m  hiz 19.44 m/s
+p90 200 m M= 28 alfa= 20.0% Pd=1.00 n=160 | menzil 0.36 m  hiz 10.14 m/s
+p90 200 m M= 56 alfa= 40.0% Pd=1.00 n=160 | menzil 0.35 m  hiz 4.94 m/s
+p90 200 m M= 70 alfa= 50.0% Pd=1.00 n=160 | menzil 0.36 m  hiz 3.87 m/s
+p90 200 m M=140 alfa=100.0% Pd=1.00 n=160 | menzil 0.35 m  hiz 1.92 m/s
+p90 300 m M=  4 alfa=  2.9% Pd=0.59 n= 95 | menzil 0.52 m  hiz 30.20 m/s
+p90 300 m M=  8 alfa=  5.7% Pd=0.97 n=156 | menzil 0.43 m  hiz 27.23 m/s
+p90 300 m M= 14 alfa= 10.0% Pd=1.00 n=160 | menzil 0.44 m  hiz 20.73 m/s
+p90 300 m M= 28 alfa= 20.0% Pd=1.00 n=160 | menzil 0.40 m  hiz 11.17 m/s
+p90 300 m M= 56 alfa= 40.0% Pd=1.00 n=160 | menzil 0.39 m  hiz 5.31 m/s
+p90 300 m M= 70 alfa= 50.0% Pd=1.00 n=160 | menzil 0.39 m  hiz 4.06 m/s
+p90 300 m M=140 alfa=100.0% Pd=1.00 n=160 | menzil 0.37 m  hiz 1.91 m/s
+p90 400 m M=  4 alfa=  2.9% Pd=0.03 n=  4 | menzil 0.44 m  hiz 35.81 m/s
+p90 400 m M=  8 alfa=  5.7% Pd=0.14 n= 22 | menzil 0.42 m  hiz 26.91 m/s
+p90 400 m M= 14 alfa= 10.0% Pd=0.44 n= 71 | menzil 0.48 m  hiz 22.00 m/s
+p90 400 m M= 28 alfa= 20.0% Pd=0.86 n=138 | menzil 0.45 m  hiz 12.62 m/s
+p90 400 m M= 56 alfa= 40.0% Pd=0.99 n=159 | menzil 0.46 m  hiz 6.06 m/s
+p90 400 m M= 70 alfa= 50.0% Pd=1.00 n=160 | menzil 0.42 m  hiz 5.01 m/s
+p90 400 m M=140 alfa=100.0% Pd=1.00 n=160 | menzil 0.39 m  hiz 2.03 m/s
+menzil_m  100  200   300   400
+alpha                         
+0.028571  1.0  1.0  0.59  0.02
+0.057143  1.0  1.0  0.98  0.14
+0.100000  1.0  1.0  1.00  0.44
+0.200000  1.0  1.0  1.00  0.86
+0.400000  1.0  1.0  1.00  0.99
+0.500000  1.0  1.0  1.00  1.00
+1.000000  1.0  1.0  1.00  1.00
+~/venvs/ehb415/bin/python radar_takip_35.py  59,90s user 4,23s system 101% cpu 1:03,09 total

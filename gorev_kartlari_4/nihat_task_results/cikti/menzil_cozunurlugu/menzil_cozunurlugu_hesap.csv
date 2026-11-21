@@ -1,0 +1,8 @@
+ayar,alt_tasiyici,bant_MHz,menzil_cozunurlugu_m,not_
+"radar_takip.py (eski, kartlar 2)",1024,30.720,4.883,"1024 alt tasiyici, dolu"
+"radar_takip_35.py (yeni, ortak izgara)",3276,98.280,1.526,"273 PRB = 3276 alt tasiyici, dolu"
+prs_takip.py (eski PRS),1008,30.240,4.960,"84 PRB, comb 4 (L = 4 sembolde tum alt tasiyicilar)"
+"PRS K1-K3, K6-K11 (48 PRB)",576,17.280,8.681,"48 PRB, comb birlestirilmis"
+PRS K4 (272 PRB),3264,97.920,1.532,"272 PRB, comb birlestirilmis"
+PRS K5 (24 PRB),288,8.640,17.361,"24 PRB, comb birlestirilmis"
+"TR 38.765 Tablo A-1 FR1 (100 MHz, 30 kHz)",3276,100.000,1.500,nominal bant; TR'nin degerlendirme ayari

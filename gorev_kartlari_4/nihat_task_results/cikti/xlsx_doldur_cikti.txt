@@ -1,0 +1,1 @@
+yazildi: ../Nihat_Ortak_Degerler_Tablosu.xlsx | sayfalar: ['Ortak değerler', 'SCS karşılaştırma (100 MHz)', 'PRS konfigürasyonları', 'ns-3 bant (30 kHz)', 'ns-3 bant (15 kHz)', 'Sionna', 'Yedek ızgara (40 MHz)', 'Sonuç şablonu', 'Nihat yol kazancı', 'Nihat Pd (300 m)', 'Nihat PRS ve hız', 'Nihat throughput (TBS)', 'Nihat menzil çözünürlüğü']
