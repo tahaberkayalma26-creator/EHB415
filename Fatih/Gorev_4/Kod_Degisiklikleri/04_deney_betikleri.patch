@@ -1,0 +1,24 @@
+diff --git a/ogretici/betikler/ocudu_prs_kos.sh b/ogretici/betikler/ocudu_prs_kos.sh
+index 690fe23..3b6d302 100644
+--- a/ogretici/betikler/ocudu_prs_kos.sh
++++ b/ogretici/betikler/ocudu_prs_kos.sh
+@@ -49,6 +49,6 @@ fi
+ cd ~/ehb415/ocudu/build/apps/gnb
+ rm -f /tmp/out_$tag.txt
+ # 8 sn bekle, 't' gonder (metrik tablosu), 22 sn olc, 'q' ile cik
+-( sleep 8; printf 't\n'; sleep 22; printf 'q\n' ) | timeout 50 script -qc "./gnb -c $cfg" /tmp/out_$tag.txt > /dev/null 2>&1
++( sleep 8; printf 't\n'; sleep 22; printf 'q\n' ) | timeout 50 script -eqc "${GNB_BIN:-./gnb} -c $cfg" /tmp/out_$tag.txt > /dev/null 2>&1
+ echo "== $tag per=$per sym=$sym bw=$bw off=$off rep=$rep gap=$gap comb=$comb exit=$?"
+ sed 's/\x1b\[[0-9;?]*[a-zA-Z]//g' /tmp/out_$tag.txt | tr -d '\r' | grep -E "pci rnti|^ +1 +44 *\||ERROR" | head -14 | cut -c1-150
+diff --git a/ogretici/betikler/ocudu_veri_genislik.sh b/ogretici/betikler/ocudu_veri_genislik.sh
+index a8d743d..284a2d6 100644
+--- a/ogretici/betikler/ocudu_veri_genislik.sh
++++ b/ogretici/betikler/ocudu_veri_genislik.sh
+@@ -5,6 +5,6 @@ cfg=${1:-kurulum/ocudu_testmode_n78.yml}
+ cp "$cfg" /tmp/ehb_genislik.yml
+ sed -i 's#/tmp/gnb_testmode.log#/tmp/gnb_genislik.log#; s#all_level: warning#all_level: debug#' /tmp/ehb_genislik.yml
+ rm -f /tmp/gnb_genislik.log
+-( cd ~/ehb415/ocudu/build/apps/gnb && timeout 12 ./gnb -c /tmp/ehb_genislik.yml > /dev/null 2>&1 )
++( cd ~/ehb415/ocudu/build/apps/gnb && timeout 12 "${GNB_BIN:-./gnb}" -c /tmp/ehb_genislik.yml > /dev/null 2>&1 )
+ echo "PDSCH rb araligi (sayi, aralik) - en sik 5:"
+ grep -a "UE PDSCH" /tmp/gnb_genislik.log | grep -a -o "rb=\[[0-9]*\.\.[0-9]*)" | sort | uniq -c | sort -rn | head -5

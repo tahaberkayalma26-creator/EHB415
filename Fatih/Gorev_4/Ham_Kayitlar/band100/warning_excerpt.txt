@@ -1,0 +1,120 @@
+2026-11-19T21:07:27.822795 [GNB     ] [W] Could not check scaling governor. filename=/sys/devices/system/cpu/cpu0/cpufreq/scaling_governor error=No such file or directory
+2026-11-19T21:07:27.822803 [GNB     ] [W] Could not check DRM KMS polling. filename=/sys/module/drm_kms_helper/parameters/poll error=No such file or directory
+2026-11-19T21:07:44.142873 [FAPI    ] [W] [  393.15] Sector#0: Real-time failure in FAPI: Received late DL_TTI.request from slot 390.1
+2026-11-19T21:07:44.142875 [FAPI    ] [W] [  394.12] Sector#0: Real-time failure in FAPI: Received TX_Data.request from slot 390.1
+2026-11-19T21:07:44.142883 [FAPI    ] [W] [  397.13] Sector#0: Real-time failure in FAPI: Received late DL_TTI.request from slot 390.2
+2026-11-19T21:07:44.142884 [FAPI    ] [W] [  397.18] Sector#0: Real-time failure in FAPI: Received TX_Data.request from slot 390.2
+2026-11-19T21:07:44.142892 [FAPI    ] [W] [  400.18] Sector#0: Real-time failure in FAPI: Received late DL_TTI.request from slot 390.3
+2026-11-19T21:07:44.142892 [FAPI    ] [W] [   401.1] Sector#0: Real-time failure in FAPI: Received UL_DCI.request message from slot 390.3
+2026-11-19T21:07:44.143159 [MAC     ] [W] [   390.3] Skipped slot indication=224.492.12. Cause: DL task queue is full.
+2026-11-19T21:07:44.143160 [MAC     ] [W] [   390.3] Skipped slot indication=224.492.13. Cause: DL task queue is full.
+2026-11-19T21:07:44.143160 [MAC     ] [W] [   390.3] Skipped slot indication=224.492.14. Cause: DL task queue is full.
+2026-11-19T21:07:44.143160 [MAC     ] [W] [   390.3] Skipped slot indication=224.492.15. Cause: DL task queue is full.
+2026-11-19T21:07:44.143161 [MAC     ] [W] [   390.3] Skipped slot indication=224.492.16. Cause: DL task queue is full.
+2026-11-19T21:07:44.143161 [MAC     ] [W] [   390.3] Skipped slot indication=224.492.17. Cause: DL task queue is full.
+2026-11-19T21:07:44.143161 [MAC     ] [W] [   390.3] Skipped slot indication=224.492.18. Cause: DL task queue is full.
+2026-11-19T21:07:44.143162 [MAC     ] [W] [   390.3] Skipped slot indication=224.492.19. Cause: DL task queue is full.
+2026-11-19T21:07:44.143162 [MAC     ] [W] [   390.3] Skipped slot indication=224.493.0. Cause: DL task queue is full.
+2026-11-19T21:07:44.143162 [MAC     ] [W] [   390.3] Skipped slot indication=224.493.1. Cause: DL task queue is full.
+2026-11-19T21:07:44.143163 [MAC     ] [W] [   390.3] Skipped slot indication=224.493.2. Cause: DL task queue is full.
+2026-11-19T21:07:44.143163 [MAC     ] [W] [   390.3] Skipped slot indication=224.493.3. Cause: DL task queue is full.
+2026-11-19T21:07:44.143163 [MAC     ] [W] [   390.3] Skipped slot indication=224.493.4. Cause: DL task queue is full.
+2026-11-19T21:07:44.143164 [MAC     ] [W] [   390.3] Skipped slot indication=224.493.5. Cause: DL task queue is full.
+2026-11-19T21:07:44.143164 [MAC     ] [W] [   390.3] Skipped slot indication=224.493.6. Cause: DL task queue is full.
+2026-11-19T21:07:44.143164 [MAC     ] [W] [   390.3] Skipped slot indication=224.493.7. Cause: DL task queue is full.
+2026-11-19T21:07:44.143196 [MAC     ] [W] [   390.3] Skipped slot indication=224.493.8. Cause: DL task queue is full.
+2026-11-19T21:07:44.143197 [MAC     ] [W] [   390.3] Skipped slot indication=224.493.9. Cause: DL task queue is full.
+2026-11-19T21:07:44.143198 [MAC     ] [W] [   390.3] Skipped slot indication=224.493.10. Cause: DL task queue is full.
+2026-11-19T21:07:44.143198 [MAC     ] [W] [   390.3] Skipped slot indication=224.493.11. Cause: DL task queue is full.
+2026-11-19T21:07:44.143199 [MAC     ] [W] [   390.3] Skipped slot indication=224.493.12. Cause: DL task queue is full.
+2026-11-19T21:07:44.143199 [MAC     ] [W] [   390.3] Skipped slot indication=224.493.13. Cause: DL task queue is full.
+2026-11-19T21:07:44.143199 [MAC     ] [W] [   390.3] Skipped slot indication=224.493.14. Cause: DL task queue is full.
+2026-11-19T21:07:44.143200 [MAC     ] [W] [   390.3] Skipped slot indication=224.493.15. Cause: DL task queue is full.
+2026-11-19T21:07:44.143200 [MAC     ] [W] [   390.3] Skipped slot indication=224.493.16. Cause: DL task queue is full.
+2026-11-19T21:07:44.143200 [MAC     ] [W] [   390.3] Skipped slot indication=224.493.17. Cause: DL task queue is full.
+2026-11-19T21:07:44.143201 [MAC     ] [W] [   390.3] Skipped slot indication=224.493.18. Cause: DL task queue is full.
+2026-11-19T21:07:44.143201 [MAC     ] [W] [   390.3] Skipped slot indication=224.493.19. Cause: DL task queue is full.
+2026-11-19T21:07:44.143213 [MAC     ] [W] [   390.3] Skipped slot indication=224.494.0. Cause: DL task queue is full.
+2026-11-19T21:07:44.143214 [MAC     ] [W] [   390.3] Skipped slot indication=224.494.1. Cause: DL task queue is full.
+2026-11-19T21:07:44.143214 [MAC     ] [W] [   390.3] Skipped slot indication=224.494.2. Cause: DL task queue is full.
+2026-11-19T21:07:44.143215 [MAC     ] [W] [   390.3] Skipped slot indication=224.494.3. Cause: DL task queue is full.
+2026-11-19T21:07:44.143224 [MAC     ] [W] [   390.3] Skipped slot indication=224.494.4. Cause: DL task queue is full.
+2026-11-19T21:07:44.143225 [MAC     ] [W] [   390.3] Skipped slot indication=224.494.5. Cause: DL task queue is full.
+2026-11-19T21:07:44.143225 [MAC     ] [W] [   390.3] Skipped slot indication=224.494.6. Cause: DL task queue is full.
+2026-11-19T21:07:44.143226 [MAC     ] [W] [   390.3] Skipped slot indication=224.494.7. Cause: DL task queue is full.
+2026-11-19T21:07:44.143235 [MAC     ] [W] [   390.3] Skipped slot indication=224.494.8. Cause: DL task queue is full.
+2026-11-19T21:07:44.143245 [MAC     ] [W] [   390.3] Skipped slot indication=224.494.9. Cause: DL task queue is full.
+2026-11-19T21:07:44.143246 [MAC     ] [W] [   390.3] Skipped slot indication=224.494.10. Cause: DL task queue is full.
+2026-11-19T21:07:44.143247 [MAC     ] [W] [   390.3] Skipped slot indication=224.494.11. Cause: DL task queue is full.
+2026-11-19T21:07:44.143247 [MAC     ] [W] [   390.3] Skipped slot indication=224.494.12. Cause: DL task queue is full.
+2026-11-19T21:07:44.143247 [MAC     ] [W] [   390.3] Skipped slot indication=224.494.13. Cause: DL task queue is full.
+2026-11-19T21:07:44.143248 [MAC     ] [W] [   390.3] Skipped slot indication=224.494.14. Cause: DL task queue is full.
+2026-11-19T21:07:44.143248 [MAC     ] [W] [   390.3] Skipped slot indication=224.494.15. Cause: DL task queue is full.
+2026-11-19T21:07:44.143248 [MAC     ] [W] [   390.3] Skipped slot indication=224.494.16. Cause: DL task queue is full.
+2026-11-19T21:07:44.143248 [MAC     ] [W] [   390.3] Skipped slot indication=224.494.17. Cause: DL task queue is full.
+2026-11-19T21:07:44.143249 [MAC     ] [W] [   390.3] Skipped slot indication=224.494.18. Cause: DL task queue is full.
+2026-11-19T21:07:44.143249 [MAC     ] [W] [   390.3] Skipped slot indication=224.494.19. Cause: DL task queue is full.
+2026-11-19T21:07:44.143249 [MAC     ] [W] [   390.3] Skipped slot indication=224.495.0. Cause: DL task queue is full.
+2026-11-19T21:07:44.143249 [MAC     ] [W] [   390.3] Skipped slot indication=224.495.1. Cause: DL task queue is full.
+2026-11-19T21:07:44.143301 [MAC     ] [W] [   390.3] Skipped slot indication=224.495.2. Cause: DL task queue is full.
+2026-11-19T21:07:44.143304 [MAC     ] [W] [   390.3] Skipped slot indication=224.495.3. Cause: DL task queue is full.
+2026-11-19T21:07:44.143304 [MAC     ] [W] [   390.3] Skipped slot indication=224.495.4. Cause: DL task queue is full.
+2026-11-19T21:07:44.143305 [MAC     ] [W] [   390.3] Skipped slot indication=224.495.5. Cause: DL task queue is full.
+2026-11-19T21:07:44.143305 [MAC     ] [W] [   390.3] Skipped slot indication=224.495.6. Cause: DL task queue is full.
+2026-11-19T21:07:44.143305 [MAC     ] [W] [   390.3] Skipped slot indication=224.495.7. Cause: DL task queue is full.
+2026-11-19T21:07:44.143305 [MAC     ] [W] [   390.3] Skipped slot indication=224.495.8. Cause: DL task queue is full.
+2026-11-19T21:07:44.143319 [MAC     ] [W] [   390.3] Skipped slot indication=224.495.9. Cause: DL task queue is full.
+2026-11-19T21:07:44.143321 [FAPI    ] [W] [  495.10] Sector#0: Real-time failure in FAPI: Received TX_Data.request from slot 390.3
+2026-11-19T21:07:44.143329 [MAC     ] [W] [   390.4] Skipped slot indication=224.495.10. Cause: DL task queue is full.
+2026-11-19T21:07:44.143330 [MAC     ] [W] [   390.4] Skipped slot indication=224.495.12. Cause: DL task queue is full.
+2026-11-19T21:07:44.143339 [MAC     ] [W] [   390.4] Skipped slot indication=224.495.13. Cause: DL task queue is full.
+2026-11-19T21:07:44.143340 [MAC     ] [W] [   390.4] Skipped slot indication=224.495.14. Cause: DL task queue is full.
+2026-11-19T21:07:44.143349 [MAC     ] [W] [   390.4] Skipped slot indication=224.495.15. Cause: DL task queue is full.
+2026-11-19T21:07:44.143358 [MAC     ] [W] [   390.4] Skipped slot indication=224.495.16. Cause: DL task queue is full.
+2026-11-19T21:07:44.143360 [FAPI    ] [W] [  495.17] Sector#0: Real-time failure in FAPI: Received late DL_TTI.request from slot 390.4
+2026-11-19T21:07:44.143367 [MAC     ] [W] [   390.4] Skipped slot indication=224.495.17. Cause: DL task queue is full.
+2026-11-19T21:07:44.143368 [MAC     ] [W] [   390.4] Skipped slot indication=224.495.18. Cause: DL task queue is full.
+2026-11-19T21:07:44.143369 [FAPI    ] [W] [  495.18] Sector#0: Real-time failure in FAPI: Received UL_DCI.request message from slot 390.4
+2026-11-19T21:07:44.143369 [MAC     ] [W] [   390.4] Skipped slot indication=224.495.19. Cause: DL task queue is full.
+2026-11-19T21:07:44.143369 [MAC     ] [W] [   390.4] Skipped slot indication=224.496.0. Cause: DL task queue is full.
+2026-11-19T21:07:44.143369 [MAC     ] [W] [   390.4] Skipped slot indication=224.496.1. Cause: DL task queue is full.
+2026-11-19T21:07:44.143379 [FAPI    ] [W] [   496.2] Sector#0: Real-time failure in FAPI: Received TX_Data.request from slot 390.4
+2026-11-19T21:07:44.143380 [MAC     ] [W] [   390.4] Skipped slot indication=224.496.2. Cause: DL task queue is full.
+2026-11-19T21:07:44.143381 [MAC     ] [W] [   390.4] Skipped slot indication=224.496.3. Cause: DL task queue is full.
+2026-11-19T21:07:44.143418 [MAC     ] [W] [   390.5] Skipped slot indication=224.496.5. Cause: DL task queue is full.
+2026-11-19T21:07:44.143389 [FAPI    ] [W] [   496.5] Sector#0: Real-time failure in FAPI: Received late DL_TTI.request from slot 390.5
+2026-11-19T21:07:44.143440 [FAPI    ] [W] [   496.6] Sector#0: Real-time failure in FAPI: Received UL_DCI.request message from slot 390.5
+2026-11-19T21:07:44.143440 [MAC     ] [W] [   390.5] Skipped slot indication=224.496.6. Cause: DL task queue is full.
+2026-11-19T21:07:44.143450 [MAC     ] [W] [   390.5] Skipped slot indication=224.496.7. Cause: DL task queue is full.
+2026-11-19T21:07:44.143450 [FAPI    ] [W] [   496.7] Sector#0: Real-time failure in FAPI: Received TX_Data.request from slot 390.5
+2026-11-19T21:07:44.143460 [MAC     ] [W] [   390.6] Skipped slot indication=224.496.8. Cause: DL task queue is full.
+2026-11-19T21:07:44.143469 [MAC     ] [W] [   390.6] Skipped slot indication=224.496.10. Cause: DL task queue is full.
+2026-11-19T21:07:44.143473 [FAPI    ] [W] [  496.11] Sector#0: Real-time failure in FAPI: Received late DL_TTI.request from slot 390.6
+2026-11-19T21:07:44.143477 [FAPI    ] [W] [  496.11] Sector#0: Real-time failure in FAPI: Received late UL_TTI.request from slot 390.7
+2026-11-19T21:07:44.143478 [MAC     ] [W] [   390.8] Skipped slot indication=224.496.11. Cause: DL task queue is full.
+2026-11-19T21:07:44.143480 [MAC     ] [W] [   390.8] Skipped slot indication=224.496.14. Cause: DL task queue is full.
+2026-11-19T21:07:44.143480 [MAC     ] [W] [   390.8] Skipped slot indication=224.496.15. Cause: DL task queue is full.
+2026-11-19T21:07:44.143480 [MAC     ] [W] [   390.8] Skipped slot indication=224.496.16. Cause: DL task queue is full.
+2026-11-19T21:07:44.143481 [MAC     ] [W] [   390.8] Skipped slot indication=224.496.17. Cause: DL task queue is full.
+2026-11-19T21:07:44.143481 [MAC     ] [W] [   390.8] Skipped slot indication=224.496.18. Cause: DL task queue is full.
+2026-11-19T21:07:44.143481 [MAC     ] [W] [   390.8] Skipped slot indication=224.496.19. Cause: DL task queue is full.
+2026-11-19T21:07:44.143481 [MAC     ] [W] [   390.8] Skipped slot indication=224.497.0. Cause: DL task queue is full.
+2026-11-19T21:07:44.143481 [FAPI    ] [W] [   497.0] Sector#0: Real-time failure in FAPI: Received late UL_TTI.request from slot 390.8
+2026-11-19T21:07:44.143482 [MAC     ] [W] [   390.8] Skipped slot indication=224.497.1. Cause: DL task queue is full.
+2026-11-19T21:07:44.143482 [MAC     ] [W] [   390.8] Skipped slot indication=224.497.2. Cause: DL task queue is full.
+2026-11-19T21:07:44.143482 [MAC     ] [W] [   390.9] Skipped slot indication=224.497.4. Cause: DL task queue is full.
+2026-11-19T21:07:44.143483 [MAC     ] [W] [   390.9] Skipped slot indication=224.497.5. Cause: DL task queue is full.
+2026-11-19T21:07:44.143483 [MAC     ] [W] [   390.9] Skipped slot indication=224.497.6. Cause: DL task queue is full.
+2026-11-19T21:07:44.143483 [MAC     ] [W] [   390.9] Skipped slot indication=224.497.7. Cause: DL task queue is full.
+2026-11-19T21:07:44.143483 [MAC     ] [W] [   390.9] Skipped slot indication=224.497.8. Cause: DL task queue is full.
+2026-11-19T21:07:44.143484 [MAC     ] [W] [   390.9] Skipped slot indication=224.497.9. Cause: DL task queue is full.
+2026-11-19T21:07:44.143484 [FAPI    ] [W] [  497.10] Sector#0: Real-time failure in FAPI: Received late UL_TTI.request from slot 390.9
+2026-11-19T21:07:44.143484 [MAC     ] [W] [   390.9] Skipped slot indication=224.497.10. Cause: DL task queue is full.
+2026-11-19T21:07:44.143484 [MAC     ] [W] [   390.9] Skipped slot indication=224.497.11. Cause: DL task queue is full.
+2026-11-19T21:07:44.143485 [MAC     ] [W] [  390.10] Skipped slot indication=224.497.13. Cause: DL task queue is full.
+2026-11-19T21:07:44.143485 [MAC     ] [W] [  390.10] Skipped slot indication=224.497.14. Cause: DL task queue is full.
+2026-11-19T21:07:44.143485 [MAC     ] [W] [  390.10] Skipped slot indication=224.497.15. Cause: DL task queue is full.
+2026-11-19T21:07:44.143486 [MAC     ] [W] [  390.10] Skipped slot indication=224.497.16. Cause: DL task queue is full.
+2026-11-19T21:07:44.143486 [MAC     ] [W] [  390.10] Skipped slot indication=224.497.17. Cause: DL task queue is full.
+2026-11-19T21:07:44.143486 [MAC     ] [W] [  390.10] Skipped slot indication=224.497.18. Cause: DL task queue is full.
+2026-11-19T21:07:44.143486 [MAC     ] [W] [  390.10] Skipped slot indication=224.497.19. Cause: DL task queue is full.

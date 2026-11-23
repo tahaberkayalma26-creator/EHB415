@@ -1,0 +1,6 @@
+[1/5] cd /home/fatih/ehb415/ocudu-gorev4/build/lib/support/versioning && cmake -P /home/fatih/ehb415/ocudu-gorev4/build/build_info.cmake
+-- Generating build information
+[2/5] Linking CXX static library apps/services/app_execution_metrics/libocudu_exec_metrics_app_service.a
+[3/5] Building CXX object lib/scheduler/ue_scheduling/CMakeFiles/ue_sched.dir/cell_group_event_manager.cpp.o
+[4/5] Linking CXX static library lib/scheduler/libocudu_sched.a
+[5/5] Linking CXX executable apps/gnb/gnb

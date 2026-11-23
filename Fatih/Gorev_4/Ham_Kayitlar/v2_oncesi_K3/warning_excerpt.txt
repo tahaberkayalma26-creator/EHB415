@@ -1,0 +1,120 @@
+2026-11-20T14:10:25.217477 [GNB     ] [W] Could not check scaling governor. filename=/sys/devices/system/cpu/cpu0/cpufreq/scaling_governor error=No such file or directory
+2026-11-20T14:10:25.217485 [GNB     ] [W] Could not check DRM KMS polling. filename=/sys/module/drm_kms_helper/parameters/poll error=No such file or directory
+2026-11-20T14:10:25.910537 [SCHED   ] [E] [   511.6] Not enough PDSCH space for SIB1 for SSB index 0
+2026-11-20T14:10:25.910538 [SCHED   ] [E] [   511.6] Not enough PDSCH space for SIB1 for SSB index 0
+2026-11-20T14:10:25.910539 [SCHED   ] [E] [   511.6] Not enough PDSCH space for SIB1 for SSB index 0
+2026-11-20T14:10:25.910539 [SCHED   ] [E] [   511.6] Not enough PDSCH space for SIB1 for SSB index 0
+2026-11-20T14:10:25.910539 [SCHED   ] [E] [   511.6] Not enough PDSCH space for SIB1 for SSB index 0
+2026-11-20T14:10:25.910539 [SCHED   ] [E] [   511.6] Not enough PDSCH space for SIB1 for SSB index 0
+2026-11-20T14:10:25.910539 [SCHED   ] [E] [   511.6] Not enough PDSCH space for SIB1 for SSB index 0
+2026-11-20T14:10:25.910539 [SCHED   ] [E] [   511.6] Not enough PDSCH space for SIB1 for SSB index 0
+2026-11-20T14:10:25.910540 [SCHED   ] [E] [   511.6] No valid PDSCH time domain resource exists to schedule SIB1
+2026-11-20T14:10:26.070618 [SCHED   ] [E] [   527.6] Not enough PDSCH space for SIB1 for SSB index 0
+2026-11-20T14:10:26.070619 [SCHED   ] [E] [   527.6] Not enough PDSCH space for SIB1 for SSB index 0
+2026-11-20T14:10:26.070619 [SCHED   ] [E] [   527.6] Not enough PDSCH space for SIB1 for SSB index 0
+2026-11-20T14:10:26.070619 [SCHED   ] [E] [   527.6] Not enough PDSCH space for SIB1 for SSB index 0
+2026-11-20T14:10:26.070620 [SCHED   ] [E] [   527.6] Not enough PDSCH space for SIB1 for SSB index 0
+2026-11-20T14:10:26.070620 [SCHED   ] [E] [   527.6] Not enough PDSCH space for SIB1 for SSB index 0
+2026-11-20T14:10:26.070620 [SCHED   ] [E] [   527.6] Not enough PDSCH space for SIB1 for SSB index 0
+2026-11-20T14:10:26.070621 [SCHED   ] [E] [   527.6] Not enough PDSCH space for SIB1 for SSB index 0
+2026-11-20T14:10:26.070621 [SCHED   ] [E] [   527.6] No valid PDSCH time domain resource exists to schedule SIB1
+2026-11-20T14:10:26.230568 [SCHED   ] [E] [   543.6] Not enough PDSCH space for SIB1 for SSB index 0
+2026-11-20T14:10:26.230569 [SCHED   ] [E] [   543.6] Not enough PDSCH space for SIB1 for SSB index 0
+2026-11-20T14:10:26.230569 [SCHED   ] [E] [   543.6] Not enough PDSCH space for SIB1 for SSB index 0
+2026-11-20T14:10:26.230570 [SCHED   ] [E] [   543.6] Not enough PDSCH space for SIB1 for SSB index 0
+2026-11-20T14:10:26.230570 [SCHED   ] [E] [   543.6] Not enough PDSCH space for SIB1 for SSB index 0
+2026-11-20T14:10:26.230570 [SCHED   ] [E] [   543.6] Not enough PDSCH space for SIB1 for SSB index 0
+2026-11-20T14:10:26.230570 [SCHED   ] [E] [   543.6] Not enough PDSCH space for SIB1 for SSB index 0
+2026-11-20T14:10:26.230571 [SCHED   ] [E] [   543.6] Not enough PDSCH space for SIB1 for SSB index 0
+2026-11-20T14:10:26.230571 [SCHED   ] [E] [   543.6] No valid PDSCH time domain resource exists to schedule SIB1
+2026-11-20T14:10:26.390603 [SCHED   ] [E] [   559.6] Not enough PDSCH space for SIB1 for SSB index 0
+2026-11-20T14:10:26.390603 [SCHED   ] [E] [   559.6] Not enough PDSCH space for SIB1 for SSB index 0
+2026-11-20T14:10:26.390604 [SCHED   ] [E] [   559.6] Not enough PDSCH space for SIB1 for SSB index 0
+2026-11-20T14:10:26.390604 [SCHED   ] [E] [   559.6] Not enough PDSCH space for SIB1 for SSB index 0
+2026-11-20T14:10:26.390604 [SCHED   ] [E] [   559.6] Not enough PDSCH space for SIB1 for SSB index 0
+2026-11-20T14:10:26.390605 [SCHED   ] [E] [   559.6] Not enough PDSCH space for SIB1 for SSB index 0
+2026-11-20T14:10:26.390605 [SCHED   ] [E] [   559.6] Not enough PDSCH space for SIB1 for SSB index 0
+2026-11-20T14:10:26.390605 [SCHED   ] [E] [   559.6] Not enough PDSCH space for SIB1 for SSB index 0
+2026-11-20T14:10:26.390606 [SCHED   ] [E] [   559.6] No valid PDSCH time domain resource exists to schedule SIB1
+2026-11-20T14:10:26.550523 [SCHED   ] [E] [   575.6] Not enough PDSCH space for SIB1 for SSB index 0
+2026-11-20T14:10:26.550524 [SCHED   ] [E] [   575.6] Not enough PDSCH space for SIB1 for SSB index 0
+2026-11-20T14:10:26.550524 [SCHED   ] [E] [   575.6] Not enough PDSCH space for SIB1 for SSB index 0
+2026-11-20T14:10:26.550525 [SCHED   ] [E] [   575.6] Not enough PDSCH space for SIB1 for SSB index 0
+2026-11-20T14:10:26.550525 [SCHED   ] [E] [   575.6] Not enough PDSCH space for SIB1 for SSB index 0
+2026-11-20T14:10:26.550525 [SCHED   ] [E] [   575.6] Not enough PDSCH space for SIB1 for SSB index 0
+2026-11-20T14:10:26.550525 [SCHED   ] [E] [   575.6] Not enough PDSCH space for SIB1 for SSB index 0
+2026-11-20T14:10:26.550526 [SCHED   ] [E] [   575.6] Not enough PDSCH space for SIB1 for SSB index 0
+2026-11-20T14:10:26.550526 [SCHED   ] [E] [   575.6] No valid PDSCH time domain resource exists to schedule SIB1
+2026-11-20T14:10:26.710594 [SCHED   ] [E] [   591.6] Not enough PDSCH space for SIB1 for SSB index 0
+2026-11-20T14:10:26.710595 [SCHED   ] [E] [   591.6] Not enough PDSCH space for SIB1 for SSB index 0
+2026-11-20T14:10:26.710596 [SCHED   ] [E] [   591.6] Not enough PDSCH space for SIB1 for SSB index 0
+2026-11-20T14:10:26.710596 [SCHED   ] [E] [   591.6] Not enough PDSCH space for SIB1 for SSB index 0
+2026-11-20T14:10:26.710596 [SCHED   ] [E] [   591.6] Not enough PDSCH space for SIB1 for SSB index 0
+2026-11-20T14:10:26.710596 [SCHED   ] [E] [   591.6] Not enough PDSCH space for SIB1 for SSB index 0
+2026-11-20T14:10:26.710597 [SCHED   ] [E] [   591.6] Not enough PDSCH space for SIB1 for SSB index 0
+2026-11-20T14:10:26.710597 [SCHED   ] [E] [   591.6] Not enough PDSCH space for SIB1 for SSB index 0
+2026-11-20T14:10:26.710597 [SCHED   ] [E] [   591.6] No valid PDSCH time domain resource exists to schedule SIB1
+2026-11-20T14:10:26.870574 [SCHED   ] [E] [   607.6] Not enough PDSCH space for SIB1 for SSB index 0
+2026-11-20T14:10:26.870575 [SCHED   ] [E] [   607.6] Not enough PDSCH space for SIB1 for SSB index 0
+2026-11-20T14:10:26.870576 [SCHED   ] [E] [   607.6] Not enough PDSCH space for SIB1 for SSB index 0
+2026-11-20T14:10:26.870576 [SCHED   ] [E] [   607.6] Not enough PDSCH space for SIB1 for SSB index 0
+2026-11-20T14:10:26.870577 [SCHED   ] [E] [   607.6] Not enough PDSCH space for SIB1 for SSB index 0
+2026-11-20T14:10:26.870577 [SCHED   ] [E] [   607.6] Not enough PDSCH space for SIB1 for SSB index 0
+2026-11-20T14:10:26.870577 [SCHED   ] [E] [   607.6] Not enough PDSCH space for SIB1 for SSB index 0
+2026-11-20T14:10:26.870578 [SCHED   ] [E] [   607.6] Not enough PDSCH space for SIB1 for SSB index 0
+2026-11-20T14:10:26.870578 [SCHED   ] [E] [   607.6] No valid PDSCH time domain resource exists to schedule SIB1
+2026-11-20T14:10:27.030593 [SCHED   ] [E] [   623.6] Not enough PDSCH space for SIB1 for SSB index 0
+2026-11-20T14:10:27.030595 [SCHED   ] [E] [   623.6] Not enough PDSCH space for SIB1 for SSB index 0
+2026-11-20T14:10:27.030595 [SCHED   ] [E] [   623.6] Not enough PDSCH space for SIB1 for SSB index 0
+2026-11-20T14:10:27.030595 [SCHED   ] [E] [   623.6] Not enough PDSCH space for SIB1 for SSB index 0
+2026-11-20T14:10:27.030595 [SCHED   ] [E] [   623.6] Not enough PDSCH space for SIB1 for SSB index 0
+2026-11-20T14:10:27.030596 [SCHED   ] [E] [   623.6] Not enough PDSCH space for SIB1 for SSB index 0
+2026-11-20T14:10:27.030596 [SCHED   ] [E] [   623.6] Not enough PDSCH space for SIB1 for SSB index 0
+2026-11-20T14:10:27.030596 [SCHED   ] [E] [   623.6] Not enough PDSCH space for SIB1 for SSB index 0
+2026-11-20T14:10:27.030596 [SCHED   ] [E] [   623.6] No valid PDSCH time domain resource exists to schedule SIB1
+2026-11-20T14:10:27.190528 [SCHED   ] [E] [   639.6] Not enough PDSCH space for SIB1 for SSB index 0
+2026-11-20T14:10:27.190529 [SCHED   ] [E] [   639.6] Not enough PDSCH space for SIB1 for SSB index 0
+2026-11-20T14:10:27.190529 [SCHED   ] [E] [   639.6] Not enough PDSCH space for SIB1 for SSB index 0
+2026-11-20T14:10:27.190530 [SCHED   ] [E] [   639.6] Not enough PDSCH space for SIB1 for SSB index 0
+2026-11-20T14:10:27.190530 [SCHED   ] [E] [   639.6] Not enough PDSCH space for SIB1 for SSB index 0
+2026-11-20T14:10:27.190530 [SCHED   ] [E] [   639.6] Not enough PDSCH space for SIB1 for SSB index 0
+2026-11-20T14:10:27.190530 [SCHED   ] [E] [   639.6] Not enough PDSCH space for SIB1 for SSB index 0
+2026-11-20T14:10:27.190531 [SCHED   ] [E] [   639.6] Not enough PDSCH space for SIB1 for SSB index 0
+2026-11-20T14:10:27.190531 [SCHED   ] [E] [   639.6] No valid PDSCH time domain resource exists to schedule SIB1
+2026-11-20T14:10:27.350564 [SCHED   ] [E] [   655.6] Not enough PDSCH space for SIB1 for SSB index 0
+2026-11-20T14:10:27.350565 [SCHED   ] [E] [   655.6] Not enough PDSCH space for SIB1 for SSB index 0
+2026-11-20T14:10:27.350566 [SCHED   ] [E] [   655.6] Not enough PDSCH space for SIB1 for SSB index 0
+2026-11-20T14:10:27.350566 [SCHED   ] [E] [   655.6] Not enough PDSCH space for SIB1 for SSB index 0
+2026-11-20T14:10:27.350566 [SCHED   ] [E] [   655.6] Not enough PDSCH space for SIB1 for SSB index 0
+2026-11-20T14:10:27.350567 [SCHED   ] [E] [   655.6] Not enough PDSCH space for SIB1 for SSB index 0
+2026-11-20T14:10:27.350567 [SCHED   ] [E] [   655.6] Not enough PDSCH space for SIB1 for SSB index 0
+2026-11-20T14:10:27.350567 [SCHED   ] [E] [   655.6] Not enough PDSCH space for SIB1 for SSB index 0
+2026-11-20T14:10:27.350567 [SCHED   ] [E] [   655.6] No valid PDSCH time domain resource exists to schedule SIB1
+2026-11-20T14:10:27.510606 [SCHED   ] [E] [   671.6] Not enough PDSCH space for SIB1 for SSB index 0
+2026-11-20T14:10:27.510607 [SCHED   ] [E] [   671.6] Not enough PDSCH space for SIB1 for SSB index 0
+2026-11-20T14:10:27.510608 [SCHED   ] [E] [   671.6] Not enough PDSCH space for SIB1 for SSB index 0
+2026-11-20T14:10:27.510608 [SCHED   ] [E] [   671.6] Not enough PDSCH space for SIB1 for SSB index 0
+2026-11-20T14:10:27.510608 [SCHED   ] [E] [   671.6] Not enough PDSCH space for SIB1 for SSB index 0
+2026-11-20T14:10:27.510609 [SCHED   ] [E] [   671.6] Not enough PDSCH space for SIB1 for SSB index 0
+2026-11-20T14:10:27.510609 [SCHED   ] [E] [   671.6] Not enough PDSCH space for SIB1 for SSB index 0
+2026-11-20T14:10:27.510609 [SCHED   ] [E] [   671.6] Not enough PDSCH space for SIB1 for SSB index 0
+2026-11-20T14:10:27.510610 [SCHED   ] [E] [   671.6] No valid PDSCH time domain resource exists to schedule SIB1
+2026-11-20T14:10:27.087267 [RU      ] [W] Dummy RU backward clock slot detected: previous=1487999 observed=1487134 backwards_slots=865
+2026-11-20T14:10:27.087345 [RU      ] [W] Dummy RU backward clock slot detected: previous=1487999 observed=1487134 backwards_slots=865
+2026-11-20T14:10:27.087419 [RU      ] [W] Dummy RU backward clock slot detected: previous=1487999 observed=1487134 backwards_slots=865
+2026-11-20T14:10:27.087511 [RU      ] [W] Dummy RU backward clock slot detected: previous=1487999 observed=1487135 backwards_slots=864
+2026-11-20T14:10:27.087616 [RU      ] [W] Dummy RU backward clock slot detected: previous=1487999 observed=1487135 backwards_slots=864
+2026-11-20T14:10:27.087694 [RU      ] [W] Dummy RU backward clock slot detected: previous=1487999 observed=1487135 backwards_slots=864
+2026-11-20T14:10:27.087772 [RU      ] [W] Dummy RU backward clock slot detected: previous=1487999 observed=1487135 backwards_slots=864
+2026-11-20T14:10:27.087856 [RU      ] [W] Dummy RU backward clock slot detected: previous=1487999 observed=1487135 backwards_slots=864
+2026-11-20T14:10:27.087934 [RU      ] [W] Dummy RU backward clock slot detected: previous=1487999 observed=1487135 backwards_slots=864
+2026-11-20T14:10:27.088006 [RU      ] [W] Dummy RU backward clock slot detected: previous=1487999 observed=1487136 backwards_slots=863
+2026-11-20T14:10:27.088082 [RU      ] [W] Dummy RU backward clock slot detected: previous=1487999 observed=1487136 backwards_slots=863
+2026-11-20T14:10:27.088158 [RU      ] [W] Dummy RU backward clock slot detected: previous=1487999 observed=1487136 backwards_slots=863
+2026-11-20T14:10:27.088230 [RU      ] [W] Dummy RU backward clock slot detected: previous=1487999 observed=1487136 backwards_slots=863
+2026-11-20T14:10:27.088306 [RU      ] [W] Dummy RU backward clock slot detected: previous=1487999 observed=1487136 backwards_slots=863
+2026-11-20T14:10:27.088382 [RU      ] [W] Dummy RU backward clock slot detected: previous=1487999 observed=1487136 backwards_slots=863
+2026-11-20T14:10:27.088454 [RU      ] [W] Dummy RU backward clock slot detected: previous=1487999 observed=1487136 backwards_slots=863
+2026-11-20T14:10:27.088530 [RU      ] [W] Dummy RU backward clock slot detected: previous=1487999 observed=1487137 backwards_slots=862
+2026-11-20T14:10:27.088601 [RU      ] [W] Dummy RU backward clock slot detected: previous=1487999 observed=1487137 backwards_slots=862
+2026-11-20T14:10:27.088673 [RU      ] [W] Dummy RU backward clock slot detected: previous=1487999 observed=1487137 backwards_slots=862

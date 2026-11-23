@@ -1,0 +1,1 @@
+CFG_BASE=/home/fatih/ehb415/gorev4_runs/tanisal100_info/base.yml GNB_BIN=/home/fatih/ehb415/gorev4_runs/bin/gnb_clockguard bash /home/fatih/ehb415/gorev4_project/ogretici/betikler/ocudu_prs_kos.sh tanisal100_info 0 0 0 2 1 1 4

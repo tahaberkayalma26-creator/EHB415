@@ -1,0 +1,269 @@
+top - 00:06:39 up 2 min,  1 user,  load average: 1.07, 0.53, 0.21
+Tasks:   1 total,   1 running,   0 sleeping,   0 stopped,   0 zombie
+%Cpu(s):  0.0 us,  6.4 sy,  0.0 ni, 93.6 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0 st 
+MiB Mem :  15707.9 total,  10870.4 free,   1072.2 used,   4004.8 buff/cache     
+MiB Swap:   4096.0 total,   4096.0 free,      0.0 used.  14635.7 avail Mem 
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND
+    608 fatih     20   0 2254696 582548  12160 R  90.9   3.6   0:00.44 gnb
+
+top - 00:06:40 up 2 min,  1 user,  load average: 1.07, 0.53, 0.21
+Tasks:   1 total,   1 running,   0 sleeping,   0 stopped,   0 zombie
+%Cpu(s):  0.3 us,  6.0 sy,  0.0 ni, 93.7 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0 st 
+MiB Mem :  15707.9 total,  10870.4 free,   1072.2 used,   4004.8 buff/cache     
+MiB Swap:   4096.0 total,   4096.0 free,      0.0 used.  14635.7 avail Mem 
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND
+    608 fatih     20   0 2254696   1.7g  12160 R  95.1  10.9   0:01.42 gnb
+
+top - 00:06:41 up 3 min,  1 user,  load average: 1.06, 0.54, 0.21
+Tasks:   1 total,   1 running,   0 sleeping,   0 stopped,   0 zombie
+%Cpu(s):  2.4 us,  4.3 sy,  0.0 ni, 92.9 id,  0.0 wa,  0.0 hi,  0.4 si,  0.0 st 
+MiB Mem :  15707.9 total,  10870.4 free,   1072.2 used,   4004.8 buff/cache     
+MiB Swap:   4096.0 total,   4096.0 free,      0.0 used.  14635.7 avail Mem 
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND
+    608 fatih     20   0 3432004   2.5g  17872 R 105.0  16.0   0:02.47 gnb
+
+top - 00:06:42 up 3 min,  1 user,  load average: 1.06, 0.54, 0.21
+Tasks:   1 total,   0 running,   1 sleeping,   0 stopped,   0 zombie
+%Cpu(s):  3.5 us,  1.5 sy,  0.0 ni, 93.5 id,  0.0 wa,  0.0 hi,  1.4 si,  0.0 st 
+MiB Mem :  15707.9 total,   8565.7 free,   3376.8 used,   4004.8 buff/cache     
+MiB Swap:   4096.0 total,   4096.0 free,      0.0 used.  12331.0 avail Mem 
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND
+    608 fatih     20   0 3978324   2.7g  26192 S  73.3  17.4   0:03.21 gnb
+
+top - 00:06:43 up 3 min,  1 user,  load average: 1.06, 0.54, 0.21
+Tasks:   1 total,   0 running,   1 sleeping,   0 stopped,   0 zombie
+%Cpu(s):  3.5 us,  0.7 sy,  0.0 ni, 94.2 id,  0.0 wa,  0.0 hi,  1.6 si,  0.0 st 
+MiB Mem :  15707.9 total,   8565.7 free,   3376.8 used,   4004.8 buff/cache     
+MiB Swap:   4096.0 total,   4096.0 free,      0.0 used.  12331.0 avail Mem 
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND
+    608 fatih     20   0 3978324   2.7g  26192 S  56.0  17.4   0:03.77 gnb
+
+top - 00:06:44 up 3 min,  1 user,  load average: 1.06, 0.54, 0.21
+Tasks:   1 total,   0 running,   1 sleeping,   0 stopped,   0 zombie
+%Cpu(s):  4.0 us,  0.3 sy,  0.0 ni, 94.5 id,  0.0 wa,  0.0 hi,  1.2 si,  0.0 st 
+MiB Mem :  15707.9 total,   8565.7 free,   3376.8 used,   4004.8 buff/cache     
+MiB Swap:   4096.0 total,   4096.0 free,      0.0 used.  12331.0 avail Mem 
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND
+    608 fatih     20   0 3978324   2.7g  26192 S  63.4  17.4   0:04.41 gnb
+
+top - 00:06:45 up 3 min,  1 user,  load average: 1.06, 0.54, 0.21
+Tasks:   1 total,   0 running,   1 sleeping,   0 stopped,   0 zombie
+%Cpu(s):  3.7 us,  0.5 sy,  0.0 ni, 93.9 id,  0.1 wa,  0.0 hi,  1.8 si,  0.0 st 
+MiB Mem :  15707.9 total,   8565.7 free,   3376.8 used,   4004.8 buff/cache     
+MiB Swap:   4096.0 total,   4096.0 free,      0.0 used.  12331.1 avail Mem 
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND
+    608 fatih     20   0 3978324   2.7g  26192 S  60.0  17.4   0:05.01 gnb
+
+top - 00:06:46 up 3 min,  1 user,  load average: 1.14, 0.56, 0.22
+Tasks:   1 total,   0 running,   1 sleeping,   0 stopped,   0 zombie
+%Cpu(s):  3.9 us,  0.5 sy,  0.0 ni, 94.3 id,  0.0 wa,  0.0 hi,  1.2 si,  0.0 st 
+MiB Mem :  15707.9 total,   8565.7 free,   3376.8 used,   4004.8 buff/cache     
+MiB Swap:   4096.0 total,   4096.0 free,      0.0 used.  12331.1 avail Mem 
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND
+    608 fatih     20   0 3978324   2.7g  26192 S  61.4  17.4   0:05.63 gnb
+
+top - 00:06:45 up 3 min,  1 user,  load average: 1.14, 0.56, 0.22
+Tasks:   1 total,   0 running,   1 sleeping,   0 stopped,   0 zombie
+%Cpu(s): 12.3 us,  1.2 sy,  0.0 ni, 85.3 id,  0.2 wa,  0.0 hi,  0.9 si,  0.0 st 
+MiB Mem :  15707.9 total,   8565.7 free,   3376.8 used,   4004.8 buff/cache     
+MiB Swap:   4096.0 total,   4096.0 free,      0.0 used.  12331.1 avail Mem 
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND
+    608 fatih     20   0 3978324   2.7g  26192 S 202.0  17.4   0:07.65 gnb
+
+top - 00:06:46 up 3 min,  1 user,  load average: 1.14, 0.56, 0.22
+Tasks:   1 total,   0 running,   1 sleeping,   0 stopped,   0 zombie
+%Cpu(s): 17.9 us,  1.9 sy,  0.0 ni, 79.7 id,  0.0 wa,  0.0 hi,  0.4 si,  0.0 st 
+MiB Mem :  15707.9 total,   8565.7 free,   3376.8 used,   4004.8 buff/cache     
+MiB Swap:   4096.0 total,   4096.0 free,      0.0 used.  12331.1 avail Mem 
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND
+    608 fatih     20   0 3978324   2.7g  26192 S 303.0  17.4   0:10.68 gnb
+
+top - 00:06:47 up 3 min,  1 user,  load average: 1.14, 0.56, 0.22
+Tasks:   1 total,   0 running,   1 sleeping,   0 stopped,   0 zombie
+%Cpu(s): 18.3 us,  1.7 sy,  0.0 ni, 79.6 id,  0.0 wa,  0.0 hi,  0.4 si,  0.0 st 
+MiB Mem :  15707.9 total,   8565.7 free,   3376.8 used,   4004.8 buff/cache     
+MiB Swap:   4096.0 total,   4096.0 free,      0.0 used.  12331.1 avail Mem 
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND
+    608 fatih     20   0 3978324   2.7g  26192 S 304.9  17.4   0:13.82 gnb
+
+top - 00:06:48 up 3 min,  1 user,  load average: 1.14, 0.56, 0.22
+Tasks:   1 total,   0 running,   1 sleeping,   0 stopped,   0 zombie
+%Cpu(s): 18.6 us,  1.6 sy,  0.0 ni, 79.7 id,  0.0 wa,  0.0 hi,  0.1 si,  0.0 st 
+MiB Mem :  15707.9 total,   7839.7 free,   3413.9 used,   4699.9 buff/cache     
+MiB Swap:   4096.0 total,   4096.0 free,      0.0 used.  12294.0 avail Mem 
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND
+    608 fatih     20   0 3978324   2.7g  26192 S 298.0  17.4   0:16.83 gnb
+
+top - 00:06:49 up 3 min,  1 user,  load average: 1.29, 0.60, 0.24
+Tasks:   1 total,   0 running,   1 sleeping,   0 stopped,   0 zombie
+%Cpu(s): 18.5 us,  1.5 sy,  0.0 ni, 79.9 id,  0.0 wa,  0.0 hi,  0.1 si,  0.0 st 
+MiB Mem :  15707.9 total,   7839.7 free,   3413.9 used,   4699.9 buff/cache     
+MiB Swap:   4096.0 total,   4096.0 free,      0.0 used.  12294.0 avail Mem 
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND
+    608 fatih     20   0 3978324   2.7g  26192 S 309.0  17.4   0:19.92 gnb
+
+top - 00:06:50 up 3 min,  1 user,  load average: 1.29, 0.60, 0.24
+Tasks:   1 total,   0 running,   1 sleeping,   0 stopped,   0 zombie
+%Cpu(s): 10.3 us,  1.1 sy,  0.0 ni, 88.0 id,  0.1 wa,  0.0 hi,  0.6 si,  0.0 st 
+MiB Mem :  15707.9 total,   7839.7 free,   3413.9 used,   4699.9 buff/cache     
+MiB Swap:   4096.0 total,   4096.0 free,      0.0 used.  12294.0 avail Mem 
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND
+    608 fatih     20   0 3978324   2.7g  26192 S 185.0  17.4   0:21.77 gnb
+
+top - 00:06:51 up 3 min,  1 user,  load average: 1.29, 0.60, 0.24
+Tasks:   1 total,   0 running,   1 sleeping,   0 stopped,   0 zombie
+%Cpu(s):  2.1 us,  0.6 sy,  0.0 ni, 96.1 id,  0.0 wa,  0.0 hi,  1.2 si,  0.0 st 
+MiB Mem :  15707.9 total,   7590.8 free,   3411.0 used,   4951.5 buff/cache     
+MiB Swap:   4096.0 total,   4096.0 free,      0.0 used.  12296.9 avail Mem 
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND
+    608 fatih     20   0 3978324   2.7g  26192 S  57.0  17.4   0:22.34 gnb
+
+top - 00:06:52 up 3 min,  1 user,  load average: 1.29, 0.60, 0.24
+Tasks:   1 total,   0 running,   1 sleeping,   0 stopped,   0 zombie
+%Cpu(s):  2.1 us,  0.4 sy,  0.0 ni, 96.3 id,  0.0 wa,  0.0 hi,  1.1 si,  0.0 st 
+MiB Mem :  15707.9 total,   7590.8 free,   3411.0 used,   4951.5 buff/cache     
+MiB Swap:   4096.0 total,   4096.0 free,      0.0 used.  12296.9 avail Mem 
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND
+    608 fatih     20   0 3978324   2.7g  26192 S  58.0  17.4   0:22.92 gnb
+
+top - 00:06:53 up 3 min,  1 user,  load average: 1.29, 0.60, 0.24
+Tasks:   1 total,   0 running,   1 sleeping,   0 stopped,   0 zombie
+%Cpu(s):  2.2 us,  0.5 sy,  0.0 ni, 95.5 id,  0.0 wa,  0.0 hi,  1.9 si,  0.0 st 
+MiB Mem :  15707.9 total,   7590.8 free,   3411.0 used,   4951.5 buff/cache     
+MiB Swap:   4096.0 total,   4096.0 free,      0.0 used.  12296.9 avail Mem 
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND
+    608 fatih     20   0 3978324   2.7g  26192 S  54.5  17.4   0:23.47 gnb
+
+top - 00:06:54 up 3 min,  1 user,  load average: 1.26, 0.61, 0.24
+Tasks:   1 total,   0 running,   1 sleeping,   0 stopped,   0 zombie
+%Cpu(s):  1.7 us,  0.7 sy,  0.0 ni, 95.2 id,  0.0 wa,  0.0 hi,  2.5 si,  0.0 st 
+MiB Mem :  15707.9 total,   7597.5 free,   3404.4 used,   4951.6 buff/cache     
+MiB Swap:   4096.0 total,   4096.0 free,      0.0 used.  12303.5 avail Mem 
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND
+    608 fatih     20   0 3978324   2.7g  26192 S  49.0  17.4   0:23.96 gnb
+
+top - 00:06:55 up 3 min,  1 user,  load average: 1.26, 0.61, 0.24
+Tasks:   1 total,   0 running,   1 sleeping,   0 stopped,   0 zombie
+%Cpu(s):  1.8 us,  0.3 sy,  0.0 ni, 95.5 id,  0.1 wa,  0.0 hi,  2.3 si,  0.0 st 
+MiB Mem :  15707.9 total,   7597.5 free,   3404.4 used,   4951.6 buff/cache     
+MiB Swap:   4096.0 total,   4096.0 free,      0.0 used.  12303.5 avail Mem 
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND
+    608 fatih     20   0 3978324   2.7g  26192 S  53.0  17.4   0:24.49 gnb
+
+top - 00:06:56 up 3 min,  1 user,  load average: 1.26, 0.61, 0.24
+Tasks:   1 total,   0 running,   1 sleeping,   0 stopped,   0 zombie
+%Cpu(s):  1.8 us,  0.7 sy,  0.0 ni, 95.1 id,  0.0 wa,  0.0 hi,  2.3 si,  0.0 st 
+MiB Mem :  15707.9 total,   7597.5 free,   3404.4 used,   4951.6 buff/cache     
+MiB Swap:   4096.0 total,   4096.0 free,      0.0 used.  12303.5 avail Mem 
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND
+    608 fatih     20   0 3978324   2.7g  26192 S  51.0  17.4   0:25.00 gnb
+
+top - 00:06:57 up 3 min,  1 user,  load average: 1.26, 0.61, 0.24
+Tasks:   1 total,   0 running,   1 sleeping,   0 stopped,   0 zombie
+%Cpu(s):  2.0 us,  0.6 sy,  0.0 ni, 95.1 id,  0.0 wa,  0.0 hi,  2.3 si,  0.0 st 
+MiB Mem :  15707.9 total,   7605.6 free,   3396.3 used,   4951.6 buff/cache     
+MiB Swap:   4096.0 total,   4096.0 free,      0.0 used.  12311.6 avail Mem 
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND
+    608 fatih     20   0 3978324   2.7g  26192 S  50.5  17.4   0:25.51 gnb
+
+top - 00:06:58 up 3 min,  1 user,  load average: 1.26, 0.61, 0.24
+Tasks:   1 total,   0 running,   1 sleeping,   0 stopped,   0 zombie
+%Cpu(s):  2.0 us,  0.4 sy,  0.0 ni, 95.6 id,  0.0 wa,  0.0 hi,  2.0 si,  0.0 st 
+MiB Mem :  15707.9 total,   7605.6 free,   3396.3 used,   4951.6 buff/cache     
+MiB Swap:   4096.0 total,   4096.0 free,      0.0 used.  12311.6 avail Mem 
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND
+    608 fatih     20   0 3978324   2.7g  26192 S  53.0  17.4   0:26.04 gnb
+
+top - 00:06:59 up 3 min,  1 user,  load average: 1.48, 0.66, 0.26
+Tasks:   1 total,   0 running,   1 sleeping,   0 stopped,   0 zombie
+%Cpu(s):  1.9 us,  0.5 sy,  0.0 ni, 95.9 id,  0.0 wa,  0.0 hi,  1.7 si,  0.0 st 
+MiB Mem :  15707.9 total,   7605.6 free,   3396.3 used,   4951.6 buff/cache     
+MiB Swap:   4096.0 total,   4096.0 free,      0.0 used.  12311.6 avail Mem 
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND
+    608 fatih     20   0 3978324   2.7g  26192 S  54.5  17.4   0:26.59 gnb
+
+top - 00:07:00 up 3 min,  1 user,  load average: 1.48, 0.66, 0.26
+Tasks:   1 total,   0 running,   1 sleeping,   0 stopped,   0 zombie
+%Cpu(s):  1.9 us,  0.4 sy,  0.0 ni, 95.4 id,  0.0 wa,  0.0 hi,  2.2 si,  0.0 st 
+MiB Mem :  15707.9 total,   7611.8 free,   3390.0 used,   4951.6 buff/cache     
+MiB Swap:   4096.0 total,   4096.0 free,      0.0 used.  12317.8 avail Mem 
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND
+    608 fatih     20   0 3978324   2.7g  26192 S  54.0  17.4   0:27.13 gnb
+
+top - 00:07:01 up 3 min,  1 user,  load average: 1.48, 0.66, 0.26
+Tasks:   1 total,   0 running,   1 sleeping,   0 stopped,   0 zombie
+%Cpu(s):  2.4 us,  0.6 sy,  0.0 ni, 96.3 id,  0.0 wa,  0.0 hi,  0.7 si,  0.0 st 
+MiB Mem :  15707.9 total,   7611.8 free,   3390.0 used,   4951.6 buff/cache     
+MiB Swap:   4096.0 total,   4096.0 free,      0.0 used.  12317.8 avail Mem 
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND
+    608 fatih     20   0 3978324   2.7g  26192 S  63.0  17.4   0:27.76 gnb
+
+top - 00:07:02 up 3 min,  1 user,  load average: 1.48, 0.66, 0.26
+Tasks:   1 total,   0 running,   1 sleeping,   0 stopped,   0 zombie
+%Cpu(s):  2.0 us,  0.5 sy,  0.0 ni, 97.5 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0 st 
+MiB Mem :  15707.9 total,   7611.8 free,   3390.0 used,   4951.6 buff/cache     
+MiB Swap:   4096.0 total,   4096.0 free,      0.0 used.  12317.8 avail Mem 
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND
+    608 fatih     20   0 3978324   2.7g  26192 S  54.5  17.4   0:28.31 gnb
+
+top - 00:07:03 up 3 min,  1 user,  load average: 1.48, 0.66, 0.26
+Tasks:   1 total,   0 running,   1 sleeping,   0 stopped,   0 zombie
+%Cpu(s):  1.9 us,  0.4 sy,  0.0 ni, 96.3 id,  0.0 wa,  0.0 hi,  1.4 si,  0.0 st 
+MiB Mem :  15707.9 total,   7607.6 free,   3394.1 used,   4951.7 buff/cache     
+MiB Swap:   4096.0 total,   4096.0 free,      0.0 used.  12313.7 avail Mem 
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND
+    608 fatih     20   0 3978324   2.7g  26192 S  51.5  17.4   0:28.83 gnb
+
+top - 00:07:04 up 3 min,  1 user,  load average: 1.52, 0.69, 0.27
+Tasks:   1 total,   0 running,   1 sleeping,   0 stopped,   0 zombie
+%Cpu(s):  1.8 us,  0.4 sy,  0.0 ni, 94.7 id,  0.0 wa,  0.0 hi,  3.1 si,  0.0 st 
+MiB Mem :  15707.9 total,   7607.6 free,   3394.1 used,   4951.7 buff/cache     
+MiB Swap:   4096.0 total,   4096.0 free,      0.0 used.  12313.7 avail Mem 
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND
+    608 fatih     20   0 3978324   2.7g  26192 S  50.0  17.4   0:29.33 gnb
+
+top - 00:07:05 up 3 min,  1 user,  load average: 1.52, 0.69, 0.27
+Tasks:   1 total,   0 running,   1 sleeping,   0 stopped,   0 zombie
+%Cpu(s):  2.0 us,  0.4 sy,  0.0 ni, 95.6 id,  0.0 wa,  0.0 hi,  2.0 si,  0.0 st 
+MiB Mem :  15707.9 total,   7607.6 free,   3394.1 used,   4951.7 buff/cache     
+MiB Swap:   4096.0 total,   4096.0 free,      0.0 used.  12313.7 avail Mem 
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND
+    608 fatih     20   0 3978324   2.7g  26192 S  51.0  17.4   0:29.84 gnb
+
+top - 00:07:06 up 3 min,  1 user,  load average: 1.52, 0.69, 0.27
+Tasks:   1 total,   0 running,   1 sleeping,   0 stopped,   0 zombie
+%Cpu(s):  1.9 us,  0.4 sy,  0.0 ni, 95.7 id,  0.0 wa,  0.0 hi,  2.0 si,  0.0 st 
+MiB Mem :  15707.9 total,   7619.2 free,   3382.5 used,   4951.7 buff/cache     
+MiB Swap:   4096.0 total,   4096.0 free,      0.0 used.  12325.3 avail Mem 
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND
+    608 fatih     20   0 3978324   2.7g  26192 S  48.5  17.4   0:30.33 gnb

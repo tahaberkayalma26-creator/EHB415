@@ -1,0 +1,1 @@
+CFG_BASE=/home/fatih/ehb415/gorev4_runs/v2_oncesi_K4/base.yml GNB_BIN=/home/fatih/ehb415/gorev4_runs/bin/gnb_compat bash /home/fatih/ehb415/gorev4_project/ogretici/betikler/ocudu_prs_kos.sh v2_oncesi_K4 10 4 272 2 1 1 4

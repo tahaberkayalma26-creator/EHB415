@@ -1,0 +1,5 @@
+[1/4] cd /home/fatih/ehb415/ocudu-gorev4/build/lib/support/versioning && cmake -P /home/fatih/ehb415/ocudu-gorev4/build/build_info.cmake
+-- Generating build information
+[2/4] Building CXX object lib/ru/dummy/CMakeFiles/ocudu_ru_dummy.dir/ru_dummy_impl.cpp.o
+[3/4] Linking CXX static library lib/ru/dummy/libocudu_ru_dummy.a
+[4/4] Linking CXX executable apps/gnb/gnb

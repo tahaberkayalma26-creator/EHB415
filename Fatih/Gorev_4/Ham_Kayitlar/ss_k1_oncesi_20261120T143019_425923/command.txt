@@ -1,0 +1,1 @@
+CFG_BASE=/home/fatih/ehb415/gorev4_runs/ss_k1_oncesi_20261120T143019_425923/base.yml GNB_BIN=/home/fatih/ehb415/gorev4_runs/bin/gnb_compat bash /home/fatih/ehb415/gorev4_project/ogretici/betikler/ocudu_prs_kos.sh ss_k1_oncesi_20261120T143019_425923 10 4 48 2 1 1 4

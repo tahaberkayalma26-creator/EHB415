@@ -1,0 +1,120 @@
+2026-11-19T21:05:29.173282 [GNB     ] [W] Could not check scaling governor. filename=/sys/devices/system/cpu/cpu0/cpufreq/scaling_governor error=No such file or directory
+2026-11-19T21:05:29.173290 [GNB     ] [W] Could not check DRM KMS polling. filename=/sys/module/drm_kms_helper/parameters/poll error=No such file or directory
+2026-11-19T21:05:41.842780 [FAPI    ] [W] [  200.10] Sector#0: Real-time failure in FAPI: Received late UL_TTI.request from slot 198.8
+2026-11-19T21:05:41.842786 [FAPI    ] [W] [  200.10] Sector#0: Real-time failure in FAPI: Received late UL_TTI.request from slot 198.9
+2026-11-19T21:05:41.842795 [FAPI    ] [W] [  200.10] Sector#0: Real-time failure in FAPI: Received late DL_TTI.request from slot 198.10
+2026-11-19T21:05:41.842796 [FAPI    ] [W] [  200.10] Sector#0: Real-time failure in FAPI: Received TX_Data.request from slot 198.10
+2026-11-19T21:05:41.842801 [FAPI    ] [W] [  200.10] Sector#0: Real-time failure in FAPI: Received late DL_TTI.request from slot 198.11
+2026-11-19T21:05:41.842802 [FAPI    ] [W] [  200.10] Sector#0: Real-time failure in FAPI: Received TX_Data.request from slot 198.11
+2026-11-19T21:05:41.842809 [FAPI    ] [W] [  200.10] Sector#0: Real-time failure in FAPI: Received late DL_TTI.request from slot 198.12
+2026-11-19T21:05:41.842809 [FAPI    ] [W] [  200.10] Sector#0: Real-time failure in FAPI: Received TX_Data.request from slot 198.12
+2026-11-19T21:05:41.842817 [FAPI    ] [W] [  200.10] Sector#0: Real-time failure in FAPI: Received late DL_TTI.request from slot 198.13
+2026-11-19T21:05:41.842818 [FAPI    ] [W] [  200.10] Sector#0: Real-time failure in FAPI: Received UL_DCI.request message from slot 198.13
+2026-11-19T21:05:41.842818 [FAPI    ] [W] [  200.10] Sector#0: Real-time failure in FAPI: Received TX_Data.request from slot 198.13
+2026-11-19T21:05:41.842826 [FAPI    ] [W] [  200.10] Sector#0: Real-time failure in FAPI: Received late DL_TTI.request from slot 198.14
+2026-11-19T21:05:41.842826 [FAPI    ] [W] [  200.10] Sector#0: Real-time failure in FAPI: Received UL_DCI.request message from slot 198.14
+2026-11-19T21:05:41.842827 [FAPI    ] [W] [  200.10] Sector#0: Real-time failure in FAPI: Received TX_Data.request from slot 198.14
+2026-11-19T21:05:41.842834 [FAPI    ] [W] [  200.10] Sector#0: Real-time failure in FAPI: Received late DL_TTI.request from slot 198.15
+2026-11-19T21:05:41.842834 [FAPI    ] [W] [  200.10] Sector#0: Real-time failure in FAPI: Received UL_DCI.request message from slot 198.15
+2026-11-19T21:05:41.842836 [FAPI    ] [W] [  200.10] Sector#0: Real-time failure in FAPI: Received TX_Data.request from slot 198.15
+2026-11-19T21:05:41.842840 [FAPI    ] [W] [  200.10] Sector#0: Real-time failure in FAPI: Received late DL_TTI.request from slot 198.16
+2026-11-19T21:05:41.842843 [FAPI    ] [W] [  200.10] Sector#0: Real-time failure in FAPI: Received late UL_TTI.request from slot 198.17
+2026-11-19T21:05:41.842846 [FAPI    ] [W] [  200.10] Sector#0: Real-time failure in FAPI: Received late UL_TTI.request from slot 198.18
+2026-11-19T21:05:41.842848 [FAPI    ] [W] [  200.10] Sector#0: Real-time failure in FAPI: Received late UL_TTI.request from slot 198.19
+2026-11-19T21:05:41.842853 [FAPI    ] [W] [  200.10] Sector#0: Real-time failure in FAPI: Received late DL_TTI.request from slot 199.0
+2026-11-19T21:05:41.842883 [FAPI    ] [W] [  200.10] Sector#0: Real-time failure in FAPI: Received TX_Data.request from slot 199.0
+2026-11-19T21:05:41.842902 [FAPI    ] [W] [  200.10] Sector#0: Real-time failure in FAPI: Received late DL_TTI.request from slot 199.1
+2026-11-19T21:05:41.842903 [FAPI    ] [W] [  200.10] Sector#0: Real-time failure in FAPI: Received TX_Data.request from slot 199.1
+2026-11-19T21:05:41.842909 [FAPI    ] [W] [  200.10] Sector#0: Real-time failure in FAPI: Received late DL_TTI.request from slot 199.2
+2026-11-19T21:05:41.842909 [FAPI    ] [W] [  200.10] Sector#0: Real-time failure in FAPI: Received TX_Data.request from slot 199.2
+2026-11-19T21:05:41.842947 [FAPI    ] [W] [  200.10] Sector#0: Real-time failure in FAPI: Received late DL_TTI.request from slot 199.3
+2026-11-19T21:05:41.842948 [FAPI    ] [W] [  200.10] Sector#0: Real-time failure in FAPI: Received UL_DCI.request message from slot 199.3
+2026-11-19T21:05:41.842949 [FAPI    ] [W] [  200.10] Sector#0: Real-time failure in FAPI: Received TX_Data.request from slot 199.3
+2026-11-19T21:05:41.842958 [FAPI    ] [W] [  200.10] Sector#0: Real-time failure in FAPI: Received late DL_TTI.request from slot 199.4
+2026-11-19T21:05:41.842958 [FAPI    ] [W] [  200.10] Sector#0: Real-time failure in FAPI: Received UL_DCI.request message from slot 199.4
+2026-11-19T21:05:41.842959 [FAPI    ] [W] [  200.10] Sector#0: Real-time failure in FAPI: Received TX_Data.request from slot 199.4
+2026-11-19T21:05:41.842964 [FAPI    ] [W] [  200.10] Sector#0: Real-time failure in FAPI: Received late DL_TTI.request from slot 199.5
+2026-11-19T21:05:41.842975 [FAPI    ] [W] [  200.10] Sector#0: Real-time failure in FAPI: Received UL_DCI.request message from slot 199.5
+2026-11-19T21:05:41.842976 [FAPI    ] [W] [  200.10] Sector#0: Real-time failure in FAPI: Received TX_Data.request from slot 199.5
+2026-11-19T21:05:41.842990 [FAPI    ] [W] [  200.10] Sector#0: Real-time failure in FAPI: Received late DL_TTI.request from slot 199.6
+2026-11-19T21:05:41.842994 [FAPI    ] [W] [  200.10] Sector#0: Real-time failure in FAPI: Received late UL_TTI.request from slot 199.7
+2026-11-19T21:05:41.842996 [FAPI    ] [W] [  200.10] Sector#0: Real-time failure in FAPI: Received late UL_TTI.request from slot 199.8
+2026-11-19T21:05:41.843018 [FAPI    ] [W] [  200.10] Sector#0: Real-time failure in FAPI: Received late UL_TTI.request from slot 199.9
+2026-11-19T21:05:41.843032 [FAPI    ] [W] [  200.10] Sector#0: Real-time failure in FAPI: Received late DL_TTI.request from slot 199.10
+2026-11-19T21:05:41.843032 [FAPI    ] [W] [  200.10] Sector#0: Real-time failure in FAPI: Received TX_Data.request from slot 199.10
+2026-11-19T21:05:41.843037 [FAPI    ] [W] [  200.10] Sector#0: Real-time failure in FAPI: Received late DL_TTI.request from slot 199.11
+2026-11-19T21:05:41.843037 [FAPI    ] [W] [  200.10] Sector#0: Real-time failure in FAPI: Received TX_Data.request from slot 199.11
+2026-11-19T21:05:41.843041 [FAPI    ] [W] [  200.10] Sector#0: Real-time failure in FAPI: Received late DL_TTI.request from slot 199.12
+2026-11-19T21:05:41.843041 [FAPI    ] [W] [  200.10] Sector#0: Real-time failure in FAPI: Received TX_Data.request from slot 199.12
+2026-11-19T21:05:41.843046 [FAPI    ] [W] [  200.10] Sector#0: Real-time failure in FAPI: Received late DL_TTI.request from slot 199.13
+2026-11-19T21:05:41.843047 [FAPI    ] [W] [  200.10] Sector#0: Real-time failure in FAPI: Received UL_DCI.request message from slot 199.13
+2026-11-19T21:05:41.843047 [FAPI    ] [W] [  200.10] Sector#0: Real-time failure in FAPI: Received TX_Data.request from slot 199.13
+2026-11-19T21:05:41.843053 [FAPI    ] [W] [  200.10] Sector#0: Real-time failure in FAPI: Received late DL_TTI.request from slot 199.14
+2026-11-19T21:05:41.843053 [FAPI    ] [W] [  200.10] Sector#0: Real-time failure in FAPI: Received UL_DCI.request message from slot 199.14
+2026-11-19T21:05:41.843053 [FAPI    ] [W] [  200.10] Sector#0: Real-time failure in FAPI: Received TX_Data.request from slot 199.14
+2026-11-19T21:05:41.843058 [FAPI    ] [W] [  200.10] Sector#0: Real-time failure in FAPI: Received late DL_TTI.request from slot 199.15
+2026-11-19T21:05:41.843059 [FAPI    ] [W] [  200.10] Sector#0: Real-time failure in FAPI: Received UL_DCI.request message from slot 199.15
+2026-11-19T21:05:41.843059 [FAPI    ] [W] [  200.10] Sector#0: Real-time failure in FAPI: Received TX_Data.request from slot 199.15
+2026-11-19T21:05:41.843063 [FAPI    ] [W] [  200.11] Sector#0: Real-time failure in FAPI: Received late DL_TTI.request from slot 199.16
+2026-11-19T21:05:41.843065 [FAPI    ] [W] [  200.11] Sector#0: Real-time failure in FAPI: Received late UL_TTI.request from slot 199.17
+2026-11-19T21:05:41.843068 [FAPI    ] [W] [  200.11] Sector#0: Real-time failure in FAPI: Received late UL_TTI.request from slot 199.18
+2026-11-19T21:05:41.843070 [FAPI    ] [W] [  200.11] Sector#0: Real-time failure in FAPI: Received late UL_TTI.request from slot 199.19
+2026-11-19T21:05:41.843075 [FAPI    ] [W] [  200.11] Sector#0: Real-time failure in FAPI: Received late DL_TTI.request from slot 200.0
+2026-11-19T21:05:41.843076 [FAPI    ] [W] [  200.11] Sector#0: Real-time failure in FAPI: Received TX_Data.request from slot 200.0
+2026-11-19T21:05:41.843078 [FAPI    ] [W] [  200.11] Sector#0: Real-time failure in FAPI: Received late DL_TTI.request from slot 200.1
+2026-11-19T21:05:41.843079 [FAPI    ] [W] [  200.11] Sector#0: Real-time failure in FAPI: Received TX_Data.request from slot 200.1
+2026-11-19T21:05:41.843083 [FAPI    ] [W] [  200.11] Sector#0: Real-time failure in FAPI: Received late DL_TTI.request from slot 200.2
+2026-11-19T21:05:41.843083 [FAPI    ] [W] [  200.11] Sector#0: Real-time failure in FAPI: Received TX_Data.request from slot 200.2
+2026-11-19T21:05:41.843088 [FAPI    ] [W] [  200.11] Sector#0: Real-time failure in FAPI: Received late DL_TTI.request from slot 200.3
+2026-11-19T21:05:41.843088 [FAPI    ] [W] [  200.11] Sector#0: Real-time failure in FAPI: Received UL_DCI.request message from slot 200.3
+2026-11-19T21:05:41.843088 [FAPI    ] [W] [  200.11] Sector#0: Real-time failure in FAPI: Received TX_Data.request from slot 200.3
+2026-11-19T21:05:41.843094 [FAPI    ] [W] [  200.11] Sector#0: Real-time failure in FAPI: Received late DL_TTI.request from slot 200.4
+2026-11-19T21:05:41.843094 [FAPI    ] [W] [  200.11] Sector#0: Real-time failure in FAPI: Received UL_DCI.request message from slot 200.4
+2026-11-19T21:05:41.843094 [FAPI    ] [W] [  200.11] Sector#0: Real-time failure in FAPI: Received TX_Data.request from slot 200.4
+2026-11-19T21:05:41.843099 [FAPI    ] [W] [  200.11] Sector#0: Real-time failure in FAPI: Received late DL_TTI.request from slot 200.5
+2026-11-19T21:05:41.843100 [FAPI    ] [W] [  200.11] Sector#0: Real-time failure in FAPI: Received UL_DCI.request message from slot 200.5
+2026-11-19T21:05:41.843100 [FAPI    ] [W] [  200.11] Sector#0: Real-time failure in FAPI: Received TX_Data.request from slot 200.5
+2026-11-19T21:05:45.834812 [FAPI    ] [W] [  599.14] Sector#0: Real-time failure in FAPI: Received late UL_TTI.request from slot 598.8
+2026-11-19T21:05:45.834818 [FAPI    ] [W] [  599.14] Sector#0: Real-time failure in FAPI: Received late UL_TTI.request from slot 598.9
+2026-11-19T21:05:45.834825 [FAPI    ] [W] [  599.14] Sector#0: Real-time failure in FAPI: Received late DL_TTI.request from slot 598.10
+2026-11-19T21:05:45.834825 [FAPI    ] [W] [  599.14] Sector#0: Real-time failure in FAPI: Received TX_Data.request from slot 598.10
+2026-11-19T21:05:45.834829 [FAPI    ] [W] [  599.14] Sector#0: Real-time failure in FAPI: Received late DL_TTI.request from slot 598.11
+2026-11-19T21:05:45.834829 [FAPI    ] [W] [  599.14] Sector#0: Real-time failure in FAPI: Received TX_Data.request from slot 598.11
+2026-11-19T21:05:45.834835 [FAPI    ] [W] [  599.14] Sector#0: Real-time failure in FAPI: Received late DL_TTI.request from slot 598.12
+2026-11-19T21:05:45.834836 [FAPI    ] [W] [  599.14] Sector#0: Real-time failure in FAPI: Received TX_Data.request from slot 598.12
+2026-11-19T21:05:45.834844 [FAPI    ] [W] [  599.14] Sector#0: Real-time failure in FAPI: Received late DL_TTI.request from slot 598.13
+2026-11-19T21:05:45.834844 [FAPI    ] [W] [  599.14] Sector#0: Real-time failure in FAPI: Received UL_DCI.request message from slot 598.13
+2026-11-19T21:05:45.834844 [FAPI    ] [W] [  599.14] Sector#0: Real-time failure in FAPI: Received TX_Data.request from slot 598.13
+2026-11-19T21:05:45.834882 [FAPI    ] [W] [  599.14] Sector#0: Real-time failure in FAPI: Received late DL_TTI.request from slot 598.14
+2026-11-19T21:05:45.834883 [FAPI    ] [W] [  599.14] Sector#0: Real-time failure in FAPI: Received UL_DCI.request message from slot 598.14
+2026-11-19T21:05:45.834884 [FAPI    ] [W] [  599.14] Sector#0: Real-time failure in FAPI: Received TX_Data.request from slot 598.14
+2026-11-19T21:05:45.834893 [FAPI    ] [W] [  599.14] Sector#0: Real-time failure in FAPI: Received late DL_TTI.request from slot 598.15
+2026-11-19T21:05:45.834893 [FAPI    ] [W] [  599.14] Sector#0: Real-time failure in FAPI: Received UL_DCI.request message from slot 598.15
+2026-11-19T21:05:45.834894 [FAPI    ] [W] [  599.14] Sector#0: Real-time failure in FAPI: Received TX_Data.request from slot 598.15
+2026-11-19T21:05:45.834898 [FAPI    ] [W] [  599.14] Sector#0: Real-time failure in FAPI: Received late DL_TTI.request from slot 598.16
+2026-11-19T21:05:45.834900 [FAPI    ] [W] [  599.14] Sector#0: Real-time failure in FAPI: Received late UL_TTI.request from slot 598.17
+2026-11-19T21:05:45.834903 [FAPI    ] [W] [  599.14] Sector#0: Real-time failure in FAPI: Received late UL_TTI.request from slot 598.18
+2026-11-19T21:05:45.834905 [FAPI    ] [W] [  599.14] Sector#0: Real-time failure in FAPI: Received late UL_TTI.request from slot 598.19
+2026-11-19T21:05:45.834911 [FAPI    ] [W] [  599.14] Sector#0: Real-time failure in FAPI: Received late DL_TTI.request from slot 599.0
+2026-11-19T21:05:45.834924 [FAPI    ] [W] [  599.14] Sector#0: Real-time failure in FAPI: Received TX_Data.request from slot 599.0
+2026-11-19T21:05:45.834930 [FAPI    ] [W] [  599.14] Sector#0: Real-time failure in FAPI: Received late DL_TTI.request from slot 599.1
+2026-11-19T21:05:45.834930 [FAPI    ] [W] [  599.14] Sector#0: Real-time failure in FAPI: Received TX_Data.request from slot 599.1
+2026-11-19T21:05:45.834935 [FAPI    ] [W] [  599.14] Sector#0: Real-time failure in FAPI: Received late DL_TTI.request from slot 599.2
+2026-11-19T21:05:45.834935 [FAPI    ] [W] [  599.14] Sector#0: Real-time failure in FAPI: Received TX_Data.request from slot 599.2
+2026-11-19T21:05:45.834953 [FAPI    ] [W] [  599.14] Sector#0: Real-time failure in FAPI: Received late DL_TTI.request from slot 599.3
+2026-11-19T21:05:45.834953 [FAPI    ] [W] [  599.14] Sector#0: Real-time failure in FAPI: Received UL_DCI.request message from slot 599.3
+2026-11-19T21:05:45.834964 [FAPI    ] [W] [  599.14] Sector#0: Real-time failure in FAPI: Received TX_Data.request from slot 599.3
+2026-11-19T21:05:45.834972 [FAPI    ] [W] [  599.14] Sector#0: Real-time failure in FAPI: Received late DL_TTI.request from slot 599.4
+2026-11-19T21:05:45.834981 [FAPI    ] [W] [  599.14] Sector#0: Real-time failure in FAPI: Received UL_DCI.request message from slot 599.4
+2026-11-19T21:05:45.834981 [FAPI    ] [W] [  599.14] Sector#0: Real-time failure in FAPI: Received TX_Data.request from slot 599.4
+2026-11-19T21:05:45.834995 [FAPI    ] [W] [  599.14] Sector#0: Real-time failure in FAPI: Received late DL_TTI.request from slot 599.5
+2026-11-19T21:05:45.834996 [FAPI    ] [W] [  599.14] Sector#0: Real-time failure in FAPI: Received UL_DCI.request message from slot 599.5
+2026-11-19T21:05:45.834996 [FAPI    ] [W] [  599.14] Sector#0: Real-time failure in FAPI: Received TX_Data.request from slot 599.5
+2026-11-19T21:05:45.835000 [FAPI    ] [W] [  599.14] Sector#0: Real-time failure in FAPI: Received late DL_TTI.request from slot 599.6
+2026-11-19T21:05:45.835002 [FAPI    ] [W] [  599.14] Sector#0: Real-time failure in FAPI: Received late UL_TTI.request from slot 599.7
+2026-11-19T21:05:45.835004 [FAPI    ] [W] [  599.14] Sector#0: Real-time failure in FAPI: Received late UL_TTI.request from slot 599.8
+2026-11-19T21:05:45.836048 [PHY     ] [W] [   599.9] Discarded uplink slot. Ignoring processing.
+2026-11-19T21:05:45.836122 [RU      ] [W] Real-time failure in RU: received late UL request from slot 599.9 in sector 0.
+2026-11-19T21:05:45.836597 [SCHED   ] [W] [  599.18] rnti=0x44 h_id=1: Discarding CRC. Cause: UL HARQ process is not expecting CRC for PUSCH slot 599.9
+2026-11-19T21:05:45.836598 [SCHED   ] [W] [  599.18] rnti=0x44: Discarding UCI indication PDU. Cause: Respective UCI grant was not found (UCI slot=599.9)
+2026-11-19T21:05:45.838563 [RU      ] [W] Real-time failure in RU: detected late DL request from slot 599.10 in sector 0.

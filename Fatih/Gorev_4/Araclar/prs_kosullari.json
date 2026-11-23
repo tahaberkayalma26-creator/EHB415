@@ -1,0 +1,691 @@
+{
+  "kaynak": {
+    "path": "C:\\Users\\fatih\\OneDrive\\Desktop\\Data Com\\4. Görev Kartı Belgeleri\\ortak_degerler.xlsx",
+    "bytes": 22505,
+    "sha256": "2c0383af4306a64f460e7fb30aeb4b6b9598f8c22c94cb6af19e33c2b9e4307d"
+  },
+  "okunan_aralik": "'PRS konfigürasyonları'!A1:K17",
+  "olusturulma_utc": "2026-11-19T21:06:54.264000+00:00",
+  "konfigurasyonlar": [
+    {
+      "etiket": "K0",
+      "periyot_slot": 0,
+      "sembol": 0,
+      "comb": 0,
+      "bw_prb": 0,
+      "sembol_ofset": 0,
+      "slot_ofset": 0,
+      "aciklama": "PRS yok (referans)",
+      "prs_araligi_ms": 0,
+      "model_kaybi_oran": 0,
+      "durum": "ÖNERİ: her satır bir parametreyi değiştirir. Kayıp modeli TDD için ölçümle doğrulanmadı.",
+      "rep": 1,
+      "gap": 1,
+      "rep_gap_durumu": "XLSX içinde tanımlı değil; görev kartı K1 ve güncel betik varsayılanı 1/1 uygulanır.",
+      "default_source": {
+        "degerler": {
+          "rep": 1,
+          "gap": 1
+        },
+        "nitelik": "XLSX satırlarında açıkça tanımlanmamış çalışma varsayılanları.",
+        "betik": "/home/fatih/ehb415/gorev4_project/ogretici/betikler/ocudu_prs_kos.sh",
+        "commit": "4c31d938648abb355e0befdd8221ae0d5cdfbbbb",
+        "satir": 12,
+        "tanim": "rep=${6:-1}; gap=${7:-1}",
+        "ek_dayanak": "Resmî Görev 4 kartının K1 örneği: rep=1, gap=1."
+      },
+      "rep_gap_uygulanir": false,
+      "source_file": "C:\\Users\\fatih\\OneDrive\\Desktop\\Data Com\\4. Görev Kartı Belgeleri\\ortak_degerler.xlsx",
+      "source_range": "'PRS konfigürasyonları'!A2:K2",
+      "source_cells": {
+        "etiket": "A2",
+        "periyot_slot": "B2",
+        "sembol": "C2",
+        "comb": "D2",
+        "bw_prb": "E2",
+        "sembol_ofset": "F2",
+        "slot_ofset": "G2",
+        "aciklama": "H2",
+        "prs_araligi_ms": "I2",
+        "model_kaybi_oran": "J2",
+        "durum": "K2"
+      },
+      "model_kaybi_niteligi": "Ölçüm değil; kaynak çalışma kitabının doğrulanmamış model sonucu."
+    },
+    {
+      "etiket": "K1",
+      "periyot_slot": 10,
+      "sembol": 4,
+      "comb": 4,
+      "bw_prb": 48,
+      "sembol_ofset": 2,
+      "slot_ofset": 1,
+      "aciklama": "Referans PRS (5 ms'de bir)",
+      "prs_araligi_ms": 5,
+      "model_kaybi_oran": 0.16666666666666666,
+      "durum": "ÖNERİ: her satır bir parametreyi değiştirir. Kayıp modeli TDD için ölçümle doğrulanmadı.",
+      "rep": 1,
+      "gap": 1,
+      "rep_gap_durumu": "XLSX içinde tanımlı değil; görev kartı K1 ve güncel betik varsayılanı 1/1 uygulanır.",
+      "default_source": {
+        "degerler": {
+          "rep": 1,
+          "gap": 1
+        },
+        "nitelik": "XLSX satırlarında açıkça tanımlanmamış çalışma varsayılanları.",
+        "betik": "/home/fatih/ehb415/gorev4_project/ogretici/betikler/ocudu_prs_kos.sh",
+        "commit": "4c31d938648abb355e0befdd8221ae0d5cdfbbbb",
+        "satir": 12,
+        "tanim": "rep=${6:-1}; gap=${7:-1}",
+        "ek_dayanak": "Resmî Görev 4 kartının K1 örneği: rep=1, gap=1."
+      },
+      "rep_gap_uygulanir": true,
+      "source_file": "C:\\Users\\fatih\\OneDrive\\Desktop\\Data Com\\4. Görev Kartı Belgeleri\\ortak_degerler.xlsx",
+      "source_range": "'PRS konfigürasyonları'!A3:K3",
+      "source_cells": {
+        "etiket": "A3",
+        "periyot_slot": "B3",
+        "sembol": "C3",
+        "comb": "D3",
+        "bw_prb": "E3",
+        "sembol_ofset": "F3",
+        "slot_ofset": "G3",
+        "aciklama": "H3",
+        "prs_araligi_ms": "I3",
+        "model_kaybi_oran": "J3",
+        "durum": "K3"
+      },
+      "model_kaybi_niteligi": "Ölçüm değil; kaynak çalışma kitabının doğrulanmamış model sonucu."
+    },
+    {
+      "etiket": "K2",
+      "periyot_slot": 20,
+      "sembol": 4,
+      "comb": 4,
+      "bw_prb": 48,
+      "sembol_ofset": 2,
+      "slot_ofset": 1,
+      "aciklama": "Yalnız periyot: 10 ms",
+      "prs_araligi_ms": 10,
+      "model_kaybi_oran": 0.08333333333333333,
+      "durum": "ÖNERİ: her satır bir parametreyi değiştirir. Kayıp modeli TDD için ölçümle doğrulanmadı.",
+      "rep": 1,
+      "gap": 1,
+      "rep_gap_durumu": "XLSX içinde tanımlı değil; görev kartı K1 ve güncel betik varsayılanı 1/1 uygulanır.",
+      "default_source": {
+        "degerler": {
+          "rep": 1,
+          "gap": 1
+        },
+        "nitelik": "XLSX satırlarında açıkça tanımlanmamış çalışma varsayılanları.",
+        "betik": "/home/fatih/ehb415/gorev4_project/ogretici/betikler/ocudu_prs_kos.sh",
+        "commit": "4c31d938648abb355e0befdd8221ae0d5cdfbbbb",
+        "satir": 12,
+        "tanim": "rep=${6:-1}; gap=${7:-1}",
+        "ek_dayanak": "Resmî Görev 4 kartının K1 örneği: rep=1, gap=1."
+      },
+      "rep_gap_uygulanir": true,
+      "source_file": "C:\\Users\\fatih\\OneDrive\\Desktop\\Data Com\\4. Görev Kartı Belgeleri\\ortak_degerler.xlsx",
+      "source_range": "'PRS konfigürasyonları'!A4:K4",
+      "source_cells": {
+        "etiket": "A4",
+        "periyot_slot": "B4",
+        "sembol": "C4",
+        "comb": "D4",
+        "bw_prb": "E4",
+        "sembol_ofset": "F4",
+        "slot_ofset": "G4",
+        "aciklama": "H4",
+        "prs_araligi_ms": "I4",
+        "model_kaybi_oran": "J4",
+        "durum": "K4"
+      },
+      "model_kaybi_niteligi": "Ölçüm değil; kaynak çalışma kitabının doğrulanmamış model sonucu."
+    },
+    {
+      "etiket": "K3",
+      "periyot_slot": 40,
+      "sembol": 4,
+      "comb": 4,
+      "bw_prb": 48,
+      "sembol_ofset": 2,
+      "slot_ofset": 1,
+      "aciklama": "Yalnız periyot: 20 ms",
+      "prs_araligi_ms": 20,
+      "model_kaybi_oran": 0.041666666666666664,
+      "durum": "ÖNERİ: her satır bir parametreyi değiştirir. Kayıp modeli TDD için ölçümle doğrulanmadı.",
+      "rep": 1,
+      "gap": 1,
+      "rep_gap_durumu": "XLSX içinde tanımlı değil; görev kartı K1 ve güncel betik varsayılanı 1/1 uygulanır.",
+      "default_source": {
+        "degerler": {
+          "rep": 1,
+          "gap": 1
+        },
+        "nitelik": "XLSX satırlarında açıkça tanımlanmamış çalışma varsayılanları.",
+        "betik": "/home/fatih/ehb415/gorev4_project/ogretici/betikler/ocudu_prs_kos.sh",
+        "commit": "4c31d938648abb355e0befdd8221ae0d5cdfbbbb",
+        "satir": 12,
+        "tanim": "rep=${6:-1}; gap=${7:-1}",
+        "ek_dayanak": "Resmî Görev 4 kartının K1 örneği: rep=1, gap=1."
+      },
+      "rep_gap_uygulanir": true,
+      "source_file": "C:\\Users\\fatih\\OneDrive\\Desktop\\Data Com\\4. Görev Kartı Belgeleri\\ortak_degerler.xlsx",
+      "source_range": "'PRS konfigürasyonları'!A5:K5",
+      "source_cells": {
+        "etiket": "A5",
+        "periyot_slot": "B5",
+        "sembol": "C5",
+        "comb": "D5",
+        "bw_prb": "E5",
+        "sembol_ofset": "F5",
+        "slot_ofset": "G5",
+        "aciklama": "H5",
+        "prs_araligi_ms": "I5",
+        "model_kaybi_oran": "J5",
+        "durum": "K5"
+      },
+      "model_kaybi_niteligi": "Ölçüm değil; kaynak çalışma kitabının doğrulanmamış model sonucu."
+    },
+    {
+      "etiket": "K4",
+      "periyot_slot": 10,
+      "sembol": 4,
+      "comb": 4,
+      "bw_prb": 272,
+      "sembol_ofset": 2,
+      "slot_ofset": 1,
+      "aciklama": "Yalnız genişlik: tüm hücre (272 PRB). Veri kaybı K1 ile aynı olmalı (veri alanı 48 PRB ise), menzil çözünürlüğü çok daha iyi",
+      "prs_araligi_ms": 5,
+      "model_kaybi_oran": 0.16666666666666666,
+      "durum": "ÖNERİ: her satır bir parametreyi değiştirir. Kayıp modeli TDD için ölçümle doğrulanmadı.",
+      "rep": 1,
+      "gap": 1,
+      "rep_gap_durumu": "XLSX içinde tanımlı değil; görev kartı K1 ve güncel betik varsayılanı 1/1 uygulanır.",
+      "default_source": {
+        "degerler": {
+          "rep": 1,
+          "gap": 1
+        },
+        "nitelik": "XLSX satırlarında açıkça tanımlanmamış çalışma varsayılanları.",
+        "betik": "/home/fatih/ehb415/gorev4_project/ogretici/betikler/ocudu_prs_kos.sh",
+        "commit": "4c31d938648abb355e0befdd8221ae0d5cdfbbbb",
+        "satir": 12,
+        "tanim": "rep=${6:-1}; gap=${7:-1}",
+        "ek_dayanak": "Resmî Görev 4 kartının K1 örneği: rep=1, gap=1."
+      },
+      "rep_gap_uygulanir": true,
+      "source_file": "C:\\Users\\fatih\\OneDrive\\Desktop\\Data Com\\4. Görev Kartı Belgeleri\\ortak_degerler.xlsx",
+      "source_range": "'PRS konfigürasyonları'!A6:K6",
+      "source_cells": {
+        "etiket": "A6",
+        "periyot_slot": "B6",
+        "sembol": "C6",
+        "comb": "D6",
+        "bw_prb": "E6",
+        "sembol_ofset": "F6",
+        "slot_ofset": "G6",
+        "aciklama": "H6",
+        "prs_araligi_ms": "I6",
+        "model_kaybi_oran": "J6",
+        "durum": "K6"
+      },
+      "model_kaybi_niteligi": "Ölçüm değil; kaynak çalışma kitabının doğrulanmamış model sonucu."
+    },
+    {
+      "etiket": "K5",
+      "periyot_slot": 10,
+      "sembol": 4,
+      "comb": 4,
+      "bw_prb": 24,
+      "sembol_ofset": 2,
+      "slot_ofset": 1,
+      "aciklama": "Yalnız genişlik: yarım",
+      "prs_araligi_ms": 5,
+      "model_kaybi_oran": 0.08333333333333333,
+      "durum": "ÖNERİ: her satır bir parametreyi değiştirir. Kayıp modeli TDD için ölçümle doğrulanmadı.",
+      "rep": 1,
+      "gap": 1,
+      "rep_gap_durumu": "XLSX içinde tanımlı değil; görev kartı K1 ve güncel betik varsayılanı 1/1 uygulanır.",
+      "default_source": {
+        "degerler": {
+          "rep": 1,
+          "gap": 1
+        },
+        "nitelik": "XLSX satırlarında açıkça tanımlanmamış çalışma varsayılanları.",
+        "betik": "/home/fatih/ehb415/gorev4_project/ogretici/betikler/ocudu_prs_kos.sh",
+        "commit": "4c31d938648abb355e0befdd8221ae0d5cdfbbbb",
+        "satir": 12,
+        "tanim": "rep=${6:-1}; gap=${7:-1}",
+        "ek_dayanak": "Resmî Görev 4 kartının K1 örneği: rep=1, gap=1."
+      },
+      "rep_gap_uygulanir": true,
+      "source_file": "C:\\Users\\fatih\\OneDrive\\Desktop\\Data Com\\4. Görev Kartı Belgeleri\\ortak_degerler.xlsx",
+      "source_range": "'PRS konfigürasyonları'!A7:K7",
+      "source_cells": {
+        "etiket": "A7",
+        "periyot_slot": "B7",
+        "sembol": "C7",
+        "comb": "D7",
+        "bw_prb": "E7",
+        "sembol_ofset": "F7",
+        "slot_ofset": "G7",
+        "aciklama": "H7",
+        "prs_araligi_ms": "I7",
+        "model_kaybi_oran": "J7",
+        "durum": "K7"
+      },
+      "model_kaybi_niteligi": "Ölçüm değil; kaynak çalışma kitabının doğrulanmamış model sonucu."
+    },
+    {
+      "etiket": "K6",
+      "periyot_slot": 10,
+      "sembol": 12,
+      "comb": 4,
+      "bw_prb": 48,
+      "sembol_ofset": 2,
+      "slot_ofset": 1,
+      "aciklama": "Yalnız sembol sayısı: 12",
+      "prs_araligi_ms": 5,
+      "model_kaybi_oran": 0.16666666666666666,
+      "durum": "ÖNERİ: her satır bir parametreyi değiştirir. Kayıp modeli TDD için ölçümle doğrulanmadı.",
+      "rep": 1,
+      "gap": 1,
+      "rep_gap_durumu": "XLSX içinde tanımlı değil; görev kartı K1 ve güncel betik varsayılanı 1/1 uygulanır.",
+      "default_source": {
+        "degerler": {
+          "rep": 1,
+          "gap": 1
+        },
+        "nitelik": "XLSX satırlarında açıkça tanımlanmamış çalışma varsayılanları.",
+        "betik": "/home/fatih/ehb415/gorev4_project/ogretici/betikler/ocudu_prs_kos.sh",
+        "commit": "4c31d938648abb355e0befdd8221ae0d5cdfbbbb",
+        "satir": 12,
+        "tanim": "rep=${6:-1}; gap=${7:-1}",
+        "ek_dayanak": "Resmî Görev 4 kartının K1 örneği: rep=1, gap=1."
+      },
+      "rep_gap_uygulanir": true,
+      "source_file": "C:\\Users\\fatih\\OneDrive\\Desktop\\Data Com\\4. Görev Kartı Belgeleri\\ortak_degerler.xlsx",
+      "source_range": "'PRS konfigürasyonları'!A8:K8",
+      "source_cells": {
+        "etiket": "A8",
+        "periyot_slot": "B8",
+        "sembol": "C8",
+        "comb": "D8",
+        "bw_prb": "E8",
+        "sembol_ofset": "F8",
+        "slot_ofset": "G8",
+        "aciklama": "H8",
+        "prs_araligi_ms": "I8",
+        "model_kaybi_oran": "J8",
+        "durum": "K8"
+      },
+      "model_kaybi_niteligi": "Ölçüm değil; kaynak çalışma kitabının doğrulanmamış model sonucu."
+    },
+    {
+      "etiket": "K7",
+      "periyot_slot": 10,
+      "sembol": 4,
+      "comb": 2,
+      "bw_prb": 48,
+      "sembol_ofset": 2,
+      "slot_ofset": 1,
+      "aciklama": "Yalnız comb: 2",
+      "prs_araligi_ms": 5,
+      "model_kaybi_oran": 0.16666666666666666,
+      "durum": "ÖNERİ: her satır bir parametreyi değiştirir. Kayıp modeli TDD için ölçümle doğrulanmadı.",
+      "rep": 1,
+      "gap": 1,
+      "rep_gap_durumu": "XLSX içinde tanımlı değil; görev kartı K1 ve güncel betik varsayılanı 1/1 uygulanır.",
+      "default_source": {
+        "degerler": {
+          "rep": 1,
+          "gap": 1
+        },
+        "nitelik": "XLSX satırlarında açıkça tanımlanmamış çalışma varsayılanları.",
+        "betik": "/home/fatih/ehb415/gorev4_project/ogretici/betikler/ocudu_prs_kos.sh",
+        "commit": "4c31d938648abb355e0befdd8221ae0d5cdfbbbb",
+        "satir": 12,
+        "tanim": "rep=${6:-1}; gap=${7:-1}",
+        "ek_dayanak": "Resmî Görev 4 kartının K1 örneği: rep=1, gap=1."
+      },
+      "rep_gap_uygulanir": true,
+      "source_file": "C:\\Users\\fatih\\OneDrive\\Desktop\\Data Com\\4. Görev Kartı Belgeleri\\ortak_degerler.xlsx",
+      "source_range": "'PRS konfigürasyonları'!A9:K9",
+      "source_cells": {
+        "etiket": "A9",
+        "periyot_slot": "B9",
+        "sembol": "C9",
+        "comb": "D9",
+        "bw_prb": "E9",
+        "sembol_ofset": "F9",
+        "slot_ofset": "G9",
+        "aciklama": "H9",
+        "prs_araligi_ms": "I9",
+        "model_kaybi_oran": "J9",
+        "durum": "K9"
+      },
+      "model_kaybi_niteligi": "Ölçüm değil; kaynak çalışma kitabının doğrulanmamış model sonucu."
+    },
+    {
+      "etiket": "K8",
+      "periyot_slot": 10,
+      "sembol": 12,
+      "comb": 12,
+      "bw_prb": 48,
+      "sembol_ofset": 2,
+      "slot_ofset": 1,
+      "aciklama": "Comb 12, 12 sembol",
+      "prs_araligi_ms": 5,
+      "model_kaybi_oran": 0.16666666666666666,
+      "durum": "ÖNERİ: her satır bir parametreyi değiştirir. Kayıp modeli TDD için ölçümle doğrulanmadı.",
+      "rep": 1,
+      "gap": 1,
+      "rep_gap_durumu": "XLSX içinde tanımlı değil; görev kartı K1 ve güncel betik varsayılanı 1/1 uygulanır.",
+      "default_source": {
+        "degerler": {
+          "rep": 1,
+          "gap": 1
+        },
+        "nitelik": "XLSX satırlarında açıkça tanımlanmamış çalışma varsayılanları.",
+        "betik": "/home/fatih/ehb415/gorev4_project/ogretici/betikler/ocudu_prs_kos.sh",
+        "commit": "4c31d938648abb355e0befdd8221ae0d5cdfbbbb",
+        "satir": 12,
+        "tanim": "rep=${6:-1}; gap=${7:-1}",
+        "ek_dayanak": "Resmî Görev 4 kartının K1 örneği: rep=1, gap=1."
+      },
+      "rep_gap_uygulanir": true,
+      "source_file": "C:\\Users\\fatih\\OneDrive\\Desktop\\Data Com\\4. Görev Kartı Belgeleri\\ortak_degerler.xlsx",
+      "source_range": "'PRS konfigürasyonları'!A10:K10",
+      "source_cells": {
+        "etiket": "A10",
+        "periyot_slot": "B10",
+        "sembol": "C10",
+        "comb": "D10",
+        "bw_prb": "E10",
+        "sembol_ofset": "F10",
+        "slot_ofset": "G10",
+        "aciklama": "H10",
+        "prs_araligi_ms": "I10",
+        "model_kaybi_oran": "J10",
+        "durum": "K10"
+      },
+      "model_kaybi_niteligi": "Ölçüm değil; kaynak çalışma kitabının doğrulanmamış model sonucu."
+    },
+    {
+      "etiket": "K9",
+      "periyot_slot": 10,
+      "sembol": 4,
+      "comb": 4,
+      "bw_prb": 48,
+      "sembol_ofset": 0,
+      "slot_ofset": 1,
+      "aciklama": "Yalnız sembol ofseti: 0",
+      "prs_araligi_ms": 5,
+      "model_kaybi_oran": 0.16666666666666666,
+      "durum": "ÖNERİ: her satır bir parametreyi değiştirir. Kayıp modeli TDD için ölçümle doğrulanmadı.",
+      "rep": 1,
+      "gap": 1,
+      "rep_gap_durumu": "XLSX içinde tanımlı değil; görev kartı K1 ve güncel betik varsayılanı 1/1 uygulanır.",
+      "default_source": {
+        "degerler": {
+          "rep": 1,
+          "gap": 1
+        },
+        "nitelik": "XLSX satırlarında açıkça tanımlanmamış çalışma varsayılanları.",
+        "betik": "/home/fatih/ehb415/gorev4_project/ogretici/betikler/ocudu_prs_kos.sh",
+        "commit": "4c31d938648abb355e0befdd8221ae0d5cdfbbbb",
+        "satir": 12,
+        "tanim": "rep=${6:-1}; gap=${7:-1}",
+        "ek_dayanak": "Resmî Görev 4 kartının K1 örneği: rep=1, gap=1."
+      },
+      "rep_gap_uygulanir": true,
+      "source_file": "C:\\Users\\fatih\\OneDrive\\Desktop\\Data Com\\4. Görev Kartı Belgeleri\\ortak_degerler.xlsx",
+      "source_range": "'PRS konfigürasyonları'!A11:K11",
+      "source_cells": {
+        "etiket": "A11",
+        "periyot_slot": "B11",
+        "sembol": "C11",
+        "comb": "D11",
+        "bw_prb": "E11",
+        "sembol_ofset": "F11",
+        "slot_ofset": "G11",
+        "aciklama": "H11",
+        "prs_araligi_ms": "I11",
+        "model_kaybi_oran": "J11",
+        "durum": "K11"
+      },
+      "model_kaybi_niteligi": "Ölçüm değil; kaynak çalışma kitabının doğrulanmamış model sonucu."
+    },
+    {
+      "etiket": "K10",
+      "periyot_slot": 10,
+      "sembol": 4,
+      "comb": 4,
+      "bw_prb": 48,
+      "sembol_ofset": 10,
+      "slot_ofset": 1,
+      "aciklama": "Yalnız sembol ofseti: 10",
+      "prs_araligi_ms": 5,
+      "model_kaybi_oran": 0.16666666666666666,
+      "durum": "ÖNERİ: her satır bir parametreyi değiştirir. Kayıp modeli TDD için ölçümle doğrulanmadı.",
+      "rep": 1,
+      "gap": 1,
+      "rep_gap_durumu": "XLSX içinde tanımlı değil; görev kartı K1 ve güncel betik varsayılanı 1/1 uygulanır.",
+      "default_source": {
+        "degerler": {
+          "rep": 1,
+          "gap": 1
+        },
+        "nitelik": "XLSX satırlarında açıkça tanımlanmamış çalışma varsayılanları.",
+        "betik": "/home/fatih/ehb415/gorev4_project/ogretici/betikler/ocudu_prs_kos.sh",
+        "commit": "4c31d938648abb355e0befdd8221ae0d5cdfbbbb",
+        "satir": 12,
+        "tanim": "rep=${6:-1}; gap=${7:-1}",
+        "ek_dayanak": "Resmî Görev 4 kartının K1 örneği: rep=1, gap=1."
+      },
+      "rep_gap_uygulanir": true,
+      "source_file": "C:\\Users\\fatih\\OneDrive\\Desktop\\Data Com\\4. Görev Kartı Belgeleri\\ortak_degerler.xlsx",
+      "source_range": "'PRS konfigürasyonları'!A12:K12",
+      "source_cells": {
+        "etiket": "A12",
+        "periyot_slot": "B12",
+        "sembol": "C12",
+        "comb": "D12",
+        "bw_prb": "E12",
+        "sembol_ofset": "F12",
+        "slot_ofset": "G12",
+        "aciklama": "H12",
+        "prs_araligi_ms": "I12",
+        "model_kaybi_oran": "J12",
+        "durum": "K12"
+      },
+      "model_kaybi_niteligi": "Ölçüm değil; kaynak çalışma kitabının doğrulanmamış model sonucu."
+    },
+    {
+      "etiket": "K11",
+      "periyot_slot": 10,
+      "sembol": 6,
+      "comb": 6,
+      "bw_prb": 48,
+      "sembol_ofset": 2,
+      "slot_ofset": 1,
+      "aciklama": "Comb 6, 6 sembol",
+      "prs_araligi_ms": null,
+      "model_kaybi_oran": null,
+      "durum": "ÖNERİ: her satır bir parametreyi değiştirir. Kayıp modeli TDD için ölçümle doğrulanmadı.",
+      "rep": 1,
+      "gap": 1,
+      "rep_gap_durumu": "XLSX içinde tanımlı değil; görev kartı K1 ve güncel betik varsayılanı 1/1 uygulanır.",
+      "default_source": {
+        "degerler": {
+          "rep": 1,
+          "gap": 1
+        },
+        "nitelik": "XLSX satırlarında açıkça tanımlanmamış çalışma varsayılanları.",
+        "betik": "/home/fatih/ehb415/gorev4_project/ogretici/betikler/ocudu_prs_kos.sh",
+        "commit": "4c31d938648abb355e0befdd8221ae0d5cdfbbbb",
+        "satir": 12,
+        "tanim": "rep=${6:-1}; gap=${7:-1}",
+        "ek_dayanak": "Resmî Görev 4 kartının K1 örneği: rep=1, gap=1."
+      },
+      "rep_gap_uygulanir": true,
+      "source_file": "/home/fatih/ehb415/gorev4_project/ogretici/veri/ortak_degerler.xlsx",
+      "source_commit": "4c31d938648abb355e0befdd8221ae0d5cdfbbbb",
+      "source_sha256": "8f96f81549bc964332c17737bb9ea2cbbc2dab297e8fafe47e491e92208ab242",
+      "source_range": "'PRS konfigürasyonları'!A13:H13",
+      "source_cells": {
+        "etiket": "A13",
+        "periyot_slot": "B13",
+        "sembol": "C13",
+        "comb": "D13",
+        "bw_prb": "E13",
+        "sembol_ofset": "F13",
+        "slot_ofset": "G13",
+        "aciklama": "H13"
+      },
+      "source_note": "Kullanıcının 22.5 KB dosyasında yok; PDF ile uyumlu güncel repo dosyasından.",
+      "model_kaybi_niteligi": "Ölçüm değil; repo kaynağında formül önbelleği boş olduğundan null."
+    }
+  ],
+  "ortak_ayarlar": {
+    "merkez_frekans_ghz": {
+      "deger": 3.5,
+      "birim": "GHz",
+      "durum": "KARAR (Taha) onay",
+      "not": "Türkiye'de 5G baz istasyonları bu frekans civarında (Taha).",
+      "source_range": "'Ortak değerler'!A2:E2"
+    },
+    "band": {
+      "deger": "n78",
+      "birim": null,
+      "durum": "KAYNAK",
+      "not": "TS 38.101-1: n78 = 3300-3800 MHz, TDD. OCUDU band_helper.cpp: n78 = TDD.",
+      "source_range": "'Ortak değerler'!A3:E3"
+    },
+    "dl_arfcn": {
+      "deger": 633334,
+      "birim": null,
+      "durum": "DENENDİ",
+      "not": "600000 + (3500-3000) MHz / 15 kHz = 633333,3; n78'de 30 kHz rasterinde adım 2 olduğundan çift sayı: 633334 (3500,01 MHz). OCUDU kabul etti.",
+      "source_range": "'Ortak değerler'!A4:E4"
+    },
+    "duplex": {
+      "deger": "TDD",
+      "birim": null,
+      "durum": "KAYNAK",
+      "not": "Eski OCUDU testi band 3 (FDD) idi. Sayılar yeniden ölçülecek.",
+      "source_range": "'Ortak değerler'!A5:E5"
+    },
+    "scs_khz": {
+      "deger": 30,
+      "birim": "kHz",
+      "durum": "DENENDİ",
+      "not": "OCUDU n78'de 15 kHz'i REDDETTİ: 'Common SCS 15kHz is not equal to SSB SCS 30kHz'. n78'de SSB yalnız 30 kHz (OCUDU band_helper.cpp satır 308). Ana ızgara 30 kHz.",
+      "source_range": "'Ortak değerler'!A6:E6"
+    },
+    "kanal_bw_mhz": {
+      "deger": 100,
+      "birim": "MHz",
+      "durum": "KARAR (Taha)",
+      "not": "Türkiye'de 5G yayını 100 MHz ile yapılıyor (Taha). Yedek ızgara: 40 MHz (106 PRB), OCUDU'da çalıştığı doğrulandı: 'Yedek ızgara' sayfası.",
+      "source_range": "'Ortak değerler'!A7:E7"
+    },
+    "ana_prb": {
+      "deger": 273,
+      "birim": "PRB",
+      "durum": "KAYNAK",
+      "not": "TS 38.101-1 Tablo 5.3.2-1, SCS 30 kHz, 100 MHz.",
+      "source_range": "'Ortak değerler'!A8:E8"
+    },
+    "slot_ms": {
+      "deger": 0.5,
+      "birim": "ms",
+      "durum": "GENEL BİLGİ",
+      "not": "30 kHz: 1 slot = 0,5 ms, 14 sembol. TS 38.211 §4.3'ten teyit edilmedi (dosya bizde yok). OCUDU testinde 30 kHz'te DL ok 1200/s, 2000 slot/s ile uyumlu göründü. Eski testte 15 kHz idi (1 ms).",
+      "source_range": "'Ortak değerler'!A10:E10"
+    },
+    "cerceve_10ms_slot": {
+      "deger": 20,
+      "birim": "slot",
+      "durum": "GENEL BİLGİ",
+      "not": "30 kHz: 10 ms / 0,5 ms. Çerçeve süresi 10 ms (TS 38.211 teyit edilmedi).",
+      "source_range": "'Ortak değerler'!A11:E11"
+    },
+    "tdd_periyot_slot": {
+      "deger": 10,
+      "birim": "slot",
+      "durum": "DENENDİ",
+      "not": "OCUDU varsayılanı (du_high_config.h: dl_ul_period_slots = 10 → 5 ms). Testte kabul edildi.",
+      "source_range": "'Ortak değerler'!A12:E12"
+    },
+    "tdd_dl_slot": {
+      "deger": 6,
+      "birim": "slot",
+      "durum": "DENENDİ",
+      "not": "OCUDU varsayılanı (nof_dl_slots = 6). Testte DL ok 1200/s, UL ok 600/s göründü (2000 slot/s içinde).",
+      "source_range": "'Ortak değerler'!A13:E13"
+    },
+    "tdd_mixed_dl_sembol": {
+      "deger": 8,
+      "birim": "sembol",
+      "durum": "KAYNAK",
+      "not": "OCUDU varsayılanı (nof_dl_symbols = 8). Model kaybı karışık slotu saymaz.",
+      "source_range": "'Ortak değerler'!A14:E14"
+    },
+    "tdd_ul_slot": {
+      "deger": 3,
+      "birim": "slot",
+      "durum": "KAYNAK",
+      "not": "OCUDU varsayılanı (nof_ul_slots = 3).",
+      "source_range": "'Ortak değerler'!A15:E15"
+    },
+    "pdsch_bw_prb_on_deger": {
+      "deger": 48,
+      "birim": "PRB",
+      "durum": "ÖN DEĞER (Fatih doğrulayacak)",
+      "not": "40 MHz koşusunda 9566 kez [0..48); 100 MHz koşusunda 8185 kez [0..48) (ocudu_veri_genislik.sh, tek koşu). Ama 100 MHz koşusunda veri akışı yoktu (DL/UL = 0), bu yüzden kesin değil. Eski testteki 96 geçerli değil.",
+      "source_range": "'Ortak değerler'!A16:E16"
+    }
+  },
+  "kaynak_notlari": {
+    "'PRS konfigürasyonları'!A14": "Kural (TS 38.211 §7.4.1.7, OCUDU prs.cpp / prs_constants.h): comb {2,4,6,12}; sembol {2,4,6,12}; sembol >= comb ve comb'un katı olmalı. Periyot (30 kHz, slot) = 2 × {4,5,8,10,16,20,32,40,64,80,...}. PRS genişliği 24..272 PRB, 4'ün katı. Hücre 273 PRB, PRS en çok 272.",
+    "'PRS konfigürasyonları'!A15": "PRS aralığı sütunu 'Slot süresi' hücresini (B10) kullanır. Model kaybı hücresi 'Veri genişliği' (B16) ve TDD hücrelerini kullanır; hücreler 'ÖLÇÜLECEK' yazarsa #DEĞER! görünür.",
+    "'PRS konfigürasyonları'!A16": "Ofset kabulü: eski testte (FDD, band 3, 15 kHz) ofset 0, 2, 10 kabul; 1, 5, 7 NZP-CSI-RS ile çakışıp ret. n78 TDD 30 kHz'te yeniden denenecek.",
+    "'PRS konfigürasyonları'!A17": "PRS slotu TDD'de DL slotuna düşmeli (slot_ofset 1 = periyodun 1. slotu; DL slotlar 0-5). Aksi halde OCUDU reddedebilir; sonucu yazın."
+  },
+  "eksikler": [
+    "K11 kullanıcının dosyasında yok; PDF ile uyumlu güncel repo koşulu ayrı provenansla eklendi.",
+    "rep ve gap XLSX içinde açıkça tanımlı değil; resmî kart ve betik varsayılanı 1/1 kullanıldı.",
+    "PDSCH 48 PRB kaynakta ön değer; 100 MHz veri akışıyla doğrulanması bekleniyor."
+  ],
+  "karsilastirma": {
+    "dosya": {
+      "path": "C:\\Users\\fatih\\OneDrive\\Desktop\\Data Com\\4. Görev Kartı Belgeleri\\Kaynaklar\\Proje\\ogretici\\veri\\ortak_degerler.xlsx",
+      "bytes": 16388,
+      "sha256": "8f96f81549bc964332c17737bb9ea2cbbc2dab297e8fafe47e491e92208ab242"
+    },
+    "K0_K10_parametreleri_A_G_ayni": true,
+    "karsilastirma_dosyasinda_ek_K11": {
+      "etiket": "K11",
+      "periyot_slot": 10,
+      "sembol": 6,
+      "comb": 6,
+      "bw_prb": 48,
+      "sembol_ofset": 2,
+      "slot_ofset": 1,
+      "aciklama": "Comb 6, 6 sembol",
+      "prs_araligi_ms": null,
+      "model_kaybi_oran": null,
+      "durum": "ÖNERİ: her satır bir parametreyi değiştirir. Kayıp modeli TDD için ölçümle doğrulanmadı."
+    },
+    "ek_K11_araligi": "'PRS konfigürasyonları'!A13:K13",
+    "karar": "K0-K10 için kullanıcının sağladığı 22505 bayt kaynak korundu. PDF kapsamındaki K11 güncel repo 4c31d938 dosyasından ayrı provenansla eklendi.",
+    "diger_farklar": [
+      "Yetkili kaynakta PRS, Sionna ve ns-3 formül sonuçları önbellekte mevcut; alternatifte çoğu boş.",
+      "Yetkili kaynakta ns-3 sayısal sütunları paylaşılan formüller içerir; alternatifte tekil formüller var.",
+      "Sionna!C7 yetkili kaynakta K1..K10; alternatifte K1..K11.",
+      "Sonuç şablonu!A13 yetkili kaynakta boş; alternatifte K11."
+    ]
+  }
+}

@@ -1,0 +1,393 @@
+{
+  "method": "Read-only full archived debug logs, after gNB measurements finished; count actual PHY PDU ranges and scheduler trace fields.",
+  "pdsch_width": {
+    "dominant_range": "[0..48)",
+    "counts": {
+      "[0..2)": 1,
+      "[0..42)": 1,
+      "[0..48)": 30465,
+      "[0..17)": 2786,
+      "[10..48)": 174
+    },
+    "baseline_tbs_3969_observed": true,
+    "non_interleaved_only": true
+  },
+  "models": {
+    "v2_oncesi_K1": {
+      "tag": "v2_oncesi_K1",
+      "pdsch_phy_pdu_ranges": {
+        "[0..2)": 1,
+        "[0..42)": 1,
+        "[0..48)": 25421,
+        "[0..17)": 2824
+      },
+      "full48_tbs_bytes": {
+        "269": 3,
+        "3969": 21185,
+        "3649": 4233
+      },
+      "vrb_to_prb_mapping_counts": {
+        "0": 28247
+      },
+      "non_interleaved_only": true,
+      "nrtx_counts": {
+        "0": 28242,
+        "1": 5
+      },
+      "no_retx_verified": false,
+      "full48_prs_excluded_re_counts": {},
+      "nonzero_retx_examples": [
+        {
+          "line": 1858949,
+          "text": "- UE PDSCH: ue=0 c-rnti=0x44 h_id=1 rb=[0..48) symb=[1..14) cw[0]: tbs=3969 mcs=28 rv=2 nrtx=1 k1=5"
+        },
+        {
+          "line": 1858960,
+          "text": "- UE PDSCH: ue=0 c-rnti=0x44 h_id=4 rb=[0..48) symb=[1..14) cw[0]: tbs=3969 mcs=28 rv=2 nrtx=1 k1=4"
+        },
+        {
+          "line": 1858996,
+          "text": "- UE PDSCH: ue=0 c-rnti=0x44 h_id=2 rb=[0..48) symb=[1..14) cw[0]: tbs=3969 mcs=28 rv=2 nrtx=1 k1=4"
+        }
+      ]
+    },
+    "v2_sonrasi_K1": {
+      "tag": "v2_sonrasi_K1",
+      "pdsch_phy_pdu_ranges": {
+        "[0..2)": 1,
+        "[0..42)": 1,
+        "[0..48)": 30486,
+        "[0..17)": 2790,
+        "[10..48)": 174
+      },
+      "full48_tbs_bytes": {
+        "269": 11,
+        "253": 3,
+        "225": 3,
+        "3969": 20899,
+        "3713": 5397,
+        "3649": 4173
+      },
+      "vrb_to_prb_mapping_counts": {
+        "0": 33452
+      },
+      "non_interleaved_only": true,
+      "nrtx_counts": {
+        "0": 33405,
+        "1": 14,
+        "2": 14,
+        "3": 11,
+        "4": 8
+      },
+      "no_retx_verified": false,
+      "full48_prs_excluded_re_counts": {
+        "432": 5393
+      },
+      "nonzero_retx_examples": [
+        {
+          "line": 3205408,
+          "text": "- UE PDSCH: ue=0 c-rnti=0x44 h_id=2 rb=[0..48) symb=[1..14) cw[0]: tbs=3969 mcs=28 rv=2 nrtx=1 k1=6"
+        },
+        {
+          "line": 3205424,
+          "text": "- UE PDSCH: ue=0 c-rnti=0x44 h_id=0 rb=[0..48) symb=[1..14) cw[0]: tbs=3713 mcs=28 rv=2 nrtx=1 k1=5"
+        },
+        {
+          "line": 3205440,
+          "text": "- UE PDSCH: ue=0 c-rnti=0x44 h_id=6 rb=[0..48) symb=[1..14) cw[0]: tbs=3969 mcs=28 rv=2 nrtx=1 k1=4"
+        }
+      ],
+      "expected_data_re": 432,
+      "expected_prs_slot_tbs_bytes": 3713,
+      "re_trace_matches": true,
+      "expected_tbs_observed": true
+    },
+    "v2_oncesi_K6": {
+      "tag": "v2_oncesi_K6",
+      "pdsch_phy_pdu_ranges": {
+        "[0..43)": 1,
+        "[0..48)": 25300,
+        "[0..17)": 2811
+      },
+      "full48_tbs_bytes": {
+        "3969": 21085,
+        "3649": 4215
+      },
+      "vrb_to_prb_mapping_counts": {
+        "0": 28112
+      },
+      "non_interleaved_only": true,
+      "nrtx_counts": {
+        "0": 28112
+      },
+      "no_retx_verified": true,
+      "full48_prs_excluded_re_counts": {},
+      "nonzero_retx_examples": []
+    },
+    "v2_sonrasi_K6": {
+      "tag": "v2_sonrasi_K6",
+      "pdsch_phy_pdu_ranges": {
+        "[0..2)": 1,
+        "[0..42)": 1,
+        "[0..48)": 30378,
+        "[0..17)": 2778,
+        "[10..48)": 174
+      },
+      "full48_tbs_bytes": {
+        "3969": 20831,
+        "3072": 5381,
+        "3649": 4166
+      },
+      "vrb_to_prb_mapping_counts": {
+        "0": 33332
+      },
+      "non_interleaved_only": true,
+      "nrtx_counts": {
+        "0": 33332
+      },
+      "no_retx_verified": true,
+      "full48_prs_excluded_re_counts": {
+        "1296": 5381
+      },
+      "nonzero_retx_examples": [],
+      "expected_data_re": 1296,
+      "expected_prs_slot_tbs_bytes": 3072,
+      "re_trace_matches": true,
+      "expected_tbs_observed": true
+    },
+    "v2_oncesi_K7": {
+      "tag": "v2_oncesi_K7",
+      "pdsch_phy_pdu_ranges": {
+        "[0..2)": 1,
+        "[0..42)": 1,
+        "[0..48)": 24840,
+        "[0..17)": 2760
+      },
+      "full48_tbs_bytes": {
+        "269": 3,
+        "3969": 20697,
+        "3649": 4140
+      },
+      "vrb_to_prb_mapping_counts": {
+        "0": 27602
+      },
+      "non_interleaved_only": true,
+      "nrtx_counts": {
+        "0": 27602
+      },
+      "no_retx_verified": true,
+      "full48_prs_excluded_re_counts": {},
+      "nonzero_retx_examples": []
+    },
+    "v2_sonrasi_K7": {
+      "tag": "v2_sonrasi_K7",
+      "pdsch_phy_pdu_ranges": {
+        "[0..2)": 1,
+        "[0..42)": 1,
+        "[0..48)": 30451,
+        "[0..17)": 2784,
+        "[10..48)": 174
+      },
+      "full48_tbs_bytes": {
+        "269": 3,
+        "233": 1,
+        "3969": 20881,
+        "3393": 5393,
+        "3649": 4173
+      },
+      "vrb_to_prb_mapping_counts": {
+        "0": 33411
+      },
+      "non_interleaved_only": true,
+      "nrtx_counts": {
+        "0": 33405,
+        "1": 6
+      },
+      "no_retx_verified": false,
+      "full48_prs_excluded_re_counts": {
+        "864": 5393
+      },
+      "nonzero_retx_examples": [
+        {
+          "line": 562456,
+          "text": "- UE PDSCH: ue=0 c-rnti=0x44 h_id=2 rb=[0..48) symb=[1..14) cw[0]: tbs=3969 mcs=28 rv=2 nrtx=1 k1=6"
+        },
+        {
+          "line": 562465,
+          "text": "- UE PDSCH: ue=0 c-rnti=0x44 h_id=1 rb=[0..48) symb=[1..14) cw[0]: tbs=3393 mcs=28 rv=2 nrtx=1 k1=5"
+        },
+        {
+          "line": 562476,
+          "text": "- UE PDSCH: ue=0 c-rnti=0x44 h_id=9 rb=[0..48) symb=[1..14) cw[0]: tbs=3969 mcs=28 rv=2 nrtx=1 k1=4"
+        }
+      ],
+      "expected_data_re": 864,
+      "expected_prs_slot_tbs_bytes": 3393,
+      "re_trace_matches": true,
+      "expected_tbs_observed": true
+    },
+    "v2_oncesi_K8": {
+      "tag": "v2_oncesi_K8",
+      "pdsch_phy_pdu_ranges": {
+        "[47..48)": 1,
+        "[0..42)": 1,
+        "[0..48)": 25129,
+        "[0..17)": 2793
+      },
+      "full48_tbs_bytes": {
+        "269": 6,
+        "225": 3,
+        "3969": 20937,
+        "3649": 4183
+      },
+      "vrb_to_prb_mapping_counts": {
+        "0": 27924
+      },
+      "non_interleaved_only": true,
+      "nrtx_counts": {
+        "0": 27916,
+        "1": 8
+      },
+      "no_retx_verified": false,
+      "full48_prs_excluded_re_counts": {},
+      "nonzero_retx_examples": [
+        {
+          "line": 1428329,
+          "text": "- UE PDSCH: ue=0 c-rnti=0x44 h_id=3 rb=[0..17) symb=[1..14) cw[0]: tbs=1409 mcs=28 rv=2 nrtx=1 k1=7"
+        },
+        {
+          "line": 1428397,
+          "text": "- UE PDSCH: ue=0 c-rnti=0x44 h_id=4 rb=[0..48) symb=[1..14) cw[0]: tbs=3969 mcs=28 rv=2 nrtx=1 k1=5"
+        },
+        {
+          "line": 1428510,
+          "text": "- UE PDSCH: ue=0 c-rnti=0x44 h_id=0 rb=[0..48) symb=[1..14) cw[0]: tbs=3969 mcs=28 rv=2 nrtx=1 k1=4"
+        }
+      ]
+    },
+    "v2_sonrasi_K8": {
+      "tag": "v2_sonrasi_K8",
+      "pdsch_phy_pdu_ranges": {
+        "[0..2)": 1,
+        "[0..42)": 1,
+        "[0..48)": 30197,
+        "[0..17)": 2761,
+        "[10..48)": 172
+      },
+      "full48_tbs_bytes": {
+        "269": 11,
+        "253": 3,
+        "225": 3,
+        "3969": 20696,
+        "3713": 5347,
+        "3649": 4137
+      },
+      "vrb_to_prb_mapping_counts": {
+        "0": 33132
+      },
+      "non_interleaved_only": true,
+      "nrtx_counts": {
+        "0": 33132
+      },
+      "no_retx_verified": true,
+      "full48_prs_excluded_re_counts": {
+        "432": 5350
+      },
+      "nonzero_retx_examples": [],
+      "expected_data_re": 432,
+      "expected_prs_slot_tbs_bytes": 3713,
+      "re_trace_matches": true,
+      "expected_tbs_observed": true
+    },
+    "v2_oncesi_K11": {
+      "tag": "v2_oncesi_K11",
+      "pdsch_phy_pdu_ranges": {
+        "[47..48)": 1,
+        "[0..42)": 1,
+        "[0..48)": 25117,
+        "[0..17)": 2791
+      },
+      "full48_tbs_bytes": {
+        "269": 3,
+        "3969": 20932,
+        "3649": 4182
+      },
+      "vrb_to_prb_mapping_counts": {
+        "0": 27910
+      },
+      "non_interleaved_only": true,
+      "nrtx_counts": {
+        "0": 27905,
+        "1": 5
+      },
+      "no_retx_verified": false,
+      "full48_prs_excluded_re_counts": {},
+      "nonzero_retx_examples": [
+        {
+          "line": 295007,
+          "text": "- UE PDSCH: ue=0 c-rnti=0x44 h_id=2 rb=[0..48) symb=[1..14) cw[0]: tbs=3969 mcs=28 rv=2 nrtx=1 k1=5"
+        },
+        {
+          "line": 295018,
+          "text": "- UE PDSCH: ue=0 c-rnti=0x44 h_id=1 rb=[0..48) symb=[1..14) cw[0]: tbs=3969 mcs=28 rv=2 nrtx=1 k1=4"
+        },
+        {
+          "line": 295031,
+          "text": "- UE PDSCH: ue=0 c-rnti=0x44 h_id=7 rb=[0..48) symb=[1..14) cw[0]: tbs=3969 mcs=28 rv=2 nrtx=1 k1=4"
+        }
+      ]
+    },
+    "v2_sonrasi_K11": {
+      "tag": "v2_sonrasi_K11",
+      "pdsch_phy_pdu_ranges": {
+        "[0..2)": 1,
+        "[0..42)": 1,
+        "[0..48)": 30160,
+        "[0..17)": 2759,
+        "[10..48)": 172
+      },
+      "full48_tbs_bytes": {
+        "269": 11,
+        "253": 3,
+        "225": 3,
+        "3969": 20672,
+        "3713": 5337,
+        "3649": 4134
+      },
+      "vrb_to_prb_mapping_counts": {
+        "0": 33093
+      },
+      "non_interleaved_only": true,
+      "nrtx_counts": {
+        "0": 33081,
+        "1": 6,
+        "2": 4,
+        "3": 2
+      },
+      "no_retx_verified": false,
+      "full48_prs_excluded_re_counts": {
+        "384": 5340
+      },
+      "nonzero_retx_examples": [
+        {
+          "line": 2750122,
+          "text": "- UE PDSCH: ue=0 c-rnti=0x44 h_id=4 rb=[0..48) symb=[1..14) cw[0]: tbs=3969 mcs=28 rv=2 nrtx=1 k1=6"
+        },
+        {
+          "line": 2750138,
+          "text": "- UE PDSCH: ue=0 c-rnti=0x44 h_id=6 rb=[0..48) symb=[1..14) cw[0]: tbs=3969 mcs=28 rv=2 nrtx=1 k1=5"
+        },
+        {
+          "line": 2750265,
+          "text": "- UE PDSCH: ue=0 c-rnti=0x44 h_id=1 rb=[0..17) symb=[1..14) cw[0]: tbs=1409 mcs=28 rv=2 nrtx=1 k1=7"
+        }
+      ],
+      "expected_data_re": 384,
+      "expected_prs_slot_tbs_bytes": 3713,
+      "re_trace_matches": true,
+      "expected_tbs_observed": true
+    }
+  },
+  "all_expected_re_tbs_observed": true,
+  "all_selected_repeats_no_retx": false
+}

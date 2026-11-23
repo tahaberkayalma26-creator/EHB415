@@ -1,0 +1,16 @@
+2026-11-20T14:06:49.212592 [GNB     ] [W] Could not check scaling governor. filename=/sys/devices/system/cpu/cpu0/cpufreq/scaling_governor error=No such file or directory
+2026-11-20T14:06:49.212617 [GNB     ] [W] Could not check DRM KMS polling. filename=/sys/module/drm_kms_helper/parameters/poll error=No such file or directory
+2026-11-20T14:07:08.684601 [FAPI    ] [W] [  244.14] Sector#0: Real-time failure in FAPI: Received late DL_TTI.request from slot 244.4
+2026-11-20T14:07:08.684603 [FAPI    ] [W] [  244.14] Sector#0: Real-time failure in FAPI: Received UL_DCI.request message from slot 244.4
+2026-11-20T14:07:08.684604 [FAPI    ] [W] [  244.14] Sector#0: Real-time failure in FAPI: Received TX_Data.request from slot 244.4
+2026-11-20T14:07:08.684615 [FAPI    ] [W] [  244.14] Sector#0: Real-time failure in FAPI: Received late DL_TTI.request from slot 244.5
+2026-11-20T14:07:08.684615 [FAPI    ] [W] [  244.14] Sector#0: Real-time failure in FAPI: Received UL_DCI.request message from slot 244.5
+2026-11-20T14:07:08.684616 [FAPI    ] [W] [  244.14] Sector#0: Real-time failure in FAPI: Received TX_Data.request from slot 244.5
+2026-11-20T14:07:08.684621 [FAPI    ] [W] [  244.14] Sector#0: Real-time failure in FAPI: Received late DL_TTI.request from slot 244.6
+2026-11-20T14:07:08.684624 [FAPI    ] [W] [  244.14] Sector#0: Real-time failure in FAPI: Received late UL_TTI.request from slot 244.7
+2026-11-20T14:07:08.684628 [FAPI    ] [W] [  244.14] Sector#0: Real-time failure in FAPI: Received late UL_TTI.request from slot 244.8
+2026-11-20T14:07:08.686085 [PHY     ] [W] [   244.9] Discarded uplink slot. Ignoring processing.
+2026-11-20T14:07:08.686097 [RU      ] [W] Real-time failure in RU: received late UL request from slot 244.9 in sector 0.
+2026-11-20T14:07:08.686536 [SCHED   ] [W] [  244.18] rnti=0x44 h_id=3: Discarding CRC. Cause: UL HARQ process is not expecting CRC for PUSCH slot 244.9
+2026-11-20T14:07:08.686537 [SCHED   ] [W] [  244.18] rnti=0x44: Discarding UCI indication PDU. Cause: Respective UCI grant was not found (UCI slot=244.9)
+2026-11-20T14:07:08.688538 [RU      ] [W] Real-time failure in RU: detected late DL request from slot 244.10 in sector 0.

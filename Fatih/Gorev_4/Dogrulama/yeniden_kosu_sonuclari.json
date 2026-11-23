@@ -1,0 +1,915 @@
+{
+  "completed": 23,
+  "total": 23,
+  "results": [
+    {
+      "old_tag": "ref100_1",
+      "new_tag": "v2_ref100_1",
+      "measurement_valid": true,
+      "exit": 0,
+      "metric_rows": 22,
+      "used_rows": 20,
+      "old_values": {
+        "dl_mbps_mean": 36.0,
+        "ul_mbps_mean": 119.0,
+        "dl_ok_mean": 1200,
+        "ul_ok_mean": 600,
+        "dl_nok_mean": 0,
+        "ul_nok_mean": 0
+      },
+      "new_values": {
+        "dl_mbps_mean": 36.0,
+        "ul_mbps_mean": 119.0,
+        "dl_ok_mean": 1200,
+        "ul_ok_mean": 600,
+        "dl_nok_mean": 0,
+        "ul_nok_mean": 0
+      },
+      "delta": {
+        "dl_mbps_mean": 0.0,
+        "ul_mbps_mean": 0.0,
+        "dl_ok_mean": 0,
+        "ul_ok_mean": 0,
+        "dl_nok_mean": 0,
+        "ul_nok_mean": 0
+      },
+      "console_values_identical": true,
+      "log_counts": {
+        "warning_lines": 2,
+        "sib1_lines": 2,
+        "late_lines": 1
+      },
+      "accepted": true
+    },
+    {
+      "old_tag": "ref100_2",
+      "new_tag": "v2_ref100_2",
+      "measurement_valid": true,
+      "exit": 0,
+      "metric_rows": 22,
+      "used_rows": 20,
+      "old_values": {
+        "dl_mbps_mean": 36.0,
+        "ul_mbps_mean": 119.0,
+        "dl_ok_mean": 1200,
+        "ul_ok_mean": 600,
+        "dl_nok_mean": 0,
+        "ul_nok_mean": 0
+      },
+      "new_values": {
+        "dl_mbps_mean": 36.0,
+        "ul_mbps_mean": 119.0,
+        "dl_ok_mean": 1200,
+        "ul_ok_mean": 600,
+        "dl_nok_mean": 0,
+        "ul_nok_mean": 0
+      },
+      "delta": {
+        "dl_mbps_mean": 0.0,
+        "ul_mbps_mean": 0.0,
+        "dl_ok_mean": 0,
+        "ul_ok_mean": 0,
+        "dl_nok_mean": 0,
+        "ul_nok_mean": 0
+      },
+      "console_values_identical": true,
+      "log_counts": {
+        "warning_lines": 6,
+        "late_lines": 3
+      },
+      "accepted": true
+    },
+    {
+      "old_tag": "ref100_3",
+      "new_tag": "v2_ref100_3",
+      "measurement_valid": true,
+      "exit": 0,
+      "metric_rows": 22,
+      "used_rows": 20,
+      "old_values": {
+        "dl_mbps_mean": 36.0,
+        "ul_mbps_mean": 119.0,
+        "dl_ok_mean": 1200,
+        "ul_ok_mean": 600,
+        "dl_nok_mean": 0,
+        "ul_nok_mean": 0
+      },
+      "new_values": {
+        "dl_mbps_mean": 35.95,
+        "ul_mbps_mean": 119.0,
+        "dl_ok_mean": 1199.7,
+        "ul_ok_mean": 599.85,
+        "dl_nok_mean": 0.3,
+        "ul_nok_mean": 0
+      },
+      "delta": {
+        "dl_mbps_mean": -0.05,
+        "ul_mbps_mean": 0.0,
+        "dl_ok_mean": -0.3,
+        "ul_ok_mean": -0.15,
+        "dl_nok_mean": 0.3,
+        "ul_nok_mean": 0
+      },
+      "console_values_identical": false,
+      "log_counts": {
+        "warning_lines": 16,
+        "late_lines": 7
+      },
+      "accepted": true
+    },
+    {
+      "old_tag": "duzeltilmis40",
+      "new_tag": "v2_duzeltilmis40",
+      "measurement_valid": true,
+      "exit": 0,
+      "metric_rows": 22,
+      "used_rows": 20,
+      "old_values": {
+        "dl_mbps_mean": 36.0,
+        "ul_mbps_mean": 44.9,
+        "dl_ok_mean": 1200,
+        "ul_ok_mean": 600,
+        "dl_nok_mean": 0,
+        "ul_nok_mean": 0
+      },
+      "new_values": {
+        "dl_mbps_mean": 35.85,
+        "ul_mbps_mean": 44.745,
+        "dl_ok_mean": 1195.8,
+        "ul_ok_mean": 597.9,
+        "dl_nok_mean": 4.2,
+        "ul_nok_mean": 0
+      },
+      "delta": {
+        "dl_mbps_mean": -0.15,
+        "ul_mbps_mean": -0.155,
+        "dl_ok_mean": -4.2,
+        "ul_ok_mean": -2.1,
+        "dl_nok_mean": 4.2,
+        "ul_nok_mean": 0
+      },
+      "console_values_identical": false,
+      "log_counts": {
+        "warning_lines": 293,
+        "late_lines": 153
+      },
+      "accepted": true
+    },
+    {
+      "old_tag": "duzeltilmis60",
+      "new_tag": "v2_duzeltilmis60",
+      "measurement_valid": true,
+      "exit": 0,
+      "metric_rows": 22,
+      "used_rows": 20,
+      "old_values": {
+        "dl_mbps_mean": 36.0,
+        "ul_mbps_mean": 69.5,
+        "dl_ok_mean": 1200,
+        "ul_ok_mean": 600,
+        "dl_nok_mean": 0,
+        "ul_nok_mean": 0
+      },
+      "new_values": {
+        "dl_mbps_mean": 36.0,
+        "ul_mbps_mean": 69.5,
+        "dl_ok_mean": 1200,
+        "ul_ok_mean": 600,
+        "dl_nok_mean": 0,
+        "ul_nok_mean": 0
+      },
+      "delta": {
+        "dl_mbps_mean": 0.0,
+        "ul_mbps_mean": 0.0,
+        "dl_ok_mean": 0,
+        "ul_ok_mean": 0,
+        "dl_nok_mean": 0,
+        "ul_nok_mean": 0
+      },
+      "console_values_identical": true,
+      "log_counts": {
+        "warning_lines": 2
+      },
+      "accepted": true
+    },
+    {
+      "old_tag": "duzeltilmis80",
+      "new_tag": "v2_duzeltilmis80",
+      "measurement_valid": true,
+      "exit": 0,
+      "metric_rows": 23,
+      "used_rows": 21,
+      "old_values": {
+        "dl_mbps_mean": 36.0,
+        "ul_mbps_mean": 94.6,
+        "dl_ok_mean": 1200,
+        "ul_ok_mean": 600,
+        "dl_nok_mean": 0,
+        "ul_nok_mean": 0
+      },
+      "new_values": {
+        "dl_mbps_mean": 36.0,
+        "ul_mbps_mean": 94.6,
+        "dl_ok_mean": 1200,
+        "ul_ok_mean": 600,
+        "dl_nok_mean": 0,
+        "ul_nok_mean": 0
+      },
+      "delta": {
+        "dl_mbps_mean": 0.0,
+        "ul_mbps_mean": 0.0,
+        "dl_ok_mean": 0,
+        "ul_ok_mean": 0,
+        "dl_nok_mean": 0,
+        "ul_nok_mean": 0
+      },
+      "console_values_identical": true,
+      "log_counts": {
+        "warning_lines": 2
+      },
+      "accepted": true
+    },
+    {
+      "old_tag": "duzeltilmis100",
+      "new_tag": "v2_duzeltilmis100",
+      "measurement_valid": true,
+      "exit": 0,
+      "metric_rows": 22,
+      "used_rows": 20,
+      "old_values": {
+        "dl_mbps_mean": 36.0,
+        "ul_mbps_mean": 119.0,
+        "dl_ok_mean": 1200,
+        "ul_ok_mean": 600,
+        "dl_nok_mean": 0,
+        "ul_nok_mean": 0
+      },
+      "new_values": {
+        "dl_mbps_mean": 36.0,
+        "ul_mbps_mean": 119.0,
+        "dl_ok_mean": 1200,
+        "ul_ok_mean": 600,
+        "dl_nok_mean": 0,
+        "ul_nok_mean": 0
+      },
+      "delta": {
+        "dl_mbps_mean": 0.0,
+        "ul_mbps_mean": 0.0,
+        "dl_ok_mean": 0,
+        "ul_ok_mean": 0,
+        "dl_nok_mean": 0,
+        "ul_nok_mean": 0
+      },
+      "console_values_identical": true,
+      "log_counts": {
+        "warning_lines": 2
+      },
+      "accepted": true
+    },
+    {
+      "old_tag": "oncesi_K1",
+      "new_tag": "v2_oncesi_K1",
+      "measurement_valid": true,
+      "exit": 0,
+      "metric_rows": 22,
+      "used_rows": 20,
+      "old_values": {
+        "dl_mbps_mean": 29.0,
+        "ul_mbps_mean": 119.0,
+        "dl_ok_mean": 1000,
+        "ul_ok_mean": 600,
+        "dl_nok_mean": 0,
+        "ul_nok_mean": 0
+      },
+      "new_values": {
+        "dl_mbps_mean": 29.0,
+        "ul_mbps_mean": 119.0,
+        "dl_ok_mean": 999.75,
+        "ul_ok_mean": 599.85,
+        "dl_nok_mean": 0.25,
+        "ul_nok_mean": 0
+      },
+      "delta": {
+        "dl_mbps_mean": 0.0,
+        "ul_mbps_mean": 0.0,
+        "dl_ok_mean": -0.25,
+        "ul_ok_mean": -0.15,
+        "dl_nok_mean": 0.25,
+        "ul_nok_mean": 0
+      },
+      "console_values_identical": false,
+      "log_counts": {
+        "late_lines": 13,
+        "warning_lines": 11,
+        "sib1_lines": 1595,
+        "error_lines": 1593
+      },
+      "accepted": true
+    },
+    {
+      "old_tag": "oncesi_K2",
+      "new_tag": "v2_oncesi_K2",
+      "measurement_valid": true,
+      "exit": 0,
+      "metric_rows": 23,
+      "used_rows": 21,
+      "old_values": {
+        "dl_mbps_mean": 32.0,
+        "ul_mbps_mean": 119.0,
+        "dl_ok_mean": 1100,
+        "ul_ok_mean": 600,
+        "dl_nok_mean": 0,
+        "ul_nok_mean": 0
+      },
+      "new_values": {
+        "dl_mbps_mean": 32.0,
+        "ul_mbps_mean": 119.0,
+        "dl_ok_mean": 1100,
+        "ul_ok_mean": 600,
+        "dl_nok_mean": 0,
+        "ul_nok_mean": 0
+      },
+      "delta": {
+        "dl_mbps_mean": 0.0,
+        "ul_mbps_mean": 0.0,
+        "dl_ok_mean": 0,
+        "ul_ok_mean": 0,
+        "dl_nok_mean": 0,
+        "ul_nok_mean": 0
+      },
+      "console_values_identical": true,
+      "log_counts": {
+        "warning_lines": 2,
+        "error_lines": 1584,
+        "sib1_lines": 1584
+      },
+      "accepted": true
+    },
+    {
+      "old_tag": "oncesi_K3",
+      "new_tag": "v2_oncesi_K3",
+      "measurement_valid": true,
+      "exit": 0,
+      "metric_rows": 22,
+      "used_rows": 20,
+      "old_values": {
+        "dl_mbps_mean": 34.0,
+        "ul_mbps_mean": 119.0,
+        "dl_ok_mean": 1150,
+        "ul_ok_mean": 600,
+        "dl_nok_mean": 0,
+        "ul_nok_mean": 0
+      },
+      "new_values": {
+        "dl_mbps_mean": 33.95,
+        "ul_mbps_mean": 118.8,
+        "dl_ok_mean": 1147.9,
+        "ul_ok_mean": 598.9,
+        "dl_nok_mean": 2.1,
+        "ul_nok_mean": 0
+      },
+      "delta": {
+        "dl_mbps_mean": -0.05,
+        "ul_mbps_mean": -0.2,
+        "dl_ok_mean": -2.1,
+        "ul_ok_mean": -1.1,
+        "dl_nok_mean": 2.1,
+        "ul_nok_mean": 0
+      },
+      "console_values_identical": false,
+      "log_counts": {
+        "warning_lines": 5918,
+        "error_lines": 1566,
+        "sib1_lines": 1566,
+        "dummy_backward_clock_events": 5774,
+        "late_lines": 74
+      },
+      "accepted": true
+    },
+    {
+      "old_tag": "oncesi_K4",
+      "new_tag": "v2_oncesi_K4",
+      "measurement_valid": true,
+      "exit": 0,
+      "metric_rows": 22,
+      "used_rows": 20,
+      "old_values": {
+        "dl_mbps_mean": 29.0,
+        "ul_mbps_mean": 119.0,
+        "dl_ok_mean": 1000,
+        "ul_ok_mean": 600,
+        "dl_nok_mean": 0,
+        "ul_nok_mean": 0
+      },
+      "new_values": {
+        "dl_mbps_mean": 29.0,
+        "ul_mbps_mean": 119.0,
+        "dl_ok_mean": 1000,
+        "ul_ok_mean": 600,
+        "dl_nok_mean": 0,
+        "ul_nok_mean": 0
+      },
+      "delta": {
+        "dl_mbps_mean": 0.0,
+        "ul_mbps_mean": 0.0,
+        "dl_ok_mean": 0,
+        "ul_ok_mean": 0,
+        "dl_nok_mean": 0,
+        "ul_nok_mean": 0
+      },
+      "console_values_identical": true,
+      "log_counts": {
+        "warning_lines": 5863,
+        "error_lines": 1566,
+        "sib1_lines": 1566,
+        "dummy_backward_clock_events": 5861
+      },
+      "accepted": true
+    },
+    {
+      "old_tag": "oncesi_K5",
+      "new_tag": "v2_oncesi_K5",
+      "measurement_valid": true,
+      "exit": 0,
+      "metric_rows": 22,
+      "used_rows": 20,
+      "old_values": {
+        "dl_mbps_mean": 32.0,
+        "ul_mbps_mean": 119.0,
+        "dl_ok_mean": 1200,
+        "ul_ok_mean": 600,
+        "dl_nok_mean": 0,
+        "ul_nok_mean": 0
+      },
+      "new_values": {
+        "dl_mbps_mean": 32.0,
+        "ul_mbps_mean": 119.0,
+        "dl_ok_mean": 1200,
+        "ul_ok_mean": 600,
+        "dl_nok_mean": 0,
+        "ul_nok_mean": 0
+      },
+      "delta": {
+        "dl_mbps_mean": 0.0,
+        "ul_mbps_mean": 0.0,
+        "dl_ok_mean": 0,
+        "ul_ok_mean": 0,
+        "dl_nok_mean": 0,
+        "ul_nok_mean": 0
+      },
+      "console_values_identical": true,
+      "log_counts": {
+        "warning_lines": 5757,
+        "dummy_backward_clock_events": 5749,
+        "late_lines": 5
+      },
+      "accepted": true
+    },
+    {
+      "old_tag": "oncesi_K6",
+      "new_tag": "v2_oncesi_K6",
+      "measurement_valid": true,
+      "exit": 0,
+      "metric_rows": 22,
+      "used_rows": 20,
+      "old_values": {
+        "dl_mbps_mean": 29.0,
+        "ul_mbps_mean": 119.0,
+        "dl_ok_mean": 1000,
+        "ul_ok_mean": 600,
+        "dl_nok_mean": 0,
+        "ul_nok_mean": 0
+      },
+      "new_values": {
+        "dl_mbps_mean": 29.0,
+        "ul_mbps_mean": 119.0,
+        "dl_ok_mean": 1000,
+        "ul_ok_mean": 600,
+        "dl_nok_mean": 0,
+        "ul_nok_mean": 0
+      },
+      "delta": {
+        "dl_mbps_mean": 0.0,
+        "ul_mbps_mean": 0.0,
+        "dl_ok_mean": 0,
+        "ul_ok_mean": 0,
+        "dl_nok_mean": 0,
+        "ul_nok_mean": 0
+      },
+      "console_values_identical": true,
+      "log_counts": {
+        "late_lines": 7,
+        "warning_lines": 6173,
+        "sib1_lines": 1586,
+        "error_lines": 1584,
+        "dummy_backward_clock_events": 6166
+      },
+      "accepted": true
+    },
+    {
+      "old_tag": "oncesi_K7",
+      "new_tag": "v2_oncesi_K7",
+      "measurement_valid": true,
+      "exit": 0,
+      "metric_rows": 22,
+      "used_rows": 20,
+      "old_values": {
+        "dl_mbps_mean": 29.0,
+        "ul_mbps_mean": 119.0,
+        "dl_ok_mean": 1000,
+        "ul_ok_mean": 600,
+        "dl_nok_mean": 0,
+        "ul_nok_mean": 0
+      },
+      "new_values": {
+        "dl_mbps_mean": 29.0,
+        "ul_mbps_mean": 119.0,
+        "dl_ok_mean": 1000,
+        "ul_ok_mean": 600,
+        "dl_nok_mean": 0,
+        "ul_nok_mean": 0
+      },
+      "delta": {
+        "dl_mbps_mean": 0.0,
+        "ul_mbps_mean": 0.0,
+        "dl_ok_mean": 0,
+        "ul_ok_mean": 0,
+        "dl_nok_mean": 0,
+        "ul_nok_mean": 0
+      },
+      "console_values_identical": true,
+      "log_counts": {
+        "late_lines": 5,
+        "warning_lines": 5801,
+        "sib1_lines": 1550,
+        "error_lines": 1548,
+        "dummy_backward_clock_events": 5746
+      },
+      "accepted": true
+    },
+    {
+      "old_tag": "oncesi_K8",
+      "new_tag": "v2_oncesi_K8",
+      "measurement_valid": true,
+      "exit": 0,
+      "metric_rows": 21,
+      "used_rows": 19,
+      "old_values": {
+        "dl_mbps_mean": 29.0,
+        "ul_mbps_mean": 119.0,
+        "dl_ok_mean": 1000,
+        "ul_ok_mean": 600,
+        "dl_nok_mean": 0,
+        "ul_nok_mean": 0
+      },
+      "new_values": {
+        "dl_mbps_mean": 29.0,
+        "ul_mbps_mean": 119.0,
+        "dl_ok_mean": 999.578947,
+        "ul_ok_mean": 599.789474,
+        "dl_nok_mean": 0.421053,
+        "ul_nok_mean": 0
+      },
+      "delta": {
+        "dl_mbps_mean": 0.0,
+        "ul_mbps_mean": 0.0,
+        "dl_ok_mean": -0.421053,
+        "ul_ok_mean": -0.210526,
+        "dl_nok_mean": 0.421053,
+        "ul_nok_mean": 0
+      },
+      "console_values_identical": false,
+      "log_counts": {
+        "late_lines": 13,
+        "warning_lines": 5855,
+        "sib1_lines": 1577,
+        "error_lines": 1575,
+        "dummy_backward_clock_events": 5841
+      },
+      "accepted": true
+    },
+    {
+      "old_tag": "oncesi_K9",
+      "new_tag": "v2_oncesi_K9",
+      "measurement_valid": true,
+      "exit": 0,
+      "metric_rows": 22,
+      "used_rows": 20,
+      "old_values": {
+        "dl_mbps_mean": 29.0,
+        "ul_mbps_mean": 119.0,
+        "dl_ok_mean": 1000,
+        "ul_ok_mean": 600,
+        "dl_nok_mean": 0,
+        "ul_nok_mean": 0
+      },
+      "new_values": {
+        "dl_mbps_mean": 28.95,
+        "ul_mbps_mean": 118.75,
+        "dl_ok_mean": 997.75,
+        "ul_ok_mean": 598.55,
+        "dl_nok_mean": 2.25,
+        "ul_nok_mean": 0
+      },
+      "delta": {
+        "dl_mbps_mean": -0.05,
+        "ul_mbps_mean": -0.25,
+        "dl_ok_mean": -2.25,
+        "ul_ok_mean": -1.45,
+        "dl_nok_mean": 2.25,
+        "ul_nok_mean": 0
+      },
+      "console_values_identical": false,
+      "log_counts": {
+        "warning_lines": 5276,
+        "sib1_lines": 1577,
+        "late_lines": 100,
+        "error_lines": 1575,
+        "dummy_backward_clock_events": 5100
+      },
+      "accepted": true
+    },
+    {
+      "old_tag": "oncesi_K10",
+      "new_tag": "v2_oncesi_K10",
+      "measurement_valid": true,
+      "exit": 0,
+      "metric_rows": 22,
+      "used_rows": 20,
+      "old_values": {
+        "dl_mbps_mean": 29.0,
+        "ul_mbps_mean": 119.0,
+        "dl_ok_mean": 1000,
+        "ul_ok_mean": 600,
+        "dl_nok_mean": 0,
+        "ul_nok_mean": 0
+      },
+      "new_values": {
+        "dl_mbps_mean": 29.0,
+        "ul_mbps_mean": 119.0,
+        "dl_ok_mean": 999.85,
+        "ul_ok_mean": 599.95,
+        "dl_nok_mean": 0.15,
+        "ul_nok_mean": 0
+      },
+      "delta": {
+        "dl_mbps_mean": 0.0,
+        "ul_mbps_mean": 0.0,
+        "dl_ok_mean": -0.15,
+        "ul_ok_mean": -0.05,
+        "dl_nok_mean": 0.15,
+        "ul_nok_mean": 0
+      },
+      "console_values_identical": false,
+      "log_counts": {
+        "warning_lines": 5826,
+        "sib1_lines": 524,
+        "late_lines": 9,
+        "error_lines": 522,
+        "dummy_backward_clock_events": 5805
+      },
+      "accepted": true
+    },
+    {
+      "old_tag": "oncesi_K11",
+      "new_tag": "v2_oncesi_K11",
+      "measurement_valid": true,
+      "exit": 0,
+      "metric_rows": 22,
+      "used_rows": 20,
+      "old_values": {
+        "dl_mbps_mean": 29.0,
+        "ul_mbps_mean": 119.0,
+        "dl_ok_mean": 1000,
+        "ul_ok_mean": 600,
+        "dl_nok_mean": 0,
+        "ul_nok_mean": 0
+      },
+      "new_values": {
+        "dl_mbps_mean": 29.0,
+        "ul_mbps_mean": 119.0,
+        "dl_ok_mean": 1000,
+        "ul_ok_mean": 600,
+        "dl_nok_mean": 0,
+        "ul_nok_mean": 0
+      },
+      "delta": {
+        "dl_mbps_mean": 0.0,
+        "ul_mbps_mean": 0.0,
+        "dl_ok_mean": 0,
+        "ul_ok_mean": 0,
+        "dl_nok_mean": 0,
+        "ul_nok_mean": 0
+      },
+      "console_values_identical": true,
+      "log_counts": {
+        "late_lines": 17,
+        "warning_lines": 5586,
+        "sib1_lines": 1568,
+        "error_lines": 1566,
+        "dummy_backward_clock_events": 5558
+      },
+      "accepted": true
+    },
+    {
+      "old_tag": "sonrasi_K1",
+      "new_tag": "v2_sonrasi_K1",
+      "measurement_valid": true,
+      "exit": 0,
+      "metric_rows": 21,
+      "used_rows": 19,
+      "old_values": {
+        "dl_mbps_mean": 35.0,
+        "ul_mbps_mean": 119.0,
+        "dl_ok_mean": 1200,
+        "ul_ok_mean": 600,
+        "dl_nok_mean": 0,
+        "ul_nok_mean": 0
+      },
+      "new_values": {
+        "dl_mbps_mean": 34.947368,
+        "ul_mbps_mean": 118.736842,
+        "dl_ok_mean": 1197.157895,
+        "ul_ok_mean": 598.578947,
+        "dl_nok_mean": 2.842105,
+        "ul_nok_mean": 0
+      },
+      "delta": {
+        "dl_mbps_mean": -0.052632,
+        "ul_mbps_mean": -0.263158,
+        "dl_ok_mean": -2.842105,
+        "ul_ok_mean": -1.421053,
+        "dl_nok_mean": 2.842105,
+        "ul_nok_mean": 0
+      },
+      "console_values_identical": false,
+      "log_counts": {
+        "late_lines": 94,
+        "warning_lines": 5984,
+        "sib1_lines": 2,
+        "dummy_backward_clock_events": 5783
+      },
+      "accepted": true
+    },
+    {
+      "old_tag": "sonrasi_K6",
+      "new_tag": "v2_sonrasi_K6",
+      "measurement_valid": true,
+      "exit": 0,
+      "metric_rows": 22,
+      "used_rows": 20,
+      "old_values": {
+        "dl_mbps_mean": 34.0,
+        "ul_mbps_mean": 119.0,
+        "dl_ok_mean": 1200,
+        "ul_ok_mean": 600,
+        "dl_nok_mean": 0,
+        "ul_nok_mean": 0
+      },
+      "new_values": {
+        "dl_mbps_mean": 34.0,
+        "ul_mbps_mean": 119.0,
+        "dl_ok_mean": 1200,
+        "ul_ok_mean": 600,
+        "dl_nok_mean": 0,
+        "ul_nok_mean": 0
+      },
+      "delta": {
+        "dl_mbps_mean": 0.0,
+        "ul_mbps_mean": 0.0,
+        "dl_ok_mean": 0,
+        "ul_ok_mean": 0,
+        "dl_nok_mean": 0,
+        "ul_nok_mean": 0
+      },
+      "console_values_identical": true,
+      "log_counts": {
+        "late_lines": 5,
+        "warning_lines": 5869,
+        "sib1_lines": 2,
+        "dummy_backward_clock_events": 5867
+      },
+      "accepted": true
+    },
+    {
+      "old_tag": "sonrasi_K7",
+      "new_tag": "v2_sonrasi_K7",
+      "measurement_valid": true,
+      "exit": 0,
+      "metric_rows": 22,
+      "used_rows": 20,
+      "old_values": {
+        "dl_mbps_mean": 35.0,
+        "ul_mbps_mean": 119.0,
+        "dl_ok_mean": 1200,
+        "ul_ok_mean": 600,
+        "dl_nok_mean": 0,
+        "ul_nok_mean": 0
+      },
+      "new_values": {
+        "dl_mbps_mean": 35.0,
+        "ul_mbps_mean": 119.0,
+        "dl_ok_mean": 1200,
+        "ul_ok_mean": 600,
+        "dl_nok_mean": 0,
+        "ul_nok_mean": 0
+      },
+      "delta": {
+        "dl_mbps_mean": 0.0,
+        "ul_mbps_mean": 0.0,
+        "dl_ok_mean": 0,
+        "ul_ok_mean": 0,
+        "dl_nok_mean": 0,
+        "ul_nok_mean": 0
+      },
+      "console_values_identical": true,
+      "log_counts": {
+        "late_lines": 9,
+        "warning_lines": 5613,
+        "sib1_lines": 2,
+        "dummy_backward_clock_events": 5604
+      },
+      "accepted": true
+    },
+    {
+      "old_tag": "sonrasi_K8",
+      "new_tag": "v2_sonrasi_K8",
+      "measurement_valid": true,
+      "exit": 0,
+      "metric_rows": 22,
+      "used_rows": 20,
+      "old_values": {
+        "dl_mbps_mean": 35.0,
+        "ul_mbps_mean": 119.0,
+        "dl_ok_mean": 1200,
+        "ul_ok_mean": 600,
+        "dl_nok_mean": 0,
+        "ul_nok_mean": 0
+      },
+      "new_values": {
+        "dl_mbps_mean": 35.0,
+        "ul_mbps_mean": 119.0,
+        "dl_ok_mean": 1200,
+        "ul_ok_mean": 600,
+        "dl_nok_mean": 0,
+        "ul_nok_mean": 0
+      },
+      "delta": {
+        "dl_mbps_mean": 0.0,
+        "ul_mbps_mean": 0.0,
+        "dl_ok_mean": 0,
+        "ul_ok_mean": 0,
+        "dl_nok_mean": 0,
+        "ul_nok_mean": 0
+      },
+      "console_values_identical": true,
+      "log_counts": {
+        "late_lines": 5,
+        "warning_lines": 5806,
+        "sib1_lines": 2,
+        "dummy_backward_clock_events": 5705
+      },
+      "accepted": true
+    },
+    {
+      "old_tag": "sonrasi_K11",
+      "new_tag": "v2_sonrasi_K11",
+      "measurement_valid": true,
+      "exit": 0,
+      "metric_rows": 22,
+      "used_rows": 20,
+      "old_values": {
+        "dl_mbps_mean": 35.0,
+        "ul_mbps_mean": 119.0,
+        "dl_ok_mean": 1200,
+        "ul_ok_mean": 600,
+        "dl_nok_mean": 0,
+        "ul_nok_mean": 0
+      },
+      "new_values": {
+        "dl_mbps_mean": 35.0,
+        "ul_mbps_mean": 118.95,
+        "dl_ok_mean": 1199.4,
+        "ul_ok_mean": 599.7,
+        "dl_nok_mean": 0.6,
+        "ul_nok_mean": 0
+      },
+      "delta": {
+        "dl_mbps_mean": 0.0,
+        "ul_mbps_mean": -0.05,
+        "dl_ok_mean": -0.6,
+        "ul_ok_mean": -0.3,
+        "dl_nok_mean": 0.6,
+        "ul_nok_mean": 0
+      },
+      "console_values_identical": false,
+      "log_counts": {
+        "late_lines": 25,
+        "warning_lines": 5697,
+        "sib1_lines": 2,
+        "dummy_backward_clock_events": 5652
+      },
+      "accepted": true
+    }
+  ]
+}

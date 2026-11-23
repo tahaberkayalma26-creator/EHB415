@@ -1,0 +1,4456 @@
+{
+  "date": "2026-11-23",
+  "line_endings": "Shell/Python/Markdown copies use LF; report/image/data bytes are retained.",
+  "files": [
+    {
+      "path": ".gitignore",
+      "bytes": 143,
+      "sha256": "3b73edea29a5f330519f869930ebcd471190d50ab06937666e79efebb1912b97"
+    },
+    {
+      "path": "100MHz_Duzeltmeleri/kaynak/lib/ru/dummy/ru_dummy_impl.cpp",
+      "bytes": 5877,
+      "sha256": "a9495152c3843f79568c93c543b0cd4269366324dd98fc69dadd64731180e0c4"
+    },
+    {
+      "path": "100MHz_Duzeltmeleri/kaynak/lib/scheduler/ue_scheduling/cell_group_event_manager.cpp",
+      "bytes": 15360,
+      "sha256": "cc4b46a23a366449f1f0dbe42983b2c5f21a1b48f8544cee7013698ed7f2cb14"
+    },
+    {
+      "path": "100MHz_Duzeltmeleri/OCUDU_Lisans/BSD-3-Clause-Open-MPI.txt",
+      "bytes": 2032,
+      "sha256": "3b9d59405592515bfa519e78559a4a335e408fc186ae32ef2235d72b19fb8308"
+    },
+    {
+      "path": "100MHz_Duzeltmeleri/OCUDU_Lisans/COPYRIGHTS.txt",
+      "bytes": 28805,
+      "sha256": "f5264be244de872cdc726a81c9229cc3a2c86d1025deb5e97feaf93a34f6f07d"
+    },
+    {
+      "path": "100MHz_Duzeltmeleri/OCUDU_Lisans/LICENSE",
+      "bytes": 1989,
+      "sha256": "b0e445000e3f2daa48fabb512773ccbf4447fdbfbf709a4a8f966448b268fd0c"
+    },
+    {
+      "path": "100MHz_Duzeltmeleri/OKU_BENI.txt",
+      "bytes": 2988,
+      "sha256": "6aef2bc45e6a5c3a9f93f4e8853bc69fba8b9c02dc947458937bc3655066319d"
+    },
+    {
+      "path": "100MHz_Duzeltmeleri/patches/01_dummy_saat_korumasi.patch",
+      "bytes": 1317,
+      "sha256": "1570a5ea4478151169a33612961bebf2cd5d3c25cb3ccc553c995c5f12bbe974"
+    },
+    {
+      "path": "100MHz_Duzeltmeleri/patches/02_conres_slice_bildirimi.patch",
+      "bytes": 991,
+      "sha256": "5417c2a6a3b7e4305aa0498aa01094e9ffd1725a1d73313fb11db179b413207e"
+    },
+    {
+      "path": "100MHz_Duzeltmeleri.zip",
+      "bytes": 21560,
+      "sha256": "55c855c6eb51d8b8887004ebeaa036a9433bbb0342c43cf8780efb2716988479"
+    },
+    {
+      "path": "Gorev_2/Ders_Projesi_Yerel_Kopya/ogretici/betikler/ocudu_prs_kos.sh",
+      "bytes": 2164,
+      "sha256": "c11d84bfcd20c6f829b06a124e780af212082197369f4f55563cba8decbb0c77"
+    },
+    {
+      "path": "Gorev_2/Proje/BASLANGIC.md",
+      "bytes": 5346,
+      "sha256": "d31a681523c479ea786756ab73d3eda8fadfe8ecf63cb3d59f35f3524542b326"
+    },
+    {
+      "path": "Gorev_2/Proje/gorev2/cok_u4.csv",
+      "bytes": 46,
+      "sha256": "b2d47422cae70d441eecf8cfaf4fde7518025f97b96689459e837d8d30fddb58"
+    },
+    {
+      "path": "Gorev_2/Proje/gorev2/cok_u4.txt",
+      "bytes": 11115,
+      "sha256": "6dc567dd3f96087f92ddd1f97110116c01e55d67a7d8d371978b2603a1e59044"
+    },
+    {
+      "path": "Gorev_2/Proje/gorev2/cok_u4.yml",
+      "bytes": 1001,
+      "sha256": "949ac9ab7f43a986f17c90916bff7b430f2768570057f1d2460801b1006eb1df"
+    },
+    {
+      "path": "Gorev_2/Proje/gorev2/cok_u4p4.csv",
+      "bytes": 48,
+      "sha256": "fd182b8b30913675627017d5fe2b5ed97dfc18241a2512d8536b65cf00aa4d43"
+    },
+    {
+      "path": "Gorev_2/Proje/gorev2/cok_u4p4.txt",
+      "bytes": 11117,
+      "sha256": "f4a11a5aa7833a9e98eb4baa7db4a9e5552ea5604877324f11f3275271b219ec"
+    },
+    {
+      "path": "Gorev_2/Proje/gorev2/cok_u4p4.yml",
+      "bytes": 1279,
+      "sha256": "6e1b2322c6606bd236519563f71887440413f68895cf865fc3612a4322f17fc0"
+    },
+    {
+      "path": "Gorev_2/Proje/gorev2/e1_gnb.log",
+      "bytes": 233502,
+      "sha256": "554247107e36a2dfc93bf0a2ce0b859c349bdd4a1479128ae4e2d0226fd842d3"
+    },
+    {
+      "path": "Gorev_2/Proje/gorev2/e2_gnb.log",
+      "bytes": 388132,
+      "sha256": "c3984e03f9978a5e0c4931a29c1a42a64a4bbd1b290456d949c4e8e4c3e346da"
+    },
+    {
+      "path": "Gorev_2/Proje/gorev2/e3_gnb.log",
+      "bytes": 574107,
+      "sha256": "9d4cb38e4d597d011850c4327030ad9d087d759c36c82bdfc2497e48878c3fc9"
+    },
+    {
+      "path": "Gorev_2/Proje/gorev2/e3_ul_info.log",
+      "bytes": 18810817,
+      "sha256": "9b66d55b9039e43ad208a9f56a3cbc458e396c0d1b4f9aa53d0fa04e4999fb6e"
+    },
+    {
+      "path": "Gorev_2/Proje/gorev2/e4_gnb.log",
+      "bytes": 392214,
+      "sha256": "fe1e24967f8519f0aaf4f2c87f6c00e22b594bce20f43e6aa948aae792d7c984"
+    },
+    {
+      "path": "Gorev_2/Proje/gorev2/ehb_e1.yml",
+      "bytes": 1277,
+      "sha256": "6f5682a97b9f0078a55b5debf0036ca2cafd2d42964f78cdff718b55270f0dc3"
+    },
+    {
+      "path": "Gorev_2/Proje/gorev2/ehb_e2.yml",
+      "bytes": 1278,
+      "sha256": "8560c003cf5d1a880a375adcb900fb7ce98f8e2d3923d0de115b12df847a5f0b"
+    },
+    {
+      "path": "Gorev_2/Proje/gorev2/ehb_e3.yml",
+      "bytes": 1277,
+      "sha256": "95ff4e4660af326a21c8a126acbb0fb5a4a7580aae08d93028ee7c55f18d0355"
+    },
+    {
+      "path": "Gorev_2/Proje/gorev2/ehb_e3_info.yml",
+      "bytes": 1272,
+      "sha256": "84368ee0ce616651e2fd3072a00ef406e7d18bd3745ea10c02150597699752c3"
+    },
+    {
+      "path": "Gorev_2/Proje/gorev2/ehb_e4.yml",
+      "bytes": 1278,
+      "sha256": "11bba519f9a24a5256c7ade1e3ddc2804d779906c716c98ac6bf85bf96a2448b"
+    },
+    {
+      "path": "Gorev_2/Proje/gorev2/ehb_e5.yml",
+      "bytes": 1277,
+      "sha256": "4e89b8ed6289abdb888b0e923d12f1e0fa2389f0cbdcf4606ec9288038745630"
+    },
+    {
+      "path": "Gorev_2/Proje/gorev2/ehb_ofs1.yml",
+      "bytes": 1277,
+      "sha256": "a5fc2216ea0489f4a0f07f91f180b04e2d1f220891e9ea612372a87dc973bab1"
+    },
+    {
+      "path": "Gorev_2/Proje/gorev2/ehb_ofs7.yml",
+      "bytes": 1277,
+      "sha256": "2eb49a313467dce496de7bd0101a47bb18b56c1d28a98d9c5557b067d1f4703e"
+    },
+    {
+      "path": "Gorev_2/Proje/gorev2/out_e1.txt",
+      "bytes": 4572,
+      "sha256": "1164c87b66205ff2778db27151ea8c990b08fe9270d3888c60ae74ced83d4ae9"
+    },
+    {
+      "path": "Gorev_2/Proje/gorev2/out_e2.txt",
+      "bytes": 4572,
+      "sha256": "597f7e2bca963675a0aeb81f73e10f39778d7dccd164ece62263b1c0a2974269"
+    },
+    {
+      "path": "Gorev_2/Proje/gorev2/out_e3.txt",
+      "bytes": 4572,
+      "sha256": "f96eb884ca97369f01f6793e3ba943d1cf935064b2b89bf732229a6be884ac49"
+    },
+    {
+      "path": "Gorev_2/Proje/gorev2/out_e4.txt",
+      "bytes": 4572,
+      "sha256": "fa3f58d8ac9cc8a7530b1e3683eb3eed9529388a8045bc338d52641375ffc68f"
+    },
+    {
+      "path": "Gorev_2/Proje/gorev2/out_e5.txt",
+      "bytes": 1130,
+      "sha256": "b9ea68dcbd4dff2456e454d8716d219a6dfcf4bc311f6f4077d3e9a88309751b"
+    },
+    {
+      "path": "Gorev_2/Proje/gorev2/out_ofs1.txt",
+      "bytes": 1132,
+      "sha256": "6a0ef5dab0f200dba7c5ab044048d496dfb4b3c9c2c6d393a9a71bb05a2d44ff"
+    },
+    {
+      "path": "Gorev_2/Proje/gorev2/out_ofs7.txt",
+      "bytes": 1132,
+      "sha256": "eda1ea50b7a8839d9811d61b364b62e164b5438c14b99221424214c109d785cf"
+    },
+    {
+      "path": "Gorev_2/Proje/gorev2/u4_gnb.log",
+      "bytes": 552,
+      "sha256": "33e419558020c5cee292b7323a9cd6a462d769214cc9e9bb2b7247f0f521c197"
+    },
+    {
+      "path": "Gorev_2/Proje/gorev2/u4p4_gnb.log",
+      "bytes": 534301,
+      "sha256": "d9288d78903eea329886fd8733453d3679238df43ac7a6e4288e4c61c9aaa1bf"
+    },
+    {
+      "path": "Gorev_2/Proje/gosterim/CANLI_GOSTERIM.md",
+      "bytes": 1619,
+      "sha256": "f2145129e48a2189465d3726ba94c909be13f46750c9b3120b61c4790876b6ed"
+    },
+    {
+      "path": "Gorev_2/Proje/gosterim/grafik_hazirla.py",
+      "bytes": 2444,
+      "sha256": "d9014acd25a1837768a5862bd7504b762aafc6444489c74725c3f3ab4d356f9c"
+    },
+    {
+      "path": "Gorev_2/Proje/gosterim/ocudu_karsilastirma.png",
+      "bytes": 99613,
+      "sha256": "01540cfdfae47df66c588e387910416b47aa298bbba2ea8a7983aab099d0d159"
+    },
+    {
+      "path": "Gorev_2/Proje/ilk_iki_20261025T152612Z_298/base-console.txt",
+      "bytes": 4250,
+      "sha256": "dc2b174e4606d05fc513e331d31aa570447029d4db26a8262707b0c5793b9913"
+    },
+    {
+      "path": "Gorev_2/Proje/ilk_iki_20261025T152612Z_298/base-invocation.log",
+      "bytes": 1719,
+      "sha256": "289297834545cb3ee29d80dc7c5c49983dabea6725af63e9b6c6c51f2564da0e"
+    },
+    {
+      "path": "Gorev_2/Proje/ilk_iki_20261025T152612Z_298/base-readable.txt",
+      "bytes": 4204,
+      "sha256": "852be30f084908e3d3210da00d95c2e951dba588ac6da370585829e9e0a287a4"
+    },
+    {
+      "path": "Gorev_2/Proje/ilk_iki_20261025T152612Z_298/base.yml",
+      "bytes": 1051,
+      "sha256": "0d157ede160892217bef84f1a96a293dd6daa324426a22d6aa3f818b85b09d7c"
+    },
+    {
+      "path": "Gorev_2/Proje/ilk_iki_20261025T152612Z_298/ilk_karsilastirma.csv",
+      "bytes": 169,
+      "sha256": "74c9a6caa246aaa82e4da9b4beb702fd9370e62974cfb9c36e698a20a14351ed"
+    },
+    {
+      "path": "Gorev_2/Proje/ilk_iki_20261025T152612Z_298/p4-console.txt",
+      "bytes": 4248,
+      "sha256": "f7ad27ad5ac1071125a2d59aba58e53c4460959f1f50120bde0a277cc4ce8411"
+    },
+    {
+      "path": "Gorev_2/Proje/ilk_iki_20261025T152612Z_298/p4-invocation.log",
+      "bytes": 1720,
+      "sha256": "4e14e4b0ac643fe982d3b1a2222fc4a0c2e783b18534386a2ce0f3b26f2e3ce3"
+    },
+    {
+      "path": "Gorev_2/Proje/ilk_iki_20261025T152612Z_298/p4-readable.txt",
+      "bytes": 4202,
+      "sha256": "c17d7af307b695e147b8b6fdd5582ab84f23cfdf774e5f4c49de40f245277ce9"
+    },
+    {
+      "path": "Gorev_2/Proje/ilk_iki_20261025T152612Z_298/p4.yml",
+      "bytes": 1279,
+      "sha256": "9b715ab3b480979ec3a69f3edf679f064664523c41b3405f46e5116792334c14"
+    },
+    {
+      "path": "Gorev_2/Proje/ilk_iki_20261025T152612Z_298/sonuclar.json",
+      "bytes": 989,
+      "sha256": "2967d3967e60060d10c5a35e8a845999d8e3bdf0cbf52d44c0b243392e8c377c"
+    },
+    {
+      "path": "Gorev_2/Proje/ilk_iki_deney.sh",
+      "bytes": 4457,
+      "sha256": "b75730c54b16be736e41fece4854cd59355e1440a0b2bd942272ceb56bd57367"
+    },
+    {
+      "path": "Gorev_2/Raporlar/Fatih_Gorev_Karti_2_Sonuc_Ozeti.pdf",
+      "bytes": 120151,
+      "sha256": "f86bd2a6c6beda8967732ed8acb5b7dd475624defff8ca0254ed9b83b8fea5f4"
+    },
+    {
+      "path": "Gorev_2/Raporlar/Fatih_Görev_Kartı_2_Çıktıları.docx",
+      "bytes": 1975008,
+      "sha256": "d1585e9f56a7461e709f2285b8913f2bbf638aa310f1efa234a81e44252ba12c"
+    },
+    {
+      "path": "Gorev_2/Raporlar/Notlarım.md",
+      "bytes": 2072,
+      "sha256": "09cb083b39ba72ab40d8760ca1b6d456a8f814a567482c603fc53885a681c857"
+    },
+    {
+      "path": "Gorev_4/Araclar/clock_probe.c",
+      "bytes": 852,
+      "sha256": "97058fbb5e26c9d4b2399eb90c4d0de75b7065272d19b8b20cd65e8ac641b9c5"
+    },
+    {
+      "path": "Gorev_4/Araclar/clock_step_inject.c",
+      "bytes": 4156,
+      "sha256": "5c8695a92abff586f491b30006215d07a5ea0dcd65edc4416b6ef226a9fe69ac"
+    },
+    {
+      "path": "Gorev_4/Araclar/dogrulama_raporu_uret.py",
+      "bytes": 10739,
+      "sha256": "cba4da92949d3c1a5393790acf9135afc73413c110d244330732fa7b914fb2e0"
+    },
+    {
+      "path": "Gorev_4/Araclar/ilk_tarama.py",
+      "bytes": 752,
+      "sha256": "475b157db480c8fa66d0403d843c326342492d027c1c04396255822de61a4b97"
+    },
+    {
+      "path": "Gorev_4/Araclar/OCUDU_SS_icin_Ac.cmd",
+      "bytes": 410,
+      "sha256": "003c1c8ef4d46c1567309a5167828c31bb8f8b41505184e49f2603e2eb7c36e4"
+    },
+    {
+      "path": "Gorev_4/Araclar/olcum_kos.py",
+      "bytes": 9816,
+      "sha256": "eea3e4f30f774482b5cae9ad55b66d1fbb697d5ad1f43edfd2769801d14ef682"
+    },
+    {
+      "path": "Gorev_4/Araclar/prs_kosullari.json",
+      "bytes": 28339,
+      "sha256": "e030ab3320e340689357ece15b99e589fdebc21a27482b175bd6e549cd9e635b"
+    },
+    {
+      "path": "Gorev_4/Araclar/prs_taramasi.py",
+      "bytes": 1095,
+      "sha256": "1c5e0207fc285640f75a5f78c2dce131ba5414868ea6ff31d764230837a141d2"
+    },
+    {
+      "path": "Gorev_4/Araclar/rapor_stil_ve_veri_taslagi.md",
+      "bytes": 3583,
+      "sha256": "c38bfe58a7f37ee716e9be7f9cdd66fd90df259f6efc8b6c7ee74e0bc2bb6222"
+    },
+    {
+      "path": "Gorev_4/Araclar/rapor_uret.py",
+      "bytes": 35020,
+      "sha256": "c0bd9a903813185a09fb8b343dfd6915714b18dabfd107ea709bf7ac17379a9b"
+    },
+    {
+      "path": "Gorev_4/Araclar/referans_tarama.py",
+      "bytes": 880,
+      "sha256": "971a60a21285e36429e338b11d2cabb1b58f73256baa8847f8ee1a02300e45bc"
+    },
+    {
+      "path": "Gorev_4/Araclar/ss_icin_calistir.py",
+      "bytes": 9071,
+      "sha256": "1858d54976052955facfba0b55553944d03c4ee7591d558477b3272594c2651e"
+    },
+    {
+      "path": "Gorev_4/Araclar/ss_icin_calistir.sh",
+      "bytes": 152,
+      "sha256": "f856386882256d223a92905399145bb43852a467b2ba20cb82323f3f5f7f6131"
+    },
+    {
+      "path": "Gorev_4/Araclar/ss_raporu_kaynak_metinle_uret.py",
+      "bytes": 12000,
+      "sha256": "fee464e30fc4f8894744adb4766a59887d2c481e8492665bd1f4c2fb99f65012"
+    },
+    {
+      "path": "Gorev_4/Araclar/ss_raporu_uret.py",
+      "bytes": 141,
+      "sha256": "66a80cbc2ee35e86433b61ad8114fec1200f44a4721366666d1ef37f3e4df47e"
+    },
+    {
+      "path": "Gorev_4/Araclar/tekrar_model_kontrolu.py",
+      "bytes": 3637,
+      "sha256": "3ed1b0e3634ff2595192ab39a104839f1a9465e5b291a76f4cc623f63c034ab5"
+    },
+    {
+      "path": "Gorev_4/Araclar/terminal_kanit_goster.cmd",
+      "bytes": 313,
+      "sha256": "e76ba88d0e6909057f069715a6081e80ee4f2561f9555b3d44f791453a263b06"
+    },
+    {
+      "path": "Gorev_4/Araclar/teslim_ozeti_uret.py",
+      "bytes": 11756,
+      "sha256": "f5f0cd4da09442269590ba7a4824d5217bf5756b3c04fb6328a1430add570ecf"
+    },
+    {
+      "path": "Gorev_4/Araclar/yeniden_dogrula.py",
+      "bytes": 3827,
+      "sha256": "9f0b6a77665e0e222654022659a2d1fc8cc4ff83cd67eef6f5ce6faa0935682c"
+    },
+    {
+      "path": "Gorev_4/Dogrulama/dogrulama_tamamlandi.json",
+      "bytes": 1179,
+      "sha256": "364daa933ad714b5ca6838ec198937d4e2d0d64e4e6f130ce2dd0b2a78b738d2"
+    },
+    {
+      "path": "Gorev_4/Dogrulama/menu12_terminal_ozeti.txt",
+      "bytes": 4210,
+      "sha256": "c5cf993a7763d5447d9ae60a905216d179cbd7159ba1ea57cbe05d1f92a8c643"
+    },
+    {
+      "path": "Gorev_4/Dogrulama/onceki_raporlar_korundu.json",
+      "bytes": 256,
+      "sha256": "be6513071d5e09690ee7eee8b69839019e2e15ac88ddcb7d0ec4498923a9de5a"
+    },
+    {
+      "path": "Gorev_4/Dogrulama/pdsch_genislik_ve_model_kontrolu.json",
+      "bytes": 10848,
+      "sha256": "8b1c5d3324ad396181a7ad1e548229bb69db0e8072545f6f8a11bd936aa9e22f"
+    },
+    {
+      "path": "Gorev_4/Dogrulama/yeniden_kosu_plani.json",
+      "bytes": 16745,
+      "sha256": "32e2bfaf731c35986d621b016904e6d129ba106057d0abc3a77416352683d4f2"
+    },
+    {
+      "path": "Gorev_4/Dogrulama/yeniden_kosu_sonuclari.json",
+      "bytes": 22352,
+      "sha256": "21dda413a9e46a7de59a8843b174dc007d55b2aa7c673f56b377e4f20c8396bf"
+    },
+    {
+      "path": "Gorev_4/Ekran_Goruntuleri/Orijinaller/01_referans.png",
+      "bytes": 305335,
+      "sha256": "815906d5b82532829b30f6892cc9b9db3e34abe119180f9e3d5a5baf47a39960"
+    },
+    {
+      "path": "Gorev_4/Ekran_Goruntuleri/Orijinaller/02_K1_once.png",
+      "bytes": 338227,
+      "sha256": "dbece399b6376c151339a597e4c1fa45c53053d8fbdae1308d28bd7b3c353ee3"
+    },
+    {
+      "path": "Gorev_4/Ekran_Goruntuleri/Orijinaller/03_K1_sonra.png",
+      "bytes": 340521,
+      "sha256": "96dce27249851f5b8f4c8f425da40685ae4b4dc1ab6e5d925590ae851bd2d3a8"
+    },
+    {
+      "path": "Gorev_4/Ekran_Goruntuleri/Orijinaller/04_K6_once.png",
+      "bytes": 336752,
+      "sha256": "6be1df082f9475c28c384b0d19e6d8fd965975c501d124a2ae7bad90745b97a1"
+    },
+    {
+      "path": "Gorev_4/Ekran_Goruntuleri/Orijinaller/05_K6_sonra.png",
+      "bytes": 340928,
+      "sha256": "2f12942cb52f546dd345a0b5fd7eeaa9331b4fcb37dbc30d6640c115b42cec44"
+    },
+    {
+      "path": "Gorev_4/Ekran_Goruntuleri/Orijinaller/06_dogrulama_arsivi.png",
+      "bytes": 298417,
+      "sha256": "92f082162f3dd06d31e0a9ab00284de58a9dd0d57a232ea05d37b764172a8b78"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/b100_r1/base.yml",
+      "bytes": 1012,
+      "sha256": "e0cd5a73a245543bec2e53b0eae122f093c931d08fe7d2770d6b6f24960abd19"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/b100_r1/command.txt",
+      "bytes": 153,
+      "sha256": "efd1bc6458d117c7b2f61c1e9979653f2653a4fbd29c892a2206ceecc20cfe06"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/b100_r1/config.yml",
+      "bytes": 1012,
+      "sha256": "e0cd5a73a245543bec2e53b0eae122f093c931d08fe7d2770d6b6f24960abd19"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/b100_r1/gnb.log.gz",
+      "bytes": 34913989,
+      "sha256": "8af4e2b7b6a2f53032d8026ee06a69a9c95295aa50362e4d5acc6f7ddf49ae88"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/b100_r1/metrics.csv",
+      "bytes": 28199,
+      "sha256": "f306bdfaddd31df7e87509876b2929cc18c05e35169257dba6743d4b45e1e0df"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/b100_r1/summary.json",
+      "bytes": 1224,
+      "sha256": "c7c02fc38923695d4af683b7602ab6cc7eb9aa56aca861fd8e813d56ce41eefd"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/b100_r1/terminal.txt",
+      "bytes": 185977,
+      "sha256": "85f890b79a738f1ffd9101a335bcffb387142daa12f5492c34407510477b5801"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/b100_r1/top.txt",
+      "bytes": 15869,
+      "sha256": "5074722a86391818b24a1870c46c4cfaabb5f9e59352669586a30e4b53003a23"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/b100_r1/typescript.txt",
+      "bytes": 187682,
+      "sha256": "3f63e6510ceffacad8c320ce98e61cd66ba6a3820f0be0e23a677912ed347e2c"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/b100_r1/warning_excerpt.txt",
+      "bytes": 15214,
+      "sha256": "2347675b27b0f564dd706a99f0786e0412d34b5fa9b352188c1b5f2503cf5e95"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/b100_r1/wrapper_output.txt",
+      "bytes": 1712,
+      "sha256": "f18ec7e529af13f41c2d8f0579e50ee1b274a1cccd0a56c961f6849bd508ae2a"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/b100_r2/base.yml",
+      "bytes": 1012,
+      "sha256": "85cd51bd6c9ec031d52c505a85ec63e7a4bab99f455028966909cfbcd50fec60"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/b100_r2/command.txt",
+      "bytes": 153,
+      "sha256": "6e2b27e5a40b25d4a4cbedcfcd523bc619b5a574a0ba7aa68f4988a485dad735"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/b100_r2/config.yml",
+      "bytes": 1012,
+      "sha256": "85cd51bd6c9ec031d52c505a85ec63e7a4bab99f455028966909cfbcd50fec60"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/b100_r2/gnb.log.gz",
+      "bytes": 48757982,
+      "sha256": "89c40a3d252751d2eb0da457a690b720a50184bd594bcc34cf81566ba33b4420"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/b100_r2/metrics.csv",
+      "bytes": 78734,
+      "sha256": "4764da2d94fb244c04638af88ba8489a555e1336c253fba86fb6d9ee0dbff14c"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/b100_r2/summary.json",
+      "bytes": 1153,
+      "sha256": "822f4b74a3020a07ac84c2a66fca530c132b6940ddeb0ddca03d494d4d6a2f5d"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/b100_r2/terminal.txt",
+      "bytes": 507500,
+      "sha256": "51e0e145f065401eab715c7dd8336dfae81264a28d09bf472635ae267fec499c"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/b100_r2/top.txt",
+      "bytes": 15869,
+      "sha256": "fececce89a1c58d53b9a8143f351479eed377be3543eb3126735f592820615a2"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/b100_r2/typescript.txt",
+      "bytes": 512137,
+      "sha256": "a8e96b6d5361fa379e52c088a76d2f466614fd2f8e1290bf4b5ad179860cecb7"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/b100_r2/warning_excerpt.txt",
+      "bytes": 16247,
+      "sha256": "868794a423a49cbdd62dc3c86386bffeb307604b46f001f5e399f6fdc97420b9"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/b100_r2/wrapper_output.txt",
+      "bytes": 1712,
+      "sha256": "474122a44877d2f1d7a50a4ec1feaa6057b09f78d6f4f81dda47987e6a952189"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/b100_r3/base.yml",
+      "bytes": 1012,
+      "sha256": "b3170b8277c49758d8b64ad6b6622cc495ccc4f356ab62feef5c7106a2f45834"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/b100_r3/command.txt",
+      "bytes": 153,
+      "sha256": "bd4c19590c9687bac454d7508a35f139613187d826c7a7ab86f51bd465926b5e"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/b100_r3/config.yml",
+      "bytes": 1012,
+      "sha256": "b3170b8277c49758d8b64ad6b6622cc495ccc4f356ab62feef5c7106a2f45834"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/b100_r3/gnb.log.gz",
+      "bytes": 32218395,
+      "sha256": "13afa3a908be1b79e28f1ed6832937dcd409e02cba0e98c20f86ba2790ec7fd3"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/b100_r3/metrics.csv",
+      "bytes": 590,
+      "sha256": "46f66564bb0ebf83cc9c348126c7fba06f0293d477f607437fb9349b0da9e692"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/b100_r3/summary.json",
+      "bytes": 1162,
+      "sha256": "e67d8bba6b9446636882db2789890269b70f06ee9ddfe4ed285c923360d6e3ce"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/b100_r3/terminal.txt",
+      "bytes": 4138,
+      "sha256": "a58f34a5a92c501df38973f7d6927820d6d5e0768759effa4c3fbecfd3f133de"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/b100_r3/top.txt",
+      "bytes": 15869,
+      "sha256": "45b2737813dcc86441120f1c50143116c222d927a0a609d19e38eabf39b5c3c2"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/b100_r3/typescript.txt",
+      "bytes": 4184,
+      "sha256": "1d1ff1b4b8349a9c7ffc9181de66e4fbe9a0b8ee4e6cd9ddbdbeae7c71dce989"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/b100_r3/warning_excerpt.txt",
+      "bytes": 16230,
+      "sha256": "088117eaf0308c291ea0ddb73cb6b7abe9aaa837a28d8507edb574be0a8e6b41"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/b100_r3/wrapper_output.txt",
+      "bytes": 1712,
+      "sha256": "5dd08f3d9ec1f286458a13785f213d4ec9f93732dabdb7f7fd3a312fc26091a5"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/band100/base.yml",
+      "bytes": 1012,
+      "sha256": "3dea159f7d2e5f74603df6af9ab41cd5172443c02ef8f8e1edf1114b85421038"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/band100/command.txt",
+      "bytes": 153,
+      "sha256": "f43c7953c1910a99c7f6c688baf660edd1c281d9c9c4427966ba6b1c16c5999f"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/band100/config.yml",
+      "bytes": 1012,
+      "sha256": "3dea159f7d2e5f74603df6af9ab41cd5172443c02ef8f8e1edf1114b85421038"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/band100/gnb.log.gz",
+      "bytes": 43499149,
+      "sha256": "1b9ce85d55d1afdf92594cbeae41634649ddfba7e8e46fe26199bd62988344d7"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/band100/metrics.csv",
+      "bytes": 57033,
+      "sha256": "2632acf1f4504c1aa440937a0c59f8649263b2d923b3cee65f191ae0c671a425"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/band100/summary.json",
+      "bytes": 1194,
+      "sha256": "6747046049a7f2b43f6e570cb62f25c270e4572699641a54ec9aae11ad17e493"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/band100/terminal.txt",
+      "bytes": 368524,
+      "sha256": "bd3417de134fc66d02eec27213379ba3b67fd1cae178d99d88a169ae727dd861"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/band100/top.txt",
+      "bytes": 15869,
+      "sha256": "835605099994b69dbe79629bfc8c8d51588b2337f147e53fad9e369474d0dc22"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/band100/typescript.txt",
+      "bytes": 371894,
+      "sha256": "b5374c5c2a4a06bb7fbc1af9e465346267222135f57b94f6d9ffa02985d599c5"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/band100/warning_excerpt.txt",
+      "bytes": 14586,
+      "sha256": "58e6a5c8706c7dce824cb9ac410798bd0325c489fa8712a1bff1b37e9812b307"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/band100/wrapper_output.txt",
+      "bytes": 1712,
+      "sha256": "11024ff609e8e4562afdc941e576fac21077e8fc86593f4b20862b6df14e9dde"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/band40/base.yml",
+      "bytes": 1010,
+      "sha256": "5484befbafda4274b84af19bd8bfdba3401b3e44932f680ae8217f56d8db6719"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/band40/command.txt",
+      "bytes": 151,
+      "sha256": "031fdd8a4507d39210beb1e0b8907c712c750e9fac41113e1053d41c4c5e546c"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/band40/config.yml",
+      "bytes": 1010,
+      "sha256": "5484befbafda4274b84af19bd8bfdba3401b3e44932f680ae8217f56d8db6719"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/band40/gnb.log.gz",
+      "bytes": 59026,
+      "sha256": "9d6d65ef1ff01c544f52c5a91456a8082bdd2b4d26e347e244dffb460e04a9ec"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/band40/metrics.csv",
+      "bytes": 391,
+      "sha256": "ac290e042be6511d5b5fc1068fe55a890702f228315b2c7d50a7549dda16eaa5"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/band40/summary.json",
+      "bytes": 1185,
+      "sha256": "bc4476ce7a84295ed5658040fa2f7e1860dfde76778831a625c4d5a3d7d41032"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/band40/terminal.txt",
+      "bytes": 3193,
+      "sha256": "cb073bc9565f8d2a2b7f7c4689952a1fd9758a6332f16688c3262b1c9371f220"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/band40/top.txt",
+      "bytes": 15644,
+      "sha256": "d2b739884fc43ebc4a658ba9a877f5f8c289b078599bcccc864a9ac47098399a"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/band40/typescript.txt",
+      "bytes": 3229,
+      "sha256": "5a1eefa8cf880a427ee7dedf2c315129e9f6cbc958b3023041640f9000df3016"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/band40/warning_excerpt.txt",
+      "bytes": 16198,
+      "sha256": "e4c8d0935c5cb35981f9150349caaaf48a7fd58d5cc676867b62b02a7e498c40"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/band40/wrapper_output.txt",
+      "bytes": 1713,
+      "sha256": "354989e438260430e8ad07d469f2699aca44f29f6aaaa7ea3d16b498b0e48872"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/band60/base.yml",
+      "bytes": 1010,
+      "sha256": "ae51a0bd33281a767f5a6c9663fbb25880b77e01219974d23dfbdd96e07a666e"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/band60/command.txt",
+      "bytes": 151,
+      "sha256": "2440370b79a6e235a2d07ac740d204f64aa6340ab5cd5a71dfbe4ff33be97ab2"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/band60/config.yml",
+      "bytes": 1010,
+      "sha256": "ae51a0bd33281a767f5a6c9663fbb25880b77e01219974d23dfbdd96e07a666e"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/band60/gnb.log.gz",
+      "bytes": 30867087,
+      "sha256": "fcee95a932ed6e0c603689cd90e245700c948e27807b0c18e37b75a89624494b"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/band60/metrics.csv",
+      "bytes": 11694,
+      "sha256": "fcb8149f929cfd4d6aa01c296add5d92752a7790d6f623e9d66f71abd00262f2"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/band60/summary.json",
+      "bytes": 1190,
+      "sha256": "4d2c2d594770aef39170cef4a6be27541f74742bbb2efc939de3f65d8a318310"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/band60/terminal.txt",
+      "bytes": 78760,
+      "sha256": "bd46e1b8f68d0f126ffb8c1c71b9df68e944fab3c1b94a342a6b44887804b125"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/band60/top.txt",
+      "bytes": 15869,
+      "sha256": "bc41bc2101ad15c9f3916636dce77f64c7e8a7b5431056829a6265e5eacd83b0"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/band60/typescript.txt",
+      "bytes": 79487,
+      "sha256": "c1d82bf77ddba2fe5f0fa3af6b20037ab748848a03d1bf7916a2d2498069ac76"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/band60/warning_excerpt.txt",
+      "bytes": 16161,
+      "sha256": "ceedc8c89f0fdcc699517220b2afa39772ca46630293c61e11c09bc949b4b719"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/band60/wrapper_output.txt",
+      "bytes": 1711,
+      "sha256": "41bdbf96c6653bf61ebff83dae283b9c9b0ce55b6ccf74531d70cd4cb1c0e17c"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/band80/base.yml",
+      "bytes": 1010,
+      "sha256": "13d5bff1d7bb60233b664d6c2fd7f9f66b7871824005a630218e64108c7bd290"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/band80/command.txt",
+      "bytes": 151,
+      "sha256": "1748c6bfefa2b38742d129ecaf4708750061ae6fa3bf0b21814737cea6f06b58"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/band80/config.yml",
+      "bytes": 1010,
+      "sha256": "13d5bff1d7bb60233b664d6c2fd7f9f66b7871824005a630218e64108c7bd290"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/band80/gnb.log.gz",
+      "bytes": 45861050,
+      "sha256": "e70c7a2b1928accff7b234d68e155e121bd604fea2865c5ca05633af807e11e4"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/band80/metrics.csv",
+      "bytes": 63250,
+      "sha256": "6d962e9042f8ce185bb52affa4c985541550999ead712a5eaebd8571cedfe320"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/band80/summary.json",
+      "bytes": 1190,
+      "sha256": "810852f17dacd0af69ec59a8b77b8b2ed85fa632e15aed92b20206cbf2234afe"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/band80/terminal.txt",
+      "bytes": 407958,
+      "sha256": "66cfe14065f1d75c654a7c75c6cec670dca9d2739f9919932e890e3b7e76c8fd"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/band80/top.txt",
+      "bytes": 15869,
+      "sha256": "c69b4c272bc2dbbe2b8e6dea580873326506c8e70cf9540a6b4f958f8dad821e"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/band80/typescript.txt",
+      "bytes": 411687,
+      "sha256": "7fb08936851cea7c1cd12bcaaa61d651e3c2d340676b8314c736ac1ec67fd47d"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/band80/warning_excerpt.txt",
+      "bytes": 15444,
+      "sha256": "c9f44d1d9e03bf2b21190ef8d066f01eff6f5e650af606530fefa46a9a6ba5c9"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/band80/wrapper_output.txt",
+      "bytes": 1711,
+      "sha256": "d963090f4fed4716ca2c25d5c7a3a2f4a068e1229225a43b33e980ff6229ca68"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/clockstep2_korumali/base.yml",
+      "bytes": 1021,
+      "sha256": "918369a647b2d3e756b7cb18a0cf69ec25acfacc8e8005b26060555978d6c071"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/clockstep2_korumali/command.txt",
+      "bytes": 301,
+      "sha256": "c202c830c13e7d6c3d370ccd1485c82afe76099fc2c2280984dca8b41f025598"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/clockstep2_korumali/config.yml",
+      "bytes": 1021,
+      "sha256": "918369a647b2d3e756b7cb18a0cf69ec25acfacc8e8005b26060555978d6c071"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/clockstep2_korumali/gnb.log.gz",
+      "bytes": 2255037,
+      "sha256": "2e4e0622dec12e568218780aeafde2ad7ffc53ca873dc523bebe416339fa430f"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/clockstep2_korumali/metrics.csv",
+      "bytes": 654,
+      "sha256": "dcec6e025a07463d62605fa117269459fc64d18ebf5ca743ca25ecb823a71ec3"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/clockstep2_korumali/summary.json",
+      "bytes": 1487,
+      "sha256": "7b96ac2df06d9119068c2f5993843438858a0101f543229b81dad916aba10958"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/clockstep2_korumali/terminal.txt",
+      "bytes": 4419,
+      "sha256": "227c2de3127225067cbaab8bc85af44e9c53475d84d96f38e955ea4b3cb780bd"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/clockstep2_korumali/top.txt",
+      "bytes": 16019,
+      "sha256": "249f4a73e0e9be5b7dc1e8e6308984252512c676fbdc16ee4851361787765e5e"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/clockstep2_korumali/typescript.txt",
+      "bytes": 4466,
+      "sha256": "4e1edd8778fe7881d8a02ad9afa0ff3459d3ce5caf78ecf6cec78b2d617063d5"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/clockstep2_korumali/warning_excerpt.txt",
+      "bytes": 16142,
+      "sha256": "948f221da07715c50eaf04d108e4ab1d3631dce3a737f606b8b9d6559a2ceaf3"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/clockstep2_korumali/wrapper_output.txt",
+      "bytes": 1724,
+      "sha256": "dde520ba3629caec7817b24698144ebc6d1dd3cd6d19b4cf0d302f79248c535b"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/clockstep2_korumasiz/base.yml",
+      "bytes": 1022,
+      "sha256": "98c347e7b04c253c3cfdbc23a00080c98890c702b212b4bfc6a2ae5a59c4886f"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/clockstep2_korumasiz/command.txt",
+      "bytes": 311,
+      "sha256": "e0c9227d98b59f0e14d925d927426a34c4899f48a23f36f4cc3a3bd1846483b6"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/clockstep2_korumasiz/config.yml",
+      "bytes": 1022,
+      "sha256": "98c347e7b04c253c3cfdbc23a00080c98890c702b212b4bfc6a2ae5a59c4886f"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/clockstep2_korumasiz/gnb.log.gz",
+      "bytes": 42883747,
+      "sha256": "72d62425b90b1d3b6f1a648f7eef822d96fa3c034c125f04a3431b74d9310fe2"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/clockstep2_korumasiz/metrics.csv",
+      "bytes": 594,
+      "sha256": "bc68de46d51344de9692918feb2d80aadf057c864a7be3aa2bfcaf3396bb187f"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/clockstep2_korumasiz/summary.json",
+      "bytes": 1481,
+      "sha256": "c0286a450b24df77086b3f1d3046b1106b46fe65ac22219d2470d48b95ed74b8"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/clockstep2_korumasiz/terminal.txt",
+      "bytes": 4484,
+      "sha256": "5ce5fb1938387f4d66dc8d112cb39f7298c8a3b1a0a3defc203c7942246e552f"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/clockstep2_korumasiz/top.txt",
+      "bytes": 16473,
+      "sha256": "732a93a23131c02582e2b8a1b99e526e72eb2b52065682a9c6b02b31c96dba81"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/clockstep2_korumasiz/typescript.txt",
+      "bytes": 4532,
+      "sha256": "a374fef6fff59d5d90aa2c360ef829e76553706bb6beecc952ba0cea37bcc42e"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/clockstep2_korumasiz/warning_excerpt.txt",
+      "bytes": 15996,
+      "sha256": "efc87b0a2b38fc1637fba3071abc2835bc9084860f3d8ab20dd77a8bb01d74fc"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/clockstep2_korumasiz/wrapper_output.txt",
+      "bytes": 1725,
+      "sha256": "31bc2202ec13c5964a45d2f76a982f93c2f39b68ec63547bef278d137d40d2ac"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/clockstep_korumali/base.yml",
+      "bytes": 1010,
+      "sha256": "e2e1b4b24054bdb94e97a882dc9c55c53be88c8cba9fb3ac40212aa1ab054ee9"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/clockstep_korumali/command.txt",
+      "bytes": 299,
+      "sha256": "daf0cc474f6bc65e6d35e78c304c7039469b303dd88fbfbea474b0409c71ab0a"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/clockstep_korumali/config.yml",
+      "bytes": 1010,
+      "sha256": "e2e1b4b24054bdb94e97a882dc9c55c53be88c8cba9fb3ac40212aa1ab054ee9"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/clockstep_korumali/gnb_recovered.log.gz",
+      "bytes": 2333557,
+      "sha256": "9bdfa98532f4cb0804c96482e953a1edcaaa21db1fc816fdb9c1680515b51916"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/clockstep_korumali/metrics.csv",
+      "bytes": 654,
+      "sha256": "dcec6e025a07463d62605fa117269459fc64d18ebf5ca743ca25ecb823a71ec3"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/clockstep_korumali/summary.json",
+      "bytes": 1341,
+      "sha256": "6fcb222d583592a50a1e06cb652ddd61a4e4390373f6a53dd98c7396ea8a0fb3"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/clockstep_korumali/terminal.txt",
+      "bytes": 4407,
+      "sha256": "181cab451be38f743b47fcbf63a777854cacbe62bff1e1235e52f2d5502bfd0e"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/clockstep_korumali/top.txt",
+      "bytes": 16019,
+      "sha256": "f6cdc9b6375a7382e3271bccc1e0e414bfbb01dba6ba437a2e9fc06de994c471"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/clockstep_korumali/typescript.txt",
+      "bytes": 4454,
+      "sha256": "4a7984b84b5d81cdef5bfa534f41a2ef8f203066b992b1f27d6c279c789c99d0"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/clockstep_korumali/wrapper_output.txt",
+      "bytes": 1723,
+      "sha256": "79c5605a082bd5c47333de797c38d7e0f962e1e2b5867311c3eb67ff8b122970"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/clockstep_korumasiz/base.yml",
+      "bytes": 1010,
+      "sha256": "e2e1b4b24054bdb94e97a882dc9c55c53be88c8cba9fb3ac40212aa1ab054ee9"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/clockstep_korumasiz/command.txt",
+      "bytes": 309,
+      "sha256": "226ada2bb85bdd59af472f0aa1d4429ac2e791d17ccd760adc121f09aa2419a1"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/clockstep_korumasiz/config.yml",
+      "bytes": 1010,
+      "sha256": "e2e1b4b24054bdb94e97a882dc9c55c53be88c8cba9fb3ac40212aa1ab054ee9"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/clockstep_korumasiz/metrics.csv",
+      "bytes": 554,
+      "sha256": "c6f3360253fbdcdbc3a8648208a8f534739116e161cd778a5dd7a69f6b74ea67"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/clockstep_korumasiz/summary.json",
+      "bytes": 1375,
+      "sha256": "f85742f6648817a2981b6ff5a9c624f973ddc63a1fa6ce525c44eef65c47967a"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/clockstep_korumasiz/terminal.txt",
+      "bytes": 4235,
+      "sha256": "df2a273f033c117b721fa217a026e2f62d3434212166728eb52895f9bc48547a"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/clockstep_korumasiz/top.txt",
+      "bytes": 16473,
+      "sha256": "d2bb2005169e48552758f9bb6c36c2d3c10c7a27bd5315856cf455ec313d8dec"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/clockstep_korumasiz/typescript.txt",
+      "bytes": 4281,
+      "sha256": "7caacd8c5f9408a7f4fe5db7013eb461424678fc4eea47ee5ef8a93f992f21c3"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/clockstep_korumasiz/wrapper_output.txt",
+      "bytes": 1724,
+      "sha256": "df4a1b4e30b278c86afab7a1e275dca35dac3a56f9acbe533b29bea6f1a3afd6"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/duzeltilmis100/base.yml",
+      "bytes": 1019,
+      "sha256": "9c66cb7702f7f0e7c2b13d64fb6b24a501fcc679c6b2a13cf4bfc8d910aeb968"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/duzeltilmis100/command.txt",
+      "bytes": 221,
+      "sha256": "125ce73dfd682fa7496aebde0b6d0f410ffc5f35ee89a15d95e963792f23b3de"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/duzeltilmis100/config.yml",
+      "bytes": 1019,
+      "sha256": "9c66cb7702f7f0e7c2b13d64fb6b24a501fcc679c6b2a13cf4bfc8d910aeb968"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/duzeltilmis100/gnb.log.gz",
+      "bytes": 398,
+      "sha256": "857891448855b05cf5c1665274d8a54d4bc64568279cc418b5fca6316b59bd1c"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/duzeltilmis100/metrics.csv",
+      "bytes": 682,
+      "sha256": "e3350e1da5a90dc80cbce426e9cd377f1ca3092dd1a6d366ed1e133105f67614"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/duzeltilmis100/summary.json",
+      "bytes": 1182,
+      "sha256": "7ed7e18aa8318076c3d4d731bc17bcc08840f7519dc52ba3da795b73cab37ef1"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/duzeltilmis100/terminal.txt",
+      "bytes": 4610,
+      "sha256": "f75c1a0b8d76fffcdd82ad8b99e3459b82c39d82157e7a649d657d111376f1d1"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/duzeltilmis100/top.txt",
+      "bytes": 16504,
+      "sha256": "9e145aeca641c8f061e21f6eaff79ba5a577abb0d22d78ec9bb55aa409fb5790"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/duzeltilmis100/typescript.txt",
+      "bytes": 4660,
+      "sha256": "d62d36cfe8949eae5e71d3e3e124a38ea105d51bc3b8008d74fcd5baeb2076b5"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/duzeltilmis100/warning_excerpt.txt",
+      "bytes": 451,
+      "sha256": "29d243c1598794d897d7f44f322b6c23ab9fd0a00d9983c62890b0d94f362296"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/duzeltilmis100/wrapper_output.txt",
+      "bytes": 1719,
+      "sha256": "9c15e9fcd613971905671089902de42a61e9629bc47374f64ce167a05b4a7d33"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/duzeltilmis40/base.yml",
+      "bytes": 1017,
+      "sha256": "25e0fe7cd129bd61269b4cacfbfa61185fdb02739c5a45d9d84439f997d1d843"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/duzeltilmis40/command.txt",
+      "bytes": 219,
+      "sha256": "efeaeb8c2a41928e1d12015eaea24dcffaecdb894e45cab3500a476c4c40cd9a"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/duzeltilmis40/config.yml",
+      "bytes": 1017,
+      "sha256": "25e0fe7cd129bd61269b4cacfbfa61185fdb02739c5a45d9d84439f997d1d843"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/duzeltilmis40/gnb.log.gz",
+      "bytes": 330,
+      "sha256": "da7cc97cb54e268b75d943f346fd583641a90fb4344be7e7b1aa5a2fad7dfc5c"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/duzeltilmis40/metrics.csv",
+      "bytes": 632,
+      "sha256": "984bc911a0cbb864b4813d18c3d2a6f66841b6667b0e074fc57e7e186c5728a9"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/duzeltilmis40/summary.json",
+      "bytes": 1156,
+      "sha256": "054e7545f3ce9d8a796196b32a0b316179e294c9b3ad5f41cff92a85547c04e9"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/duzeltilmis40/terminal.txt",
+      "bytes": 4252,
+      "sha256": "36d86672fdef0d7dc05dd6ab783d6b0afb81c21aaa5d18ff555dab848c4c5b12"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/duzeltilmis40/top.txt",
+      "bytes": 16049,
+      "sha256": "446b7c1d20e5218cea626856a307ea88e5dbb154347af53a14d1a326e30b2819"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/duzeltilmis40/typescript.txt",
+      "bytes": 4298,
+      "sha256": "559d7deb1638a2b9f8b80e14a404b8fb2feee9d696460ffcb8deacc752a50c2d"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/duzeltilmis40/warning_excerpt.txt",
+      "bytes": 330,
+      "sha256": "a69b589db2aa582fa65dec6a4f4469ce9df6a06159dbb4de5206ca8c4b118ace"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/duzeltilmis40/wrapper_output.txt",
+      "bytes": 1718,
+      "sha256": "d8ffe519566dec199a17e2b8d65704a4eafe82817b1dd22b4e17c4991ceced8a"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/duzeltilmis60/base.yml",
+      "bytes": 1017,
+      "sha256": "e5c035091996bd30d40e07534b78bff6bc81220edd375eb8b9c2fb74e34f04aa"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/duzeltilmis60/command.txt",
+      "bytes": 219,
+      "sha256": "adfe65dc11902e0df196e98d7e615b3375ebc4b105562423bd143c18cee80fc5"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/duzeltilmis60/config.yml",
+      "bytes": 1017,
+      "sha256": "e5c035091996bd30d40e07534b78bff6bc81220edd375eb8b9c2fb74e34f04aa"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/duzeltilmis60/gnb.log.gz",
+      "bytes": 331,
+      "sha256": "dc7315c782a9922c95c05a9233bb856f704eff439349a9f2b673e829fa64baff"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/duzeltilmis60/metrics.csv",
+      "bytes": 632,
+      "sha256": "fa587efb5618be0c00633050cd76a15825cef6d3087ebe5a4ce6c9c648bcfcb8"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/duzeltilmis60/summary.json",
+      "bytes": 1156,
+      "sha256": "57154446c5911850cb98642d643c08e3c673228887b363ef3d2b5295974cee35"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/duzeltilmis60/terminal.txt",
+      "bytes": 4252,
+      "sha256": "330957bd7f222f443a457fdbf1512ed837e6c9a21c2a711edd9747e0f75766bc"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/duzeltilmis60/top.txt",
+      "bytes": 16504,
+      "sha256": "4a43d07dfa69c9db1d782a1332c87e31add53d85ad31bcc35a5b305260757e57"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/duzeltilmis60/typescript.txt",
+      "bytes": 4298,
+      "sha256": "3fac85cc8a6b1661f582d8391d6c0c57d9979793a5c49301c2a585160b8e41fc"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/duzeltilmis60/warning_excerpt.txt",
+      "bytes": 330,
+      "sha256": "7ddb1d8f9447837ff1ba273424f9d3a3577cbe6b00b2d8b53c2752c41fd9a97d"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/duzeltilmis60/wrapper_output.txt",
+      "bytes": 1718,
+      "sha256": "5a4b532c572342bc2616c2cf7ced637d4b635179260655206df2766ed69b7f67"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/duzeltilmis80/base.yml",
+      "bytes": 1017,
+      "sha256": "c7da325bc910d2edf7000773a4f6045c87cebbd6bc18f3c48a3533ec80d32245"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/duzeltilmis80/command.txt",
+      "bytes": 219,
+      "sha256": "f1e07eda951fbeadded9bb78fe211a369511a01ebd36723cadbc8223ea497508"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/duzeltilmis80/config.yml",
+      "bytes": 1017,
+      "sha256": "c7da325bc910d2edf7000773a4f6045c87cebbd6bc18f3c48a3533ec80d32245"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/duzeltilmis80/gnb.log.gz",
+      "bytes": 332,
+      "sha256": "cb0da86e710af1203fb098fe584f02a1b6b84f5a77208cce47f8e9ad784bf083"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/duzeltilmis80/metrics.csv",
+      "bytes": 632,
+      "sha256": "1fc2b70ac2d115a62a393b4ade332abe097310e799c8adc95019c1e0b9d33bde"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/duzeltilmis80/summary.json",
+      "bytes": 1156,
+      "sha256": "2170565bf5ea236e0f4e20cc0351c6ae43cfc52a5aeb545d20ed0580db12d20b"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/duzeltilmis80/terminal.txt",
+      "bytes": 4252,
+      "sha256": "7d7725c2f9289c3de8609f726c2ced773c09923bed294498c1300333ea53eae4"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/duzeltilmis80/top.txt",
+      "bytes": 16049,
+      "sha256": "e9f67bd559fa1decac95e89c7f7505717d5de2e270b95a9fffafff6a127cb441"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/duzeltilmis80/typescript.txt",
+      "bytes": 4298,
+      "sha256": "9bceb1d6c947be82296f82300c570f453b317ea2484fba8dae3d77fe5c431ffa"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/duzeltilmis80/warning_excerpt.txt",
+      "bytes": 330,
+      "sha256": "e8f4f17b148b4f2ce8ddf84203e2065d6ea7752a2a6f95258551d85829468f90"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/duzeltilmis80/wrapper_output.txt",
+      "bytes": 1718,
+      "sha256": "388f8e9e8fc7bab8b85c367c9d7b1767ece8d7191b0c65a227b7c0bf15e66741"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/oncesi_K1/base.yml",
+      "bytes": 1012,
+      "sha256": "a2ae58911d2b01d2e807790fcf8f4d2c9d3fe636f74209296625fc8b7eb49173"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/oncesi_K1/command.txt",
+      "bytes": 213,
+      "sha256": "fa0f30b67ebf512bff217466c5af6d05adcfb2722fb3ad12c0ae23be23c8cf29"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/oncesi_K1/config.yml",
+      "bytes": 1338,
+      "sha256": "02810c666c293b1e6df0a6570b1e74e63c301c3a522b4ea4d5631a2c7ab08e88"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/oncesi_K1/gnb.log.gz",
+      "bytes": 7872167,
+      "sha256": "c04a104f6fcb4e8f6cd4ac6888479f56b51c9356fac732853b55b7625531908e"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/oncesi_K1/metrics.csv",
+      "bytes": 654,
+      "sha256": "0d26c83dcc75ca542f719f6d2d042ba9ae5639e848b7215ed5f4dc8a78014082"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/oncesi_K1/model_validation.json",
+      "bytes": 381,
+      "sha256": "49d5f3a41213eb8b6fefbc87b3cf5c29e91b9d1e5619f23f93d228bfcc74a8b5"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/oncesi_K1/summary.json",
+      "bytes": 1232,
+      "sha256": "f929ed902711dc19e23689a74e78ded9c749c753e923d1123c1c0fd48c37d566"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/oncesi_K1/terminal.txt",
+      "bytes": 4245,
+      "sha256": "7d406e51f1ae27c4ffcda09f6e0ad2a900ec67da6ec98cbe5cb74f472f110d43"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/oncesi_K1/top.txt",
+      "bytes": 16049,
+      "sha256": "67b3c148c5ef02848446da9753f403ea2585dffbcd15e50b984534b545151bcf"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/oncesi_K1/typescript.txt",
+      "bytes": 4291,
+      "sha256": "efd85da35c5d1b503b2c44237a6e97c8e137cc0efea369f91fcdcf94ecf1dd0e"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/oncesi_K1/warning_excerpt.txt",
+      "bytes": 12404,
+      "sha256": "de6ad8aad3683c4eba63cee7227f6f442743a6329feb1e44c2c17bcea75c9aea"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/oncesi_K1/wrapper_output.txt",
+      "bytes": 1716,
+      "sha256": "da8c2b65074d97d33d81db475410d004a3365a9bbf99eb9f7844a56d0a252483"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/oncesi_K10/base.yml",
+      "bytes": 1012,
+      "sha256": "084e3ef998ace47db29cdd94ff735444361a505f42a475406a463ad1072c7c11"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/oncesi_K10/command.txt",
+      "bytes": 216,
+      "sha256": "88ed1a21cf787ef684f90c619bad33d02598e99ca17b2855b04897002bf5e167"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/oncesi_K10/config.yml",
+      "bytes": 1339,
+      "sha256": "33d100dd3d84626f34994be7e6223285f669acbd8b4dc79acf947c270b045dfe"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/oncesi_K10/gnb.log.gz",
+      "bytes": 2088325,
+      "sha256": "da8f086c56a5f44ef25ffdbdc0282c8da66918826ca3d44aab5bd65c0bd9469f"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/oncesi_K10/metrics.csv",
+      "bytes": 654,
+      "sha256": "0d26c83dcc75ca542f719f6d2d042ba9ae5639e848b7215ed5f4dc8a78014082"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/oncesi_K10/summary.json",
+      "bytes": 1114,
+      "sha256": "7b37f460dedfe25731799bd4fb88eb691b85da1ff0edf957445b967801e34c8e"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/oncesi_K10/terminal.txt",
+      "bytes": 4247,
+      "sha256": "771a909226d192ef2786b478ed8c866d458f2f80271954613d683ba8029c4fe6"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/oncesi_K10/top.txt",
+      "bytes": 16504,
+      "sha256": "b5dc060fdcc06ded6b7732020c9a89f231b2245d3aefbe19192728ab46bcab3e"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/oncesi_K10/typescript.txt",
+      "bytes": 4293,
+      "sha256": "8a34555ab833bbd7bbb950a62c863588de68a37b43528746acced4e6eb2bedad"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/oncesi_K10/warning_excerpt.txt",
+      "bytes": 12248,
+      "sha256": "6f58bacfa678adfb96b9127d26711bdec5827531848a3f582eaad2f91df0c363"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/oncesi_K10/wrapper_output.txt",
+      "bytes": 1718,
+      "sha256": "31cbd8e3e7781a1ad0d053ab343d9a3144fa1ef3791d601b3b1cd86b13206f68"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/oncesi_K11/base.yml",
+      "bytes": 1013,
+      "sha256": "f414601fa66f569a13662adad82e51b916d301d2f6af6445409cd4329c82ed9d"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/oncesi_K11/command.txt",
+      "bytes": 215,
+      "sha256": "d9b8bf85f6b07b27e2f3ac1d6ca3bf388b0c183306206beacd1ab6121e97180a"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/oncesi_K11/config.yml",
+      "bytes": 1339,
+      "sha256": "93f6525c1f67ed5d4ab058dffb34507ea242c6c87b8404ff079aaa2b6fede122"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/oncesi_K11/gnb.log.gz",
+      "bytes": 7958473,
+      "sha256": "d1da7174e075e7b90b26be13e7e80d2917eead32777a9c6c058cb0ce582ab76f"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/oncesi_K11/metrics.csv",
+      "bytes": 654,
+      "sha256": "0d26c83dcc75ca542f719f6d2d042ba9ae5639e848b7215ed5f4dc8a78014082"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/oncesi_K11/model_validation.json",
+      "bytes": 413,
+      "sha256": "d472ea0d27363cd2beb87560e69ea557286d22662d1077428893aa229032670f"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/oncesi_K11/summary.json",
+      "bytes": 1117,
+      "sha256": "7bb042d145e6f5a288728479660ea43c6a9cf6b447e005e6d780adf02051997f"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/oncesi_K11/terminal.txt",
+      "bytes": 4247,
+      "sha256": "0597a75c76cc801252e95246129744ed8bf967f1f1bf6e3effff1d160bf47722"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/oncesi_K11/top.txt",
+      "bytes": 16049,
+      "sha256": "6294ce18a393342e61b627d80d97a70f05fd21dbcb4f5892478674633019d4fe"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/oncesi_K11/typescript.txt",
+      "bytes": 4293,
+      "sha256": "fc2e2791313670d2fbdba39415ebd69fce8011c553a1de00f26ae12cd974f5e1"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/oncesi_K11/warning_excerpt.txt",
+      "bytes": 12404,
+      "sha256": "ace3a4c2f310a82b706bebfc1a4df0ec69ad51e4f3b6b40b5ddb8b03f096259c"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/oncesi_K11/wrapper_output.txt",
+      "bytes": 1717,
+      "sha256": "38c25701a1ea34719418169321037a07434cd6dd41b0590ad6907421de01fa31"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/oncesi_K2/base.yml",
+      "bytes": 1014,
+      "sha256": "9786a6b5922647d74050a9b810d7e060c17ffc59ff836416a26ac56ed7451d17"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/oncesi_K2/command.txt",
+      "bytes": 213,
+      "sha256": "92af0e6f1aca05ea2b77073b67a32ae5cd0b9b415d5a9f1311d9b6443134340e"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/oncesi_K2/config.yml",
+      "bytes": 1340,
+      "sha256": "df4f015a060b57de6413efd5e65bf9f6d5c2efdeeb8da16adc88916571fb2b80"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/oncesi_K2/gnb.log.gz",
+      "bytes": 4418,
+      "sha256": "a52f32b491fc374561279b4d1253bf6e628fced7d4574b2e9bcd0b1f5501bc1d"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/oncesi_K2/metrics.csv",
+      "bytes": 654,
+      "sha256": "f1ba31bbf3d40ded16e38278747e40f80f745746879f9b77a93659e46e8fc78d"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/oncesi_K2/summary.json",
+      "bytes": 1210,
+      "sha256": "726dedef1c03f187604ae6a64f80b9aeb3724b4aaca2103ea31c528ba89d2884"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/oncesi_K2/terminal.txt",
+      "bytes": 4245,
+      "sha256": "ef4402dbf24d113cd779cc438d47f1e79bc237d877d283cf74679333cf97fa33"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/oncesi_K2/top.txt",
+      "bytes": 16049,
+      "sha256": "1aeafa858729e7472b4b4547b133f866e1b474188ba9d0dc13e9b3a9a1bfb575"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/oncesi_K2/typescript.txt",
+      "bytes": 4291,
+      "sha256": "d72f7db618fc8973b756a520f5a9430d7df9e7a2a50dfab21a7e95df494d3528"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/oncesi_K2/warning_excerpt.txt",
+      "bytes": 12404,
+      "sha256": "7011949ae45639f8f6cffb0d51b7da5e5dfb384947ed583b1f06fc1bfd911c67"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/oncesi_K2/wrapper_output.txt",
+      "bytes": 1716,
+      "sha256": "248d320f2f74bcce5371ba4e3dae4b7c1841069127637f90396f55d50b56fb23"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/oncesi_K3/base.yml",
+      "bytes": 1014,
+      "sha256": "893ba013686f2922c91128d23b348698cceb36014e382a46d065134ceb50c9b3"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/oncesi_K3/command.txt",
+      "bytes": 213,
+      "sha256": "9a349534a961078989dc0ddd1e0d197c047363234bdfd391291b3d508dae4e10"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/oncesi_K3/config.yml",
+      "bytes": 1340,
+      "sha256": "14f6abca935b8b3b3e5c4c97d1fc5ead55f66fc5a86dc10df0aacb72cfca40da"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/oncesi_K3/gnb.log.gz",
+      "bytes": 4398,
+      "sha256": "9c8f7d4b3a2e9de0e9400fce9679424eaa7a59f3daa6a8c3eb8bf340c2f67c81"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/oncesi_K3/metrics.csv",
+      "bytes": 654,
+      "sha256": "11adc84674b03c8b1253f1a64af563428cae58774e1db5d4e52e8c79d27c545a"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/oncesi_K3/summary.json",
+      "bytes": 1210,
+      "sha256": "3c82c864ff7221385795cc797f398049ddbdacba4b72fb586e07bcdf12468da3"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/oncesi_K3/terminal.txt",
+      "bytes": 4245,
+      "sha256": "fa2d24a5aac800006edfc2ccaf334d1aad4f04939372ce39e346c12d9a74755f"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/oncesi_K3/top.txt",
+      "bytes": 16504,
+      "sha256": "8b2b287b3a0a26cfd8a4a6cc280ecda316d1f7a234d1c10a0abcdbbd8ea9afbe"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/oncesi_K3/typescript.txt",
+      "bytes": 4291,
+      "sha256": "fdab5cab172cf8c5b2b3ba6b33a659b9b76df580c598ec79388a64addc1b021b"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/oncesi_K3/warning_excerpt.txt",
+      "bytes": 12404,
+      "sha256": "a475e8c001647744c7ce11e18bbccfc44141bbff7a067709dc2ab4998a802c31"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/oncesi_K3/wrapper_output.txt",
+      "bytes": 1716,
+      "sha256": "15d40a639b7632ddf3ec28eaf8412025e13ad6b70691b40008cfe1e728749d28"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/oncesi_K4/base.yml",
+      "bytes": 1014,
+      "sha256": "33561faf6dfb5c1b9c18581c0c595eb67a10fa466689408f62f2bf29bb3a47cc"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/oncesi_K4/command.txt",
+      "bytes": 214,
+      "sha256": "06e561d19447df625f1f61276c1c1161bdc83559f5de33e15377c4cc0dbade8b"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/oncesi_K4/config.yml",
+      "bytes": 1341,
+      "sha256": "38cf1d558920c77d09bc8f37cfa7bad8e0bdf7d500308883002a3d2ad869e467"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/oncesi_K4/gnb.log.gz",
+      "bytes": 4369,
+      "sha256": "c651ddb8f5f4e96ce0fa2b358a5a45d74631d193826d5011a0042fae2418d16e"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/oncesi_K4/metrics.csv",
+      "bytes": 654,
+      "sha256": "0d26c83dcc75ca542f719f6d2d042ba9ae5639e848b7215ed5f4dc8a78014082"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/oncesi_K4/summary.json",
+      "bytes": 1211,
+      "sha256": "dcc3dc94ef6d46fbe673406728ab1e2baf2e1e604ba80a12d2c1558a8210bf18"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/oncesi_K4/terminal.txt",
+      "bytes": 4245,
+      "sha256": "a990acc8b64c1fc305e04133ae1113de192af4cc3665104307ac8bee80bc6d7e"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/oncesi_K4/top.txt",
+      "bytes": 16049,
+      "sha256": "c32823a6c290d5f353ba83db50c5079f5fa652199b1fd5aaec5bdff4cce6ce2a"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/oncesi_K4/typescript.txt",
+      "bytes": 4291,
+      "sha256": "dee6cc3c644dc9e383aa59326fbf860287c66576317f09de3c8be5453e7aad5d"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/oncesi_K4/warning_excerpt.txt",
+      "bytes": 12404,
+      "sha256": "8805809d8bc4e3f9bc5978ce07fa4f6b961e0cac2e2a642d4de731106b7a392c"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/oncesi_K4/wrapper_output.txt",
+      "bytes": 1717,
+      "sha256": "678f78354551a410bc2b00d2f692c63139d5ab2022076407a0aaa8de7f2c59f9"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/oncesi_K5/base.yml",
+      "bytes": 1014,
+      "sha256": "69f965a57d93ecabc2080dcfd78133ab322a71a56b16ab5a737d026e5e430352"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/oncesi_K5/command.txt",
+      "bytes": 213,
+      "sha256": "a17d4e3afffde616598dcd1f9ac7fe10d7700330058a65a8b4a1532b097f0680"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/oncesi_K5/config.yml",
+      "bytes": 1340,
+      "sha256": "bcf5d47c47726945b29f88a3cf41c35faa0d6a9c55b562a9bb2f6a5523adb422"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/oncesi_K5/gnb.log.gz",
+      "bytes": 329,
+      "sha256": "f1988323497e33e7c1d8756cbab816d9897aadff653d8ab5e7a2ae94b2cfa9af"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/oncesi_K5/metrics.csv",
+      "bytes": 654,
+      "sha256": "c879096fc364c35517c596daec8630b0bcbb46827d28dd1017d198edfcd7a872"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/oncesi_K5/summary.json",
+      "bytes": 1157,
+      "sha256": "326e4e7b958c02c36d649bf08c95f4e90bb018950288bb9f1e1e5b064c7f07a9"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/oncesi_K5/terminal.txt",
+      "bytes": 4245,
+      "sha256": "46186d1e2bdcea74ff644979796bb47223353deb34560ff133e571a2c8a1c721"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/oncesi_K5/top.txt",
+      "bytes": 16504,
+      "sha256": "407bd857a66893a9cb530cbed53e27625b572b4d39379f6a5aadf0516ab56c0b"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/oncesi_K5/typescript.txt",
+      "bytes": 4291,
+      "sha256": "ead8dc1fe82e17177821dd484fab27ed0ac8431e3ac410cde2b4db4641fc44be"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/oncesi_K5/warning_excerpt.txt",
+      "bytes": 330,
+      "sha256": "60597ae1265424dc9e8e9ce11757fb11f755b01430e9ad18459a4fe149342b00"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/oncesi_K5/wrapper_output.txt",
+      "bytes": 1716,
+      "sha256": "505d10afbb7ae535a56c9b44665aaf2b15210e17503772e1f0245dc75f691d89"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/oncesi_K6/base.yml",
+      "bytes": 1012,
+      "sha256": "5462372bf86049b9cb6e8bd6639f2892de33b5cae7f3b62a24b64364d0f271dc"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/oncesi_K6/command.txt",
+      "bytes": 214,
+      "sha256": "3c75f3af8593103e624c8f350fb379e678953ec03235b3631c9e695eac8d7322"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/oncesi_K6/config.yml",
+      "bytes": 1339,
+      "sha256": "99756c35e00f6bb444a4957058800dd21857c2f2e95758253bbc11f6fbaa19da"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/oncesi_K6/gnb.log.gz",
+      "bytes": 7931549,
+      "sha256": "cba985258025c70ab46fa91e901f0c86df4438a1e61d8e790b0cf4f6715d935d"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/oncesi_K6/metrics.csv",
+      "bytes": 654,
+      "sha256": "0d26c83dcc75ca542f719f6d2d042ba9ae5639e848b7215ed5f4dc8a78014082"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/oncesi_K6/model_validation.json",
+      "bytes": 346,
+      "sha256": "56747f28692875d8a8ac9292675c08d1c8e7801969fa9ec7396c148faf8f4a00"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/oncesi_K6/summary.json",
+      "bytes": 1233,
+      "sha256": "cbe89c0cff0dc7772d79c1b6b620795f1d6b9fd6e2bf0532ff15cb698ef7ef6d"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/oncesi_K6/terminal.txt",
+      "bytes": 4245,
+      "sha256": "95912efc67fb984f9f63fc4b6152a4b768ea2b24d8394f9e352ab14a08cab8c4"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/oncesi_K6/top.txt",
+      "bytes": 16049,
+      "sha256": "02b2737ef3e78f45349bfbde08bebda7359b27073203b16e1f2d32ee3c9f9d90"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/oncesi_K6/typescript.txt",
+      "bytes": 4291,
+      "sha256": "8731323e2a69b853383960cd41088f74c77f9119d9ad05275ceb7f8beb8b45a5"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/oncesi_K6/warning_excerpt.txt",
+      "bytes": 12404,
+      "sha256": "458111665f5713e95dfd72e84dfb3c98b131fbdd0673bd011eaaa3c9ac7f43f4"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/oncesi_K6/wrapper_output.txt",
+      "bytes": 1717,
+      "sha256": "53338e822ba9f9118d385fcbfcb244e2bafd9610ae47ca037e5644503135736b"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/oncesi_K7/base.yml",
+      "bytes": 1012,
+      "sha256": "75d94b79ff50ecb6d9ce2b17b65551aaea96dee282df4574ab05976d71d746a1"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/oncesi_K7/command.txt",
+      "bytes": 213,
+      "sha256": "176175c109a04b7faf85df8314e14ec34273fa78a229c60c582e43fbe4960633"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/oncesi_K7/config.yml",
+      "bytes": 1338,
+      "sha256": "bba478ae369961ecc0ac5994ab7b75c86dcf87dcb316384e9f2ea481a5be330a"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/oncesi_K7/gnb.log.gz",
+      "bytes": 7941801,
+      "sha256": "57c54bdd5f671e9afb0e4bac8d16bc830fec39a507697c415e11da7135512a60"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/oncesi_K7/metrics.csv",
+      "bytes": 654,
+      "sha256": "0d26c83dcc75ca542f719f6d2d042ba9ae5639e848b7215ed5f4dc8a78014082"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/oncesi_K7/model_validation.json",
+      "bytes": 346,
+      "sha256": "40d34cc2fe92bb1cebf94b753cd6f222279d2b068ba9b86fef01d5d4d111b82c"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/oncesi_K7/summary.json",
+      "bytes": 1232,
+      "sha256": "7b4b1565236adeae18d455562b79bf3811145d170721039ba20519d0bece06d7"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/oncesi_K7/terminal.txt",
+      "bytes": 4245,
+      "sha256": "9a5459e7d7ba6af0a12e60ee88aa4929ae79fc53e01bd1c0f19aa02f09f3f2ee"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/oncesi_K7/top.txt",
+      "bytes": 16504,
+      "sha256": "66c6cc2f1f1a41d2b5107ef839eecba1737b0bac9ec5c0c0313ab0e7b5349d4b"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/oncesi_K7/typescript.txt",
+      "bytes": 4291,
+      "sha256": "fa4a592cfc369315b28f361002d88b4f6fedcb3cc2f2c9c090071e5d5336c9a3"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/oncesi_K7/warning_excerpt.txt",
+      "bytes": 12404,
+      "sha256": "4354f1a0c14ca029319ca5cb58176f53f207c0aed2a9caeb2b2ae2aca72939b1"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/oncesi_K7/wrapper_output.txt",
+      "bytes": 1716,
+      "sha256": "9c0a0065e1c0405b7e1efe2bf4fdad304a41eefc6c02f90e40e44decba635b91"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/oncesi_K8/base.yml",
+      "bytes": 1012,
+      "sha256": "c6466cbd111d1f0325f695a6395695b4a97a84a4455a7c3caec9714bdcda90f8"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/oncesi_K8/command.txt",
+      "bytes": 215,
+      "sha256": "97bed95e10831d9fb7932750d8a576957a69fd6274dff5d8638367471ccd31a8"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/oncesi_K8/config.yml",
+      "bytes": 1340,
+      "sha256": "de572c5356c8cc97218cf67e65562a07606285dd86c5f4e34910fde0c88ac944"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/oncesi_K8/gnb.log.gz",
+      "bytes": 7961735,
+      "sha256": "e8318f54a4eb49a6884291da07091063a0e5f2ea7a309f38d776b8c7dd407db0"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/oncesi_K8/metrics.csv",
+      "bytes": 654,
+      "sha256": "0d26c83dcc75ca542f719f6d2d042ba9ae5639e848b7215ed5f4dc8a78014082"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/oncesi_K8/model_validation.json",
+      "bytes": 414,
+      "sha256": "3dbbc86cceefd4b0f40ac7b096ac164aac484913bfa0a91f4fa29f3a290ee080"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/oncesi_K8/summary.json",
+      "bytes": 1234,
+      "sha256": "61aac145089dbe5f92aa01b05981fec891784e70a7ca9bad484ffc2ea6cdf2d8"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/oncesi_K8/terminal.txt",
+      "bytes": 4245,
+      "sha256": "730ddabb01d1bc611b27c31909c2dcf01ecd0958af5416b64c3129dda591e7ff"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/oncesi_K8/top.txt",
+      "bytes": 16049,
+      "sha256": "010e99f2a0e6f09170fc8728b7e9320c7d3d2ccf80fdb7a2e0fd7df6cb35dbfe"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/oncesi_K8/typescript.txt",
+      "bytes": 4291,
+      "sha256": "57ca19f234772596a8f086ab378e79485508ad321167bc8deb9fbe3e969b17f3"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/oncesi_K8/warning_excerpt.txt",
+      "bytes": 12404,
+      "sha256": "be8b2fce6e609470c92afb4c03074e32a35c5106c1fd58b0715fca73362314b8"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/oncesi_K8/wrapper_output.txt",
+      "bytes": 1718,
+      "sha256": "f8bff3181ec14450d5dd6766897772639bf64f9a2f384059e1b5ac83c2d92e6c"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/oncesi_K9/base.yml",
+      "bytes": 1011,
+      "sha256": "a8ce5b0bdcfb0c08402f933d47f15230756d6242e1e25d77e74f54606abdaeff"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/oncesi_K9/command.txt",
+      "bytes": 213,
+      "sha256": "f08adbd040b2a0be3b8cbdcea374e5fff3aa6b77564ace400aee78db76d7330d"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/oncesi_K9/config.yml",
+      "bytes": 1337,
+      "sha256": "739634f702675aa79da830d02eab67d9fb18cf89d20470cbb8cf069c20cfe500"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/oncesi_K9/gnb.log.gz",
+      "bytes": 2103769,
+      "sha256": "6cf7877113893c1a34148c86d404303616c3cdbbf091e61d08dcd1e11fabe3be"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/oncesi_K9/metrics.csv",
+      "bytes": 654,
+      "sha256": "0d26c83dcc75ca542f719f6d2d042ba9ae5639e848b7215ed5f4dc8a78014082"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/oncesi_K9/summary.json",
+      "bytes": 1230,
+      "sha256": "cd618f602054246240a05627fc2a10d271d633f043ee9e0400f71b0ac4d5c99b"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/oncesi_K9/terminal.txt",
+      "bytes": 4245,
+      "sha256": "effd296171e44fc17d09ababae2a0c0eeb10d836ed6398b5abff38f01287da5c"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/oncesi_K9/top.txt",
+      "bytes": 16051,
+      "sha256": "201bedd6dae83bbad19f5268d20cbe70a6202089a46e268ef41176f820a9303d"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/oncesi_K9/typescript.txt",
+      "bytes": 4291,
+      "sha256": "1b431ca20f8b48ce7b979ed6c795ea15a6c46e7e0de3860dc1a4a22d86277bc4"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/oncesi_K9/warning_excerpt.txt",
+      "bytes": 12404,
+      "sha256": "68337a141da29c5214e2128d406006b9e80161e5b053dfb3872c2b36868b5fdf"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/oncesi_K9/wrapper_output.txt",
+      "bytes": 1716,
+      "sha256": "8c547e50fcfd5738df8256fb4ad91eccc5caa9bb8cef3ff621d32138c7b8a0bb"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/ref100_1/base.yml",
+      "bytes": 1010,
+      "sha256": "e2e1b4b24054bdb94e97a882dc9c55c53be88c8cba9fb3ac40212aa1ab054ee9"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/ref100_1/command.txt",
+      "bytes": 209,
+      "sha256": "fd9b42e825203b2ca09425656e9cb0c482bfb35098869506ecf59c368459323a"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/ref100_1/config.yml",
+      "bytes": 1010,
+      "sha256": "e2e1b4b24054bdb94e97a882dc9c55c53be88c8cba9fb3ac40212aa1ab054ee9"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/ref100_1/gnb.log.gz",
+      "bytes": 2294544,
+      "sha256": "c840d3cad6a0866e74f2842464ef6e42323656e09e2600f1df001685e7968152"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/ref100_1/metrics.csv",
+      "bytes": 682,
+      "sha256": "e3350e1da5a90dc80cbce426e9cd377f1ca3092dd1a6d366ed1e133105f67614"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/ref100_1/summary.json",
+      "bytes": 1199,
+      "sha256": "c7732d74bc1250e8d776b6dd4e804313e4dd71c26c55afc37701354c0e72b517"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/ref100_1/terminal.txt",
+      "bytes": 4598,
+      "sha256": "70d7b85188b2cf862846945a3c5e9d9e9a3aac33e8d801e8e63a3202246ec4c0"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/ref100_1/top.txt",
+      "bytes": 16473,
+      "sha256": "df2682f18eccd926b081bce1c753ff99a3ed5191e1efd1bbf65a8435e01cf2c5"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/ref100_1/typescript.txt",
+      "bytes": 4648,
+      "sha256": "359d552808d0ed1a55b855de9e74c588a4a741d1ab9b5a77c0784b3c297cd37c"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/ref100_1/warning_excerpt.txt",
+      "bytes": 330,
+      "sha256": "c122e1279b55511130ef06a55b670a2df6bc4d7e017a93e9f01536c3a705a397"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/ref100_1/wrapper_output.txt",
+      "bytes": 1713,
+      "sha256": "bc2413c82d09e5622c3edaac5f854ca7b98b5ccf3344a767f7dbe035914fb563"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/ref100_2/base.yml",
+      "bytes": 1013,
+      "sha256": "b1c15becf1b3fcbe77a8e2c3bc0d596d548c8f862c4d829e8a467a76cacc7358"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/ref100_2/command.txt",
+      "bytes": 209,
+      "sha256": "bb9c4e5d872f8b30694a1aaf4c6e4cf2d79283f3568f78b4f33f929626c0fda1"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/ref100_2/config.yml",
+      "bytes": 1013,
+      "sha256": "b1c15becf1b3fcbe77a8e2c3bc0d596d548c8f862c4d829e8a467a76cacc7358"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/ref100_2/gnb.log.gz",
+      "bytes": 331,
+      "sha256": "d135e47cb4f5c5127ecbd07e8cb90e4a8fc2353fc8494e5cb4ad890c13ca898d"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/ref100_2/metrics.csv",
+      "bytes": 682,
+      "sha256": "e3350e1da5a90dc80cbce426e9cd377f1ca3092dd1a6d366ed1e133105f67614"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/ref100_2/summary.json",
+      "bytes": 1155,
+      "sha256": "8e9cf7ad96bc1636bb45cbe1682c30228215384ae07a4698900986d2ce1a443c"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/ref100_2/terminal.txt",
+      "bytes": 4598,
+      "sha256": "38d51f758ac1d4125d63c3f984d5c24dff53b7c7a80ee796acb0ed9eae7971ee"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/ref100_2/top.txt",
+      "bytes": 16044,
+      "sha256": "c7675ff80a88484b70d5f6ad210213a7421bf151f2d6f53dd56df723c7985a7d"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/ref100_2/typescript.txt",
+      "bytes": 4648,
+      "sha256": "fca76e793dc171724a1ed87362d0f367c194374d7695d8b44c8f6bafcb9187cb"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/ref100_2/warning_excerpt.txt",
+      "bytes": 330,
+      "sha256": "3301562259dfae1a956a0d4615152e55d42bdc75496419624be6f9d3847fd048"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/ref100_2/wrapper_output.txt",
+      "bytes": 1713,
+      "sha256": "1f22d3791a4537b213d7419514ce1363cea9a4c446f82b0cca27565c95e748a7"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/ref100_3/base.yml",
+      "bytes": 1013,
+      "sha256": "5339bbdc4fc8b82486138aa5c76d906a9803b15d829eb7a82bd1bbc4a8ece339"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/ref100_3/command.txt",
+      "bytes": 209,
+      "sha256": "df139795cdbc971ff428bdabb3645f7c6c3e0890f71542024bcf284a4556944c"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/ref100_3/config.yml",
+      "bytes": 1013,
+      "sha256": "5339bbdc4fc8b82486138aa5c76d906a9803b15d829eb7a82bd1bbc4a8ece339"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/ref100_3/gnb.log.gz",
+      "bytes": 330,
+      "sha256": "4176a326ee5324f90cdb9c9373a833498a2d0fae083a138e29f1dae2668b8b91"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/ref100_3/metrics.csv",
+      "bytes": 654,
+      "sha256": "dcec6e025a07463d62605fa117269459fc64d18ebf5ca743ca25ecb823a71ec3"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/ref100_3/summary.json",
+      "bytes": 1154,
+      "sha256": "d0b1265eb411c2f1cc75f7c5e344c724aa7816d189cfb43cf8dde04c24d40aae"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/ref100_3/terminal.txt",
+      "bytes": 4243,
+      "sha256": "d8c284c47f14d65bc2ad45a27c9a084634bb6c7df6b1ec0cf97fd484a402c8d8"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/ref100_3/top.txt",
+      "bytes": 16049,
+      "sha256": "198aad4eca99492b91ae2370368acf4052a5637a2ee9409f87f5ed8b0091eef1"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/ref100_3/typescript.txt",
+      "bytes": 4289,
+      "sha256": "41ece031cada341cdf445968a7cfb45a57f91fa79e2217d978284dc8efb3357d"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/ref100_3/warning_excerpt.txt",
+      "bytes": 330,
+      "sha256": "149fa75e903513e154f6e73752c9c3f2fe494518773045c8a940821b0943d508"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/ref100_3/wrapper_output.txt",
+      "bytes": 1713,
+      "sha256": "aba0e7d2830b621d34c29881827326ef9d744f71145133db0a205a501a5ebed7"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/saat_tanisi/clock_monitor.json",
+      "bytes": 151,
+      "sha256": "7ef2eb37a6edc3260c32dd1d406c73731781a97273d33a5891386f1f5a847dbd"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/saat_tanisi/clock_probe_tsc.txt",
+      "bytes": 50,
+      "sha256": "b46d1c33a065f6e70dbc95774d0ddee7fe88409332771ef0fff0337248685853"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/sonrasi_K1/base.yml",
+      "bytes": 1013,
+      "sha256": "0f5ee06d8b056f886f4901fad136b339616bf697b7023c57a12596a4a27d1f97"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/sonrasi_K1/command.txt",
+      "bytes": 218,
+      "sha256": "78164b0affed7fdd9a3cf81afb4345e6f3349f95ce0d86501b2b7c05261f4197"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/sonrasi_K1/config.yml",
+      "bytes": 1339,
+      "sha256": "252a06c442380dc959255b952fe2bb61342a1a397890472a6485de7147763f04"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/sonrasi_K1/gnb.log.gz",
+      "bytes": 9328697,
+      "sha256": "d29a1a81549e0ef2469e04c522b97bad16b058f29b27a1a1bf5b6ccf455935b8"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/sonrasi_K1/metrics.csv",
+      "bytes": 654,
+      "sha256": "9ea9e2f134752803b6e493fbb1e6f54677bc34b670234642286a17bada61bfa6"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/sonrasi_K1/model_validation.json",
+      "bytes": 456,
+      "sha256": "da93abcaf25fe61ffa4fd796d4fed0b60e98371034261ee4c930d5f85436b407"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/sonrasi_K1/summary.json",
+      "bytes": 1091,
+      "sha256": "5ab9edc7229d35b717278595ea110c0e5ca0f1f89f599c9cbe8642abf9165fcf"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/sonrasi_K1/terminal.txt",
+      "bytes": 4250,
+      "sha256": "27276cb01f2ff902412cec8ff0948ead8312f23337995a54da56a8686349151d"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/sonrasi_K1/top.txt",
+      "bytes": 16504,
+      "sha256": "744fdb51830d49f9b5ea13d8d4192564b6bd2c5c3348042ce7766e9c26e3ed83"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/sonrasi_K1/typescript.txt",
+      "bytes": 4296,
+      "sha256": "2550d135a096638a724031868b2a47dd96a0aae67502270d2d338c01dc44493b"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/sonrasi_K1/warning_excerpt.txt",
+      "bytes": 610,
+      "sha256": "f0d277400c8d04ed03b5a035113a0cc4e35aa1e8ec5feea9ddf3dc474429c65b"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/sonrasi_K1/wrapper_output.txt",
+      "bytes": 1717,
+      "sha256": "3d55f72fdaea860817e62f332654cd32c6ff2fda4d2b5b84ed642c9553fed03a"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/sonrasi_K11/base.yml",
+      "bytes": 1014,
+      "sha256": "1af014d0e0b029f66112e8aab0ba06ca5f705cf1bae1f2a63ccd8a072bf1a430"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/sonrasi_K11/command.txt",
+      "bytes": 220,
+      "sha256": "af16f9edd9e6ed3b746de2f1923e9b1dba332fb8384f6ff742f64a6d85c8dadb"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/sonrasi_K11/config.yml",
+      "bytes": 1340,
+      "sha256": "30c208a37d244e6eb95c6dc7069e1448df6d6c4ac045908865949df3a4de95eb"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/sonrasi_K11/gnb.log.gz",
+      "bytes": 9263278,
+      "sha256": "eba8018fffe35737efcce86ffeb28e6acc1eaaaeac6e0caa610b2b41294b9df6"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/sonrasi_K11/metrics.csv",
+      "bytes": 654,
+      "sha256": "9ea9e2f134752803b6e493fbb1e6f54677bc34b670234642286a17bada61bfa6"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/sonrasi_K11/model_validation.json",
+      "bytes": 390,
+      "sha256": "4b7f81fd6fc1c16c59865e6cc0a6d51c3e862367fa355b80bdd233934b88b15c"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/sonrasi_K11/summary.json",
+      "bytes": 1093,
+      "sha256": "54c8abc6f1b75b48d5a667431712d3b6e7a9d82349fe8379238a3161cdf446cb"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/sonrasi_K11/terminal.txt",
+      "bytes": 4252,
+      "sha256": "31ead5cd10ee20e13dbc9237febc6c3a7fe2c7f448c4e9403014280d02c0a530"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/sonrasi_K11/top.txt",
+      "bytes": 16504,
+      "sha256": "33b52b9cf41a7cdf1e1635adb897a02f22ade34588bfcfb2aad258fd1820458f"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/sonrasi_K11/typescript.txt",
+      "bytes": 4298,
+      "sha256": "a1ce8dbf0712ea60cd4e9b3782bef277c0614705a61eb278740419d5ba305efe"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/sonrasi_K11/warning_excerpt.txt",
+      "bytes": 330,
+      "sha256": "8a364e2ee33cd9ae03053de5257bd1323d2bab5787bae8411e382acab06f545a"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/sonrasi_K11/wrapper_output.txt",
+      "bytes": 1718,
+      "sha256": "418708d322529c76b83a85f5ce52ded56828f1d833c9338c71883d5b2a91c2fb"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/sonrasi_K6/base.yml",
+      "bytes": 1013,
+      "sha256": "84d66b4966b6958ce43813cb924f976207f6f756077d658cf6d82cb31b846b69"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/sonrasi_K6/command.txt",
+      "bytes": 219,
+      "sha256": "6e7ef36bc85a98bfb0817e941701d0bcaa5ae714c977daf0943d7ce27b9e90fe"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/sonrasi_K6/config.yml",
+      "bytes": 1340,
+      "sha256": "d967ae3ac24283f871fec7354168fdab2ca8f978f4dc86be39aebf59684fa750"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/sonrasi_K6/gnb.log.gz",
+      "bytes": 9442883,
+      "sha256": "0f6320987b101e09421b82eebc12fd9373a1d1e390c9225420ff0d4476844a5a"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/sonrasi_K6/metrics.csv",
+      "bytes": 654,
+      "sha256": "b6ded4ce787e70aafe1dfac194bf96593f1d1e66e11c155e4faed13a201e6401"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/sonrasi_K6/model_validation.json",
+      "bytes": 461,
+      "sha256": "c9d8ff1f6d559d55a00499e0445154de262f9637e657a1e5886076218212390a"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/sonrasi_K6/summary.json",
+      "bytes": 1093,
+      "sha256": "c8dd6ad9b42e006a066b040f9bf1823b442cb055d6b096a6e2ff7beb974fe62b"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/sonrasi_K6/terminal.txt",
+      "bytes": 4250,
+      "sha256": "62a7cb2510bfd667875ece37ead8f634e20250fee1219f7c36142db52a7d0b68"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/sonrasi_K6/top.txt",
+      "bytes": 16049,
+      "sha256": "f1c14702fab9af6cb01d88e06ac144c121129ff5598b16d94f4f944aee7cfae3"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/sonrasi_K6/typescript.txt",
+      "bytes": 4296,
+      "sha256": "e53140184cfd42be568685c134dfb8527ccf46330fd8223369889eb47d3ff7d8"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/sonrasi_K6/warning_excerpt.txt",
+      "bytes": 330,
+      "sha256": "040ffce59ef8d85102cbc3310b1c0e57f0b524e2bc47853afaff0514a2bdc613"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/sonrasi_K6/wrapper_output.txt",
+      "bytes": 1718,
+      "sha256": "5558334a4c01a3e9023c055c358fd1524e9e603f30dacfe474503742b8c8f700"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/sonrasi_K7/base.yml",
+      "bytes": 1013,
+      "sha256": "99414f41ca39031bf31c688a4b1918a83e2ec51f3f15067b1aa03526b4436e53"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/sonrasi_K7/command.txt",
+      "bytes": 218,
+      "sha256": "3cc064cba4b090eec347555e5634cebd70d4c71b1bc871ee9a9f6c955f0ba5e0"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/sonrasi_K7/config.yml",
+      "bytes": 1339,
+      "sha256": "97f3da468c9426b54f86a663cb2244f1d3be2bff8f3f535a9a7eadc6cfc81da5"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/sonrasi_K7/gnb.log.gz",
+      "bytes": 9335178,
+      "sha256": "cac8fbe0feec39f0464952b6d67cf47fe059df44f369077b84fee7497667dd17"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/sonrasi_K7/metrics.csv",
+      "bytes": 654,
+      "sha256": "9ea9e2f134752803b6e493fbb1e6f54677bc34b670234642286a17bada61bfa6"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/sonrasi_K7/model_validation.json",
+      "bytes": 456,
+      "sha256": "5c48376e4e7636d4cb209b4af872777b0f2094fe81d238db7a95bd270b7c99d2"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/sonrasi_K7/summary.json",
+      "bytes": 1092,
+      "sha256": "eca04e1584657ba498c7f53f3aa4290bd5bea760a271f81420f52e0973638b0c"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/sonrasi_K7/terminal.txt",
+      "bytes": 4250,
+      "sha256": "cc81ed8e4a46770a3a859eda9bdc19f6a74c2fc168a4d40933914babf6a3393f"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/sonrasi_K7/top.txt",
+      "bytes": 16504,
+      "sha256": "4f16e6c28ae70b864d858d9b64dfb984eff4ae10fa37331016fb79fcb89b97ac"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/sonrasi_K7/typescript.txt",
+      "bytes": 4296,
+      "sha256": "250ed8de8e2a38457a759d82b7cdc378fdbcd21692aa74ef4735709b15d9861f"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/sonrasi_K7/warning_excerpt.txt",
+      "bytes": 330,
+      "sha256": "fa4bb6e1f94cfe6bb2b3a59d9fa71a9fc3df5d8d9f48a1472c15d8b6be8fbeaf"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/sonrasi_K7/wrapper_output.txt",
+      "bytes": 1717,
+      "sha256": "bb50949e16f0c47bdc9a369ff19cb24908fa539e0563d36e9796953cb9e2a078"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/sonrasi_K8/base.yml",
+      "bytes": 1013,
+      "sha256": "a3b9f408ba7c2a3300f548e1a598e6ef086d0daadc6ef988a8a51f1c74ce1bde"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/sonrasi_K8/command.txt",
+      "bytes": 220,
+      "sha256": "ce78b423007bd5600f03cdf293043dd520c9835ba90170823f7f8072125dbd43"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/sonrasi_K8/config.yml",
+      "bytes": 1341,
+      "sha256": "7d432034c9d67d5507f966275a1818166c5a631448c801bce291a7375f1a2541"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/sonrasi_K8/gnb.log.gz",
+      "bytes": 9332570,
+      "sha256": "16f962bfc97ac190ca5e33753d9125b9bae8310aead009fa4f3d26a421c4ca6c"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/sonrasi_K8/metrics.csv",
+      "bytes": 654,
+      "sha256": "9ea9e2f134752803b6e493fbb1e6f54677bc34b670234642286a17bada61bfa6"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/sonrasi_K8/model_validation.json",
+      "bytes": 456,
+      "sha256": "f71ab50889c145578f48ad55aac448eaebca36e07f2387fbbf6e2ccb9566fd6e"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/sonrasi_K8/summary.json",
+      "bytes": 1094,
+      "sha256": "012f750f4d50d2ebc40de4e86b75e02ca77b0e78952edd36f53c729d2a6f389c"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/sonrasi_K8/terminal.txt",
+      "bytes": 4250,
+      "sha256": "b2558985864d5a4b3cba7b7e9a0b726a212d3589c804b4caec0671b74b41c2d0"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/sonrasi_K8/top.txt",
+      "bytes": 16504,
+      "sha256": "f8f2b69fb75c5078b395e7fe38ac01bd1e85196a352b891019f9930054e86bd1"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/sonrasi_K8/typescript.txt",
+      "bytes": 4296,
+      "sha256": "9de8436c2c8e1e97cff0fbcbe45e2ea73a473f81589867602849062b463166d2"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/sonrasi_K8/warning_excerpt.txt",
+      "bytes": 330,
+      "sha256": "38ac978baf6d089c059e21f1239d631f95071256c286ffdc778ba061a6b90e18"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/sonrasi_K8/wrapper_output.txt",
+      "bytes": 1719,
+      "sha256": "73a5723bda5b8ff4ccef03e00658a03f2ab15c52c8bffb6f3e6e3b5e57190868"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/ss_k1_oncesi_20261120T143019_425923/base.yml",
+      "bytes": 1038,
+      "sha256": "16e58985c0c8aa7cb9e05e7e7f28fdea5ffe4ac49af38dff6083deeff22e4760"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/ss_k1_oncesi_20261120T143019_425923/command.txt",
+      "bytes": 265,
+      "sha256": "93060651417950f844dc9023f1e52cfb14fe209ce799377f1b6ec24b1c0cba1c"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/ss_k1_oncesi_20261120T143019_425923/config.yml",
+      "bytes": 1364,
+      "sha256": "7df5059b08d4f0958aa9bf60aed46d57119804be3a3c20b77252320ffe0d9eb0"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/ss_k1_oncesi_20261120T143019_425923/gnb.log.gz",
+      "bytes": 7930527,
+      "sha256": "0c368db30f6bd01edb96efc2dce5a6acb014c5c54fa649909b9c0a92c8cc95e2"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/ss_k1_oncesi_20261120T143019_425923/metrics.csv",
+      "bytes": 654,
+      "sha256": "0d26c83dcc75ca542f719f6d2d042ba9ae5639e848b7215ed5f4dc8a78014082"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/ss_k1_oncesi_20261120T143019_425923/summary.json",
+      "bytes": 1181,
+      "sha256": "d5576dc1cd05526f8babdcd9b2ba3818974d246d30c73c99124744ca51117464"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/ss_k1_oncesi_20261120T143019_425923/terminal.txt",
+      "bytes": 4297,
+      "sha256": "95c8286769e646ad1f368ecf670d4702849245c64a0c0c4dd6555359e00109bc"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/ss_k1_oncesi_20261120T143019_425923/top.txt",
+      "bytes": 16473,
+      "sha256": "a171f6b0ac8f1f9fc29e9386be0bc2e21988376ab5d99bf71d991069b5249010"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/ss_k1_oncesi_20261120T143019_425923/typescript.txt",
+      "bytes": 4343,
+      "sha256": "59034d6b13e57542711861e2fea3b634fedf5d9883e101f1d3aa33a0f9c32699"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/ss_k1_oncesi_20261120T143019_425923/warning_excerpt.txt",
+      "bytes": 12404,
+      "sha256": "eeade38d32ebafd0e503a9b7e1c1d732eb1642bacbec2235799e2e8a3368437c"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/ss_k1_oncesi_20261120T143019_425923/wrapper_output.txt",
+      "bytes": 1742,
+      "sha256": "55d6328778891737b8bb7a880d56d6c4b4751d723d9f7d4b3268fd6a1e45a255"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/ss_k1_sonrasi_20261120T143142_875972/base.yml",
+      "bytes": 1039,
+      "sha256": "f4cd54650a8a978b089fda57c98a742f94a9ccb3318201cf75e5034a9b1fe007"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/ss_k1_sonrasi_20261120T143142_875972/command.txt",
+      "bytes": 270,
+      "sha256": "fe1324e2a709bb64af2b08f248c6388da0c9287a148fa78d47438ab97a7cd144"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/ss_k1_sonrasi_20261120T143142_875972/config.yml",
+      "bytes": 1365,
+      "sha256": "ac42e89e0be37f1375b8d507e23ac527f56450b72f73ee25a41543652d6a7e5e"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/ss_k1_sonrasi_20261120T143142_875972/gnb.log.gz",
+      "bytes": 9325850,
+      "sha256": "ba3087c4e481257e872e906edacb40d48371367bf83270f30d89257087e4bd82"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/ss_k1_sonrasi_20261120T143142_875972/metrics.csv",
+      "bytes": 654,
+      "sha256": "9ea9e2f134752803b6e493fbb1e6f54677bc34b670234642286a17bada61bfa6"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/ss_k1_sonrasi_20261120T143142_875972/summary.json",
+      "bytes": 1157,
+      "sha256": "ee27acf7603592718e9e64847c783387f5ae2f6ffed692de7d87b5b04dfb453d"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/ss_k1_sonrasi_20261120T143142_875972/terminal.txt",
+      "bytes": 4302,
+      "sha256": "5b3ad60c1f899bf4335fac359ef48591ccf02df8b6001a2bd2ac57e53e0d59b4"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/ss_k1_sonrasi_20261120T143142_875972/top.txt",
+      "bytes": 16019,
+      "sha256": "f30e1750ed87a30640efc82aaebf95f0d053f83c3c3c3ea397a2899509d378c9"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/ss_k1_sonrasi_20261120T143142_875972/typescript.txt",
+      "bytes": 4348,
+      "sha256": "5485bcb79e9057b84dec79fca15ce070642d3f48affed317d2e9200d5a0e1d1c"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/ss_k1_sonrasi_20261120T143142_875972/warning_excerpt.txt",
+      "bytes": 330,
+      "sha256": "6c5dd3e8d8627b72b1996e304d25ea7d933c7af12dc206ec8bd3a384a5e24c6d"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/ss_k1_sonrasi_20261120T143142_875972/wrapper_output.txt",
+      "bytes": 1743,
+      "sha256": "af6d3d51fc26150641bca10751560c9e980ed5c416cb979a5f43eb6a9150a60c"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/ss_k6_oncesi_20261120T143243_363181/base.yml",
+      "bytes": 1038,
+      "sha256": "995e302351085e108786582d92e7e394a0d5a220a1e54148ca80e65dcf919677"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/ss_k6_oncesi_20261120T143243_363181/command.txt",
+      "bytes": 266,
+      "sha256": "9953b79b1e9d253ceddb382fa1b0dc80d44ce865416f967c95fb9138b4926239"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/ss_k6_oncesi_20261120T143243_363181/config.yml",
+      "bytes": 1365,
+      "sha256": "6d507293b867db97227d8bcdbfc9d967aa77f6338af00f2db960e49617cb9c8b"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/ss_k6_oncesi_20261120T143243_363181/gnb.log.gz",
+      "bytes": 7863403,
+      "sha256": "6f85cbbce515878652a4ee93254c896d2b97ee21e617b1299e830e5d896b45e2"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/ss_k6_oncesi_20261120T143243_363181/metrics.csv",
+      "bytes": 682,
+      "sha256": "f66e0187dc8323363b8118f9ba630928c68d470501a300fcda21934c2565a8f5"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/ss_k6_oncesi_20261120T143243_363181/summary.json",
+      "bytes": 1182,
+      "sha256": "8ae8342aaa6a1c0177e98fdbd5b15d5d97b8b75efc9f6e91871ee0ae015c4980"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/ss_k6_oncesi_20261120T143243_363181/terminal.txt",
+      "bytes": 4652,
+      "sha256": "e4a40422287ab7d17bf366410a23f0c30ff95369f06b5b00773795582356ddd6"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/ss_k6_oncesi_20261120T143243_363181/top.txt",
+      "bytes": 16019,
+      "sha256": "0280796b2980fe5ee10ce80e947b8f5474c945c98218f50a9317e07fa2d47a18"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/ss_k6_oncesi_20261120T143243_363181/typescript.txt",
+      "bytes": 4702,
+      "sha256": "871986b3ed5af7b6214a6c857c8c3bd5522c7c7c0f18fc2391009b60f8fc4771"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/ss_k6_oncesi_20261120T143243_363181/warning_excerpt.txt",
+      "bytes": 12404,
+      "sha256": "0df81aa263d75c3340f4545b42e87e43794118d36ec32e8e9a145747a33c0c29"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/ss_k6_oncesi_20261120T143243_363181/wrapper_output.txt",
+      "bytes": 1743,
+      "sha256": "2ec16a72671d9f88eea2949c87e2646d9ca60f7e83f314ff908f8c144c1629b0"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/ss_k6_sonrasi_20261120T143400_954795/base.yml",
+      "bytes": 1039,
+      "sha256": "e0c6789f5b2aebe479d3b918e77469e32f8942a574e7d33d24405831cc23b1fb"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/ss_k6_sonrasi_20261120T143400_954795/command.txt",
+      "bytes": 271,
+      "sha256": "748945456f03c7c8f82b1fdc34f575fe92a19380b33c9cd0a7d399d7c92407b5"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/ss_k6_sonrasi_20261120T143400_954795/config.yml",
+      "bytes": 1366,
+      "sha256": "3b3bd5ba9e8588fb996cefaa2deba9c7e68ea0238774e7944e849b7e7b268c84"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/ss_k6_sonrasi_20261120T143400_954795/gnb.log.gz",
+      "bytes": 9244149,
+      "sha256": "b32c710fcaa25671a72a83dd082b3c0e6ea97c7e1283d74e2932401ec5bb1ce0"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/ss_k6_sonrasi_20261120T143400_954795/metrics.csv",
+      "bytes": 682,
+      "sha256": "9da137f27173513bf0c0f0b3fa2d781187dbf543d3539bd4a743a82a4ff62b6e"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/ss_k6_sonrasi_20261120T143400_954795/summary.json",
+      "bytes": 1203,
+      "sha256": "1208f74c60e815afb68cc222b96bb01835ff3a19d8255d529858d5dc4555efc1"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/ss_k6_sonrasi_20261120T143400_954795/terminal.txt",
+      "bytes": 4657,
+      "sha256": "3709fe1fd7ff98d25962dafdffd7cee78912a7e955bb9a5bf944dfd23dac1422"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/ss_k6_sonrasi_20261120T143400_954795/top.txt",
+      "bytes": 16019,
+      "sha256": "3a658463e6b9fef7b7941677976c94ca51bf119959bc8e2b9fa1910645bcfae3"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/ss_k6_sonrasi_20261120T143400_954795/typescript.txt",
+      "bytes": 4707,
+      "sha256": "69f7659307b11553458b30db82958653bb1937c840d73cc003234850a507785d"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/ss_k6_sonrasi_20261120T143400_954795/warning_excerpt.txt",
+      "bytes": 16378,
+      "sha256": "cb572bd58a391d04cef22d80a4b27601af01a29c0462504618090ef69c9d7f52"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/ss_k6_sonrasi_20261120T143400_954795/wrapper_output.txt",
+      "bytes": 1744,
+      "sha256": "879885132c9dc6ccb612b7938833aa7e182b2cf41b0f28e0b5006e672a232e85"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/ss_ref_referans_20261120T142925_245969/base.yml",
+      "bytes": 1043,
+      "sha256": "4ac9b43899560ab24c3f81b3b232b2fc2a550db34dff8c1be12608b775fd25a0"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/ss_ref_referans_20261120T142925_245969/command.txt",
+      "bytes": 269,
+      "sha256": "3a8403e5c744bd0f05f1259588ad84e6c3523b31130e046a8400d4fb9f0881ad"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/ss_ref_referans_20261120T142925_245969/config.yml",
+      "bytes": 1043,
+      "sha256": "4ac9b43899560ab24c3f81b3b232b2fc2a550db34dff8c1be12608b775fd25a0"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/ss_ref_referans_20261120T142925_245969/gnb.log.gz",
+      "bytes": 332,
+      "sha256": "86728d2d25510dfbaa087b622fa19ae79fd4084b320c48ba6766c91a5b31ece0"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/ss_ref_referans_20261120T142925_245969/metrics.csv",
+      "bytes": 682,
+      "sha256": "e3350e1da5a90dc80cbce426e9cd377f1ca3092dd1a6d366ed1e133105f67614"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/ss_ref_referans_20261120T142925_245969/summary.json",
+      "bytes": 1108,
+      "sha256": "e4b24b021b338816fdf9847797342ce1c8c0da818f52ac61fd31941bebec60b2"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/ss_ref_referans_20261120T142925_245969/terminal.txt",
+      "bytes": 4658,
+      "sha256": "60e0c0667e69957aaf51e349588cf5d5e2faf984298c1e3b9bc9de240e1a791e"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/ss_ref_referans_20261120T142925_245969/top.txt",
+      "bytes": 16019,
+      "sha256": "fe7e374f3ccf526dd1326365274f2264f11323032e45298f0f1d8567fb5816b6"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/ss_ref_referans_20261120T142925_245969/typescript.txt",
+      "bytes": 4708,
+      "sha256": "9c63cfa7634786f947f20056de6e874ae7e64474686644b8d4b2eaf371a51b82"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/ss_ref_referans_20261120T142925_245969/warning_excerpt.txt",
+      "bytes": 330,
+      "sha256": "d57e44eca23b30f6476eb3c6d4e2f4ca918d1d1473a6ad84aad64cbfa89d4d43"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/ss_ref_referans_20261120T142925_245969/wrapper_output.txt",
+      "bytes": 1743,
+      "sha256": "70c30528adc42db814bcbe72eaac5bed17ced0b763e7d0de653fe8ed299407b2"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/tanisal100/base.yml",
+      "bytes": 1015,
+      "sha256": "48532bf9e9d0ca2cad4b209a6225feccfe616e2bb5d536838df0138e9bdeb889"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/tanisal100/command.txt",
+      "bytes": 217,
+      "sha256": "f627213d9d84d8e247185d686215538c941949c3d07db5fcdadb679241158edb"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/tanisal100/config.yml",
+      "bytes": 1015,
+      "sha256": "48532bf9e9d0ca2cad4b209a6225feccfe616e2bb5d536838df0138e9bdeb889"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/tanisal100/gnb.log.gz",
+      "bytes": 333,
+      "sha256": "056bda4fef4924114ec6b1cd890f890490c6145114e75d05bf215c5d7aeb3ec8"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/tanisal100/metrics.csv",
+      "bytes": 478,
+      "sha256": "7cbce4a1908bf8c6b23ec27c4d21e87bd2dfa29b2bbc19b2869198b725405496"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/tanisal100/summary.json",
+      "bytes": 1153,
+      "sha256": "bbbcfc640827d1effa08d07a8240a461112131ff95e68e0534f525da64541673"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/tanisal100/terminal.txt",
+      "bytes": 4251,
+      "sha256": "0f615feedf8be3cdb86c35c6bd299c73cd0219ed9459e2ce93c626261ca1579c"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/tanisal100/top.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/tanisal100/typescript.txt",
+      "bytes": 4297,
+      "sha256": "850c95f880f49c842777d5b7ab0ab62c22df60eed65bb2fb8f758619aad64bc5"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/tanisal100/warning_excerpt.txt",
+      "bytes": 330,
+      "sha256": "9eca8e5348ebd3cd2fa440c49d22a13ca9ae211f1ae9ecd46e4202a917132816"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/tanisal100/wrapper_output.txt",
+      "bytes": 1715,
+      "sha256": "5469a0568a7923a130b97338cc00e1e8304097ce112f8ba1bb40fb6fc515dee8"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/tanisal100_debug/base.yml",
+      "bytes": 1019,
+      "sha256": "10579396fd5ec2cbefb27f342b390995ba66f3a37064e65e6bac33fffcb62b82"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/tanisal100_debug/command.txt",
+      "bytes": 229,
+      "sha256": "e8c95e8318235fc163b105a4f2d06f2a4fc16c25b80e0b0951b85778058f9433"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/tanisal100_debug/config.yml",
+      "bytes": 1019,
+      "sha256": "10579396fd5ec2cbefb27f342b390995ba66f3a37064e65e6bac33fffcb62b82"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/tanisal100_debug/gnb.log.gz",
+      "bytes": 1519370,
+      "sha256": "576e8314987c33068057bf0a591e54e1270e013c103c6bba6090c11f18760b31"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/tanisal100_debug/metrics.csv",
+      "bytes": 478,
+      "sha256": "7cbce4a1908bf8c6b23ec27c4d21e87bd2dfa29b2bbc19b2869198b725405496"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/tanisal100_debug/summary.json",
+      "bytes": 1198,
+      "sha256": "25de262fe6d5dc100005dd55535cc878f6bfe73ed69030f6ba7703b049a3a55d"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/tanisal100_debug/terminal.txt",
+      "bytes": 4263,
+      "sha256": "d9b02d5b731aadbef3301bfb5fc567a18ba89917f8485da14c31ecdbea8d6090"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/tanisal100_debug/top.txt",
+      "bytes": 16019,
+      "sha256": "9294daa621e10d3042d8abffa8d69cec6b58b1affa67bc6e9c434bc59543ce30"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/tanisal100_debug/typescript.txt",
+      "bytes": 4309,
+      "sha256": "ea1dd1a43a9eb9fee407198cb3392ccdaa8fd018837c4447a84a74fe981f986b"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/tanisal100_debug/warning_excerpt.txt",
+      "bytes": 330,
+      "sha256": "ea68ed85922620af0873b2b8a4c033b783ad969483477732c24dc1a11f9139e5"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/tanisal100_debug/wrapper_output.txt",
+      "bytes": 1721,
+      "sha256": "f123c651f6b339cfd2dd60960e956e017867e4821b7db0522ce267f582c3731c"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/tanisal100_info/base.yml",
+      "bytes": 1017,
+      "sha256": "fc15f7544bc6e2de4d738c41adb4be6d2fc6616e86583ed6496099bbc287c11f"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/tanisal100_info/command.txt",
+      "bytes": 227,
+      "sha256": "932ca8644cbf3777b2c0ecc8dc7631393f922bc259386e13d8b5bc7c41ba444d"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/tanisal100_info/config.yml",
+      "bytes": 1017,
+      "sha256": "fc15f7544bc6e2de4d738c41adb4be6d2fc6616e86583ed6496099bbc287c11f"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/tanisal100_info/gnb.log.gz",
+      "bytes": 32142,
+      "sha256": "166d2fe30fc79f2ea77aa715bec640214375859ba0829a5a756609469f7dd07f"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/tanisal100_info/metrics.csv",
+      "bytes": 478,
+      "sha256": "7cbce4a1908bf8c6b23ec27c4d21e87bd2dfa29b2bbc19b2869198b725405496"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/tanisal100_info/summary.json",
+      "bytes": 1222,
+      "sha256": "ab4cc5d77489711a004032382051b46357d4c68e7e797f79abd1a67832302163"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/tanisal100_info/terminal.txt",
+      "bytes": 4261,
+      "sha256": "aa583bcbecc483f75efc89c13eac13a6cd2f09a4f9a3957c5959107837c1935a"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/tanisal100_info/top.txt",
+      "bytes": 16473,
+      "sha256": "2b41d629f841e24fddcd5ad6daceeffe635e1339dc733dea7c5048cbf4c2aa43"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/tanisal100_info/typescript.txt",
+      "bytes": 4307,
+      "sha256": "69b2effb444cd294311b2d8a16bc5ee7fbaa622ab0e69fc96d59c7e8ada37b82"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/tanisal100_info/warning_excerpt.txt",
+      "bytes": 330,
+      "sha256": "d364697e4f78bfd9d19dd03ba0aef8224829e4c05ed65036a7f0475bfb8916b6"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/tanisal100_info/wrapper_output.txt",
+      "bytes": 1720,
+      "sha256": "50da3ada05eff29318e8b0d96cd30fca104d26bd2bfde2f802c0f21282d91aa1"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/tanisal40_info/base.yml",
+      "bytes": 1015,
+      "sha256": "aa37087b107c65e78c4d6fd6aa7d8ef53e59e5179a9a497acc998c77fc5c0258"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/tanisal40_info/command.txt",
+      "bytes": 225,
+      "sha256": "60bf231c586efdb8441c7d34237277ca9425e1cf9d3c9a088262825ac5207e71"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/tanisal40_info/config.yml",
+      "bytes": 1015,
+      "sha256": "aa37087b107c65e78c4d6fd6aa7d8ef53e59e5179a9a497acc998c77fc5c0258"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/tanisal40_info/gnb.log.gz",
+      "bytes": 2327895,
+      "sha256": "92ec11b32c324bc7e2a7a55b84fdeb5b09b2c3a39633ab7cf1fc2f8a09596884"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/tanisal40_info/metrics.csv",
+      "bytes": 632,
+      "sha256": "984bc911a0cbb864b4813d18c3d2a6f66841b6667b0e074fc57e7e186c5728a9"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/tanisal40_info/summary.json",
+      "bytes": 1204,
+      "sha256": "8e1b64ab10959cf14a6ab9823ddc0e53778250887031d75d7b32c786dc326ed1"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/tanisal40_info/terminal.txt",
+      "bytes": 4258,
+      "sha256": "2aac02c429055f74345c733f4e0b1604c984aee422d6b225ec1bdd717ff2e6ae"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/tanisal40_info/top.txt",
+      "bytes": 16473,
+      "sha256": "72ea791ec0f89f0338bfd98292d7c8a5fe26a2119ab923a6715dc759438a0305"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/tanisal40_info/typescript.txt",
+      "bytes": 4304,
+      "sha256": "c4b673153f2b8c07e89a08a5154b343a371f90de296f28335d00401172e3199f"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/tanisal40_info/warning_excerpt.txt",
+      "bytes": 330,
+      "sha256": "345d65394dc5ed0a52a6cce0927b96ba3055fd14cc7d7bda852e823e62597ef0"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/tanisal40_info/wrapper_output.txt",
+      "bytes": 1719,
+      "sha256": "7a39ba5bd7f9146d3f92a342b362760cc3be329334db5fa0d52cd7c81f0d3516"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/v2_duzeltilmis100/base.yml",
+      "bytes": 1022,
+      "sha256": "84b9a6ea5d0a261b146b36eaa0540ba59c42c35aa12325b29ed72d042592fba0"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/v2_duzeltilmis100/command.txt",
+      "bytes": 227,
+      "sha256": "0193f1c8373f01f8bd8ebc525c7f010bcd521a0bc1742b067880791e474710ac"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/v2_duzeltilmis100/config.yml",
+      "bytes": 1022,
+      "sha256": "84b9a6ea5d0a261b146b36eaa0540ba59c42c35aa12325b29ed72d042592fba0"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/v2_duzeltilmis100/gnb.log.gz",
+      "bytes": 333,
+      "sha256": "1105c4533ee174ee25a5311fe7cab92ab990ac256f259384bae6b12b477546a0"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/v2_duzeltilmis100/metrics.csv",
+      "bytes": 654,
+      "sha256": "dcec6e025a07463d62605fa117269459fc64d18ebf5ca743ca25ecb823a71ec3"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/v2_duzeltilmis100/summary.json",
+      "bytes": 1087,
+      "sha256": "8bc63be88c1ff5abf73dd92dc0a949339d96fc499a90409ec500fed969301a2a"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/v2_duzeltilmis100/terminal.txt",
+      "bytes": 4261,
+      "sha256": "2b8270ab342fa8d485e57759acc01f1877ca6d168a1c0143202a4d3b1c736e75"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/v2_duzeltilmis100/top.txt",
+      "bytes": 16019,
+      "sha256": "a622ae473472ec4257406577e1f6656a10c4e1afd55043dbfeccb66777f884f5"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/v2_duzeltilmis100/typescript.txt",
+      "bytes": 4307,
+      "sha256": "5d612f2b3f7377705ae916ee7dfb2eed54e7c530e7e6929fd99c695ee81aaed7"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/v2_duzeltilmis100/warning_excerpt.txt",
+      "bytes": 330,
+      "sha256": "79e600c95c11d93c111746a8ce4b494af4febd701ec24bd8fe123335b1a054b1"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/v2_duzeltilmis100/wrapper_output.txt",
+      "bytes": 1722,
+      "sha256": "c14e4d1a405622c6f19f59e5114a4c4821944706d07cc00751e19ccd4d635a0b"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/v2_duzeltilmis40/base.yml",
+      "bytes": 1020,
+      "sha256": "8e9d0cda16212ff201c8e6b3b9678add6be58f9e0bf98806cdc56d5f0a2ca75d"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/v2_duzeltilmis40/command.txt",
+      "bytes": 225,
+      "sha256": "d1190a970eb78e694506e65ee2b888886c22edb1cba6e1f3d9c4a678f75845ca"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/v2_duzeltilmis40/config.yml",
+      "bytes": 1020,
+      "sha256": "8e9d0cda16212ff201c8e6b3b9678add6be58f9e0bf98806cdc56d5f0a2ca75d"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/v2_duzeltilmis40/gnb.log.gz",
+      "bytes": 2364,
+      "sha256": "8bdfc74804a6f2b2a5167fc9fcee7e83e674f7f73e54a70445af87c5805b7613"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/v2_duzeltilmis40/metrics.csv",
+      "bytes": 633,
+      "sha256": "ad39160d423a4c2a1df7e8fa297e89038646790d5b23531550ddb13d1e6b58e3"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/v2_duzeltilmis40/summary.json",
+      "bytes": 1118,
+      "sha256": "1ce2cda780b3531da82ca342514d6df0f63831d0e8e008b8c284726ac987c104"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/v2_duzeltilmis40/terminal.txt",
+      "bytes": 4258,
+      "sha256": "d875dc8da9eb0faf670a273f04ec76494e1e152f209c5ab3c67f921f4c5f0333"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/v2_duzeltilmis40/top.txt",
+      "bytes": 16019,
+      "sha256": "8849efc349a02b9eb9812da3c1b34536a652a631061d5c17864677795e5e46cb"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/v2_duzeltilmis40/typescript.txt",
+      "bytes": 4304,
+      "sha256": "c86cb5a1dd9c847e208ce69dbb46311c257dbd23859c4623fa77c093c81c20fa"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/v2_duzeltilmis40/warning_excerpt.txt",
+      "bytes": 16289,
+      "sha256": "fe4f9cb019159668763f095b1adb1f6bd7472251355519af6b98c2979cb553f6"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/v2_duzeltilmis40/wrapper_output.txt",
+      "bytes": 1721,
+      "sha256": "80876b5560e09dd861edffaf05aa4331325af617dc623d5e3005881327615d36"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/v2_duzeltilmis60/base.yml",
+      "bytes": 1020,
+      "sha256": "e7cfdc4f6435a5d94197e5a41e86f9a4b1910638380f09f2dccb9774200428d4"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/v2_duzeltilmis60/command.txt",
+      "bytes": 225,
+      "sha256": "7a5a6d616cf9ebfb313619b09f339bcd79def664e6b859f093503ac89cef2613"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/v2_duzeltilmis60/config.yml",
+      "bytes": 1020,
+      "sha256": "e7cfdc4f6435a5d94197e5a41e86f9a4b1910638380f09f2dccb9774200428d4"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/v2_duzeltilmis60/gnb.log.gz",
+      "bytes": 333,
+      "sha256": "42aae03689338d48af1034bdc93241000618ddd8e0ccc91d0c6f68907221a263"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/v2_duzeltilmis60/metrics.csv",
+      "bytes": 632,
+      "sha256": "fa587efb5618be0c00633050cd76a15825cef6d3087ebe5a4ce6c9c648bcfcb8"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/v2_duzeltilmis60/summary.json",
+      "bytes": 1081,
+      "sha256": "9a6ba8408d81e28ac29c2c69e51cc562275296ac1e16a1704990e172243137db"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/v2_duzeltilmis60/terminal.txt",
+      "bytes": 4258,
+      "sha256": "a784bd91d40c79139448563b67771f20f8fa902ce1f6b5ad2d967d46b882c287"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/v2_duzeltilmis60/top.txt",
+      "bytes": 16019,
+      "sha256": "3ea561944efca480a21d55cb2b5bd0c18b48b2fb34a4a23350df54a58fdddf6c"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/v2_duzeltilmis60/typescript.txt",
+      "bytes": 4304,
+      "sha256": "a246f722e3ca20826042f3c1a35df98dc4d58307335b14e5c421f0ddd423268c"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/v2_duzeltilmis60/warning_excerpt.txt",
+      "bytes": 330,
+      "sha256": "5ce79af89be761e93e854ae0d3b80df2fe83ae668baab2906db164bc9729b333"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/v2_duzeltilmis60/wrapper_output.txt",
+      "bytes": 1721,
+      "sha256": "fd818882c5948d014ee0302c759acb6b728c0796407702080b2e930654872859"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/v2_duzeltilmis80/base.yml",
+      "bytes": 1020,
+      "sha256": "b9c7f8c036bdfb39d8ba18482b7c82128b8dbdb12e1f7bc6f9688cd4de66cc6c"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/v2_duzeltilmis80/command.txt",
+      "bytes": 225,
+      "sha256": "580288d895512a5f36e437b46069fb2cccf5ee23ec0fc0caa7b63c054dfae443"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/v2_duzeltilmis80/config.yml",
+      "bytes": 1020,
+      "sha256": "b9c7f8c036bdfb39d8ba18482b7c82128b8dbdb12e1f7bc6f9688cd4de66cc6c"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/v2_duzeltilmis80/gnb.log.gz",
+      "bytes": 332,
+      "sha256": "33b7a9d94cbd0079dbd068557c81a44d5615f10ee1bd1dff11b32e662f411f10"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/v2_duzeltilmis80/metrics.csv",
+      "bytes": 659,
+      "sha256": "7d179bb97c5fc8c57b710cdac98b0fa751920a2fd4a9540635c03e9ebb8067b5"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/v2_duzeltilmis80/summary.json",
+      "bytes": 1082,
+      "sha256": "7806b15a654fd055b1ecd9d17c6f0957b51832a8686b0a1a4f606bff76de2b05"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/v2_duzeltilmis80/terminal.txt",
+      "bytes": 4613,
+      "sha256": "3bd38aff384db312274ce46079366fa887505819df0bf425180e723db3cbe197"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/v2_duzeltilmis80/top.txt",
+      "bytes": 16019,
+      "sha256": "d8d43aeae9ffb5e3256ac17e793973aeff9936114db3b6fed19c53d62c3105da"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/v2_duzeltilmis80/typescript.txt",
+      "bytes": 4663,
+      "sha256": "9c76168e7a4ad305d14aeb51dc5eaab21d1e4333f9b43b9acefc84173dc0664a"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/v2_duzeltilmis80/warning_excerpt.txt",
+      "bytes": 330,
+      "sha256": "37d94eddfdeb4c4a0a518858fcc972e699bae7240252f7953d9d0114b6c88e6f"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/v2_duzeltilmis80/wrapper_output.txt",
+      "bytes": 1721,
+      "sha256": "d998b5b6af9a66d60ef1546e73fd5ddef80bda48ad0aeeaf3c0d0afaaf18af08"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/v2_oncesi_K1/base.yml",
+      "bytes": 1015,
+      "sha256": "586aece01c8df9a019aae973de72af058d6a6c78df53a351a7179dec6e4ff928"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/v2_oncesi_K1/command.txt",
+      "bytes": 219,
+      "sha256": "72a2a26d4188c4859263daa01bdaa8d6b36711a367415f5c1344eeb06f28046a"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/v2_oncesi_K1/config.yml",
+      "bytes": 1341,
+      "sha256": "304fba211fb3d42bb0ee90f8f1fbd6ca4e33105042508a8703b43bd5e0f4211f"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/v2_oncesi_K1/gnb.log.gz",
+      "bytes": 7949772,
+      "sha256": "80624e96362c2c46d0753a2517711c31f1dcb84d77d01fbcad9da81cfa2cd760"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/v2_oncesi_K1/metrics.csv",
+      "bytes": 653,
+      "sha256": "74899cdf71d598e62181cc973010c8227a52ef6a98a9a095206bd5d1737431b4"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/v2_oncesi_K1/summary.json",
+      "bytes": 1168,
+      "sha256": "a7707b5f212513788b8739bc2c8ffa6e52e55348fa98d33212e86d2e5b58d184"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/v2_oncesi_K1/terminal.txt",
+      "bytes": 4251,
+      "sha256": "c275672037c9095e4b93b533bb6ea27056be8dd592e3ee5629772b7be593c00c"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/v2_oncesi_K1/top.txt",
+      "bytes": 16019,
+      "sha256": "32da78836415c0fb554bee8028791f72dec4fe43bd5a8eb047a5de5403f006f9"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/v2_oncesi_K1/typescript.txt",
+      "bytes": 4297,
+      "sha256": "8f9c04fe0ab90c9eca327be79f15e3a6cdaaa4749a157569f4ed1778b908fb81"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/v2_oncesi_K1/warning_excerpt.txt",
+      "bytes": 12404,
+      "sha256": "39e4a71aed15947a4e8b0484c706b6bcc3a9dfe6b618994f337d23b291305eda"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/v2_oncesi_K1/wrapper_output.txt",
+      "bytes": 1719,
+      "sha256": "9f3bf603a85382de3fd8331ad717708b4ab8ebc49f06a5bec402dcf62f112963"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/v2_oncesi_K10/base.yml",
+      "bytes": 1015,
+      "sha256": "3e5a1ec698116936a7f7a64d605c3174ca35cd687b5460a284e852b1ac48b420"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/v2_oncesi_K10/command.txt",
+      "bytes": 222,
+      "sha256": "38861ea767184c74e588a84704c436265447549648dc320ab4f10f834a6329ec"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/v2_oncesi_K10/config.yml",
+      "bytes": 1342,
+      "sha256": "dc17e0f38389dc2a52d1c855ef87f3211dd75e6afa1435081a7797a26f7649c4"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/v2_oncesi_K10/gnb.log.gz",
+      "bytes": 2097845,
+      "sha256": "6dc1174d960fc37b721e9ba77c6568e07d465b5e1fcbf7a98e2bab494bd2ca0c"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/v2_oncesi_K10/metrics.csv",
+      "bytes": 653,
+      "sha256": "b465d9734930f9ee18e2d3236bd9190509d614f5db2f58ccd5423e0af30d5c98"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/v2_oncesi_K10/summary.json",
+      "bytes": 1209,
+      "sha256": "9b259d7354794a0b5600fe0dc3af4e7cb6a409e370bcc0429932949505c020b6"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/v2_oncesi_K10/terminal.txt",
+      "bytes": 4253,
+      "sha256": "158b241501ff50e56c2d5805bd8cb16c1b91d95cd5f48ce9bc1003250ea0df28"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/v2_oncesi_K10/top.txt",
+      "bytes": 16019,
+      "sha256": "1210bcdd4046fc916a06856251e025bfdaa9e8dfe833c0719186798677693381"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/v2_oncesi_K10/typescript.txt",
+      "bytes": 4299,
+      "sha256": "0c8eb12e0abba03abb0b9d47246f1f6bb65f87ec0ea507982da8446114b00217"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/v2_oncesi_K10/warning_excerpt.txt",
+      "bytes": 12248,
+      "sha256": "252de48062cf528c05ceaf646ce9156a8e029b42cef1ad6101c3d7fbe5e43a39"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/v2_oncesi_K10/wrapper_output.txt",
+      "bytes": 1721,
+      "sha256": "a79ff7b8e76f9909fb0ea54b24f6ceab255a495885245ef42340e0e87ae34552"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/v2_oncesi_K11/base.yml",
+      "bytes": 1016,
+      "sha256": "bbe44b90a65d9afc47a665e2b754e8c317b75ad715ac6bddd7f1955c43f7c227"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/v2_oncesi_K11/command.txt",
+      "bytes": 221,
+      "sha256": "a668c1ff81e39c336e28f1e3afd53227a23cbe1ba251134c0f0dc2050d9ba4e5"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/v2_oncesi_K11/config.yml",
+      "bytes": 1342,
+      "sha256": "e0db34fa2142490de799917f1acfb72abba95ad9ddc6ae3bc083da4cd477b2b4"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/v2_oncesi_K11/gnb.log.gz",
+      "bytes": 7904011,
+      "sha256": "d44db6bfd3bf5fd55238b5a2ec4e8dffd4233f29e92cc83b26fb6193f57e8d2f"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/v2_oncesi_K11/metrics.csv",
+      "bytes": 654,
+      "sha256": "0d26c83dcc75ca542f719f6d2d042ba9ae5639e848b7215ed5f4dc8a78014082"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/v2_oncesi_K11/summary.json",
+      "bytes": 1205,
+      "sha256": "6ba23817b76e0a18c7310deb605d813e9dac0786d243a6f541373aae5de321c9"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/v2_oncesi_K11/terminal.txt",
+      "bytes": 4253,
+      "sha256": "d631194f908e58a92e32101fd5abe098a7a11d407a1a097939243f2c5c54aa0e"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/v2_oncesi_K11/top.txt",
+      "bytes": 16019,
+      "sha256": "0adc777e6fa973142a6565ad7d977f4da11d1985080915333177e5554cae2ee1"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/v2_oncesi_K11/typescript.txt",
+      "bytes": 4299,
+      "sha256": "1ed5e3b58c7769d0816afb467cf840a16b1b6e9b61a85eafa6029082fa8acfe7"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/v2_oncesi_K11/warning_excerpt.txt",
+      "bytes": 12404,
+      "sha256": "846ed387cfba760d8eb9abe3da6c1f888b3747090c53b9a93be069f8eaa54a32"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/v2_oncesi_K11/wrapper_output.txt",
+      "bytes": 1720,
+      "sha256": "e4b573a417ad308d732c9e7faad37ebf3ecc471843993b970a492856b3222cec"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/v2_oncesi_K2/base.yml",
+      "bytes": 1017,
+      "sha256": "08125ad3713165cd59cd263e4878e0a1680f556c72bf2bf5eadbe93460e2768f"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/v2_oncesi_K2/command.txt",
+      "bytes": 219,
+      "sha256": "83c5f44bace300e586d016fc1ddbad862866ce8c5ce0f5f813a5e7f51ac67fb9"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/v2_oncesi_K2/config.yml",
+      "bytes": 1343,
+      "sha256": "0c7f5277ed4f9f00daf8f48ad679c834c4c8513bff56557fbeb6ebbd984e8f87"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/v2_oncesi_K2/gnb.log.gz",
+      "bytes": 4525,
+      "sha256": "5adea851394673bddbc164be4f694ef0c69a56659a2f245a7f3fed9bf3bb87c7"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/v2_oncesi_K2/metrics.csv",
+      "bytes": 682,
+      "sha256": "4fee4b1f56f930f3e4f2f2874a9185d5f97ec10ccb9046af8d1d9d2f2856c65f"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/v2_oncesi_K2/summary.json",
+      "bytes": 1136,
+      "sha256": "d10f8a97df950d00b8e473ffb90eab27cfcf15891f5401d7b7c2396cde701726"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/v2_oncesi_K2/terminal.txt",
+      "bytes": 4606,
+      "sha256": "215743428a43749ae3ca6017117ed8a75e75b992c4c11d5b6d4934c17d1bdcf6"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/v2_oncesi_K2/top.txt",
+      "bytes": 16019,
+      "sha256": "69d005da9baf767e85c5fd515a00fa1531d9c8a868fb0e00c3ed9db8dcf7de6a"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/v2_oncesi_K2/typescript.txt",
+      "bytes": 4656,
+      "sha256": "c3edab9986f4ab1ce6b9abdcaa237e7aac4a41e2b884f9323ba9ae34e00a9c1e"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/v2_oncesi_K2/warning_excerpt.txt",
+      "bytes": 12404,
+      "sha256": "0de9c3e57129a3d37b904f1c3a857fb6b5232023f77a57cac54a1be2a1668f51"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/v2_oncesi_K2/wrapper_output.txt",
+      "bytes": 1719,
+      "sha256": "8e017a1d5d753ad58d927c4757af1257d2f48b5f5df3506860555aca7a56eba1"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/v2_oncesi_K3/base.yml",
+      "bytes": 1017,
+      "sha256": "adf4eee8816c59a3db66376b5cdc813a9adbfcf4cdffbee68562f4c998c45e8a"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/v2_oncesi_K3/command.txt",
+      "bytes": 219,
+      "sha256": "a85a045648fdafcf3ffb589180db14309ec7abecf49e799ac185e58785e52944"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/v2_oncesi_K3/config.yml",
+      "bytes": 1343,
+      "sha256": "ae8e7f072d268eb4655bda03eaa51362aa0c193f19cdc5a978276a29e286e465"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/v2_oncesi_K3/gnb.log.gz",
+      "bytes": 36292,
+      "sha256": "0734c6a5362b02a5cb34cf8a4c2fab472f5bda39e8cf0a34d674aec711e71cd7"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/v2_oncesi_K3/metrics.csv",
+      "bytes": 655,
+      "sha256": "c4d7f30e3f428c9e1a9a349ee93d720d73f7233e19e1cf2b452035b509e367b2"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/v2_oncesi_K3/summary.json",
+      "bytes": 1209,
+      "sha256": "af67d4f0dc0e9612514b614a0ca423014ddd605afe45a3ec34c8259bd4d73342"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/v2_oncesi_K3/terminal.txt",
+      "bytes": 4251,
+      "sha256": "1b0ccf78e528084c12324ce50149bb9bf40c23ae8e56959bb6e65c7ce863ab32"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/v2_oncesi_K3/top.txt",
+      "bytes": 16019,
+      "sha256": "55f4bee8b6f53a2366be788cd46f6e56195917d803fe8123217592617659759e"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/v2_oncesi_K3/typescript.txt",
+      "bytes": 4297,
+      "sha256": "9780bb4c4f8f9d3b478eb358f492955f1de2fb07f68eebad8d698ee0cb723d40"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/v2_oncesi_K3/warning_excerpt.txt",
+      "bytes": 13026,
+      "sha256": "6dcd57f7f573c3c1de2640c2d7765f5eee4327070019f7ceea47a527e2988032"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/v2_oncesi_K3/wrapper_output.txt",
+      "bytes": 1719,
+      "sha256": "997743ddb450ebd458f98afc317d28dae877ed711f1bd0108db283918bfa9006"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/v2_oncesi_K4/base.yml",
+      "bytes": 1017,
+      "sha256": "d3f21087e14eb396fe90dcf2c4584ce047248c1ace1bf615feb1d2d683e6b664"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/v2_oncesi_K4/command.txt",
+      "bytes": 220,
+      "sha256": "9238ed9343ae5a87e789310034f6eb89276a67e195315c6658e06e269a5989c1"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/v2_oncesi_K4/config.yml",
+      "bytes": 1344,
+      "sha256": "14d18186e7c206b19294c3a86d7724d3d0e9cdd4f7736ccb455920489f3faa42"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/v2_oncesi_K4/gnb.log.gz",
+      "bytes": 34559,
+      "sha256": "bc601250335226430c8db97b020ee7ed8fa492b35d0e305d25ffd7f5db548b1d"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/v2_oncesi_K4/metrics.csv",
+      "bytes": 654,
+      "sha256": "0d26c83dcc75ca542f719f6d2d042ba9ae5639e848b7215ed5f4dc8a78014082"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/v2_oncesi_K4/summary.json",
+      "bytes": 1181,
+      "sha256": "da60ffacba279618643f22ce5e565519d72cec32d177197e68c288de589af390"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/v2_oncesi_K4/terminal.txt",
+      "bytes": 4251,
+      "sha256": "6bd3b2544930dfac5a1239f53761b814ad5d58c8ce4615c2e5ed686ecfc73f61"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/v2_oncesi_K4/top.txt",
+      "bytes": 16019,
+      "sha256": "5adcfa0e01bafe9089c0f9d783a0c6b4b8c444fe329a8cf732f50f7b92d44f8a"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/v2_oncesi_K4/typescript.txt",
+      "bytes": 4297,
+      "sha256": "1dd91d66f803de15ad4f82888d52aa669dc3316059aba69f34914e0b8fe355cb"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/v2_oncesi_K4/warning_excerpt.txt",
+      "bytes": 12404,
+      "sha256": "e093e9a7e827e0a60fbcf5eefacacaa2f6c89d36e26bd9045fb9cf41a827b6bd"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/v2_oncesi_K4/wrapper_output.txt",
+      "bytes": 1720,
+      "sha256": "73e01075f1dc688a9dc905c87d35b8cda9e80c85c982e7b6fe2a272245b91cac"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/v2_oncesi_K5/base.yml",
+      "bytes": 1017,
+      "sha256": "ffa7aa2ef82a165ab591cf599e3f1859499dfa970bf904789f6e97f06c3a42c3"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/v2_oncesi_K5/command.txt",
+      "bytes": 219,
+      "sha256": "f2774ffcb4f7b8d8fb8571d0a2c7cc139448fbbf40a213cfeea093bd928dc630"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/v2_oncesi_K5/config.yml",
+      "bytes": 1343,
+      "sha256": "d5799231e6f3f65b5eac3329f1747b5494353677ecb2084cc57f0411a6f2901a"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/v2_oncesi_K5/gnb.log.gz",
+      "bytes": 30980,
+      "sha256": "331ae627b944d442f286a27ec455ee78ee62d532d4e52f880f7351e31a2676aa"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/v2_oncesi_K5/metrics.csv",
+      "bytes": 654,
+      "sha256": "c879096fc364c35517c596daec8630b0bcbb46827d28dd1017d198edfcd7a872"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/v2_oncesi_K5/summary.json",
+      "bytes": 1152,
+      "sha256": "68422fcc15671a09d382423ef2515921654ffc1b0197ee30770e8cdd019af840"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/v2_oncesi_K5/terminal.txt",
+      "bytes": 4251,
+      "sha256": "d091b5adb0dbfaa8bcf881a862ec9292ac2c8bac324aaed66c623c198ae23764"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/v2_oncesi_K5/top.txt",
+      "bytes": 16019,
+      "sha256": "7df10b7ba6e3794832d7ff20f45320a9438a6e8c04d5361580de315d127658f9"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/v2_oncesi_K5/typescript.txt",
+      "bytes": 4297,
+      "sha256": "d574f6a3f7bad51b8caf4fb3fbaac9e7dfaf082d7e56fd09f9b07bcae2b80573"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/v2_oncesi_K5/warning_excerpt.txt",
+      "bytes": 16260,
+      "sha256": "9630ae33bad5ceb602528d8892836247fe0e8eea3145a35cbc1b5690b7ca9194"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/v2_oncesi_K5/wrapper_output.txt",
+      "bytes": 1719,
+      "sha256": "91ab03626b750289ab5cadb5a1c240ffa6ebb36e0cdd0a4829681583a885174b"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/v2_oncesi_K6/base.yml",
+      "bytes": 1015,
+      "sha256": "f0ccf901f6d3fa2356e404115a826a83dc04b6367bd659e8c376d1d5875b3c3b"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/v2_oncesi_K6/command.txt",
+      "bytes": 220,
+      "sha256": "c2542a50c10aaedd57d2ae7b3972dbbf7b46bcc1a23fb159dbe2de8ca39239de"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/v2_oncesi_K6/config.yml",
+      "bytes": 1342,
+      "sha256": "3a87e340b42568ab64dc632cf2c160809d518db180c8107f4da8297ed1f9f706"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/v2_oncesi_K6/gnb.log.gz",
+      "bytes": 7963229,
+      "sha256": "c822d65253cd87ca053cf8f7861f3148746381ba67fd6811d30b940bfa10a729"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/v2_oncesi_K6/metrics.csv",
+      "bytes": 654,
+      "sha256": "0d26c83dcc75ca542f719f6d2d042ba9ae5639e848b7215ed5f4dc8a78014082"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/v2_oncesi_K6/summary.json",
+      "bytes": 1204,
+      "sha256": "3be11cbbd9074049ab7e5f7ae26139773a8cc81ffe0ea8f1b54a0904266f0b11"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/v2_oncesi_K6/terminal.txt",
+      "bytes": 4251,
+      "sha256": "10972b91a1ebd931eb09c9ad4ba5e9fe4f7b10e8f2630f76affcea6fc3b206f4"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/v2_oncesi_K6/top.txt",
+      "bytes": 16019,
+      "sha256": "ede6efbe18a5fa8c73aa9eae4e0643bb98370044924cfd86261c412a5ddc1e3c"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/v2_oncesi_K6/typescript.txt",
+      "bytes": 4297,
+      "sha256": "41c500f23cf9259a0e5ef49e1e75e73e6b0a5397d89f04e87185371e982eebcd"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/v2_oncesi_K6/warning_excerpt.txt",
+      "bytes": 12443,
+      "sha256": "c90f41cfaaab90de700de30e1c87fa9e7516c5d1f344b38a62313513bac5448e"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/v2_oncesi_K6/wrapper_output.txt",
+      "bytes": 1720,
+      "sha256": "563b46b3a04f21116b4855ee86652d15764f1c50e88cd04ca283308a3a2b6d3c"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/v2_oncesi_K7/base.yml",
+      "bytes": 1015,
+      "sha256": "715832c27fb2d37c1c34dc77d3f2068331ff49ada96b48f8d946076cb17c5ca6"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/v2_oncesi_K7/command.txt",
+      "bytes": 219,
+      "sha256": "eed4237c29de8ab5f1d56d53dcc383d9ce064fcb7fbf1f41cdd1c83397160adf"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/v2_oncesi_K7/config.yml",
+      "bytes": 1341,
+      "sha256": "829d3ec9389b5d7037f69cf3e1cd9469b75a2cfd89a9bf871337935186f16d15"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/v2_oncesi_K7/gnb.log.gz",
+      "bytes": 7799868,
+      "sha256": "019350ef9d933954890c271f44efddfea9fde6ce5c5d235a62cd1f763e43d01c"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/v2_oncesi_K7/metrics.csv",
+      "bytes": 654,
+      "sha256": "0d26c83dcc75ca542f719f6d2d042ba9ae5639e848b7215ed5f4dc8a78014082"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/v2_oncesi_K7/summary.json",
+      "bytes": 1203,
+      "sha256": "bd7245f17474d3722b7776da2fefbd37ec090edb0bddb9bd8ba3c1cb5dbbbe9c"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/v2_oncesi_K7/terminal.txt",
+      "bytes": 4251,
+      "sha256": "ab2f5ae5b4fb28504ea12e90dcd393ab1535d819a5707d40124dc8f33d5c7e4a"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/v2_oncesi_K7/top.txt",
+      "bytes": 16019,
+      "sha256": "81c3548b69b614a3143cbf85d69f907c1472f89f1c20f7b59bce74b31527b897"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/v2_oncesi_K7/typescript.txt",
+      "bytes": 4297,
+      "sha256": "77edd3e093d5519c97b6d63415614ca86a3ef0b3ded73f88990cd716433c2b7e"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/v2_oncesi_K7/warning_excerpt.txt",
+      "bytes": 12404,
+      "sha256": "54cde5b29b7e2df52730b6a9647e51178e6c51ba049b669b028c1056c64875af"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/v2_oncesi_K7/wrapper_output.txt",
+      "bytes": 1719,
+      "sha256": "e1edb33645939190949ab560da65f3ef302ff4a78501e20dbabaffc4626550f8"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/v2_oncesi_K8/base.yml",
+      "bytes": 1015,
+      "sha256": "ff9b5ac6d47aefaedafe9bf023756f1eb4c902f9fd4257441413c5da97e3776e"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/v2_oncesi_K8/command.txt",
+      "bytes": 221,
+      "sha256": "8f38c701039b61b39ce1ff698b543bfa214aa595ae64c88a228edcee7d6dd862"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/v2_oncesi_K8/config.yml",
+      "bytes": 1343,
+      "sha256": "0161846eefcdd8cfe3d2de5859ece8bbb8b2d8cd37974bcbd5825b031a94a848"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/v2_oncesi_K8/gnb.log.gz",
+      "bytes": 7899278,
+      "sha256": "6d8bf27aeecdb1204e30c39d875d1e55f91a767e9e303442af6ab33496dbaa6b"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/v2_oncesi_K8/metrics.csv",
+      "bytes": 624,
+      "sha256": "98d0940e95bb6054bce5f38794dc4e5bc3f927c8f4286d16889d1d34e1d37192"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/v2_oncesi_K8/summary.json",
+      "bytes": 1226,
+      "sha256": "ca00e9593bd6c1ebc610d362bc73a6356a02784be84b3699fe012d98ca1d524e"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/v2_oncesi_K8/terminal.txt",
+      "bytes": 4133,
+      "sha256": "cbc9905e07e25fdf0fb7f177f930bdd63a5d25581d6c80e44847048e14650b6d"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/v2_oncesi_K8/top.txt",
+      "bytes": 16019,
+      "sha256": "fe24cf43d07f930053a48ed12c0bc7f2db32e5b8084762c9aad8cadd90cb5694"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/v2_oncesi_K8/typescript.txt",
+      "bytes": 4178,
+      "sha256": "760595c77c9df6c58b411aa38caa016ee0260a06ecc231e99a69d4e9edbb5680"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/v2_oncesi_K8/warning_excerpt.txt",
+      "bytes": 12404,
+      "sha256": "2b97e49028950913695b97c1ca90bf11586dd27ba70009610d04d83337bc78fb"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/v2_oncesi_K8/wrapper_output.txt",
+      "bytes": 1721,
+      "sha256": "e01208ede07161d1bc8360828026a76781738020287eaffdfbafa0dc40671651"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/v2_oncesi_K9/base.yml",
+      "bytes": 1014,
+      "sha256": "2ec5dbe6a5618ece441247b0a4d94ff5cc751ee20beb13ec0f46f6e82e98828c"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/v2_oncesi_K9/command.txt",
+      "bytes": 219,
+      "sha256": "c38594a70fe2d0121bb3a96087a66f2ff2997b33ec5551f5df216c7d6e785a87"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/v2_oncesi_K9/config.yml",
+      "bytes": 1340,
+      "sha256": "86e6064f2fd2763e0bcc8b8b0e28efe49b70d0e077bfd6cf8ca5ee7c947c4100"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/v2_oncesi_K9/gnb.log.gz",
+      "bytes": 2134633,
+      "sha256": "20e98c8dbea416fba93f66a80659bc42a37576f27b10ece723eefc747ac4ce24"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/v2_oncesi_K9/metrics.csv",
+      "bytes": 652,
+      "sha256": "21c477e66a7a7b02553671d6c74730da834153eb902c9bdc2a5b56407366b559"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/v2_oncesi_K9/summary.json",
+      "bytes": 1213,
+      "sha256": "6ceeffa8e63de397d066867174bf642c7ab0315f18d3e535926e6e17814489d9"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/v2_oncesi_K9/terminal.txt",
+      "bytes": 4251,
+      "sha256": "03ec02c93aefc80cb4ab3b189f6808d5fd6facc90ee23eda21862f1284662c97"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/v2_oncesi_K9/top.txt",
+      "bytes": 16019,
+      "sha256": "62dd5fb750e21495ed00116505f3bfefee8da4d75edcf91ce2cb71974faf8aa4"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/v2_oncesi_K9/typescript.txt",
+      "bytes": 4297,
+      "sha256": "b388d89abf98b5847b13623d9e23322172af22fb71fbfe4e8978a682246f534d"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/v2_oncesi_K9/warning_excerpt.txt",
+      "bytes": 12404,
+      "sha256": "b3d39449128c90bd9ee8f3d1371700fad7e8c5c8eb9f6896a368841d4e117a9e"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/v2_oncesi_K9/wrapper_output.txt",
+      "bytes": 1719,
+      "sha256": "a46b7377befbe5b20393898166a6180da3d255d78fe0f7b3b8a6d2e1cbe2e762"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/v2_ref100_1/base.yml",
+      "bytes": 1013,
+      "sha256": "7638479346b15149d708f0355c7fe1595d2833af59845973c1c23a2761677550"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/v2_ref100_1/command.txt",
+      "bytes": 215,
+      "sha256": "0c330103e5db49adc25b774396f3a703b4c016eb5760e155bdf0007f1c0b1ddc"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/v2_ref100_1/config.yml",
+      "bytes": 1013,
+      "sha256": "7638479346b15149d708f0355c7fe1595d2833af59845973c1c23a2761677550"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/v2_ref100_1/gnb.log.gz",
+      "bytes": 2316833,
+      "sha256": "89e48695ec7c24d16f846aef7b5af32ca3a3e5eadef9187c17db9e8abdf826d4"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/v2_ref100_1/metrics.csv",
+      "bytes": 654,
+      "sha256": "dcec6e025a07463d62605fa117269459fc64d18ebf5ca743ca25ecb823a71ec3"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/v2_ref100_1/summary.json",
+      "bytes": 1125,
+      "sha256": "b7aaf488a286d727de42e0804f5f0836fb615110c0c46219fa75124539c0bcc0"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/v2_ref100_1/terminal.txt",
+      "bytes": 4249,
+      "sha256": "987b9b6d4c9d2313d1b4c08b8cb42268afc429afa9bd6ad63fcf996e66356724"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/v2_ref100_1/top.txt",
+      "bytes": 16019,
+      "sha256": "e7dfa05a5f5d76cbe07a3331dcf1ede745432080bb225f9ff04b2569a02277b0"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/v2_ref100_1/typescript.txt",
+      "bytes": 4295,
+      "sha256": "a8a5d5273a50cd9241dd3b0ed1333121eca4f388ad60d15652e1f880dbb09838"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/v2_ref100_1/warning_excerpt.txt",
+      "bytes": 330,
+      "sha256": "22b55ecda917145c3fdfa2ed9108b3fb4b870083abf885942d7499a1df9fc26d"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/v2_ref100_1/wrapper_output.txt",
+      "bytes": 1716,
+      "sha256": "39158f712b059cdc9d51d81a78fc98dd59f5289e76edee1ec83322d5c4d4ebaa"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/v2_ref100_2/base.yml",
+      "bytes": 1016,
+      "sha256": "683dc879ab9eb4688e6c78016c8ab3cdf9038f2fc969ec2a00e7bed7b22ca9c5"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/v2_ref100_2/command.txt",
+      "bytes": 215,
+      "sha256": "cbae1ac8e1a11a6bd3dabe85ee588349422416d5e2fba528826bf0915e5578b3"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/v2_ref100_2/config.yml",
+      "bytes": 1016,
+      "sha256": "683dc879ab9eb4688e6c78016c8ab3cdf9038f2fc969ec2a00e7bed7b22ca9c5"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/v2_ref100_2/gnb.log.gz",
+      "bytes": 472,
+      "sha256": "5f5d7b436a4712f5b160dbce6e726be7593c137303f5756a54810fda58e8cc5a"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/v2_ref100_2/metrics.csv",
+      "bytes": 654,
+      "sha256": "dcec6e025a07463d62605fa117269459fc64d18ebf5ca743ca25ecb823a71ec3"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/v2_ref100_2/summary.json",
+      "bytes": 1103,
+      "sha256": "b5664f5baaf1000a4f287ce4221f4f945c7449dfc8bb5653d1edd2e080106ad3"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/v2_ref100_2/terminal.txt",
+      "bytes": 4249,
+      "sha256": "54195b0708d9ce70c1d8d27b5892552df579aa0a330e7c65f676f71de187327c"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/v2_ref100_2/top.txt",
+      "bytes": 16019,
+      "sha256": "781e31945bceb52f24bc8f7b3007990f9ed5f5553f86aaa3b0537f69faccc02b"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/v2_ref100_2/typescript.txt",
+      "bytes": 4295,
+      "sha256": "92b19befbb30eb8da3c1e77cbab265c6d6e6fe709e4d9fa2c72b4860f5a72dcc"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/v2_ref100_2/warning_excerpt.txt",
+      "bytes": 842,
+      "sha256": "40ca9e3bc48289d0de8809b24435c8a8734d2b0499da444afbb3b065993958e1"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/v2_ref100_2/wrapper_output.txt",
+      "bytes": 1716,
+      "sha256": "e6c129fddd86dc17411cd63c1c54057ac318f4cfa980a80be8b93c29ce9b6547"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/v2_ref100_3/base.yml",
+      "bytes": 1016,
+      "sha256": "8f3bc6d28ec11cc061e7a40cee6fd4471777917fcfebf54b03a072fd0a8542fb"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/v2_ref100_3/command.txt",
+      "bytes": 215,
+      "sha256": "56b2d24ca2927aeb543fac2db656b53fc98dfc6aa94726f823be4a815e45e9eb"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/v2_ref100_3/config.yml",
+      "bytes": 1016,
+      "sha256": "8f3bc6d28ec11cc061e7a40cee6fd4471777917fcfebf54b03a072fd0a8542fb"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/v2_ref100_3/gnb.log.gz",
+      "bytes": 701,
+      "sha256": "b430c35dc009601d6fcb3b74701b54767adb52c7e8d85f6e98084d5349ad5e05"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/v2_ref100_3/metrics.csv",
+      "bytes": 654,
+      "sha256": "1769feb1e1b83526d49f4a6b5c5849968be406995399ae115447fe402f4062d1"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/v2_ref100_3/summary.json",
+      "bytes": 1111,
+      "sha256": "5c2cf5d815399248d887201676e1d453268de158ac4b9136647b13b9469b7c86"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/v2_ref100_3/terminal.txt",
+      "bytes": 4249,
+      "sha256": "9972e920fba2e02913ef995fdf8b5596afd0a9a3ea1bba475cbb8b05835252ad"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/v2_ref100_3/top.txt",
+      "bytes": 16019,
+      "sha256": "7ee83985e4f43690c54e0b6ec295121272a5275d79aec2d32a164d636ef41485"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/v2_ref100_3/typescript.txt",
+      "bytes": 4295,
+      "sha256": "afa107181bf26d560b12402a6b855fef9dd93425669426018ac583ce51a784cc"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/v2_ref100_3/warning_excerpt.txt",
+      "bytes": 2189,
+      "sha256": "020aeb3742d869bc46d0abdfb63fe55fcf4e914f143c83d5b5bf64bf21848cb0"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/v2_ref100_3/wrapper_output.txt",
+      "bytes": 1716,
+      "sha256": "236d09dd67bb9161621c5efd00a3498cfb83446b33983b389e3a1e6474fd68d2"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/v2_sonrasi_K1/base.yml",
+      "bytes": 1016,
+      "sha256": "d79bfdbd340ec7963dcc7af21e489ef50fdc3fbba456e6ebca10b8f26f532985"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/v2_sonrasi_K1/command.txt",
+      "bytes": 224,
+      "sha256": "1df7b1469a5188388873a541bc7f3d6a7341b7b3b8ffe8a6a55285d18113dca5"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/v2_sonrasi_K1/config.yml",
+      "bytes": 1342,
+      "sha256": "2aa17d18b8554ffc6be40dfaf4556b0c929187cf595f757f34dc9079e168afe7"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/v2_sonrasi_K1/gnb.log.gz",
+      "bytes": 9355435,
+      "sha256": "fec91c3b589fdb3beb6938b5cb32321cf7d1ce9189104deb25fb6463b9d7974a"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/v2_sonrasi_K1/metrics.csv",
+      "bytes": 627,
+      "sha256": "d31280a999d307c2746b86f7280032282c02dd63e4c0c2204d01117fbd5f2008"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/v2_sonrasi_K1/summary.json",
+      "bytes": 1211,
+      "sha256": "de8df1cb6da7e774ca13b9d133940d4cbfe1e80b5f4103bbac9f440280f39d4e"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/v2_sonrasi_K1/terminal.txt",
+      "bytes": 4138,
+      "sha256": "0149ba5b781f585f4b3789579cf7bf6583d9454fc80212289cc133ecdd66a25a"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/v2_sonrasi_K1/top.txt",
+      "bytes": 16021,
+      "sha256": "1c083a7d15bd1c6b777c7abc4c8488b2608d2e012b222650859348262544051a"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/v2_sonrasi_K1/typescript.txt",
+      "bytes": 4183,
+      "sha256": "648304157106ea16cc03102e8b5b3aa18595e27cfc4e5dc6b89296e80f4f4cba"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/v2_sonrasi_K1/warning_excerpt.txt",
+      "bytes": 16260,
+      "sha256": "799e5a28a10d8515f43964c2f76906aaae794989bb878dbd26892ca07efae284"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/v2_sonrasi_K1/wrapper_output.txt",
+      "bytes": 1720,
+      "sha256": "0b9808b4c98a1b3fa9b1131b4d5ec0d9a8bf8dda8bd0370575905f1b222b3818"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/v2_sonrasi_K11/base.yml",
+      "bytes": 1017,
+      "sha256": "74b8e3e6eea95e9d6d95059633db07e3551a2c3c9742d520024287914a3f9ef1"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/v2_sonrasi_K11/command.txt",
+      "bytes": 226,
+      "sha256": "ed4259bbdc18d0d64af77994059709812a8ca41b5186a684bd73481b7fcb47d6"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/v2_sonrasi_K11/config.yml",
+      "bytes": 1343,
+      "sha256": "137a3dbbe81bb17ee889622cf7be3a98abb0dd3c1e3e5e7b718ee3deb91cebbc"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/v2_sonrasi_K11/gnb.log.gz",
+      "bytes": 9281206,
+      "sha256": "33f8524c99a201c87a7b42c50e7cfefa8ee6366e5bc2076ca716cabdc642b6af"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/v2_sonrasi_K11/metrics.csv",
+      "bytes": 655,
+      "sha256": "4ac07b41492f5e86d85f254297931501eb428d3fccd82824a10575184cc93d75"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/v2_sonrasi_K11/summary.json",
+      "bytes": 1188,
+      "sha256": "d0676e25e8b31942d7b5cdd2defa7b05f558823092aa95c6bf3270055d03ce30"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/v2_sonrasi_K11/terminal.txt",
+      "bytes": 4258,
+      "sha256": "46278b88ec5c5b09860d42b77715096627e2e33fed8f1a03ee77ed0375e0e9f8"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/v2_sonrasi_K11/top.txt",
+      "bytes": 16049,
+      "sha256": "6d88d6d347554ef9a45e06ef937b8ea2c752f5f046b8d088aeeec68d11cfc354"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/v2_sonrasi_K11/typescript.txt",
+      "bytes": 4304,
+      "sha256": "1bcacb9d6db5460e16ee3744eb6d69f6426f8688865928604f73b2eae1ed4130"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/v2_sonrasi_K11/warning_excerpt.txt",
+      "bytes": 16260,
+      "sha256": "6e2ae5103d93fdd02e8d04f66d150620bd8f74ae40202cf7850029bc618f2c74"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/v2_sonrasi_K11/wrapper_output.txt",
+      "bytes": 1721,
+      "sha256": "a33df54cf56a424a409dbb578055d750358dbca189ceede87ab0576a917c430d"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/v2_sonrasi_K6/base.yml",
+      "bytes": 1016,
+      "sha256": "5d21e2d18c49c5f2a634937d9e0991680911337efe4adf3b4e4dd49c07d9ae77"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/v2_sonrasi_K6/command.txt",
+      "bytes": 225,
+      "sha256": "6e998b6593f3755ee5dca16ff2b2eb0fdea555730f96ad13b97f4d4a2e61cadb"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/v2_sonrasi_K6/config.yml",
+      "bytes": 1343,
+      "sha256": "099b1a3f77727b08e73cdf45c011653b0659668273afbc3ddbcb6df70c3e9c94"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/v2_sonrasi_K6/gnb.log.gz",
+      "bytes": 9327028,
+      "sha256": "f5575b885ed9af838e66c5389e78a4eb4d2df089887eaf89b69a29fe865d45a1"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/v2_sonrasi_K6/metrics.csv",
+      "bytes": 654,
+      "sha256": "b6ded4ce787e70aafe1dfac194bf96593f1d1e66e11c155e4faed13a201e6401"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/v2_sonrasi_K6/summary.json",
+      "bytes": 1180,
+      "sha256": "2dd736edd49ed2459f6e173963d44f9f44bed391a9c94c8c9adf96cb90de7bec"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/v2_sonrasi_K6/terminal.txt",
+      "bytes": 4256,
+      "sha256": "faebbe18c270f9d7c9093de1867e74b6b20c01632b75312d1b7c1e64397b90fc"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/v2_sonrasi_K6/top.txt",
+      "bytes": 16504,
+      "sha256": "65a1b71a6ad66f4c4e00cb8002595943408456fcd24851385ca36704deac986b"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/v2_sonrasi_K6/typescript.txt",
+      "bytes": 4302,
+      "sha256": "ece241e259fdd887b1bb3f2eda9b781b2aa564538ff58cf8b7806392ce9c8a82"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/v2_sonrasi_K6/warning_excerpt.txt",
+      "bytes": 16260,
+      "sha256": "b464700e0a66557167f50044ce84aa07f6f899c8d91b5cfd12311008a9b92c02"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/v2_sonrasi_K6/wrapper_output.txt",
+      "bytes": 1721,
+      "sha256": "1005f83a6e85f56e008b2c0db1a2f6f91a9c8afbb39ea8b47a37f0f81b2b50df"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/v2_sonrasi_K7/base.yml",
+      "bytes": 1016,
+      "sha256": "349dae3482a28839fd9f6e35399417cacc966f1041bbc7f351dabd93632d7acc"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/v2_sonrasi_K7/command.txt",
+      "bytes": 224,
+      "sha256": "7e419f7b3b3b0a3bd026930699f1a4ab6a3a80d540a01577a736a1c5eeffbfe5"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/v2_sonrasi_K7/config.yml",
+      "bytes": 1342,
+      "sha256": "5aba6215b07abd4a588a8f88d3a166db4b7f83c5a586c9b3df93209af0bf5e24"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/v2_sonrasi_K7/gnb.log.gz",
+      "bytes": 9420795,
+      "sha256": "c73bc807317d81a4158b6f560ca350d3e3d98e6b932f571aa110344fbcd4e3b8"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/v2_sonrasi_K7/metrics.csv",
+      "bytes": 654,
+      "sha256": "9ea9e2f134752803b6e493fbb1e6f54677bc34b670234642286a17bada61bfa6"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/v2_sonrasi_K7/summary.json",
+      "bytes": 1178,
+      "sha256": "e9468c0fe3ce8aceb078081710695e722df78fc32d750dcab43eeb5ffce5c6a5"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/v2_sonrasi_K7/terminal.txt",
+      "bytes": 4256,
+      "sha256": "b7361121217de0d402997f716daef8bd8ce47bad7271d57c1f0a100ebca011f3"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/v2_sonrasi_K7/top.txt",
+      "bytes": 16049,
+      "sha256": "278c27280efe03a41cb2eb0e527aeea9b0162b0da1bbab9cf5dc7a9532479b0d"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/v2_sonrasi_K7/typescript.txt",
+      "bytes": 4302,
+      "sha256": "14999b8ae60bf74a958a1d4c937c293e5e0a2e1582e698499ed03008ab4c11c3"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/v2_sonrasi_K7/warning_excerpt.txt",
+      "bytes": 16235,
+      "sha256": "eadb929526fad53d9853fa70150fb4249597b070df4e10be37f41fb525e8f7ad"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/v2_sonrasi_K7/wrapper_output.txt",
+      "bytes": 1720,
+      "sha256": "e36a8c66bb9b8e0080e682a0a44aa86c0ed23394d963cd20957f5c99f901bfa2"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/v2_sonrasi_K8/base.yml",
+      "bytes": 1016,
+      "sha256": "4abd9522ff40b0c45c10a7694a90cdc2af1caa32147b1ad9f1eaa4046a9376be"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/v2_sonrasi_K8/command.txt",
+      "bytes": 226,
+      "sha256": "2fbda5c122634bfadffefb7be197655c1ccb95ca595c08813206cc0cfc66f4d3"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/v2_sonrasi_K8/config.yml",
+      "bytes": 1344,
+      "sha256": "aa35b417b2368072add88bfc1cc2712586a4512b2de43b7fef66bed91f318d24"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/v2_sonrasi_K8/gnb.log.gz",
+      "bytes": 9335452,
+      "sha256": "63106ab8dc66563be60fcfe9644e6ebd941f7442e24657d1083325d35b4e432b"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/v2_sonrasi_K8/metrics.csv",
+      "bytes": 654,
+      "sha256": "9ea9e2f134752803b6e493fbb1e6f54677bc34b670234642286a17bada61bfa6"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/v2_sonrasi_K8/summary.json",
+      "bytes": 1181,
+      "sha256": "57b428409293e9622e639692fb8868b55d28bc43cbee629300866e56af8c175b"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/v2_sonrasi_K8/terminal.txt",
+      "bytes": 4256,
+      "sha256": "1abcc85f415af4acf6f7d1e974486b576b24b7259ba4f7edb65fe1f9265269c2"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/v2_sonrasi_K8/top.txt",
+      "bytes": 16049,
+      "sha256": "047ca86ecc551d2ef14363bf1a75970f5d38d480a3b81a0e09ef1a6fff2b8b80"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/v2_sonrasi_K8/typescript.txt",
+      "bytes": 4302,
+      "sha256": "a3e11168e2fa3b285b0b1f3ebfbc017cb99afcaf304bcec0d3d6ef0f750935f7"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/v2_sonrasi_K8/warning_excerpt.txt",
+      "bytes": 16260,
+      "sha256": "387866512ad757514464db25320d0a0361763317abcbfe8fd24f74e301bb857b"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/v2_sonrasi_K8/wrapper_output.txt",
+      "bytes": 1722,
+      "sha256": "10d9d573535c189c652fa6fd5161f9c027006932699e92a253c76cf5931a6cc9"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/v2_veri_genisligi100/base.yml",
+      "bytes": 1023,
+      "sha256": "a923626be24616fb4c93bc6dfcf91174fa9fd1e13249a1acb71a6401d101ceb4"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/v2_veri_genisligi100/command.txt",
+      "bytes": 233,
+      "sha256": "f8ec24102adf025809e633285f976ad08f6afd756a862596b0f95448eb7e6c23"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/v2_veri_genisligi100/config.yml",
+      "bytes": 1023,
+      "sha256": "a923626be24616fb4c93bc6dfcf91174fa9fd1e13249a1acb71a6401d101ceb4"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/v2_veri_genisligi100/gnb.log.gz",
+      "bytes": 8863854,
+      "sha256": "c921c8505f6b8259d094cac570e6af6c28819728569441183d9e67b0820d49ec"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/v2_veri_genisligi100/metrics.csv",
+      "bytes": 654,
+      "sha256": "dcec6e025a07463d62605fa117269459fc64d18ebf5ca743ca25ecb823a71ec3"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/v2_veri_genisligi100/summary.json",
+      "bytes": 1135,
+      "sha256": "d797107e7ebc4ccae4a52bdc64a5b62bc6ce5619b697c240051e40b5b1216a81"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/v2_veri_genisligi100/terminal.txt",
+      "bytes": 4267,
+      "sha256": "399fe655d661fcefa53412b8a67f0462e3462c4512362ad717d9bba2358cd63b"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/v2_veri_genisligi100/top.txt",
+      "bytes": 16049,
+      "sha256": "baaceec40dece9e63c41ad00041da4c1a621d8b11d5dd6ac482b3cb6ea566caf"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/v2_veri_genisligi100/typescript.txt",
+      "bytes": 4313,
+      "sha256": "31dde2cd978908dd310713b3628150f0ff3fb4d12fbf441179bd77e33913ad2a"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/v2_veri_genisligi100/warning_excerpt.txt",
+      "bytes": 330,
+      "sha256": "c92a3d5b77a51ae21e1885ab8c9ce6a93fb176a718468463e9a798523edf68f4"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/v2_veri_genisligi100/wrapper_output.txt",
+      "bytes": 1725,
+      "sha256": "a3eefe8f2c3844be40cd8dc5d01708557a4f3efd5f3803f5115b03a51e81f530"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/veri_genisligi100/command.txt",
+      "bytes": 178,
+      "sha256": "e0d5f74248f7b9671e7b10900e6a4ef08fda2b3af93883e69b8e1eac0e606e0b"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/veri_genisligi100/config.yml",
+      "bytes": 985,
+      "sha256": "0a831c3fbac77119929f2813a40d52a28a8254a2605789159ee6fdccf75257ca"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/veri_genisligi100/gnb_debug.log.gz",
+      "bytes": 3088632,
+      "sha256": "6ed200f9c2ed0f38667d084df15a26fd82869dd30d018a98c11374ebf6f0403f"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/veri_genisligi100/summary.json",
+      "bytes": 331,
+      "sha256": "19ffed6c6f8370aaf84d66f57485adce1bee2aac42ab3069964fb5dd2598f715"
+    },
+    {
+      "path": "Gorev_4/Ham_Kayitlar/veri_genisligi100/terminal.txt",
+      "bytes": 139,
+      "sha256": "0428c34771010fb229da416e4071cf6f60148e4d8d5d7719e748fc029b675ac5"
+    },
+    {
+      "path": "Gorev_4/Kaynaklar/Proje/kurulum/ocudu_testmode_n78.yml",
+      "bytes": 986,
+      "sha256": "6f0b10b01ab39c194a319e90c1eda571025c4cb14cecb74348d79fd9cad80868"
+    },
+    {
+      "path": "Gorev_4/Kaynaklar/Proje/kurulum/ocudu_testmode_n78_100MHz.yml",
+      "bytes": 987,
+      "sha256": "dac71b78ac1c90c4efd62b52fae568777bcacec0b19c68a9723d3e5df95b8a7b"
+    },
+    {
+      "path": "Gorev_4/Kaynaklar/Proje/ogretici/betikler/ocudu_prs_kos.sh",
+      "bytes": 2898,
+      "sha256": "9c317ca8aadd1124fb53629735e577015e96a3e7c11b250b6fbfd582616adc24"
+    },
+    {
+      "path": "Gorev_4/Kaynaklar/Proje/ogretici/betikler/ocudu_veri_genislik.sh",
+      "bytes": 734,
+      "sha256": "26d90eff241fdbad49a5e2ebeebe5b325784bcd09c64c72373418877711e7e55"
+    },
+    {
+      "path": "Gorev_4/Kaynaklar/Proje/ogretici/veri/ortak_degerler.xlsx",
+      "bytes": 16388,
+      "sha256": "8f96f81549bc964332c17737bb9ea2cbbc2dab297e8fafe47e491e92208ab242"
+    },
+    {
+      "path": "Gorev_4/Kod_Degisiklikleri/00_referans_uyumluluk_toplu.patch",
+      "bytes": 2308,
+      "sha256": "22bca4eb7625f8d96dd3ef6d1af1165fbd817fc9a82e5a4191cf98737af0aa7a"
+    },
+    {
+      "path": "Gorev_4/Kod_Degisiklikleri/01_dummy_saat_korumasi.patch",
+      "bytes": 1317,
+      "sha256": "1570a5ea4478151169a33612961bebf2cd5d3c25cb3ccc553c995c5f12bbe974"
+    },
+    {
+      "path": "Gorev_4/Kod_Degisiklikleri/02_conres_slice_bildirimi.patch",
+      "bytes": 991,
+      "sha256": "5417c2a6a3b7e4305aa0498aa01094e9ffd1725a1d73313fb11db179b413207e"
+    },
+    {
+      "path": "Gorev_4/Kod_Degisiklikleri/02_prs_re_tbs_modeli.patch",
+      "bytes": 11746,
+      "sha256": "d6ce6b15a46aa3b9432f6e27ed3ce8ee4fd8171df66922d712808dcaebec7761"
+    },
+    {
+      "path": "Gorev_4/Kod_Degisiklikleri/02_prs_re_tbs_modeli_aciklama.md",
+      "bytes": 9937,
+      "sha256": "274c7427109ad6091f4a56d1f1693dce53d142d3500f123cddae85acbf5e0683"
+    },
+    {
+      "path": "Gorev_4/Kod_Degisiklikleri/03_tum_deney_degisiklikleri.patch",
+      "bytes": 15224,
+      "sha256": "c395ae91cdb0e52e70b9250a0c826dec5853933c75d435d5c9ef967700556c00"
+    },
+    {
+      "path": "Gorev_4/Kod_Degisiklikleri/04_deney_betikleri.patch",
+      "bytes": 1670,
+      "sha256": "f712d9889dcee48aafd208792cd57c57ed56cd27d095e2471958f24f5fccd4c4"
+    },
+    {
+      "path": "Gorev_4/Kod_Degisiklikleri/Derleme_Kayitlari/build_clock_unprotected.log",
+      "bytes": 366,
+      "sha256": "6a16b88778f7a28c6bc0228ad802f4a67c763b2d7b4e480ea521b916d4bf9959"
+    },
+    {
+      "path": "Gorev_4/Kod_Degisiklikleri/Derleme_Kayitlari/build_clockguard.log",
+      "bytes": 162265,
+      "sha256": "d058df66c4b439c9096d961533b908c19fa3cb587b1c6d11189df804ce0ce38e"
+    },
+    {
+      "path": "Gorev_4/Kod_Degisiklikleri/Derleme_Kayitlari/build_compat.log",
+      "bytes": 489,
+      "sha256": "bc50cc0ceab87bab08ab16ae554627a48da2866a65533e0ef807d2b2e970ca19"
+    },
+    {
+      "path": "Gorev_4/Kod_Degisiklikleri/Derleme_Kayitlari/build_prs_model.log",
+      "bytes": 2704,
+      "sha256": "91291d42717b6cede924b657b752b868ce7f5b1d0ff3a713a7eafd45ed735500"
+    },
+    {
+      "path": "Gorev_4/Kod_Degisiklikleri/Derleme_Kayitlari/build_restored_model.log",
+      "bytes": 366,
+      "sha256": "a8a04ba9a4e34215e934a54faefe0283c4a556608c4bfeaaf33247dec230844d"
+    },
+    {
+      "path": "Gorev_4/Kod_Degisiklikleri/Derleme_Kayitlari/configure_clockguard.log",
+      "bytes": 4538,
+      "sha256": "df3f06fa92743991c506924a867b0e7b2f22b64b7a412a43dc974f26f228a35e"
+    },
+    {
+      "path": "Gorev_4/Kod_Degisiklikleri/Derleme_Kayitlari/final_build_check.log",
+      "bytes": 240,
+      "sha256": "c99da56ce9c84b9e405160ebbe7a9893d88f8014ef4fc2d3c1b136d841215419"
+    },
+    {
+      "path": "Gorev_4/Kod_Degisiklikleri/final_kod_kontrolleri.json",
+      "bytes": 534,
+      "sha256": "0f19f38975a64b820e23fa3afc8786aace9d1ac6b7420874553b8891abfa8c0e"
+    },
+    {
+      "path": "Gorev_4/Kod_Degisiklikleri/OCUDU_Lisans/BSD-3-Clause-Open-MPI.txt",
+      "bytes": 2032,
+      "sha256": "3b9d59405592515bfa519e78559a4a335e408fc186ae32ef2235d72b19fb8308"
+    },
+    {
+      "path": "Gorev_4/Kod_Degisiklikleri/OCUDU_Lisans/COPYRIGHTS.txt",
+      "bytes": 28805,
+      "sha256": "f5264be244de872cdc726a81c9229cc3a2c86d1025deb5e97feaf93a34f6f07d"
+    },
+    {
+      "path": "Gorev_4/Kod_Degisiklikleri/OCUDU_Lisans/LICENSE",
+      "bytes": 1989,
+      "sha256": "b0e445000e3f2daa48fabb512773ccbf4447fdbfbf709a4a8f966448b268fd0c"
+    },
+    {
+      "path": "Gorev_4/Kod_Degisiklikleri/Son_Kaynaklar/ocudu/include/ocudu/ran/sch/tbs_calculator.h",
+      "bytes": 4539,
+      "sha256": "b2f2feea909d47253d52516b2608a6ec81a324eb27c7bed227172bc1c960b098"
+    },
+    {
+      "path": "Gorev_4/Kod_Degisiklikleri/Son_Kaynaklar/ocudu/lib/ran/sch/tbs_calculator.cpp",
+      "bytes": 7042,
+      "sha256": "0eb88da6d96ff9ad47ec53915b8f78cd119c98e982aa2d56dd9618ef5b417daa"
+    },
+    {
+      "path": "Gorev_4/Kod_Degisiklikleri/Son_Kaynaklar/ocudu/lib/ru/dummy/ru_dummy_impl.cpp",
+      "bytes": 5877,
+      "sha256": "a9495152c3843f79568c93c543b0cd4269366324dd98fc69dadd64731180e0c4"
+    },
+    {
+      "path": "Gorev_4/Kod_Degisiklikleri/Son_Kaynaklar/ocudu/lib/scheduler/common_scheduling/prs_scheduler.cpp",
+      "bytes": 9453,
+      "sha256": "3cfbad06fc7f64460e806102aaee5fb7d02bebad48f1314bb5eecf90465f1821"
+    },
+    {
+      "path": "Gorev_4/Kod_Degisiklikleri/Son_Kaynaklar/ocudu/lib/scheduler/support/mcs_tbs_calculator.cpp",
+      "bytes": 24286,
+      "sha256": "9d137df3b31b141c15b633723eee97d9341a6cd1bc5552c0af6fc818ff4b8754"
+    },
+    {
+      "path": "Gorev_4/Kod_Degisiklikleri/Son_Kaynaklar/ocudu/lib/scheduler/support/mcs_tbs_calculator.h",
+      "bytes": 6499,
+      "sha256": "72fe34b8b6e4a330c6eac51bd051348e1f349fbabdd3deb5f380e3d4165925ce"
+    },
+    {
+      "path": "Gorev_4/Kod_Degisiklikleri/Son_Kaynaklar/ocudu/lib/scheduler/ue_scheduling/cell_group_event_manager.cpp",
+      "bytes": 15360,
+      "sha256": "cc4b46a23a366449f1f0dbe42983b2c5f21a1b48f8544cee7013698ed7f2cb14"
+    },
+    {
+      "path": "Gorev_4/Kod_Degisiklikleri/Son_Kaynaklar/ocudu/lib/scheduler/ue_scheduling/ue_cell_grid_allocator.cpp",
+      "bytes": 77595,
+      "sha256": "c9d21fa6d91fed5cae905aface80131d231ebaae5933e3c3c45322ae92932844"
+    },
+    {
+      "path": "Gorev_4/Kod_Degisiklikleri/Son_Kaynaklar/proje/ogretici/betikler/ocudu_prs_kos.sh",
+      "bytes": 2911,
+      "sha256": "df4d2acf504aa1f1ec103353103ae0fcf3f24acfaa6f244a48d2c13a077e2509"
+    },
+    {
+      "path": "Gorev_4/Kod_Degisiklikleri/Son_Kaynaklar/proje/ogretici/betikler/ocudu_veri_genislik.sh",
+      "bytes": 748,
+      "sha256": "b7c55512e32c222c3330832a23e57d81a5e5d071cfcfc401fd8bd735c3e9cbaa"
+    },
+    {
+      "path": "Gorev_4/Kod_Degisiklikleri/surum_kaydi.json",
+      "bytes": 1204,
+      "sha256": "8332757a726cf913790546a737d541453edc3e6785687c5bb6e6de608eca2a9c"
+    },
+    {
+      "path": "Gorev_4/Notlar/100MHz_Sorun_Analizi.md",
+      "bytes": 6734,
+      "sha256": "1baf468e9c86b17e21694f805c7a09b1f4e897eca5d83ca1e17c8cf6e3e1706c"
+    },
+    {
+      "path": "Gorev_4/Notlar/Ekran_Goruntusu_Alma.txt",
+      "bytes": 3162,
+      "sha256": "b944a485c9e9a570212967cfe952212223485efb4d3df3ba30d303237eac19cc"
+    },
+    {
+      "path": "Gorev_4/Notlar/Standart_Incelemesi.md",
+      "bytes": 2648,
+      "sha256": "eff3b661bd18f597b3fbfcbe62e3c93ea7206222dc8dc482caf39092fba5c85a"
+    },
+    {
+      "path": "Gorev_4/Notlar/Yapilan_Islemler.md",
+      "bytes": 22919,
+      "sha256": "2a83f3454282cb18f41c7309a118be445a299f6fe4840c47feba57fbe0e51442"
+    },
+    {
+      "path": "Gorev_4/Raporlar/Fatih_Gorev_Karti_4_Dogrulama_Raporu.pdf",
+      "bytes": 99547,
+      "sha256": "0a7eb8b6134a7954fd6fc70d4894b8a63d32f84cf695feccc825831e900bd4ec"
+    },
+    {
+      "path": "Gorev_4/Raporlar/Fatih_Gorev_Karti_4_Ekran_Goruntulu_Rapor.docx",
+      "bytes": 3239015,
+      "sha256": "77a450d66b12244d2ff14f0c63cf2d55bca1abaa28131e5e93c86f4fa3ca5c1a"
+    },
+    {
+      "path": "Gorev_4/Raporlar/Fatih_Gorev_Karti_4_Ekran_Goruntulu_Rapor.pdf",
+      "bytes": 628558,
+      "sha256": "2009d6bcfb9b0ecfe0ee9fd8bfe4c8994d0b8cc284b4629369fff40a7e6de7f9"
+    },
+    {
+      "path": "Gorev_4/Raporlar/Fatih_Gorev_Karti_4_Rapor.docx",
+      "bytes": 1844251,
+      "sha256": "e4d06a0b5a3d5e1e7b4015801a7baed3b2e37a568305bd4ee56f6b043a6a0ca3"
+    },
+    {
+      "path": "Gorev_4/Raporlar/Fatih_Gorev_Karti_4_Rapor.pdf",
+      "bytes": 290461,
+      "sha256": "800b472579d732f5645e7286b63b275fdf6280a47f0284e140bd80a23d61ab4d"
+    },
+    {
+      "path": "Gorev_4/Raporlar/Fatih_Gorev_Karti_4_Teslim_Ozeti.pdf",
+      "bytes": 124916,
+      "sha256": "42f589bb20960556aecca28029de729ca75ef3a7ae6819a1f5a44f24ec8e3818"
+    },
+    {
+      "path": "Gorev_4/Raporlar/ortak_degerler_Fatih_sonuclar.xlsx",
+      "bytes": 26041,
+      "sha256": "5a8b8eed18cb6838d43c394d2f56632f44def2d3aa8351a8b9b0d29a145bed16"
+    },
+    {
+      "path": "Gorev_4/Veriler/model_dogrulama.json",
+      "bytes": 5072,
+      "sha256": "5da8e2955de1f144669815ed1fa76c40570bb945739832be9dcf6b3d8e638c8e"
+    },
+    {
+      "path": "Gorev_4/Veriler/teslim_dosyasi_kontrolu.json",
+      "bytes": 1507,
+      "sha256": "10e25e0529645c691682b48d6077621f7ca6c68419171cc2c9eb8a2ce971fa25"
+    },
+    {
+      "path": "Gorev_4/Veriler/tum_olcumler.csv",
+      "bytes": 11151,
+      "sha256": "af6d9631007825d7a6fea3a95d893f5d27a6edfc9f25baf73b27539bf4923a34"
+    },
+    {
+      "path": "Gorev_4/Veriler/tum_olcumler.json",
+      "bytes": 85360,
+      "sha256": "7505471cb91cb4edde8613ddd9c26391c30114277cdb00becea85915caecc663"
+    },
+    {
+      "path": "Kurulum/OCUDU_Kurulum_ve_Calistirma.pdf",
+      "bytes": 237470,
+      "sha256": "cd6e427f804c7edaeecdacff9d3620b1df9ea045a12cb63ae43e0e33921a288b"
+    },
+    {
+      "path": "README.md",
+      "bytes": 4069,
+      "sha256": "ef0f4dfc94aafc1f9be71c5d202c5749d83f793eea5a97f89b258cc4ef8933c7"
+    }
+  ]
+}

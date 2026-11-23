@@ -1,0 +1,28 @@
+[1/27] Building CXX object lib/ran/CMakeFiles/ocudu_ran.dir/sch/tbs_calculator.cpp.o
+[2/27] Linking CXX static library lib/ran/libocudu_ran.a
+[3/27] Building CXX object lib/scheduler/CMakeFiles/ocudu_sched.dir/policy/scheduler_policy_factory.cpp.o
+[4/27] Building CXX object lib/scheduler/support/CMakeFiles/sched_support.dir/prbs_calculator.cpp.o
+[5/27] Building CXX object lib/scheduler/support/CMakeFiles/sched_support.dir/mcs_tbs_calculator.cpp.o
+[6/27] Building CXX object lib/scheduler/CMakeFiles/ocudu_sched.dir/policy/scheduler_time_qos.cpp.o
+[7/27] Building CXX object lib/scheduler/CMakeFiles/ocudu_sched.dir/configured_grant/configured_grant_scheduler_impl.cpp.o
+[8/27] Building CXX object lib/scheduler/CMakeFiles/ocudu_sched.dir/slicing/inter_slice_scheduler.cpp.o
+[9/27] Building CXX object lib/scheduler/support/CMakeFiles/sched_support.dir/sch_pdu_builder.cpp.o
+[10/27] Linking CXX static library lib/scheduler/support/libsched_support.a
+[11/27] Building CXX object lib/scheduler/CMakeFiles/ocudu_sched.dir/scheduler_impl.cpp.o
+[12/27] Building CXX object lib/scheduler/common_scheduling/CMakeFiles/common_sched.dir/sib1_scheduler.cpp.o
+[13/27] Building CXX object lib/scheduler/common_scheduling/CMakeFiles/common_sched.dir/prs_scheduler.cpp.o
+[14/27] Building CXX object lib/scheduler/common_scheduling/CMakeFiles/common_sched.dir/paging_scheduler.cpp.o
+[15/27] Building CXX object lib/scheduler/common_scheduling/CMakeFiles/common_sched.dir/si_message_scheduler.cpp.o
+[16/27] Building CXX object lib/scheduler/common_scheduling/CMakeFiles/common_sched.dir/ra_scheduler.cpp.o
+[17/27] Building CXX object lib/scheduler/ue_context/CMakeFiles/sched_ue_context.dir/ue_cell.cpp.o
+[18/27] Linking CXX static library lib/scheduler/ue_context/libsched_ue_context.a
+[19/27] Building CXX object lib/scheduler/ue_scheduling/CMakeFiles/ue_sched.dir/cell_group_event_manager.cpp.o
+[20/27] cd /home/fatih/ehb415/ocudu-gorev4/build/lib/support/versioning && cmake -P /home/fatih/ehb415/ocudu-gorev4/build/build_info.cmake
+-- Generating build information
+[21/27] Building CXX object lib/scheduler/ue_scheduling/CMakeFiles/ue_sched.dir/ue_scheduler_impl.cpp.o
+[22/27] Building CXX object lib/scheduler/ue_scheduling/CMakeFiles/ue_sched.dir/ue_cell_grid_allocator.cpp.o
+[23/27] Building CXX object lib/scheduler/ue_scheduling/CMakeFiles/ue_sched.dir/ue_fallback_scheduler.cpp.o
+[24/27] Building CXX object lib/scheduler/ue_scheduling/CMakeFiles/ue_sched.dir/grant_params_selector.cpp.o
+[25/27] Building CXX object lib/scheduler/ue_scheduling/CMakeFiles/ue_sched.dir/intra_slice_scheduler.cpp.o
+[26/27] Linking CXX static library lib/scheduler/libocudu_sched.a
+[27/27] Linking CXX executable apps/gnb/gnb

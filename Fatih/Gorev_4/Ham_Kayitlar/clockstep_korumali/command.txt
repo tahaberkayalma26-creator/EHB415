@@ -1,0 +1,1 @@
+CFG_BASE=/home/fatih/ehb415/gorev4_runs/clockstep_korumali/base.yml GNB_BIN=/home/fatih/ehb415/gorev4_runs/bin/gnb_prs_model LD_PRELOAD=/home/fatih/ehb415/gorev4_runs/bin/clock_step_inject.so bash /home/fatih/ehb415/gorev4_project/ogretici/betikler/ocudu_prs_kos.sh clockstep_korumali 0 0 0 2 1 1 4

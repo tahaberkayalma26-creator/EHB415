@@ -1,0 +1,18 @@
+diff --git a/lib/scheduler/ue_scheduling/cell_group_event_manager.cpp b/lib/scheduler/ue_scheduling/cell_group_event_manager.cpp
+index b5df989..7760c27 100644
+--- a/lib/scheduler/ue_scheduling/cell_group_event_manager.cpp
++++ b/lib/scheduler/ue_scheduling/cell_group_event_manager.cpp
+@@ -223,7 +223,13 @@ void cell_group_event_handler_impl::handle_conres_ce_acked(du_ue_index_t ue_inde
+     log_invalid_ue_index(ue_index, "ConRes CE ACKed");
+     return;
+   }
++  const bool was_in_fallback = ue_db[ue_index].get_pcell().is_in_fallback_mode();
+   ue_db.handle_conres_ce_outcome(ue_index, true);
++  // Configuration can be applied before the Msg4/ConRes HARQ ACK arrives.
++  // Complete slice registration when this ACK is the event that exits fallback.
++  if (was_in_fallback and not ue_db[ue_index].get_pcell().is_in_fallback_mode()) {
++    slice_sched.config_applied(ue_index);
++  }
+ }
+ 
+ void cell_group_event_handler_impl::handle_sr_detected(du_ue_index_t ue_index, slot_point uci_slot)

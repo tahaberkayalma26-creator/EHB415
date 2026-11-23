@@ -1,0 +1,30 @@
+{
+  "verified_utc": "2026-10-25T15:27:14.647287+00:00",
+  "ocudu_commit": "e0db566aac6e6376ddd60e83c84f58698fcc4d70",
+  "source_script": "/mnt/c/Users/fatih/OneDrive/Desktop/Data Com/EHB415/ogretici/betikler/ocudu_prs_kos.sh",
+  "linux_run_directory": "/home/fatih/ehb415/fatih_ocudu/ilk_iki_20261025T152612Z_298",
+  "conditions": [
+    {
+      "condition": "base",
+      "prs_period_slots": 0,
+      "prs_symbols": 0,
+      "prs_prbs": 0,
+      "dl_mbps": 59.0,
+      "dl_ok_per_second": 1000.0,
+      "averaged_samples": 15,
+      "total_metric_rows": 22
+    },
+    {
+      "condition": "p4",
+      "prs_period_slots": 4,
+      "prs_symbols": 12,
+      "prs_prbs": 104,
+      "dl_mbps": 44.0,
+      "dl_ok_per_second": 750.0,
+      "averaged_samples": 15,
+      "total_metric_rows": 22
+    }
+  ],
+  "dl_loss_percent": 25.423728813559322,
+  "limitations": "One run per condition on WSL2, ru_dummy/testmode; measures PRS resource cost, not sensing accuracy or field-network throughput."
+}

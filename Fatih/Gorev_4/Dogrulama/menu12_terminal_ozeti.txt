@@ -1,0 +1,64 @@
+
+OCUDU GERCEK KOSU VE EKRAN GORUNTUSU
+Ilk rapor icin 1, 2, 3, 4, 5 seceneklerini sirayla kullanin.
+ 1. SS 1 - PRS yok / 100 MHz referans
+ 2. SS 2 - K1 / PRS RB rezervasyonu
+ 3. SS 3 - K1 / deneysel RE-TBS modeli
+ 4. SS 4 - K6 / PRS RB rezervasyonu
+ 5. SS 5 - K6 / deneysel RE-TBS modeli
+ 6. EK SS - K7 / PRS RB rezervasyonu
+ 7. EK SS - K7 / deneysel RE-TBS modeli
+ 8. EK SS - K8 / PRS RB rezervasyonu
+ 9. EK SS - K8 / deneysel RE-TBS modeli
+10. EK SS - K11 / PRS RB rezervasyonu
+11. EK SS - K11 / deneysel RE-TBS modeli
+12. SS 6 - Tamamlanan 23 dogrulama kosusunun ARSIV ozetini goster (yeni test yok)
+Secim (cikis: 0): 
+=======================================================================================================
+SS 6 - ARSIV OZETI: 23 gercek tekrar kosusundan; canli yeni test degil.
+Kaynak: Dogrulama/yeniden_kosu_sonuclari.json | Hiz: Mbps | ok: yeni kosu ortalamasi
+Degerler en fazla 3 ondalikla gosterilir; tam hassasiyet kaynak JSON dosyasindadir.
+Kosul              Ilk DL  Yeni DL   Ilk UL  Yeni UL     DL ok     UL ok      dDL      dUL
+-------------------------------------------------------------------------------------------------------
+ref100_1               36       36      119      119      1200       600        0        0
+ref100_2               36       36      119      119      1200       600        0        0
+ref100_3               36    35.95      119      119    1199.7    599.85    -0.05        0
+duzeltilmis40          36    35.85     44.9   44.745    1195.8     597.9    -0.15   -0.155
+duzeltilmis60          36       36     69.5     69.5      1200       600        0        0
+duzeltilmis80          36       36     94.6     94.6      1200       600        0        0
+duzeltilmis100         36       36      119      119      1200       600        0        0
+oncesi_K1              29       29      119      119    999.75    599.85        0        0
+oncesi_K2              32       32      119      119      1100       600        0        0
+oncesi_K3              34    33.95      119    118.8    1147.9     598.9    -0.05     -0.2
+oncesi_K4              29       29      119      119      1000       600        0        0
+oncesi_K5              32       32      119      119      1200       600        0        0
+oncesi_K6              29       29      119      119      1000       600        0        0
+oncesi_K7              29       29      119      119      1000       600        0        0
+oncesi_K8              29       29      119      119   999.579   599.789        0        0
+oncesi_K9              29    28.95      119   118.75    997.75    598.55    -0.05    -0.25
+oncesi_K10             29       29      119      119    999.85    599.95        0        0
+oncesi_K11             29       29      119      119      1000       600        0        0
+sonrasi_K1             35   34.947      119  118.737  1197.158   598.579   -0.053   -0.263
+sonrasi_K6             34       34      119      119      1200       600        0        0
+sonrasi_K7             35       35      119      119      1200       600        0        0
+sonrasi_K8             35       35      119      119      1200       600        0        0
+sonrasi_K11            35       35      119   118.95    1199.4     599.7        0    -0.05
+-------------------------------------------------------------------------------------------------------
+dDL/dUL = yeni - ilk. ! varsa kosu gecersiz/ret/hata ile bitmistir; gizlenmemistir.
+Bu secenek hicbir gNB programi calistirmadi. Tamamlanmis olcumlerin ozeti okundu.
+Bu ozetin SS goruntusunu aldiktan sonra menuye donmek icin Enter: 
+OCUDU GERCEK KOSU VE EKRAN GORUNTUSU
+Ilk rapor icin 1, 2, 3, 4, 5 seceneklerini sirayla kullanin.
+ 1. SS 1 - PRS yok / 100 MHz referans
+ 2. SS 2 - K1 / PRS RB rezervasyonu
+ 3. SS 3 - K1 / deneysel RE-TBS modeli
+ 4. SS 4 - K6 / PRS RB rezervasyonu
+ 5. SS 5 - K6 / deneysel RE-TBS modeli
+ 6. EK SS - K7 / PRS RB rezervasyonu
+ 7. EK SS - K7 / deneysel RE-TBS modeli
+ 8. EK SS - K8 / PRS RB rezervasyonu
+ 9. EK SS - K8 / deneysel RE-TBS modeli
+10. EK SS - K11 / PRS RB rezervasyonu
+11. EK SS - K11 / deneysel RE-TBS modeli
+12. SS 6 - Tamamlanan 23 dogrulama kosusunun ARSIV ozetini goster (yeni test yok)
+Secim (cikis: 0): 

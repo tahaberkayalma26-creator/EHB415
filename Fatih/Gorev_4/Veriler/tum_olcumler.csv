@@ -1,0 +1,63 @@
+﻿tag,binary,accepted,gnb_returncode,measurement_valid,dl_mbps_mean,ul_mbps_mean,dl_ok_mean,ul_ok_mean,dl_nok_mean,ul_nok_mean,metric_rows,used_rows,log_level,top_gnb_cpu_mean,measurement_note
+b100_r1,original e0db566,True,0,False,0.416136,1.375758,13.872727,6.936364,2.112121,0.684091,1322,1320,warning,110.78,"diagnostic only: rejected, abnormal timing, warning storm, or aborted run"
+b100_r2,original e0db566,True,0,False,0.0,0.0,0,0,0,0,3627,3625,warning,85.71,"diagnostic only: rejected, abnormal timing, warning storm, or aborted run"
+b100_r3,original e0db566,True,0,False,36.0,119.0,1200,600,0,0,20,18,warning,96.74,"diagnostic only: rejected, abnormal timing, warning storm, or aborted run"
+band100,original e0db566,True,0,False,0.159817,0.528272,5.326484,2.663242,1.033486,0.881279,2630,2628,warning,96.61,"diagnostic only: rejected, abnormal timing, warning storm, or aborted run"
+band40,original e0db566,True,134,False,35.818182,44.772727,1196.909091,598.272727,3.090909,0,13,11,warning,43.13,"diagnostic only: rejected, abnormal timing, warning storm, or aborted run"
+band60,original e0db566,True,0,False,0.835145,1.614312,27.869565,13.934783,1.009058,0.592391,554,552,warning,90.45,"diagnostic only: rejected, abnormal timing, warning storm, or aborted run"
+band80,original e0db566,True,0,False,0.160027,0.420879,5.338599,2.669299,0.89217,0.856456,2914,2912,warning,102.0,"diagnostic only: rejected, abnormal timing, warning storm, or aborted run"
+clockstep2_korumali,/home/fatih/ehb415/gorev4_runs/bin/gnb_prs_model,True,0,False,36.0,119.0,1200,600,0,0,22,20,info,59.55,synthetic process-local clock regression only; never a performance reference
+clockstep2_korumasiz,/home/fatih/ehb415/gorev4_runs/bin/gnb_clock_unprotected,True,0,False,30.315789,100.210526,1010.526316,505.263158,0,0,21,19,info,99.39,synthetic process-local clock regression only; never a performance reference
+clockstep_korumali,/home/fatih/ehb415/gorev4_runs/bin/gnb_prs_model,True,0,False,36.0,119.0,1200,600,0,0,22,20,info,61.46,"superseded synthetic diagnostic: reused config log path; terminal preserved, do not use for reference"
+clockstep_korumasiz,/home/fatih/ehb415/gorev4_runs/bin/gnb_clock_unprotected,True,0,False,33.411765,110.5,1114.235294,557.117647,15.117647,0,19,17,info,101.49,"superseded synthetic diagnostic: reused config log path; terminal preserved, do not use for reference"
+duzeltilmis100,/home/fatih/ehb415/gorev4_runs/bin/gnb_compat,True,0,True,36.0,119.0,1200,600,0,0,23,21,warning,56.91,normal metric row count for 22-second reporting window
+duzeltilmis40,/home/fatih/ehb415/gorev4_runs/bin/gnb_compat,True,0,True,36.0,44.9,1200,600,0,0,22,20,warning,51.97,normal metric row count for 22-second reporting window
+duzeltilmis60,/home/fatih/ehb415/gorev4_runs/bin/gnb_compat,True,0,True,36.0,69.5,1200,600,0,0,22,20,warning,52.56,normal metric row count for 22-second reporting window
+duzeltilmis80,/home/fatih/ehb415/gorev4_runs/bin/gnb_compat,True,0,True,36.0,94.6,1200,600,0,0,22,20,warning,53.68,normal metric row count for 22-second reporting window
+oncesi_K1,/home/fatih/ehb415/gorev4_runs/bin/gnb_compat,True,0,True,29.0,119.0,1000,600,0,0,22,20,debug,66.53,normal metric row count for 22-second reporting window
+oncesi_K10,/home/fatih/ehb415/gorev4_runs/bin/gnb_compat,True,0,True,29.0,119.0,1000,600,0,0,22,20,info,61.41,normal metric row count for 22-second reporting window
+oncesi_K11,/home/fatih/ehb415/gorev4_runs/bin/gnb_compat,True,0,True,29.0,119.0,1000,600,0,0,22,20,debug,68.95,normal metric row count for 22-second reporting window
+oncesi_K2,/home/fatih/ehb415/gorev4_runs/bin/gnb_compat,True,0,True,32.0,119.0,1100,600,0,0,22,20,warning,56.83,normal metric row count for 22-second reporting window
+oncesi_K3,/home/fatih/ehb415/gorev4_runs/bin/gnb_compat,True,0,True,34.0,119.0,1150,600,0,0,22,20,warning,57.38,normal metric row count for 22-second reporting window
+oncesi_K4,/home/fatih/ehb415/gorev4_runs/bin/gnb_compat,True,0,True,29.0,119.0,1000,600,0,0,22,20,warning,57.66,normal metric row count for 22-second reporting window
+oncesi_K5,/home/fatih/ehb415/gorev4_runs/bin/gnb_compat,True,0,True,32.0,119.0,1200,600,0,0,22,20,warning,58.3,normal metric row count for 22-second reporting window
+oncesi_K6,/home/fatih/ehb415/gorev4_runs/bin/gnb_compat,True,0,True,29.0,119.0,1000,600,0,0,22,20,debug,65.64,normal metric row count for 22-second reporting window
+oncesi_K7,/home/fatih/ehb415/gorev4_runs/bin/gnb_compat,True,0,True,29.0,119.0,1000,600,0,0,22,20,debug,66.04,normal metric row count for 22-second reporting window
+oncesi_K8,/home/fatih/ehb415/gorev4_runs/bin/gnb_compat,True,0,True,29.0,119.0,1000,600,0,0,22,20,debug,68.47,normal metric row count for 22-second reporting window
+oncesi_K9,/home/fatih/ehb415/gorev4_runs/bin/gnb_compat,True,0,True,29.0,119.0,1000,600,0,0,22,20,info,61.52,normal metric row count for 22-second reporting window
+ref100_1,/home/fatih/ehb415/gorev4_runs/bin/gnb_compat,True,0,True,36.0,119.0,1200,600,0,0,23,21,info,60.78,normal metric row count for 22-second reporting window
+ref100_2,/home/fatih/ehb415/gorev4_runs/bin/gnb_compat,True,0,True,36.0,119.0,1200,600,0,0,23,21,warning,63.25,normal metric row count for 22-second reporting window
+ref100_3,/home/fatih/ehb415/gorev4_runs/bin/gnb_compat,True,0,True,36.0,119.0,1200,600,0,0,22,20,warning,65.29,normal metric row count for 22-second reporting window
+sonrasi_K1,/home/fatih/ehb415/gorev4_runs/bin/gnb_prs_model,True,0,True,35.0,119.0,1200,600,0,0,22,20,debug,66.2,normal metric row count for 22-second reporting window
+sonrasi_K11,/home/fatih/ehb415/gorev4_runs/bin/gnb_prs_model,True,0,True,35.0,119.0,1200,600,0,0,22,20,debug,67.97,normal metric row count for 22-second reporting window
+sonrasi_K6,/home/fatih/ehb415/gorev4_runs/bin/gnb_prs_model,True,0,True,34.0,119.0,1200,600,0,0,22,20,debug,68.53,normal metric row count for 22-second reporting window
+sonrasi_K7,/home/fatih/ehb415/gorev4_runs/bin/gnb_prs_model,True,0,True,35.0,119.0,1200,600,0,0,22,20,debug,67.32,normal metric row count for 22-second reporting window
+sonrasi_K8,/home/fatih/ehb415/gorev4_runs/bin/gnb_prs_model,True,0,True,35.0,119.0,1200,600,0,0,22,20,debug,66.71,normal metric row count for 22-second reporting window
+tanisal100,/home/fatih/ehb415/gorev4_runs/bin/gnb_clockguard,True,0,True,0.0,0.0,0,0,0,0,22,20,warning,,normal metric row count for 22-second reporting window
+tanisal100_debug,/home/fatih/ehb415/gorev4_runs/bin/gnb_clockguard,True,0,True,0.0,0.0,0,0,0,0,22,20,debug,36.27,normal metric row count for 22-second reporting window
+tanisal100_info,/home/fatih/ehb415/gorev4_runs/bin/gnb_clockguard,True,0,True,0.0,0.0,0,0,0,0,22,20,info,34.94,normal metric row count for 22-second reporting window
+tanisal40_info,/home/fatih/ehb415/gorev4_runs/bin/gnb_clockguard,True,0,True,36.0,44.9,1200,600,0,0,22,20,info,53.4,normal metric row count for 22-second reporting window
+v2_duzeltilmis100,/home/fatih/ehb415/gorev4_runs/bin/gnb_compat,True,0,True,36.0,119.0,1200,600,0,0,22,20,warning,61.45,normal metric row count for 22-second reporting window
+v2_duzeltilmis40,/home/fatih/ehb415/gorev4_runs/bin/gnb_compat,True,0,True,35.85,44.745,1195.8,597.9,4.2,0,22,20,warning,53.22,normal metric row count for 22-second reporting window
+v2_duzeltilmis60,/home/fatih/ehb415/gorev4_runs/bin/gnb_compat,True,0,True,36.0,69.5,1200,600,0,0,22,20,warning,53.9,normal metric row count for 22-second reporting window
+v2_duzeltilmis80,/home/fatih/ehb415/gorev4_runs/bin/gnb_compat,True,0,True,36.0,94.6,1200,600,0,0,23,21,warning,61.33,normal metric row count for 22-second reporting window
+v2_oncesi_K1,/home/fatih/ehb415/gorev4_runs/bin/gnb_compat,True,0,True,29.0,119.0,999.75,599.85,0.25,0,22,20,debug,65.68,normal metric row count for 22-second reporting window
+v2_oncesi_K10,/home/fatih/ehb415/gorev4_runs/bin/gnb_compat,True,0,True,29.0,119.0,999.85,599.95,0.15,0,22,20,info,60.07,normal metric row count for 22-second reporting window
+v2_oncesi_K11,/home/fatih/ehb415/gorev4_runs/bin/gnb_compat,True,0,True,29.0,119.0,1000,600,0,0,22,20,debug,67.07,normal metric row count for 22-second reporting window
+v2_oncesi_K2,/home/fatih/ehb415/gorev4_runs/bin/gnb_compat,True,0,True,32.0,119.0,1100,600,0,0,23,21,warning,59.58,normal metric row count for 22-second reporting window
+v2_oncesi_K3,/home/fatih/ehb415/gorev4_runs/bin/gnb_compat,True,0,True,33.95,118.8,1147.9,598.9,2.1,0,22,20,warning,60.17,normal metric row count for 22-second reporting window
+v2_oncesi_K4,/home/fatih/ehb415/gorev4_runs/bin/gnb_compat,True,0,True,29.0,119.0,1000,600,0,0,22,20,warning,57.63,normal metric row count for 22-second reporting window
+v2_oncesi_K5,/home/fatih/ehb415/gorev4_runs/bin/gnb_compat,True,0,True,32.0,119.0,1200,600,0,0,22,20,warning,67.57,normal metric row count for 22-second reporting window
+v2_oncesi_K6,/home/fatih/ehb415/gorev4_runs/bin/gnb_compat,True,0,True,29.0,119.0,1000,600,0,0,22,20,debug,67.06,normal metric row count for 22-second reporting window
+v2_oncesi_K7,/home/fatih/ehb415/gorev4_runs/bin/gnb_compat,True,0,True,29.0,119.0,1000,600,0,0,22,20,debug,66.39,normal metric row count for 22-second reporting window
+v2_oncesi_K8,/home/fatih/ehb415/gorev4_runs/bin/gnb_compat,True,0,True,29.0,119.0,999.578947,599.789474,0.421053,0,21,19,debug,65.32,normal metric row count for 22-second reporting window
+v2_oncesi_K9,/home/fatih/ehb415/gorev4_runs/bin/gnb_compat,True,0,True,28.95,118.75,997.75,598.55,2.25,0,22,20,info,65.32,normal metric row count for 22-second reporting window
+v2_ref100_1,/home/fatih/ehb415/gorev4_runs/bin/gnb_compat,True,0,True,36.0,119.0,1200,600,0,0,22,20,info,63.43,normal metric row count for 22-second reporting window
+v2_ref100_2,/home/fatih/ehb415/gorev4_runs/bin/gnb_compat,True,0,True,36.0,119.0,1200,600,0,0,22,20,warning,62.34,normal metric row count for 22-second reporting window
+v2_ref100_3,/home/fatih/ehb415/gorev4_runs/bin/gnb_compat,True,0,True,35.95,119.0,1199.7,599.85,0.3,0,22,20,warning,59.5,normal metric row count for 22-second reporting window
+v2_sonrasi_K1,/home/fatih/ehb415/gorev4_runs/bin/gnb_prs_model,True,0,True,34.947368,118.736842,1197.157895,598.578947,2.842105,0,21,19,debug,67.93,normal metric row count for 22-second reporting window
+v2_sonrasi_K11,/home/fatih/ehb415/gorev4_runs/bin/gnb_prs_model,True,0,True,35.0,118.95,1199.4,599.7,0.6,0,22,20,debug,71.81,normal metric row count for 22-second reporting window
+v2_sonrasi_K6,/home/fatih/ehb415/gorev4_runs/bin/gnb_prs_model,True,0,True,34.0,119.0,1200,600,0,0,22,20,debug,67.15,normal metric row count for 22-second reporting window
+v2_sonrasi_K7,/home/fatih/ehb415/gorev4_runs/bin/gnb_prs_model,True,0,True,35.0,119.0,1200,600,0,0,22,20,debug,79.2,normal metric row count for 22-second reporting window
+v2_sonrasi_K8,/home/fatih/ehb415/gorev4_runs/bin/gnb_prs_model,True,0,True,35.0,119.0,1200,600,0,0,22,20,debug,75.99,normal metric row count for 22-second reporting window
+v2_veri_genisligi100,/home/fatih/ehb415/gorev4_runs/bin/gnb_compat,True,0,True,36.0,119.0,1200,600,0,0,22,20,debug,70.96,normal metric row count for 22-second reporting window

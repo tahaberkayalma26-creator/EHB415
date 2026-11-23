@@ -1,0 +1,4 @@
+2026-11-20T05:00:52.479974 [GNB     ] [W] Could not check scaling governor. filename=/sys/devices/system/cpu/cpu0/cpufreq/scaling_governor error=No such file or directory
+2026-11-20T05:00:52.479981 [GNB     ] [W] Could not check DRM KMS polling. filename=/sys/module/drm_kms_helper/parameters/poll error=No such file or directory
+2026-11-20T05:00:54.759101 [MAC     ] [W] [   676.3] DL ue=0 rnti=0x44 h_id=4: Failed to assemble MAC PDU. Cause: No HARQ buffers available
+2026-11-20T05:00:54.759702 [MAC     ] [W] [   676.4] DL ue=0 rnti=0x44 h_id=6: Failed to assemble MAC PDU. Cause: No HARQ buffers available

@@ -1,0 +1,3 @@
+condition,prs_period_slots,prs_symbols,prs_prbs,dl_mbps,dl_ok_per_second,averaged_samples,total_metric_rows
+base,0,0,0,59.0,1000.0,15,22
+p4,4,12,104,44.0,750.0,15,22

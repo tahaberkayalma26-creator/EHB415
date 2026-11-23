@@ -1,0 +1,3 @@
+$ cmake --build /home/fatih/ehb415/ocudu-gorev4/build --target gnb -j6
+[1/1] cd /home/fatih/ehb415/ocudu-gorev4/build/lib/support/versioning && cmake -P /home/fatih/ehb415/ocudu-gorev4/build/build_info.cmake
+-- Generating build information

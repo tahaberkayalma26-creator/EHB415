@@ -1,0 +1,43 @@
+{
+  "tag": "tanisal100",
+  "started_utc": "2026-11-20T04:38:33.706005+00:00",
+  "elapsed_s": 30.353,
+  "source_config": "/home/fatih/ehb415/gorev4_project/kurulum/ocudu_testmode_n78_100MHz.yml",
+  "prs": [
+    0,
+    0,
+    0,
+    2,
+    1,
+    1,
+    4
+  ],
+  "binary": "/home/fatih/ehb415/gorev4_runs/bin/gnb_clockguard",
+  "log_level": "warning",
+  "wrapper_returncode": 0,
+  "gnb_returncode": 0,
+  "accepted": true,
+  "metric_rows": 22,
+  "used_rows": 20,
+  "sample_rule": "first and last metric rows excluded when at least five rows; no loss rows filtered",
+  "measurement_valid": true,
+  "measurement_note": "normal metric row count for 22-second reporting window",
+  "dl_mbps_mean": 0.0,
+  "dl_mbps_min": 0.0,
+  "dl_mbps_max": 0.0,
+  "ul_mbps_mean": 0.0,
+  "ul_mbps_min": 0.0,
+  "ul_mbps_max": 0.0,
+  "dl_ok_mean": 0,
+  "ul_ok_mean": 0,
+  "dl_nok_mean": 0,
+  "ul_nok_mean": 0,
+  "top_gnb_cpu_mean": null,
+  "top_gnb_cpu_max": null,
+  "gnb_log_bytes": 571,
+  "log_counts": {
+    "warning_lines": 2
+  },
+  "rejection_messages": [],
+  "classification_rule": "accepted, exit0, 12..35 rows, no >100000-warning storm; means remain raw row statistics"
+}

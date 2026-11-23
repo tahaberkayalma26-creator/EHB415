@@ -1,0 +1,40 @@
+{
+  "date_istanbul": "2026-11-20",
+  "word_pages": 8,
+  "summary_pdf_pages": 3,
+  "spreadsheet_sheets": 11,
+  "word_all_pages_visually_inspected": true,
+  "summary_all_pages_visually_inspected": true,
+  "spreadsheet_all_sheets_visually_inspected": true,
+  "screenshots": {
+    "status": "unavailable",
+    "reason": "Terminal window did not appear in screenshot helper inventory; table report preserved; no simulated images."
+  },
+  "original_xlsx_sha256": "2c0383af4306a64f460e7fb30aeb4b6b9598f8c22c94cb6af19e33c2b9e4307d",
+  "outputs": [
+    {
+      "name": "Fatih_Gorev_Karti_4_Rapor.docx",
+      "bytes": 1844251,
+      "sha256": "e4d06a0b5a3d5e1e7b4015801a7baed3b2e37a568305bd4ee56f6b043a6a0ca3"
+    },
+    {
+      "name": "ortak_degerler_Fatih_sonuclar.xlsx",
+      "bytes": 26041,
+      "sha256": "5a8b8eed18cb6838d43c394d2f56632f44def2d3aa8351a8b9b0d29a145bed16"
+    },
+    {
+      "name": "Fatih_Gorev_Karti_4_Teslim_Ozeti.pdf",
+      "bytes": 124916,
+      "sha256": "42f589bb20960556aecca28029de729ca75ef3a7ae6819a1f5a44f24ec8e3818"
+    },
+    {
+      "name": "Yapilan_Islemler.md",
+      "bytes": 20550,
+      "sha256": "2002268bc3b76dd5daaa193316e0e73fe390639b215bb314985e351e8f254f65"
+    }
+  ],
+  "validation_record": "Dogrulama/dogrulama_tamamlandi.json",
+  "last_validation_date_istanbul": "2026-11-20",
+  "screenshot_report_validation": "Araclar/SS_Rapor_QA/final_validation.json",
+  "task_coverage": "Araclar/SS_Rapor_QA/coverage_audit_final.json"
+}

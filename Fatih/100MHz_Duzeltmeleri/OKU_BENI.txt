@@ -1,0 +1,53 @@
+100 MHz OCUDU düzeltmeleri — Fatih / 23.11.2026
+
+Bu pakette 100 MHz test ortamındaki iki ayrı düzeltme bulunmaktadır.
+Saati elle 2 ms ileri alma işlemi yapılmamıştır; Windows/Ubuntu sistem saati değiştirilmemiştir.
+
+1. Geri saat okumasına karşı dummy RU koruması
+Dosya: lib/ru/dummy/ru_dummy_impl.cpp
+Fonksiyon: ru_dummy_impl::run_slot()
+Son kaynak kopyasında eklenen bölüm: 111–122. satırlar.
+
+Sistem saatinden hesaplanan hedef slot geriye düşerse, eski ileri yönlü döngü
+bir HyperSFN çevrimini dolaşabiliyor ve çok sayıda yapay geç slot üretebiliyordu.
+Eklenen kontrol bu geri okumayı fark edip o turda slot ilerletmeden dönmektedir.
+Bekleme her döngüde minimum_loop_time kadar, yani 10 mikrosaniyedir.
+Bu, sabit 2 ms eklemek değildir; saat mevcut slotu yakalayana kadar işlem bekletilir.
+Yama: patches/01_dummy_saat_korumasi.patch
+
+2. 100 MHz'de sıfır veri için bağımsız scheduler düzeltmesi
+Dosya: lib/scheduler/ue_scheduling/cell_group_event_manager.cpp
+Fonksiyon: cell_group_event_handler_impl::handle_conres_ce_acked()
+Son kaynak kopyasında eklenen bölüm: 226–232. satırlar; kritik çağrı 231. satırdır.
+
+ConRes onayı geldiğinde UE fallback modundan çıkıyorsa, eksik kalan slice
+scheduler bildirimi slice_sched.config_applied(ue_index) ile tamamlanmaktadır.
+Sadece saat koruması 100 MHz'deki sıfır veri sorununu gidermemiştir.
+İki düzeltme birlikte kullanıldığında referans koşularında DL 36 / UL 119 Mbps
+elde edilmiştir. Ortam dummy RU ve test UE kullanır.
+Yama: patches/02_conres_slice_bildirimi.patch
+
+Kaynak ve uygulama
+OCUDU taban commit: e0db566aac6e6376ddd60e83c84f58698fcc4d70
+Çalışılan Linux kaynak dizini: /home/fatih/ehb415/ocudu-gorev4
+Çalışma dalı: fatih/gorev4-clockguard
+
+Yamalar OCUDU kaynak deposunun kökünde uygulanır. EHB415 ders deposu köküne
+uygulanmaz. Önce mevcut yerel değişiklikler kontrol edilmelidir. Örnek komutlar:
+
+git apply --check /paketin/yolu/patches/01_dummy_saat_korumasi.patch /paketin/yolu/patches/02_conres_slice_bildirimi.patch
+git apply /paketin/yolu/patches/01_dummy_saat_korumasi.patch /paketin/yolu/patches/02_conres_slice_bildirimi.patch
+
+Ardından gNB yeniden derlenmelidir. kaynak/ altındaki .cpp dosyaları son kodun
+incelenebilmesi için eklenmiştir; farklı sürümdeki dosyaların üzerine doğrudan
+kopyalamak yerine yamalar incelenmelidir. Satır numaraları son kopyalara aittir.
+
+Test yardımcısı ile karıştırılmaması gereken nokta
+Araclar/clock_step_inject.c gerçek düzeltme değildir. Özel regresyon testinde
+sadece test edilen sürecin CLOCK_REALTIME okumasına -2 saniye (-2000 ms) ekler;
+sistem saatini değiştirmez. Buradaki işlem +2 ms değildir. Bu test yardımcısı
+pakete eklenmemiştir. PRS/RE-TBS modelindeki diğer deney değişiklikleri de bu
+iki hata düzeltmesinin kapsamına girmez.
+
+Bu paket yalnızca kod ve açıklamaları içerir. GitHub gönderim durumu proje işlem notlarında tutulur.
+

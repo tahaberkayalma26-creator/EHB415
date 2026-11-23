@@ -1,0 +1,120 @@
+2026-11-19T21:01:01.723511 [GNB     ] [W] Could not check scaling governor. filename=/sys/devices/system/cpu/cpu0/cpufreq/scaling_governor error=No such file or directory
+2026-11-19T21:01:01.723521 [GNB     ] [W] Could not check DRM KMS polling. filename=/sys/module/drm_kms_helper/parameters/poll error=No such file or directory
+2026-11-19T21:01:25.687261 [FAPI    ] [W] [   995.7] Sector#0: Real-time failure in FAPI: Received late DL_TTI.request from slot 961.12
+2026-11-19T21:01:25.687265 [FAPI    ] [W] [  996.12] Sector#0: Real-time failure in FAPI: Received TX_Data.request from slot 961.12
+2026-11-19T21:01:25.687283 [FAPI    ] [W] [ 1003.15] Sector#0: Real-time failure in FAPI: Received late DL_TTI.request from slot 961.13
+2026-11-19T21:01:25.687284 [FAPI    ] [W] [  1004.0] Sector#0: Real-time failure in FAPI: Received UL_DCI.request message from slot 961.13
+2026-11-19T21:01:25.687285 [FAPI    ] [W] [ 1004.10] Sector#0: Real-time failure in FAPI: Received TX_Data.request from slot 961.13
+2026-11-19T21:01:25.687295 [FAPI    ] [W] [ 1008.10] Sector#0: Real-time failure in FAPI: Received late DL_TTI.request from slot 961.14
+2026-11-19T21:01:25.687296 [FAPI    ] [W] [ 1008.12] Sector#0: Real-time failure in FAPI: Received UL_DCI.request message from slot 961.14
+2026-11-19T21:01:25.687296 [FAPI    ] [W] [ 1008.19] Sector#0: Real-time failure in FAPI: Received TX_Data.request from slot 961.14
+2026-11-19T21:01:25.687305 [FAPI    ] [W] [  1012.7] Sector#0: Real-time failure in FAPI: Received late DL_TTI.request from slot 961.15
+2026-11-19T21:01:25.687305 [FAPI    ] [W] [  1012.8] Sector#0: Real-time failure in FAPI: Received UL_DCI.request message from slot 961.15
+2026-11-19T21:01:25.687306 [FAPI    ] [W] [ 1012.17] Sector#0: Real-time failure in FAPI: Received TX_Data.request from slot 961.15
+2026-11-19T21:01:25.687311 [FAPI    ] [W] [  1015.0] Sector#0: Real-time failure in FAPI: Received late DL_TTI.request from slot 961.16
+2026-11-19T21:01:25.687316 [FAPI    ] [W] [ 1016.17] Sector#0: Real-time failure in FAPI: Received late UL_TTI.request from slot 961.17
+2026-11-19T21:01:25.687321 [FAPI    ] [W] [ 1018.15] Sector#0: Real-time failure in FAPI: Received late UL_TTI.request from slot 961.18
+2026-11-19T21:01:25.687324 [FAPI    ] [W] [ 1019.18] Sector#0: Real-time failure in FAPI: Received late UL_TTI.request from slot 961.19
+2026-11-19T21:01:25.687333 [FAPI    ] [W] [ 1023.14] Sector#0: Real-time failure in FAPI: Received late DL_TTI.request from slot 962.0
+2026-11-19T21:01:25.687334 [FAPI    ] [W] [ 1023.19] Sector#0: Real-time failure in FAPI: Received TX_Data.request from slot 962.0
+2026-11-19T21:01:25.687339 [FAPI    ] [W] [     2.4] Sector#0: Real-time failure in FAPI: Received late DL_TTI.request from slot 962.1
+2026-11-19T21:01:25.687340 [FAPI    ] [W] [     2.7] Sector#0: Real-time failure in FAPI: Received TX_Data.request from slot 962.1
+2026-11-19T21:01:25.687346 [FAPI    ] [W] [    4.19] Sector#0: Real-time failure in FAPI: Received late DL_TTI.request from slot 962.2
+2026-11-19T21:01:25.687346 [FAPI    ] [W] [     5.0] Sector#0: Real-time failure in FAPI: Received TX_Data.request from slot 962.2
+2026-11-19T21:01:25.687354 [FAPI    ] [W] [     8.1] Sector#0: Real-time failure in FAPI: Received late DL_TTI.request from slot 962.3
+2026-11-19T21:01:25.687354 [FAPI    ] [W] [     8.3] Sector#0: Real-time failure in FAPI: Received UL_DCI.request message from slot 962.3
+2026-11-19T21:01:25.687355 [FAPI    ] [W] [     8.7] Sector#0: Real-time failure in FAPI: Received TX_Data.request from slot 962.3
+2026-11-19T21:01:25.687364 [FAPI    ] [W] [    12.4] Sector#0: Real-time failure in FAPI: Received late DL_TTI.request from slot 962.4
+2026-11-19T21:01:25.687364 [FAPI    ] [W] [    12.5] Sector#0: Real-time failure in FAPI: Received UL_DCI.request message from slot 962.4
+2026-11-19T21:01:25.687364 [FAPI    ] [W] [    12.6] Sector#0: Real-time failure in FAPI: Received TX_Data.request from slot 962.4
+2026-11-19T21:01:25.687373 [FAPI    ] [W] [   15.19] Sector#0: Real-time failure in FAPI: Received late DL_TTI.request from slot 962.5
+2026-11-19T21:01:25.687374 [FAPI    ] [W] [    16.2] Sector#0: Real-time failure in FAPI: Received UL_DCI.request message from slot 962.5
+2026-11-19T21:01:25.687374 [FAPI    ] [W] [    16.3] Sector#0: Real-time failure in FAPI: Received TX_Data.request from slot 962.5
+2026-11-19T21:01:25.687378 [FAPI    ] [W] [   17.18] Sector#0: Real-time failure in FAPI: Received late DL_TTI.request from slot 962.6
+2026-11-19T21:01:25.687381 [FAPI    ] [W] [   18.19] Sector#0: Real-time failure in FAPI: Received late UL_TTI.request from slot 962.7
+2026-11-19T21:01:25.687384 [FAPI    ] [W] [    20.5] Sector#0: Real-time failure in FAPI: Received late UL_TTI.request from slot 962.8
+2026-11-19T21:01:25.687387 [FAPI    ] [W] [    21.5] Sector#0: Real-time failure in FAPI: Received late UL_TTI.request from slot 962.9
+2026-11-19T21:01:25.687392 [FAPI    ] [W] [    23.9] Sector#0: Real-time failure in FAPI: Received late DL_TTI.request from slot 962.10
+2026-11-19T21:01:25.687393 [FAPI    ] [W] [   23.13] Sector#0: Real-time failure in FAPI: Received TX_Data.request from slot 962.10
+2026-11-19T21:01:25.687397 [FAPI    ] [W] [    25.8] Sector#0: Real-time failure in FAPI: Received late DL_TTI.request from slot 962.11
+2026-11-19T21:01:25.687398 [FAPI    ] [W] [   25.10] Sector#0: Real-time failure in FAPI: Received TX_Data.request from slot 962.11
+2026-11-19T21:01:25.687402 [FAPI    ] [W] [    27.2] Sector#0: Real-time failure in FAPI: Received late DL_TTI.request from slot 962.12
+2026-11-19T21:01:25.687402 [FAPI    ] [W] [    27.4] Sector#0: Real-time failure in FAPI: Received TX_Data.request from slot 962.12
+2026-11-19T21:01:25.687408 [FAPI    ] [W] [   29.16] Sector#0: Real-time failure in FAPI: Received late DL_TTI.request from slot 962.13
+2026-11-19T21:01:25.687409 [FAPI    ] [W] [   29.18] Sector#0: Real-time failure in FAPI: Received UL_DCI.request message from slot 962.13
+2026-11-19T21:01:25.687409 [FAPI    ] [W] [   29.19] Sector#0: Real-time failure in FAPI: Received TX_Data.request from slot 962.13
+2026-11-19T21:01:25.687416 [FAPI    ] [W] [   32.19] Sector#0: Real-time failure in FAPI: Received late DL_TTI.request from slot 962.14
+2026-11-19T21:01:25.687417 [FAPI    ] [W] [    33.0] Sector#0: Real-time failure in FAPI: Received UL_DCI.request message from slot 962.14
+2026-11-19T21:01:25.687417 [FAPI    ] [W] [    33.2] Sector#0: Real-time failure in FAPI: Received TX_Data.request from slot 962.14
+2026-11-19T21:01:25.687425 [FAPI    ] [W] [    36.5] Sector#0: Real-time failure in FAPI: Received late DL_TTI.request from slot 962.15
+2026-11-19T21:01:25.687425 [FAPI    ] [W] [    36.6] Sector#0: Real-time failure in FAPI: Received UL_DCI.request message from slot 962.15
+2026-11-19T21:01:25.687425 [FAPI    ] [W] [    36.8] Sector#0: Real-time failure in FAPI: Received TX_Data.request from slot 962.15
+2026-11-19T21:01:25.687430 [FAPI    ] [W] [    38.5] Sector#0: Real-time failure in FAPI: Received late DL_TTI.request from slot 962.16
+2026-11-19T21:01:25.687432 [FAPI    ] [W] [    39.1] Sector#0: Real-time failure in FAPI: Received late UL_TTI.request from slot 962.17
+2026-11-19T21:01:25.687435 [FAPI    ] [W] [    40.1] Sector#0: Real-time failure in FAPI: Received late UL_TTI.request from slot 962.18
+2026-11-19T21:01:25.687437 [FAPI    ] [W] [    41.1] Sector#0: Real-time failure in FAPI: Received late UL_TTI.request from slot 962.19
+2026-11-19T21:01:25.687440 [MAC     ] [W] [   963.0] Skipped slot indication=187.41.9. Cause: DL task queue is full.
+2026-11-19T21:01:25.687440 [MAC     ] [W] [   963.0] Skipped slot indication=187.41.10. Cause: DL task queue is full.
+2026-11-19T21:01:25.687440 [MAC     ] [W] [   963.0] Skipped slot indication=187.41.11. Cause: DL task queue is full.
+2026-11-19T21:01:25.687441 [MAC     ] [W] [   963.0] Skipped slot indication=187.41.12. Cause: DL task queue is full.
+2026-11-19T21:01:25.687441 [MAC     ] [W] [   963.0] Skipped slot indication=187.41.13. Cause: DL task queue is full.
+2026-11-19T21:01:25.687441 [MAC     ] [W] [   963.0] Skipped slot indication=187.41.14. Cause: DL task queue is full.
+2026-11-19T21:01:25.687441 [MAC     ] [W] [   963.0] Skipped slot indication=187.41.15. Cause: DL task queue is full.
+2026-11-19T21:01:25.687442 [MAC     ] [W] [   963.0] Skipped slot indication=187.41.16. Cause: DL task queue is full.
+2026-11-19T21:01:25.687442 [MAC     ] [W] [   963.0] Skipped slot indication=187.41.17. Cause: DL task queue is full.
+2026-11-19T21:01:25.687442 [MAC     ] [W] [   963.0] Skipped slot indication=187.41.18. Cause: DL task queue is full.
+2026-11-19T21:01:25.687442 [MAC     ] [W] [   963.0] Skipped slot indication=187.41.19. Cause: DL task queue is full.
+2026-11-19T21:01:25.687443 [MAC     ] [W] [   963.0] Skipped slot indication=187.42.0. Cause: DL task queue is full.
+2026-11-19T21:01:25.687443 [MAC     ] [W] [   963.0] Skipped slot indication=187.42.1. Cause: DL task queue is full.
+2026-11-19T21:01:25.687443 [MAC     ] [W] [   963.0] Skipped slot indication=187.42.2. Cause: DL task queue is full.
+2026-11-19T21:01:25.687443 [FAPI    ] [W] [    42.3] Sector#0: Real-time failure in FAPI: Received late DL_TTI.request from slot 963.0
+2026-11-19T21:01:25.687443 [MAC     ] [W] [   963.0] Skipped slot indication=187.42.3. Cause: DL task queue is full.
+2026-11-19T21:01:25.687444 [FAPI    ] [W] [    42.4] Sector#0: Real-time failure in FAPI: Received TX_Data.request from slot 963.0
+2026-11-19T21:01:25.687444 [MAC     ] [W] [   963.0] Skipped slot indication=187.42.4. Cause: DL task queue is full.
+2026-11-19T21:01:25.687444 [MAC     ] [W] [   963.0] Skipped slot indication=187.42.5. Cause: DL task queue is full.
+2026-11-19T21:01:25.687445 [MAC     ] [W] [   963.0] Skipped slot indication=187.42.6. Cause: DL task queue is full.
+2026-11-19T21:01:25.687446 [MAC     ] [W] [   963.1] Skipped slot indication=187.42.8. Cause: DL task queue is full.
+2026-11-19T21:01:25.687447 [MAC     ] [W] [   963.1] Skipped slot indication=187.42.9. Cause: DL task queue is full.
+2026-11-19T21:01:25.687447 [MAC     ] [W] [   963.1] Skipped slot indication=187.42.10. Cause: DL task queue is full.
+2026-11-19T21:01:25.687447 [MAC     ] [W] [   963.1] Skipped slot indication=187.42.11. Cause: DL task queue is full.
+2026-11-19T21:01:25.687447 [MAC     ] [W] [   963.1] Skipped slot indication=187.42.12. Cause: DL task queue is full.
+2026-11-19T21:01:25.687447 [MAC     ] [W] [   963.1] Skipped slot indication=187.42.13. Cause: DL task queue is full.
+2026-11-19T21:01:25.687448 [MAC     ] [W] [   963.1] Skipped slot indication=187.42.14. Cause: DL task queue is full.
+2026-11-19T21:01:25.687448 [MAC     ] [W] [   963.1] Skipped slot indication=187.42.15. Cause: DL task queue is full.
+2026-11-19T21:01:25.687448 [MAC     ] [W] [   963.1] Skipped slot indication=187.42.16. Cause: DL task queue is full.
+2026-11-19T21:01:25.687448 [MAC     ] [W] [   963.1] Skipped slot indication=187.42.17. Cause: DL task queue is full.
+2026-11-19T21:01:25.687449 [FAPI    ] [W] [   42.18] Sector#0: Real-time failure in FAPI: Received late DL_TTI.request from slot 963.1
+2026-11-19T21:01:25.687449 [MAC     ] [W] [   963.1] Skipped slot indication=187.42.18. Cause: DL task queue is full.
+2026-11-19T21:01:25.687449 [FAPI    ] [W] [   42.19] Sector#0: Real-time failure in FAPI: Received TX_Data.request from slot 963.1
+2026-11-19T21:01:25.687449 [MAC     ] [W] [   963.1] Skipped slot indication=187.42.19. Cause: DL task queue is full.
+2026-11-19T21:01:25.687450 [MAC     ] [W] [   963.1] Skipped slot indication=187.43.0. Cause: DL task queue is full.
+2026-11-19T21:01:25.687450 [MAC     ] [W] [   963.2] Skipped slot indication=187.43.2. Cause: DL task queue is full.
+2026-11-19T21:01:25.687450 [MAC     ] [W] [   963.2] Skipped slot indication=187.43.3. Cause: DL task queue is full.
+2026-11-19T21:01:25.687451 [MAC     ] [W] [   963.2] Skipped slot indication=187.43.4. Cause: DL task queue is full.
+2026-11-19T21:01:25.687451 [MAC     ] [W] [   963.2] Skipped slot indication=187.43.5. Cause: DL task queue is full.
+2026-11-19T21:01:25.687451 [MAC     ] [W] [   963.2] Skipped slot indication=187.43.6. Cause: DL task queue is full.
+2026-11-19T21:01:25.687451 [MAC     ] [W] [   963.2] Skipped slot indication=187.43.7. Cause: DL task queue is full.
+2026-11-19T21:01:25.687452 [MAC     ] [W] [   963.2] Skipped slot indication=187.43.8. Cause: DL task queue is full.
+2026-11-19T21:01:25.687452 [MAC     ] [W] [   963.2] Skipped slot indication=187.43.9. Cause: DL task queue is full.
+2026-11-19T21:01:25.687452 [MAC     ] [W] [   963.2] Skipped slot indication=187.43.10. Cause: DL task queue is full.
+2026-11-19T21:01:25.687453 [MAC     ] [W] [   963.2] Skipped slot indication=187.43.11. Cause: DL task queue is full.
+2026-11-19T21:01:25.687453 [MAC     ] [W] [   963.2] Skipped slot indication=187.43.12. Cause: DL task queue is full.
+2026-11-19T21:01:25.687453 [MAC     ] [W] [   963.2] Skipped slot indication=187.43.13. Cause: DL task queue is full.
+2026-11-19T21:01:25.687453 [MAC     ] [W] [   963.2] Skipped slot indication=187.43.14. Cause: DL task queue is full.
+2026-11-19T21:01:25.687453 [MAC     ] [W] [   963.2] Skipped slot indication=187.43.15. Cause: DL task queue is full.
+2026-11-19T21:01:25.687454 [MAC     ] [W] [   963.2] Skipped slot indication=187.43.16. Cause: DL task queue is full.
+2026-11-19T21:01:25.687454 [MAC     ] [W] [   963.2] Skipped slot indication=187.43.17. Cause: DL task queue is full.
+2026-11-19T21:01:25.687454 [MAC     ] [W] [   963.2] Skipped slot indication=187.43.18. Cause: DL task queue is full.
+2026-11-19T21:01:25.687454 [FAPI    ] [W] [   43.19] Sector#0: Real-time failure in FAPI: Received late DL_TTI.request from slot 963.2
+2026-11-19T21:01:25.687454 [MAC     ] [W] [   963.2] Skipped slot indication=187.43.19. Cause: DL task queue is full.
+2026-11-19T21:01:25.687455 [FAPI    ] [W] [   43.19] Sector#0: Real-time failure in FAPI: Received TX_Data.request from slot 963.2
+2026-11-19T21:01:25.687455 [MAC     ] [W] [   963.2] Skipped slot indication=187.44.0. Cause: DL task queue is full.
+2026-11-19T21:01:25.687455 [MAC     ] [W] [   963.2] Skipped slot indication=187.44.1. Cause: DL task queue is full.
+2026-11-19T21:01:25.687456 [MAC     ] [W] [   963.3] Skipped slot indication=187.44.3. Cause: DL task queue is full.
+2026-11-19T21:01:25.687456 [MAC     ] [W] [   963.3] Skipped slot indication=187.44.4. Cause: DL task queue is full.
+2026-11-19T21:01:25.687456 [MAC     ] [W] [   963.3] Skipped slot indication=187.44.5. Cause: DL task queue is full.
+2026-11-19T21:01:25.687456 [MAC     ] [W] [   963.3] Skipped slot indication=187.44.6. Cause: DL task queue is full.
+2026-11-19T21:01:25.687456 [MAC     ] [W] [   963.3] Skipped slot indication=187.44.7. Cause: DL task queue is full.
+2026-11-19T21:01:25.687457 [MAC     ] [W] [   963.3] Skipped slot indication=187.44.8. Cause: DL task queue is full.
+2026-11-19T21:01:25.687457 [MAC     ] [W] [   963.3] Skipped slot indication=187.44.9. Cause: DL task queue is full.
+2026-11-19T21:01:25.687457 [MAC     ] [W] [   963.3] Skipped slot indication=187.44.10. Cause: DL task queue is full.

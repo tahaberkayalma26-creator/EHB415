@@ -1,0 +1,6 @@
+2026-11-20T14:06:18.671135 [GNB     ] [W] Could not check scaling governor. filename=/sys/devices/system/cpu/cpu0/cpufreq/scaling_governor error=No such file or directory
+2026-11-20T14:06:18.671142 [GNB     ] [W] Could not check DRM KMS polling. filename=/sys/module/drm_kms_helper/parameters/poll error=No such file or directory
+2026-11-20T14:06:24.625602 [FAPI    ] [W] [  958.16] Sector#0: Real-time failure in FAPI: Received late DL_TTI.request from slot 958.10
+2026-11-20T14:06:24.625606 [FAPI    ] [W] [  958.16] Sector#0: Real-time failure in FAPI: Received TX_Data.request from slot 958.10
+2026-11-20T14:06:24.627685 [RU      ] [W] Real-time failure in RU: received late DL request from slot 958.12 in sector 0.
+2026-11-20T14:06:24.629077 [RU      ] [W] Real-time failure in RU: detected late DL request from slot 958.11 in sector 0.

@@ -1,0 +1,16 @@
+Script started on 2026-10-31 17:33:09+03:00 [COMMAND="./gnb -c /tmp/ehb_ofs7.yml" <not executed on terminal>]
+
+--== OCUDU gNB (commit e0db566) ==--
+
+Warning: Scheduling priority of thread "main_pool#1" not changed. Cause: Not enough privileges.
+Warning: Scheduling priority of thread "main_pool#0" not changed. Cause: Not enough privileges.
+Warning: Scheduling priority of thread "main_pool#2" not changed. Cause: Not enough privileges.
+Warning: Scheduling priority of thread "main_pool#3" not changed. Cause: Not enough privileges.
+Warning: Scheduling priority of thread "main_pool#4" not changed. Cause: Not enough privileges.
+Warning: Scheduling priority of thread "ru_dummy" not changed. Cause: Not enough privileges.
+Warning: Scheduling priority of thread "io_broker_epoll" not changed. Cause: Not enough privileges.
+OCUDU ERROR: Invalid configuration DU cell detected.
+> Detected a collision between the NZP-CSI-RS resource (nzp-CSI-RS-ResourceId=4) and the DL-PRS resource (PRS Resource Set Id=0, PRS Resource Id=0) in slot 13 (period 20 slots)
+
+
+Script done on 2026-10-31 17:33:10+03:00 [COMMAND_EXIT_CODE="1"]

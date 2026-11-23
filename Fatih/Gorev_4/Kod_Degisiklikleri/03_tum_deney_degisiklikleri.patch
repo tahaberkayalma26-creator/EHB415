@@ -1,0 +1,273 @@
+diff --git a/include/ocudu/ran/sch/tbs_calculator.h b/include/ocudu/ran/sch/tbs_calculator.h
+index 1b2c1a2..54f87ec 100644
+--- a/include/ocudu/ran/sch/tbs_calculator.h
++++ b/include/ocudu/ran/sch/tbs_calculator.h
+@@ -72,6 +72,8 @@ struct tbs_calculator_configuration {
+   ///
+   /// Parameter \f$n_{PRB}\f$. Possibles values are {1, ..., 275}.
+   unsigned n_prb;
++  /// Additional total RE exclusions after the per-PRB cap. Experimental internal accounting; not RRC xOverhead.
++  unsigned nof_re_excluded = 0;
+ };
+ 
+ /// \brief Converts TB scaling field into the scaling factor S (see TS38.214 Table 5.1.3.2-2).
+diff --git a/lib/ran/sch/tbs_calculator.cpp b/lib/ran/sch/tbs_calculator.cpp
+index b809a86..157b13c 100644
+--- a/lib/ran/sch/tbs_calculator.cpp
++++ b/lib/ran/sch/tbs_calculator.cpp
+@@ -108,6 +108,10 @@ units::bytes ocudu::tbs_calculator_calculate(const tbs_calculator_configuration&
+   // Step 1. determine the number of REs within the slot.
+   unsigned nof_re_prime = NOF_SUBCARRIERS_PER_RB * config.nof_symb_sh - config.nof_dmrs_prb - config.nof_oh_prb;
+   unsigned nof_re       = std::min(nof_re_prime, 156U) * config.n_prb;
++  nof_re -= std::min(nof_re, config.nof_re_excluded);
++  if (nof_re == 0) {
++    return units::bytes{0};
++  }
+ 
+   float scaling = tbs_calculator_pdsch_get_scaling_factor(config.tb_scaling_field);
+ 
+diff --git a/lib/ru/dummy/ru_dummy_impl.cpp b/lib/ru/dummy/ru_dummy_impl.cpp
+index 52a3f28..2bc347e 100644
+--- a/lib/ru/dummy/ru_dummy_impl.cpp
++++ b/lib/ru/dummy/ru_dummy_impl.cpp
+@@ -108,6 +108,19 @@ void ru_dummy_impl::run_slot()
+   // Get the current system slot from the system time.
+   uint64_t slot_count = get_current_system_slot(slot_duration, current_slot.nof_slots_in_all_hyper_sfns());
+ 
++  // Guard the dummy timing loop against a backward wall-clock slot reading.
++  // Without this guard, the forward-only loop below can traverse an entire
++  // HyperSFN cycle and flood FAPI with artificial late slots.
++  const uint64_t cycle = current_slot.nof_slots_in_all_hyper_sfns();
++  const uint64_t forward_delta = (slot_count + cycle - current_slot.system_slot()) % cycle;
++  if (forward_delta > cycle / 2) {
++    logger.warning("Dummy RU backward clock slot detected: previous={} observed={} backwards_slots={}",
++                   current_slot.system_slot(), slot_count, cycle - forward_delta);
++    OCUDU_RTSAN_SCOPED_DISABLER(scoped_disabler);
++    std::this_thread::sleep_for(minimum_loop_time);
++    return;
++  }
++
+   // Make sure a minimum time between loop executions without crossing boundaries.
+   if (slot_count == current_slot.system_slot()) {
+     OCUDU_RTSAN_SCOPED_DISABLER(scoped_disabler);
+diff --git a/lib/scheduler/common_scheduling/prs_scheduler.cpp b/lib/scheduler/common_scheduling/prs_scheduler.cpp
+index 20c131e..1ccfd2a 100644
+--- a/lib/scheduler/common_scheduling/prs_scheduler.cpp
++++ b/lib/scheduler/common_scheduling/prs_scheduler.cpp
+@@ -186,11 +186,10 @@ void prs_scheduler::schedule_slot(cell_slot_resource_allocator& slot_alloc)
+         return;
+       }
+ 
+-      // The resource grid is RB-granular, so the whole PRS bandwidth is reserved even though the resource only uses
+-      // one subcarrier out of every comb size. There is no PDSCH rate matching around DL-PRS.
++      // Experimental scheduler-only model: retain the PRS PDU without reserving its whole RB rectangle.
++      // UE new-Tx TBS accounting subtracts overlapping PRS data REs; PHY rate matching is not implemented.
+       const prs_info& pdu = cached_pdus[set.first_pdu_idx + r];
+       slot_alloc.result.dl.prs.push_back(pdu);
+-      slot_alloc.dl_res_grid.fill(grant_info{pdu.scs, pdu.symbols, pdu.crbs});
+     }
+   }
+ }
+diff --git a/lib/scheduler/support/mcs_tbs_calculator.cpp b/lib/scheduler/support/mcs_tbs_calculator.cpp
+index b179e8b..9d76485 100644
+--- a/lib/scheduler/support/mcs_tbs_calculator.cpp
++++ b/lib/scheduler/support/mcs_tbs_calculator.cpp
+@@ -12,6 +12,7 @@
+ #include "ocudu/ran/sch/tbs_calculator.h"
+ #include "ocudu/ran/uci/uci_info.h"
+ #include "ocudu/ran/uci/uci_mapping.h"
++#include <limits>
+ 
+ using namespace ocudu;
+ 
+@@ -204,7 +205,8 @@ static compute_ul_mcs_tbs_error is_pusch_effective_rate_valid(const pusch_config
+ std::optional<sch_mcs_tbs> ocudu::compute_dl_mcs_tbs(const pdsch_config_params& pdsch_params,
+                                                      sch_mcs_index              max_mcs,
+                                                      unsigned                   nof_prbs,
+-                                                     bool                       contains_dc)
++                                                     bool                       contains_dc,
++                                                     unsigned                   nof_prs_data_re)
+ {
+   // The maximum supported code rate is 0.95, as per TS38.214, Section 5.1.3. The maximum code rate is defined for DL,
+   // but we consider the same value for UL.
+@@ -220,7 +222,13 @@ std::optional<sch_mcs_tbs> ocudu::compute_dl_mcs_tbs(const pdsch_config_params&
+                                                             .mcs_descr        = mcs_info,
+                                                             .nof_layers       = pdsch_params.nof_layers,
+                                                             .tb_scaling_field = pdsch_params.tb_scaling_field,
+-                                                            .n_prb            = nof_prbs});
++                                                            .n_prb            = nof_prbs,
++                                                            .nof_re_excluded  = nof_prs_data_re});
++
++  // No data REs remain after the experimental PRS exclusions. Do not create a minimum-size TB.
++  if (tbs_bytes.value() == 0) {
++    return std::nullopt;
++  }
+ 
+   // > Compute the effective code rate.
+   dlsch_configuration dlsch_info{.tbs                = tbs_bytes.to_bits(),
+@@ -235,7 +243,20 @@ std::optional<sch_mcs_tbs> ocudu::compute_dl_mcs_tbs(const pdsch_config_params&
+                                  .nof_layers  = pdsch_params.nof_layers,
+                                  .contains_dc = contains_dc};
+ 
+-  float effective_code_rate = get_dlsch_information(dlsch_info).get_effective_code_rate();
++  // Apply the same PRS exclusions to the effective-rate denominator at every MCS candidate. The shared
++  // DL-SCH helper otherwise counts DM-RS overhead but has no knowledge of this scheduler-only PRS model.
++  const auto calculate_effective_code_rate = [nof_prs_data_re](const dlsch_configuration& config) {
++    dlsch_information info = get_dlsch_information(config);
++    const unsigned excluded_bits =
++        nof_prs_data_re * config.nof_layers * get_bits_per_symbol(config.mcs_descr.modulation);
++    if (excluded_bits >= info.nof_dl_sch_bits.value() or
++        info.nof_dc_overlap_bits.value() >= info.nof_dl_sch_bits.value() - excluded_bits) {
++      return std::numeric_limits<float>::infinity();
++    }
++    info.nof_dl_sch_bits = units::bits{info.nof_dl_sch_bits.value() - excluded_bits};
++    return info.get_effective_code_rate();
++  };
++  float effective_code_rate = calculate_effective_code_rate(dlsch_info);
+ 
+   // > Decrease the MCS and recompute TBS until the effective code rate is not above the 0.95 threshold.
+   sch_mcs_index mcs = max_mcs;
+@@ -248,12 +269,13 @@ std::optional<sch_mcs_tbs> ocudu::compute_dl_mcs_tbs(const pdsch_config_params&
+                                                                       .mcs_descr        = mcs_info,
+                                                                       .nof_layers       = pdsch_params.nof_layers,
+                                                                       .tb_scaling_field = pdsch_params.tb_scaling_field,
+-                                                                      .n_prb            = nof_prbs});
++                                                                      .n_prb            = nof_prbs,
++                                                                      .nof_re_excluded  = nof_prs_data_re});
+ 
+     dlsch_info.tbs         = tbs_bytes.to_bits();
+     dlsch_info.mcs_descr   = mcs_info;
+     dlsch_info.contains_dc = contains_dc;
+-    effective_code_rate    = get_dlsch_information(dlsch_info).get_effective_code_rate();
++    effective_code_rate    = calculate_effective_code_rate(dlsch_info);
+   }
+ 
+   // If no MCS such that effective code rate <= 0.95, return an empty optional object.
+diff --git a/lib/scheduler/support/mcs_tbs_calculator.h b/lib/scheduler/support/mcs_tbs_calculator.h
+index fca3ee3..d673adc 100644
+--- a/lib/scheduler/support/mcs_tbs_calculator.h
++++ b/lib/scheduler/support/mcs_tbs_calculator.h
+@@ -30,10 +30,15 @@ struct sch_mcs_tbs {
+ /// code rate is above 0.95.
+ /// \param[in] nof_prbs Maximum number of PRBs available for the PUSCH transmission.
+ /// \param[in] contains_dc Set to true if the transmission overlaps with the position of the DC.
++/// \param[in] nof_prs_data_re Additional PRS data RE exclusions for the experimental scheduler-only TBS model.
+ /// \return The MCS and TBS, if for these values the effective code rate does not exceed 0.95; else, it returns an empty
+ /// optional object.
+ std::optional<sch_mcs_tbs>
+-compute_dl_mcs_tbs(const pdsch_config_params& pdsch_params, sch_mcs_index max_mcs, unsigned nof_prbs, bool contains_dc);
++compute_dl_mcs_tbs(const pdsch_config_params& pdsch_params,
++                   sch_mcs_index              max_mcs,
++                   unsigned                   nof_prbs,
++                   bool                       contains_dc,
++                   unsigned                   nof_prs_data_re = 0);
+ 
+ /// Uplink modulation code scheme calculator errors.
+ enum class compute_ul_mcs_tbs_error {
+diff --git a/lib/scheduler/ue_scheduling/cell_group_event_manager.cpp b/lib/scheduler/ue_scheduling/cell_group_event_manager.cpp
+index b5df989..7760c27 100644
+--- a/lib/scheduler/ue_scheduling/cell_group_event_manager.cpp
++++ b/lib/scheduler/ue_scheduling/cell_group_event_manager.cpp
+@@ -223,7 +223,13 @@ void cell_group_event_handler_impl::handle_conres_ce_acked(du_ue_index_t ue_inde
+     log_invalid_ue_index(ue_index, "ConRes CE ACKed");
+     return;
+   }
++  const bool was_in_fallback = ue_db[ue_index].get_pcell().is_in_fallback_mode();
+   ue_db.handle_conres_ce_outcome(ue_index, true);
++  // Configuration can be applied before the Msg4/ConRes HARQ ACK arrives.
++  // Complete slice registration when this ACK is the event that exits fallback.
++  if (was_in_fallback and not ue_db[ue_index].get_pcell().is_in_fallback_mode()) {
++    slice_sched.config_applied(ue_index);
++  }
+ }
+ 
+ void cell_group_event_handler_impl::handle_sr_detected(du_ue_index_t ue_index, slot_point uci_slot)
+diff --git a/lib/scheduler/ue_scheduling/ue_cell_grid_allocator.cpp b/lib/scheduler/ue_scheduling/ue_cell_grid_allocator.cpp
+index 4b95ceb..e335528 100644
+--- a/lib/scheduler/ue_scheduling/ue_cell_grid_allocator.cpp
++++ b/lib/scheduler/ue_scheduling/ue_cell_grid_allocator.cpp
+@@ -7,6 +7,7 @@
+ #include "../support/repetition_helpers.h"
+ #include "../ue_context/ue_drx_controller.h"
+ #include "grant_params_selector.h"
++#include "ocudu/ran/prs/prs.h"
+ #include "ocudu/scheduler/result/dci_info.h"
+ #include "ocudu/support/error_handling.h"
+ 
+@@ -15,6 +16,59 @@ using namespace ocudu;
+ /// Number of possible Downlink Assignment Indexes {0, ..., 3} as per TS 38.213 Section 9.1.3.
+ static constexpr unsigned DAI_MOD = 4U;
+ 
++// Counts the union of PRS REs that would otherwise carry PDSCH data. This only feeds the experimental TBS model;
++// it does not reserve PHY REs or implement PDSCH rate matching around PRS.
++static unsigned count_prs_data_re(const cell_slot_resource_allocator&          pdsch_alloc,
++                                  const pdsch_config_params&                   pdsch_cfg,
++                                  subcarrier_spacing                           scs,
++                                  const std::pair<crb_interval, crb_interval>& crbs)
++{
++  if (pdsch_alloc.result.dl.prs.empty()) {
++    return 0;
++  }
++
++  unsigned nof_prs_data_re = 0;
++  for (unsigned symbol = pdsch_cfg.symbols.start(); symbol != pdsch_cfg.symbols.stop(); ++symbol) {
++    unsigned dmrs_mask = 0;
++    if (pdsch_cfg.dmrs.dmrs_symb_pos.test(symbol)) {
++      const unsigned nof_cdm_groups = pdsch_cfg.dmrs.num_dmrs_cdm_grps_no_data;
++      for (unsigned k = 0; k != NOF_SUBCARRIERS_PER_RB; ++k) {
++        // Same no-data masks as get_dmrs_prb_mask: type 1 repeats every 2 REs, type 2 every 6 REs.
++        const bool is_dmrs = pdsch_cfg.dmrs.config_type == dmrs_config_type::type1
++                                 ? k % 2U < nof_cdm_groups
++                                 : k % 6U < 2U * nof_cdm_groups;
++        if (is_dmrs) {
++          dmrs_mask |= 1U << k;
++        }
++      }
++    }
++
++    // The two ranges are the final physical allocation, including interleaved VRB-to-PRB mapping.
++    for (const crb_interval& range : {crbs.first, crbs.second}) {
++      for (unsigned crb = range.start(); crb != range.stop(); ++crb) {
++        unsigned prs_mask = 0;
++        for (const prs_info& prs : pdsch_alloc.result.dl.prs) {
++          if (prs.scs != scs or not prs.crbs.contains(crb) or not prs.symbols.contains(symbol)) {
++            continue;
++          }
++          const unsigned comb = to_underlying(prs.comb_size);
++          const unsigned offset =
++              (prs.comb_offset + get_prs_freq_offset(prs.comb_size, symbol - prs.symbols.start())) % comb;
++          for (unsigned k = offset; k < NOF_SUBCARRIERS_PER_RB; k += comb) {
++            prs_mask |= 1U << k;
++          }
++        }
++        // Union first, then exclude DM-RS no-data REs that have already been subtracted from the TBS budget.
++        const unsigned data_mask = prs_mask & ~dmrs_mask;
++        for (unsigned k = 0; k != NOF_SUBCARRIERS_PER_RB; ++k) {
++          nof_prs_data_re += (data_mask >> k) & 1U;
++        }
++      }
++    }
++  }
++  return nof_prs_data_re;
++}
++
+ ue_cell_grid_allocator::ue_cell_grid_allocator(const scheduler_ue_expert_config& expert_cfg_,
+                                                ue_repository&                    ues_,
+                                                pdcch_resource_allocator&         pdcch_sched_,
+@@ -70,8 +124,14 @@ ue_cell_grid_allocator::calculate_dl_mcs_tbs(const cell_slot_resource_allocator&
+     contains_dc = dc_offset_helper::is_contained(tx_dc.value(), crbs.first) ||
+                   dc_offset_helper::is_contained(tx_dc.value(), crbs.second);
+   }
+-  auto mcs_tbs_info =
+-      compute_dl_mcs_tbs(pdsch_cfg, adjusted_mcs, crbs.first.length() + crbs.second.length(), contains_dc);
++  const unsigned nof_prs_data_re = count_prs_data_re(pdsch_alloc, pdsch_cfg, ss_info.bwp->dl.cfg().scs, crbs);
++  if (nof_prs_data_re != 0) {
++    ocudulog::fetch_basic_logger("SCHED").debug(
++        "Experimental PRS RE model: slot={} nof_prbs={} excluded_data_re={}",
++        pdsch_alloc.slot, crbs.first.length() + crbs.second.length(), nof_prs_data_re);
++  }
++  auto mcs_tbs_info = compute_dl_mcs_tbs(
++      pdsch_cfg, adjusted_mcs, crbs.first.length() + crbs.second.length(), contains_dc, nof_prs_data_re);
+ 
+   return mcs_tbs_info;
+ }

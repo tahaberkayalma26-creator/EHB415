@@ -1,0 +1,34 @@
+{
+  "ocudu_head": "e0db566aac6e6376ddd60e83c84f58698fcc4d70",
+  "branch": "fatih/gorev4-clockguard",
+  "project_head": "4c31d938648abb355e0befdd8221ae0d5cdfbbbb",
+  "binary_records": [
+    {
+      "path": "/home/fatih/ehb415/gorev4_runs/bin/gnb_clockguard",
+      "bytes": 51501976,
+      "sha256": "e5065c53631f72b74b303fcc33d20fa733aa00e6e0ea6fd1fe505572c155fea8"
+    },
+    {
+      "path": "/home/fatih/ehb415/gorev4_runs/bin/gnb_compat",
+      "bytes": 51501976,
+      "sha256": "e19477c910b9b6d8302dc2436dc43dff0debcc22476bf7a6d009b84193008863"
+    },
+    {
+      "path": "/home/fatih/ehb415/gorev4_runs/bin/gnb_prs_model",
+      "bytes": 51506752,
+      "sha256": "ddd64457923e950f0d1872e699a380bedd7afae36d82566ca85f5b592c6afdec"
+    },
+    {
+      "path": "/home/fatih/ehb415/gorev4_runs/bin/gnb_clock_unprotected",
+      "bytes": 51502064,
+      "sha256": "d99d3c0b7adc1ac9b02b562a034ab0291b95e56851563e0be453078d660ea677"
+    },
+    {
+      "path": "/home/fatih/ehb415/gorev4_runs/bin/clock_step_inject.so",
+      "bytes": 15992,
+      "sha256": "4ac8c67520c53adcbb7008f5eae353754044c15c76b119a08e93675e82c196bd"
+    }
+  ],
+  "final_build_check_returncode": 0,
+  "source_guard_restored": true
+}

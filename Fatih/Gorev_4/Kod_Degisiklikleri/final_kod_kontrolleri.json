@@ -1,0 +1,28 @@
+[
+  {
+    "command": [
+      "git",
+      "-C",
+      "/home/fatih/ehb415/ocudu-gorev4",
+      "diff",
+      "--check"
+    ],
+    "returncode": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "git",
+      "-C",
+      "/home/fatih/ehb415/ocudu-gorev4",
+      "apply",
+      "--reverse",
+      "--check",
+      "/mnt/c/Users/fatih/OneDrive/Desktop/Data Com/4. G\u00f6rev Kart\u0131 Belgeleri/Kod_Degisiklikleri/03_tum_deney_degisiklikleri.patch"
+    ],
+    "returncode": 0,
+    "stdout": "",
+    "stderr": ""
+  }
+]

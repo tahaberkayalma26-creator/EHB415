@@ -1,0 +1,49 @@
+Script started on 2026-11-20 08:01:24+03:00 [COMMAND="/home/fatih/ehb415/gorev4_runs/bin/gnb_prs_model -c /tmp/ehb_sonrasi_K6.yml" <not executed on terminal>]
+
+--== OCUDU gNB (commit e0db566) ==--
+
+Warning: Scheduling priority of thread "main_pool#1" not changed. Cause: Not enough privileges.
+Warning: Scheduling priority of thread "main_pool#3" not changed. Cause: Not enough privileges.
+Warning: Scheduling priority of thread "main_pool#2" not changed. Cause: Not enough privileges.
+Warning: Scheduling priority of thread "main_pool#0" not changed. Cause: Not enough privileges.
+Warning: Scheduling priority of thread "main_pool#4" not changed. Cause: Not enough privileges.
+Warning: Scheduling priority of thread "ru_dummy" not changed. Cause: Not enough privileges.
+Warning: Scheduling priority of thread "io_broker_epoll" not changed. Cause: Not enough privileges.
+Cell pci=1, bw=100 MHz, 1T1R, dl_arfcn=633334 (n78), dl_freq=3500.01 MHz, dl_ssb_arfcn=630720, ul_freq=3500.01 MHz
+
+==== gNB started ===
+Type <h> to view help
+t
+
+          |--------------------DL---------------------|-------------------------------UL-----------------------------
+ pci rnti | cqi  ri  mcs  brate   ok  nok  (%)  dl_bs | pusch  rsrp  ri  mcs  brate   ok  nok  (%)    bsr     ta  phr
+   1   44 |  15 1.0   28    34M 1200    0   0%    10M |  99.9   n/a   1   28   119M  600    0   0%  81.9M      0  n/a
+   1   44 |  15 1.0   28    34M 1200    0   0%    10M |  99.9   n/a   1   28   119M  600    0   0%  81.9M      0  n/a
+   1   44 |  15 1.0   28    34M 1200    0   0%    10M |  99.9   n/a   1   28   119M  600    0   0%  81.9M      0  n/a
+   1   44 |  15 1.0   28    34M 1200    0   0%    10M |  99.9   n/a   1   28   119M  600    0   0%  81.9M      0  n/a
+   1   44 |  15 1.0   28    34M 1200    0   0%    10M |  99.9   n/a   1   28   119M  600    0   0%  81.9M      0  n/a
+   1   44 |  15 1.0   28    34M 1200    0   0%    10M |  99.9   n/a   1   28   119M  600    0   0%  81.9M      0  n/a
+   1   44 |  15 1.0   28    34M 1200    0   0%    10M |  99.9   n/a   1   28   119M  600    0   0%  81.9M      0  n/a
+   1   44 |  15 1.0   28    34M 1200    0   0%    10M |  99.9   n/a   1   28   119M  600    0   0%  81.9M      0  n/a
+   1   44 |  15 1.0   28    34M 1200    0   0%    10M |  99.9   n/a   1   28   119M  600    0   0%  81.9M      0  n/a
+   1   44 |  15 1.0   28    34M 1200    0   0%    10M |  99.9   n/a   1   28   119M  600    0   0%  81.9M      0  n/a
+   1   44 |  15 1.0   28    34M 1200    0   0%    10M |  99.9   n/a   1   28   119M  600    0   0%  81.9M      0  n/a
+
+          |--------------------DL---------------------|-------------------------------UL-----------------------------
+ pci rnti | cqi  ri  mcs  brate   ok  nok  (%)  dl_bs | pusch  rsrp  ri  mcs  brate   ok  nok  (%)    bsr     ta  phr
+   1   44 |  15 1.0   28    34M 1200    0   0%    10M |  99.9   n/a   1   28   119M  600    0   0%  81.9M      0  n/a
+   1   44 |  15 1.0   28    34M 1200    0   0%    10M |  99.9   n/a   1   28   119M  600    0   0%  81.9M      0  n/a
+   1   44 |  15 1.0   28    34M 1200    0   0%    10M |  99.9   n/a   1   28   119M  600    0   0%  81.9M      0  n/a
+   1   44 |  15 1.0   28    34M 1200    0   0%    10M |  99.9   n/a   1   28   119M  600    0   0%  81.9M      0  n/a
+   1   44 |  15 1.0   28    34M 1200    0   0%    10M |  99.9   n/a   1   28   119M  600    0   0%  81.9M      0  n/a
+   1   44 |  15 1.0   28    34M 1200    0   0%    10M |  99.9   n/a   1   28   119M  600    0   0%  81.9M      0  n/a
+   1   44 |  15 1.0   28    34M 1200    0   0%    10M |  99.9   n/a   1   28   119M  600    0   0%  81.9M      0  n/a
+   1   44 |  15 1.0   28    34M 1200    0   0%    10M |  99.9   n/a   1   28   119M  600    0   0%  81.9M      0  n/a
+   1   44 |  15 1.0   28    34M 1200    0   0%    10M |  99.9   n/a   1   28   119M  600    0   0%  81.9M      0  n/a
+   1   44 |  15 1.0   28    34M 1200    0   0%    10M |  99.9   n/a   1   28   119M  600    0   0%  81.9M      0  n/a
+   1   44 |  15 1.0   28    34M 1200    0   0%    10M |  99.9   n/a   1   28   119M  600    0   0%  81.9M      0  n/a
+q
+Stopping...
+Logfile stored in /home/fatih/ehb415/gorev4_runs/sonrasi_K6/gnb.log
+
+Script done on 2026-11-20 08:01:54+03:00 [COMMAND_EXIT_CODE="0"]

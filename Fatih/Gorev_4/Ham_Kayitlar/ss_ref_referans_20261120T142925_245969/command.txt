@@ -1,0 +1,1 @@
+CFG_BASE=/home/fatih/ehb415/gorev4_runs/ss_ref_referans_20261120T142925_245969/base.yml GNB_BIN=/home/fatih/ehb415/gorev4_runs/bin/gnb_compat bash /home/fatih/ehb415/gorev4_project/ogretici/betikler/ocudu_prs_kos.sh ss_ref_referans_20261120T142925_245969 0 0 0 2 1 1 4

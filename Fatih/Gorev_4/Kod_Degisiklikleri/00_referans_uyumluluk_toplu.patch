@@ -1,0 +1,42 @@
+diff --git a/lib/ru/dummy/ru_dummy_impl.cpp b/lib/ru/dummy/ru_dummy_impl.cpp
+index 52a3f28..2bc347e 100644
+--- a/lib/ru/dummy/ru_dummy_impl.cpp
++++ b/lib/ru/dummy/ru_dummy_impl.cpp
+@@ -108,6 +108,19 @@ void ru_dummy_impl::run_slot()
+   // Get the current system slot from the system time.
+   uint64_t slot_count = get_current_system_slot(slot_duration, current_slot.nof_slots_in_all_hyper_sfns());
+ 
++  // Guard the dummy timing loop against a backward wall-clock slot reading.
++  // Without this guard, the forward-only loop below can traverse an entire
++  // HyperSFN cycle and flood FAPI with artificial late slots.
++  const uint64_t cycle = current_slot.nof_slots_in_all_hyper_sfns();
++  const uint64_t forward_delta = (slot_count + cycle - current_slot.system_slot()) % cycle;
++  if (forward_delta > cycle / 2) {
++    logger.warning("Dummy RU backward clock slot detected: previous={} observed={} backwards_slots={}",
++                   current_slot.system_slot(), slot_count, cycle - forward_delta);
++    OCUDU_RTSAN_SCOPED_DISABLER(scoped_disabler);
++    std::this_thread::sleep_for(minimum_loop_time);
++    return;
++  }
++
+   // Make sure a minimum time between loop executions without crossing boundaries.
+   if (slot_count == current_slot.system_slot()) {
+     OCUDU_RTSAN_SCOPED_DISABLER(scoped_disabler);
+diff --git a/lib/scheduler/ue_scheduling/cell_group_event_manager.cpp b/lib/scheduler/ue_scheduling/cell_group_event_manager.cpp
+index b5df989..7760c27 100644
+--- a/lib/scheduler/ue_scheduling/cell_group_event_manager.cpp
++++ b/lib/scheduler/ue_scheduling/cell_group_event_manager.cpp
+@@ -223,7 +223,13 @@ void cell_group_event_handler_impl::handle_conres_ce_acked(du_ue_index_t ue_inde
+     log_invalid_ue_index(ue_index, "ConRes CE ACKed");
+     return;
+   }
++  const bool was_in_fallback = ue_db[ue_index].get_pcell().is_in_fallback_mode();
+   ue_db.handle_conres_ce_outcome(ue_index, true);
++  // Configuration can be applied before the Msg4/ConRes HARQ ACK arrives.
++  // Complete slice registration when this ACK is the event that exits fallback.
++  if (was_in_fallback and not ue_db[ue_index].get_pcell().is_in_fallback_mode()) {
++    slice_sched.config_applied(ue_index);
++  }
+ }
+ 
+ void cell_group_event_handler_impl::handle_sr_detected(du_ue_index_t ue_index, slot_point uci_slot)

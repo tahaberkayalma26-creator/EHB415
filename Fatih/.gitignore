@@ -1,0 +1,8 @@
+# Bu klasördeki özgün teslim raporları ve deney günlükleri
+!**/Raporlar/
+!**/Raporlar/**
+!*.pdf
+!*.log
+__pycache__/
+.matplotlib/
+*.lock

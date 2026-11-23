@@ -1,0 +1,6 @@
+2026-10-31T14:45:32.925191 [GNB     ] [I] Built in Release mode using commit e0db566 on branch HEAD
+2026-10-31T14:45:35.322375 [GNB     ] [W] Could not check scaling governor. filename=/sys/devices/system/cpu/cpu0/cpufreq/scaling_governor error=No such file or directory
+2026-10-31T14:45:35.322392 [GNB     ] [W] Could not check DRM KMS polling. filename=/sys/module/drm_kms_helper/parameters/poll error=No such file or directory
+2026-10-31T14:45:35.832177 [GNB     ] [I] ==== gNB started ===
+2026-10-31T14:46:02.838910 [GNB     ] [I] Stopping...
+(END)

@@ -1,0 +1,6 @@
+PDSCH rb araligi (sayi, aralik) - en sik 5:
+  10637 rb=[0..48)
+    973 rb=[0..17)
+     60 rb=[10..48)
+      1 rb=[0..42)
+      1 rb=[0..2)

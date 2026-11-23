@@ -1,0 +1,30 @@
+OCUDU terminal ekran görüntülerinin alınması
+
+Önce 23 koşuluk doğrulamanın bittiğinin bildirilmesini bekle. Bu araç doğrulama sürerken veya başka gNB açıkken yeni koşu başlatmaz.
+
+1. "4. Görev Kartı Belgeleri/Araclar/OCUDU_SS_icin_Ac.cmd" dosyasına çift tıkla. CMD içinde Ubuntu çalışacak; menü gelecek. Parola istenmez.
+
+Alternatif: Ubuntu terminalini açıp şu tek satırı çalıştır:
+bash "/mnt/c/Users/fatih/OneDrive/Desktop/Data Com/4. Görev Kartı Belgeleri/Araclar/ss_icin_calistir.sh"
+
+2. Terminali büyüt. Satırlar sağdan bölünüyorsa Ctrl + fare tekerleği ile yazıyı biraz küçült. DL ve UL başlıklarının ikisi de görünmeli.
+
+3. Aşağıdaki beş seçeneği sırayla kullan. Her seçim yeni ve gerçek bir OCUDU koşusu çalıştırır; yaklaşık 30-60 saniye bekle. Sonunda başlıklar ve o koşunun son 8 metrik satırı gösterilir. Gösterilen satırlar o anda tamamlanan koşunun gerçek terminal kaydından alınır; eski ölçümün ekran görüntüsü gibi sunulmaz.
+
+   Menü 1 -> SS 1: PRS'siz 100 MHz referans.
+   Menü 2 -> SS 2: K1, değişiklik öncesi (PRS RB rezervasyonu).
+   Menü 3 -> SS 3: K1, deneysel RE/TBS modeli sonrası.
+   Menü 4 -> SS 4: K6, değişiklik öncesi.
+   Menü 5 -> SS 5: K6, deneysel RE/TBS modeli sonrası.
+
+4. Her koşunun sonuçları ekranda beklerken Ekran Alıntısı Aracı ile terminali al. "SS 1/SS 2..." başlığı, koşu etiketi, DL-UL sütun başlıkları, metrikler ve çıkış/geçerlilik satırı görünsün. Sonucu almadan Enter'a basma. Günlükler hatalı veya sonuç farklı görünürse onu da gönder; başarılıymış gibi değiştirme.
+
+5. İlk beşinden sonra menüde 12'yi seç. Bu seçenek yeni gNB çalıştırmaz; tamamlanan 23 doğrulama koşusunun kaydedilmiş sonuçlarını tek terminal tablosunda gösterir. Başlıkta "ARŞİV ÖZETİ; canlı yeni test değil" açıklaması bulunur. Koşul, ilk/yeni DL ve UL, yeni DL/UL ok ve hız farkları birlikte görünür. Pencereyi büyütüp 23 satırın tamamını kapsayan altıncı SS'yi al. Bu arşiv özetidir; yeni bir canlı koşu diye anlatılmamalıdır.
+
+6. Görüntüleri "4. Görev Kartı Belgeleri/Ekran_Goruntuleri" içine örneğin 01_referans.png, 02_K1_once.png, 03_K1_sonra.png, 04_K6_once.png, 05_K6_sonra.png ve 06_dogrulama_arsiv_ozeti.png adlarıyla kaydet. Buraya da yüklediğinde bu gerçek görüntülerle ayrı SS'li rapor hazırlanabilir. Tablolu rapor korunacak.
+
+7. Görüntüyü aldıktan sonra Enter ile menüye dön. İstersen K7 için 6-7, K8 için 8-9, K11 için 10-11 seçeneklerini de çekebilirsin; zorunlu değildir. Bu koşulların mevcut yeniden ölçümleri zaten menü12 arşiv özetindedir. Bitince 0 yaz.
+
+Kayıtlar silinmez. Her yeni koşu benzersiz ss_ etiketiyle Ham_Kayitlar altında saklanır: komut, ayarlar, tam terminal, tüm metrikler ve günlük birlikte kaydedilir. SS raporundaki ölçümler bu yeni koşu etiketleriyle ilişkilendirilecektir.
+
+Not: "Sonra" koşulları dummy/test UE üzerindeki deneysel scheduler/TBS modelidir; gerçek telefonda PHY rate matching veya radyo hızının doğrulandığı anlamına gelmez.

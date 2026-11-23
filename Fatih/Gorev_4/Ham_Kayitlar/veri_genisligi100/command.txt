@@ -1,0 +1,1 @@
+GNB_BIN=/home/fatih/ehb415/gorev4_runs/bin/gnb_compat bash /home/fatih/ehb415/gorev4_project/ogretici/betikler/ocudu_veri_genislik.sh /home/fatih/ehb415/gorev4_runs/band_100.yml

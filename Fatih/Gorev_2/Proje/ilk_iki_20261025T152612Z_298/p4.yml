@@ -1,0 +1,62 @@
+# EHB415 - OCUDU gNB radyosuz yuk testi (cekirdek ag yok, RU yok, 1 sanal UE)
+# Kullanim: ~/ehb415/ocudu/build/apps/gnb/gnb -c ocudu_testmode.yml
+# Taban: ocudu/configs/gnb_rf_b210_fdd_srsUE.yml (ru_sdr yerine ru_dummy, amf yerine no_core)
+cu_cp:
+  amf:
+    no_core: true
+    supported_tracking_areas:
+      - tac: 7
+        plmn_list:
+          - plmn: "00101"
+            tai_slice_support_list:
+              - sst: 1
+
+ru_dummy:
+  dl_processing_delay: 1
+  time_scaling: 1
+
+cell_cfg:
+  dl_arfcn: 368500
+  band: 3
+  channel_bandwidth_MHz: 20
+  common_scs: 15
+  plmn: "00101"
+  tac: 7
+  pdcch:
+    dedicated:
+      ss2_type: common
+      dci_format_0_1_and_1_1: false
+    common:
+      ss0_index: 0
+      coreset0_index: 12
+  prach:
+    prach_config_index: 1
+  prs:
+    resource_sets:
+      - comb_size: 2
+        periodicity_slots: 4
+        slot_offset: 1
+        nof_symbols: 12
+        bandwidth_prbs: 104
+        resources:
+          - sequence_id: 1
+            re_offset: 0
+            slot_offset: 0
+            symbol_offset: 2
+  pdsch:
+    mcs_table: qam64
+  pusch:
+    mcs_table: qam64
+
+log:
+  filename: /tmp/gnb_testmode.log
+  all_level: warning
+
+test_mode:
+  test_ue:
+    rnti: 0x44
+    ri: 1
+    cqi: 15
+    nof_ues: 1
+    pusch_active: true
+    pdsch_active: true

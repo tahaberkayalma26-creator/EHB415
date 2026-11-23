@@ -1,0 +1,1 @@
+CFG_BASE=/home/fatih/ehb415/gorev4_runs/b100_r1/base.yml bash /home/fatih/ehb415/gorev4_project/ogretici/betikler/ocudu_prs_kos.sh b100_r1 0 0 0 2 1 1 4

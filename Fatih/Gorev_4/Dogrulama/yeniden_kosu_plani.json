@@ -1,0 +1,645 @@
+{
+  "started_utc": "2026-11-20T14:05:46.255109+00:00",
+  "binary_sha256": {
+    "/home/fatih/ehb415/gorev4_runs/bin/gnb_compat": "e19477c910b9b6d8302dc2436dc43dff0debcc22476bf7a6d009b84193008863",
+    "/home/fatih/ehb415/gorev4_runs/bin/gnb_prs_model": "ddd64457923e950f0d1872e699a380bedd7afae36d82566ca85f5b592c6afdec"
+  },
+  "method": "Same frozen binary/configuration/log level; all interior metric rows retained; no LD_PRELOAD.",
+  "comparison": "Exact console-value comparison, plus validity/exit/NOK checks; differing rows are investigated, not filtered.",
+  "jobs": [
+    {
+      "old_tag": "ref100_1",
+      "new_tag": "v2_ref100_1",
+      "command": [
+        "/usr/bin/python3",
+        "/mnt/c/Users/fatih/OneDrive/Desktop/Data Com/4. Görev Kartı Belgeleri/Araclar/olcum_kos.py",
+        "v2_ref100_1",
+        "/home/fatih/ehb415/gorev4_runs/band_100.yml",
+        "--binary",
+        "/home/fatih/ehb415/gorev4_runs/bin/gnb_compat",
+        "--level",
+        "info"
+      ],
+      "expected": {
+        "dl_mbps_mean": 36.0,
+        "ul_mbps_mean": 119.0,
+        "dl_ok_mean": 1200,
+        "ul_ok_mean": 600,
+        "dl_nok_mean": 0,
+        "ul_nok_mean": 0
+      }
+    },
+    {
+      "old_tag": "ref100_2",
+      "new_tag": "v2_ref100_2",
+      "command": [
+        "/usr/bin/python3",
+        "/mnt/c/Users/fatih/OneDrive/Desktop/Data Com/4. Görev Kartı Belgeleri/Araclar/olcum_kos.py",
+        "v2_ref100_2",
+        "/home/fatih/ehb415/gorev4_runs/band_100.yml",
+        "--binary",
+        "/home/fatih/ehb415/gorev4_runs/bin/gnb_compat",
+        "--level",
+        "warning"
+      ],
+      "expected": {
+        "dl_mbps_mean": 36.0,
+        "ul_mbps_mean": 119.0,
+        "dl_ok_mean": 1200,
+        "ul_ok_mean": 600,
+        "dl_nok_mean": 0,
+        "ul_nok_mean": 0
+      }
+    },
+    {
+      "old_tag": "ref100_3",
+      "new_tag": "v2_ref100_3",
+      "command": [
+        "/usr/bin/python3",
+        "/mnt/c/Users/fatih/OneDrive/Desktop/Data Com/4. Görev Kartı Belgeleri/Araclar/olcum_kos.py",
+        "v2_ref100_3",
+        "/home/fatih/ehb415/gorev4_runs/band_100.yml",
+        "--binary",
+        "/home/fatih/ehb415/gorev4_runs/bin/gnb_compat",
+        "--level",
+        "warning"
+      ],
+      "expected": {
+        "dl_mbps_mean": 36.0,
+        "ul_mbps_mean": 119.0,
+        "dl_ok_mean": 1200,
+        "ul_ok_mean": 600,
+        "dl_nok_mean": 0,
+        "ul_nok_mean": 0
+      }
+    },
+    {
+      "old_tag": "duzeltilmis40",
+      "new_tag": "v2_duzeltilmis40",
+      "command": [
+        "/usr/bin/python3",
+        "/mnt/c/Users/fatih/OneDrive/Desktop/Data Com/4. Görev Kartı Belgeleri/Araclar/olcum_kos.py",
+        "v2_duzeltilmis40",
+        "/home/fatih/ehb415/gorev4_runs/band_40.yml",
+        "--binary",
+        "/home/fatih/ehb415/gorev4_runs/bin/gnb_compat",
+        "--level",
+        "warning"
+      ],
+      "expected": {
+        "dl_mbps_mean": 36.0,
+        "ul_mbps_mean": 44.9,
+        "dl_ok_mean": 1200,
+        "ul_ok_mean": 600,
+        "dl_nok_mean": 0,
+        "ul_nok_mean": 0
+      }
+    },
+    {
+      "old_tag": "duzeltilmis60",
+      "new_tag": "v2_duzeltilmis60",
+      "command": [
+        "/usr/bin/python3",
+        "/mnt/c/Users/fatih/OneDrive/Desktop/Data Com/4. Görev Kartı Belgeleri/Araclar/olcum_kos.py",
+        "v2_duzeltilmis60",
+        "/home/fatih/ehb415/gorev4_runs/band_60.yml",
+        "--binary",
+        "/home/fatih/ehb415/gorev4_runs/bin/gnb_compat",
+        "--level",
+        "warning"
+      ],
+      "expected": {
+        "dl_mbps_mean": 36.0,
+        "ul_mbps_mean": 69.5,
+        "dl_ok_mean": 1200,
+        "ul_ok_mean": 600,
+        "dl_nok_mean": 0,
+        "ul_nok_mean": 0
+      }
+    },
+    {
+      "old_tag": "duzeltilmis80",
+      "new_tag": "v2_duzeltilmis80",
+      "command": [
+        "/usr/bin/python3",
+        "/mnt/c/Users/fatih/OneDrive/Desktop/Data Com/4. Görev Kartı Belgeleri/Araclar/olcum_kos.py",
+        "v2_duzeltilmis80",
+        "/home/fatih/ehb415/gorev4_runs/band_80.yml",
+        "--binary",
+        "/home/fatih/ehb415/gorev4_runs/bin/gnb_compat",
+        "--level",
+        "warning"
+      ],
+      "expected": {
+        "dl_mbps_mean": 36.0,
+        "ul_mbps_mean": 94.6,
+        "dl_ok_mean": 1200,
+        "ul_ok_mean": 600,
+        "dl_nok_mean": 0,
+        "ul_nok_mean": 0
+      }
+    },
+    {
+      "old_tag": "duzeltilmis100",
+      "new_tag": "v2_duzeltilmis100",
+      "command": [
+        "/usr/bin/python3",
+        "/mnt/c/Users/fatih/OneDrive/Desktop/Data Com/4. Görev Kartı Belgeleri/Araclar/olcum_kos.py",
+        "v2_duzeltilmis100",
+        "/home/fatih/ehb415/gorev4_runs/band_100.yml",
+        "--binary",
+        "/home/fatih/ehb415/gorev4_runs/bin/gnb_compat",
+        "--level",
+        "warning"
+      ],
+      "expected": {
+        "dl_mbps_mean": 36.0,
+        "ul_mbps_mean": 119.0,
+        "dl_ok_mean": 1200,
+        "ul_ok_mean": 600,
+        "dl_nok_mean": 0,
+        "ul_nok_mean": 0
+      }
+    },
+    {
+      "old_tag": "oncesi_K1",
+      "new_tag": "v2_oncesi_K1",
+      "command": [
+        "/usr/bin/python3",
+        "/mnt/c/Users/fatih/OneDrive/Desktop/Data Com/4. Görev Kartı Belgeleri/Araclar/olcum_kos.py",
+        "v2_oncesi_K1",
+        "/home/fatih/ehb415/gorev4_runs/band_100.yml",
+        "--binary",
+        "/home/fatih/ehb415/gorev4_runs/bin/gnb_compat",
+        "--level",
+        "debug",
+        "--prs",
+        "10",
+        "4",
+        "48",
+        "2",
+        "1",
+        "1",
+        "4"
+      ],
+      "expected": {
+        "dl_mbps_mean": 29.0,
+        "ul_mbps_mean": 119.0,
+        "dl_ok_mean": 1000,
+        "ul_ok_mean": 600,
+        "dl_nok_mean": 0,
+        "ul_nok_mean": 0
+      }
+    },
+    {
+      "old_tag": "oncesi_K2",
+      "new_tag": "v2_oncesi_K2",
+      "command": [
+        "/usr/bin/python3",
+        "/mnt/c/Users/fatih/OneDrive/Desktop/Data Com/4. Görev Kartı Belgeleri/Araclar/olcum_kos.py",
+        "v2_oncesi_K2",
+        "/home/fatih/ehb415/gorev4_runs/band_100.yml",
+        "--binary",
+        "/home/fatih/ehb415/gorev4_runs/bin/gnb_compat",
+        "--level",
+        "warning",
+        "--prs",
+        "20",
+        "4",
+        "48",
+        "2",
+        "1",
+        "1",
+        "4"
+      ],
+      "expected": {
+        "dl_mbps_mean": 32.0,
+        "ul_mbps_mean": 119.0,
+        "dl_ok_mean": 1100,
+        "ul_ok_mean": 600,
+        "dl_nok_mean": 0,
+        "ul_nok_mean": 0
+      }
+    },
+    {
+      "old_tag": "oncesi_K3",
+      "new_tag": "v2_oncesi_K3",
+      "command": [
+        "/usr/bin/python3",
+        "/mnt/c/Users/fatih/OneDrive/Desktop/Data Com/4. Görev Kartı Belgeleri/Araclar/olcum_kos.py",
+        "v2_oncesi_K3",
+        "/home/fatih/ehb415/gorev4_runs/band_100.yml",
+        "--binary",
+        "/home/fatih/ehb415/gorev4_runs/bin/gnb_compat",
+        "--level",
+        "warning",
+        "--prs",
+        "40",
+        "4",
+        "48",
+        "2",
+        "1",
+        "1",
+        "4"
+      ],
+      "expected": {
+        "dl_mbps_mean": 34.0,
+        "ul_mbps_mean": 119.0,
+        "dl_ok_mean": 1150,
+        "ul_ok_mean": 600,
+        "dl_nok_mean": 0,
+        "ul_nok_mean": 0
+      }
+    },
+    {
+      "old_tag": "oncesi_K4",
+      "new_tag": "v2_oncesi_K4",
+      "command": [
+        "/usr/bin/python3",
+        "/mnt/c/Users/fatih/OneDrive/Desktop/Data Com/4. Görev Kartı Belgeleri/Araclar/olcum_kos.py",
+        "v2_oncesi_K4",
+        "/home/fatih/ehb415/gorev4_runs/band_100.yml",
+        "--binary",
+        "/home/fatih/ehb415/gorev4_runs/bin/gnb_compat",
+        "--level",
+        "warning",
+        "--prs",
+        "10",
+        "4",
+        "272",
+        "2",
+        "1",
+        "1",
+        "4"
+      ],
+      "expected": {
+        "dl_mbps_mean": 29.0,
+        "ul_mbps_mean": 119.0,
+        "dl_ok_mean": 1000,
+        "ul_ok_mean": 600,
+        "dl_nok_mean": 0,
+        "ul_nok_mean": 0
+      }
+    },
+    {
+      "old_tag": "oncesi_K5",
+      "new_tag": "v2_oncesi_K5",
+      "command": [
+        "/usr/bin/python3",
+        "/mnt/c/Users/fatih/OneDrive/Desktop/Data Com/4. Görev Kartı Belgeleri/Araclar/olcum_kos.py",
+        "v2_oncesi_K5",
+        "/home/fatih/ehb415/gorev4_runs/band_100.yml",
+        "--binary",
+        "/home/fatih/ehb415/gorev4_runs/bin/gnb_compat",
+        "--level",
+        "warning",
+        "--prs",
+        "10",
+        "4",
+        "24",
+        "2",
+        "1",
+        "1",
+        "4"
+      ],
+      "expected": {
+        "dl_mbps_mean": 32.0,
+        "ul_mbps_mean": 119.0,
+        "dl_ok_mean": 1200,
+        "ul_ok_mean": 600,
+        "dl_nok_mean": 0,
+        "ul_nok_mean": 0
+      }
+    },
+    {
+      "old_tag": "oncesi_K6",
+      "new_tag": "v2_oncesi_K6",
+      "command": [
+        "/usr/bin/python3",
+        "/mnt/c/Users/fatih/OneDrive/Desktop/Data Com/4. Görev Kartı Belgeleri/Araclar/olcum_kos.py",
+        "v2_oncesi_K6",
+        "/home/fatih/ehb415/gorev4_runs/band_100.yml",
+        "--binary",
+        "/home/fatih/ehb415/gorev4_runs/bin/gnb_compat",
+        "--level",
+        "debug",
+        "--prs",
+        "10",
+        "12",
+        "48",
+        "2",
+        "1",
+        "1",
+        "4"
+      ],
+      "expected": {
+        "dl_mbps_mean": 29.0,
+        "ul_mbps_mean": 119.0,
+        "dl_ok_mean": 1000,
+        "ul_ok_mean": 600,
+        "dl_nok_mean": 0,
+        "ul_nok_mean": 0
+      }
+    },
+    {
+      "old_tag": "oncesi_K7",
+      "new_tag": "v2_oncesi_K7",
+      "command": [
+        "/usr/bin/python3",
+        "/mnt/c/Users/fatih/OneDrive/Desktop/Data Com/4. Görev Kartı Belgeleri/Araclar/olcum_kos.py",
+        "v2_oncesi_K7",
+        "/home/fatih/ehb415/gorev4_runs/band_100.yml",
+        "--binary",
+        "/home/fatih/ehb415/gorev4_runs/bin/gnb_compat",
+        "--level",
+        "debug",
+        "--prs",
+        "10",
+        "4",
+        "48",
+        "2",
+        "1",
+        "1",
+        "2"
+      ],
+      "expected": {
+        "dl_mbps_mean": 29.0,
+        "ul_mbps_mean": 119.0,
+        "dl_ok_mean": 1000,
+        "ul_ok_mean": 600,
+        "dl_nok_mean": 0,
+        "ul_nok_mean": 0
+      }
+    },
+    {
+      "old_tag": "oncesi_K8",
+      "new_tag": "v2_oncesi_K8",
+      "command": [
+        "/usr/bin/python3",
+        "/mnt/c/Users/fatih/OneDrive/Desktop/Data Com/4. Görev Kartı Belgeleri/Araclar/olcum_kos.py",
+        "v2_oncesi_K8",
+        "/home/fatih/ehb415/gorev4_runs/band_100.yml",
+        "--binary",
+        "/home/fatih/ehb415/gorev4_runs/bin/gnb_compat",
+        "--level",
+        "debug",
+        "--prs",
+        "10",
+        "12",
+        "48",
+        "2",
+        "1",
+        "1",
+        "12"
+      ],
+      "expected": {
+        "dl_mbps_mean": 29.0,
+        "ul_mbps_mean": 119.0,
+        "dl_ok_mean": 1000,
+        "ul_ok_mean": 600,
+        "dl_nok_mean": 0,
+        "ul_nok_mean": 0
+      }
+    },
+    {
+      "old_tag": "oncesi_K9",
+      "new_tag": "v2_oncesi_K9",
+      "command": [
+        "/usr/bin/python3",
+        "/mnt/c/Users/fatih/OneDrive/Desktop/Data Com/4. Görev Kartı Belgeleri/Araclar/olcum_kos.py",
+        "v2_oncesi_K9",
+        "/home/fatih/ehb415/gorev4_runs/band_100.yml",
+        "--binary",
+        "/home/fatih/ehb415/gorev4_runs/bin/gnb_compat",
+        "--level",
+        "info",
+        "--prs",
+        "10",
+        "4",
+        "48",
+        "0",
+        "1",
+        "1",
+        "4"
+      ],
+      "expected": {
+        "dl_mbps_mean": 29.0,
+        "ul_mbps_mean": 119.0,
+        "dl_ok_mean": 1000,
+        "ul_ok_mean": 600,
+        "dl_nok_mean": 0,
+        "ul_nok_mean": 0
+      }
+    },
+    {
+      "old_tag": "oncesi_K10",
+      "new_tag": "v2_oncesi_K10",
+      "command": [
+        "/usr/bin/python3",
+        "/mnt/c/Users/fatih/OneDrive/Desktop/Data Com/4. Görev Kartı Belgeleri/Araclar/olcum_kos.py",
+        "v2_oncesi_K10",
+        "/home/fatih/ehb415/gorev4_runs/band_100.yml",
+        "--binary",
+        "/home/fatih/ehb415/gorev4_runs/bin/gnb_compat",
+        "--level",
+        "info",
+        "--prs",
+        "10",
+        "4",
+        "48",
+        "10",
+        "1",
+        "1",
+        "4"
+      ],
+      "expected": {
+        "dl_mbps_mean": 29.0,
+        "ul_mbps_mean": 119.0,
+        "dl_ok_mean": 1000,
+        "ul_ok_mean": 600,
+        "dl_nok_mean": 0,
+        "ul_nok_mean": 0
+      }
+    },
+    {
+      "old_tag": "oncesi_K11",
+      "new_tag": "v2_oncesi_K11",
+      "command": [
+        "/usr/bin/python3",
+        "/mnt/c/Users/fatih/OneDrive/Desktop/Data Com/4. Görev Kartı Belgeleri/Araclar/olcum_kos.py",
+        "v2_oncesi_K11",
+        "/home/fatih/ehb415/gorev4_runs/band_100.yml",
+        "--binary",
+        "/home/fatih/ehb415/gorev4_runs/bin/gnb_compat",
+        "--level",
+        "debug",
+        "--prs",
+        "10",
+        "6",
+        "48",
+        "2",
+        "1",
+        "1",
+        "6"
+      ],
+      "expected": {
+        "dl_mbps_mean": 29.0,
+        "ul_mbps_mean": 119.0,
+        "dl_ok_mean": 1000,
+        "ul_ok_mean": 600,
+        "dl_nok_mean": 0,
+        "ul_nok_mean": 0
+      }
+    },
+    {
+      "old_tag": "sonrasi_K1",
+      "new_tag": "v2_sonrasi_K1",
+      "command": [
+        "/usr/bin/python3",
+        "/mnt/c/Users/fatih/OneDrive/Desktop/Data Com/4. Görev Kartı Belgeleri/Araclar/olcum_kos.py",
+        "v2_sonrasi_K1",
+        "/home/fatih/ehb415/gorev4_runs/band_100.yml",
+        "--binary",
+        "/home/fatih/ehb415/gorev4_runs/bin/gnb_prs_model",
+        "--level",
+        "debug",
+        "--prs",
+        "10",
+        "4",
+        "48",
+        "2",
+        "1",
+        "1",
+        "4"
+      ],
+      "expected": {
+        "dl_mbps_mean": 35.0,
+        "ul_mbps_mean": 119.0,
+        "dl_ok_mean": 1200,
+        "ul_ok_mean": 600,
+        "dl_nok_mean": 0,
+        "ul_nok_mean": 0
+      }
+    },
+    {
+      "old_tag": "sonrasi_K6",
+      "new_tag": "v2_sonrasi_K6",
+      "command": [
+        "/usr/bin/python3",
+        "/mnt/c/Users/fatih/OneDrive/Desktop/Data Com/4. Görev Kartı Belgeleri/Araclar/olcum_kos.py",
+        "v2_sonrasi_K6",
+        "/home/fatih/ehb415/gorev4_runs/band_100.yml",
+        "--binary",
+        "/home/fatih/ehb415/gorev4_runs/bin/gnb_prs_model",
+        "--level",
+        "debug",
+        "--prs",
+        "10",
+        "12",
+        "48",
+        "2",
+        "1",
+        "1",
+        "4"
+      ],
+      "expected": {
+        "dl_mbps_mean": 34.0,
+        "ul_mbps_mean": 119.0,
+        "dl_ok_mean": 1200,
+        "ul_ok_mean": 600,
+        "dl_nok_mean": 0,
+        "ul_nok_mean": 0
+      }
+    },
+    {
+      "old_tag": "sonrasi_K7",
+      "new_tag": "v2_sonrasi_K7",
+      "command": [
+        "/usr/bin/python3",
+        "/mnt/c/Users/fatih/OneDrive/Desktop/Data Com/4. Görev Kartı Belgeleri/Araclar/olcum_kos.py",
+        "v2_sonrasi_K7",
+        "/home/fatih/ehb415/gorev4_runs/band_100.yml",
+        "--binary",
+        "/home/fatih/ehb415/gorev4_runs/bin/gnb_prs_model",
+        "--level",
+        "debug",
+        "--prs",
+        "10",
+        "4",
+        "48",
+        "2",
+        "1",
+        "1",
+        "2"
+      ],
+      "expected": {
+        "dl_mbps_mean": 35.0,
+        "ul_mbps_mean": 119.0,
+        "dl_ok_mean": 1200,
+        "ul_ok_mean": 600,
+        "dl_nok_mean": 0,
+        "ul_nok_mean": 0
+      }
+    },
+    {
+      "old_tag": "sonrasi_K8",
+      "new_tag": "v2_sonrasi_K8",
+      "command": [
+        "/usr/bin/python3",
+        "/mnt/c/Users/fatih/OneDrive/Desktop/Data Com/4. Görev Kartı Belgeleri/Araclar/olcum_kos.py",
+        "v2_sonrasi_K8",
+        "/home/fatih/ehb415/gorev4_runs/band_100.yml",
+        "--binary",
+        "/home/fatih/ehb415/gorev4_runs/bin/gnb_prs_model",
+        "--level",
+        "debug",
+        "--prs",
+        "10",
+        "12",
+        "48",
+        "2",
+        "1",
+        "1",
+        "12"
+      ],
+      "expected": {
+        "dl_mbps_mean": 35.0,
+        "ul_mbps_mean": 119.0,
+        "dl_ok_mean": 1200,
+        "ul_ok_mean": 600,
+        "dl_nok_mean": 0,
+        "ul_nok_mean": 0
+      }
+    },
+    {
+      "old_tag": "sonrasi_K11",
+      "new_tag": "v2_sonrasi_K11",
+      "command": [
+        "/usr/bin/python3",
+        "/mnt/c/Users/fatih/OneDrive/Desktop/Data Com/4. Görev Kartı Belgeleri/Araclar/olcum_kos.py",
+        "v2_sonrasi_K11",
+        "/home/fatih/ehb415/gorev4_runs/band_100.yml",
+        "--binary",
+        "/home/fatih/ehb415/gorev4_runs/bin/gnb_prs_model",
+        "--level",
+        "debug",
+        "--prs",
+        "10",
+        "6",
+        "48",
+        "2",
+        "1",
+        "1",
+        "6"
+      ],
+      "expected": {
+        "dl_mbps_mean": 35.0,
+        "ul_mbps_mean": 119.0,
+        "dl_ok_mean": 1200,
+        "ul_ok_mean": 600,
+        "dl_nok_mean": 0,
+        "ul_nok_mean": 0
+      }
+    }
+  ]
+}
