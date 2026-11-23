@@ -160,3 +160,10 @@
 - Kopyalar kaynak dosyalarla SHA-256 üzerinden karşılaştırıldı. Yükleme klasöründe 100 MiB üstünde dosya bulunmadı. Rapor PDF/Office metinlerinde öğrenci numarası alanı bulunmadı. Anahtar/parola değeri herhangi bir çıktı veya dosyaya yazılmadı.
 - README içinde rapor/görsel bağlantıları, kaynak sürümler ve saat koruması/ConRes düzeltmesinin ayrı açıklamaları eklendi. Kök .gitignore yüzünden özgün teslim raporlarının dışarıda kalmaması için yalnız Fatih klasörüne özgü kurallar eklendi.
 - Gönderim için GitHub cihaz onayı tamamlandı; hesabın hedef depoya yazma yetkisi doğrulandı. Gönderim sonucu ve commit bilgisi ayrıca kaydedilecektir.
+
+### GitHub gönderimi tamamlandı
+
+- Fatih klasörü Taha'nın EHB415 deposunun main dalına gönderildi. İçerik commit'i: 5d0344a383a3fb8528a31a099d2ff875ab1765b2.
+- GitHub API ve uzak dal kontrolüyle ilk yüklemedeki 891 dosyanın tamamı yerel Git dosyalarıyla sayı ve blob özeti üzerinden karşılaştırıldı; tamamı eşleşti.
+- Gönderim kaydı GitHub_Gonderim_Kaydi.json dosyasına yazıldı. Kayıt, bu not ve güncel dosya listesi de yayın klasörüne eklendi.
+- Önceki EHB415 klasöründeki yerel betik değişikliği ve Untitled.ipynb korunmuştur. Gönderim, temiz depo kopyasından yapıldı.

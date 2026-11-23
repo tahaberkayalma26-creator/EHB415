@@ -4378,14 +4378,19 @@
       "sha256": "b944a485c9e9a570212967cfe952212223485efb4d3df3ba30d303237eac19cc"
     },
     {
+      "path": "Gorev_4/Notlar/GitHub_Gonderim_Kaydi.json",
+      "bytes": 357,
+      "sha256": "236ebff013760d944696f5e653eb6aec10e03ff82595a41410693f928a97c2bf"
+    },
+    {
       "path": "Gorev_4/Notlar/Standart_Incelemesi.md",
       "bytes": 2648,
       "sha256": "eff3b661bd18f597b3fbfcbe62e3c93ea7206222dc8dc482caf39092fba5c85a"
     },
     {
       "path": "Gorev_4/Notlar/Yapilan_Islemler.md",
-      "bytes": 22919,
-      "sha256": "2a83f3454282cb18f41c7309a118be445a299f6fe4840c47feba57fbe0e51442"
+      "bytes": 23538,
+      "sha256": "29162dead04b99f3a5b0ee4033283ab500acd759f18cfb4242d9cab9ec7e31e9"
     },
     {
       "path": "Gorev_4/Raporlar/Fatih_Gorev_Karti_4_Dogrulama_Raporu.pdf",
